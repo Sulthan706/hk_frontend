@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.service.changeSchedule.ui.operator.activity.ChangeScheduleOperatorActivity">
+
+    <include
+        android:id="@+id/appbar_change_schedule_operator"
+        layout="@layout/app_bar_default_with_history" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar_change_schedule_operator">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_22sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Judul Tuker Jadwal"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_titleChangeScheduleOpr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bg_empty_card"
+                android:elevation="@dimen/_5sdp"
+                android:padding="@dimen/_8sdp">
+
+                <EditText
+                    android:id="@+id/et_titleChangeScheduleOpr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:hint="Judul tuker jadwal"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Alasan Tuker Jadwal"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_descChangeScheduleOpr"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bg_empty_card"
+                android:elevation="@dimen/_5sdp"
+                android:padding="@dimen/_8sdp">
+
+                <EditText
+                    android:id="@+id/tv_descChangeScheduleOpr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:gravity="top|left"
+                    android:hint="Alasan tuker jadwal"
+                    android:inputType="text"
+                    android:maxLines="2"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Dari tanggal"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Shift"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/rl_dateFromChangeScheduleOpr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/bg_empty_card"
+                    android:elevation="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/tv_dateFromChangeScheduleOpr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/ivCalendarFrom"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:maxLines="1"
+                        android:text="Pilih Tanggal"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <ImageView
+                        android:id="@+id/ivCalendarFrom"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_calendar_orange" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_shiftFromChangeScheduleOpr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/bg_empty_card"
+                    android:elevation="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/tv_shiftFromChangeScheduleOpr"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_24sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:gravity="center_vertical"
+                        android:text="Pilih Shift"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Ke tanggal"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Shift"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/rl_dateToChangeScheduleOpr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/bg_empty_card"
+                    android:elevation="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/tv_dateToChangeScheduleOpr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/ivCalendarTo"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:maxLines="1"
+                        android:text="Pilih Tanggal"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <ImageView
+                        android:id="@+id/ivCalendarTo"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_calendar_orange" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_shiftToChangeScheduleOpr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/bg_empty_card"
+                    android:elevation="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/tv_shiftToChangeScheduleOpr"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_24sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:gravity="center_vertical"
+                        android:text="Pilih Shift"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Digantikan oleh :"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_opsChangeScheduleOpr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_4ssp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_empty_card"
+                android:elevation="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tv_opsChangeScheduleOpr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:maxLines="1"
+                    android:text="Pilih Operator"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submitChangeScheduleOpr"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginTop="@dimen/_32sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/btn_disable"
+                android:fontFamily="@font/poppinsmedium"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_24sdp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

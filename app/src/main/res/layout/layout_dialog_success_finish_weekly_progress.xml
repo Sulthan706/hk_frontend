@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_attendance"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_100sdp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_gravity="center_horizontal"
+        app:lottie_rawRes="@raw/success_create_permission" />
+
+    <TextView
+        android:id="@+id/tv_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Berhasil Selesaikan Pekerjaan"
+        android:textColor="@color/green2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppinssemibold"/>
+
+    <TextView
+        android:id="@+id/tv_desc_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selanjutnya, pekerjaan akan diproses approval oleh atasan atau kepala cabang"
+        android:textColor="@color/black2"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/poppinsregular"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:paddingEnd="@dimen/_32sdp"
+        android:paddingStart="@dimen/_32sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_secondary"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Kembali"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp" />
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".features.features_management.homescreen.inspeksi.weeklyprogress.ui.activity.WeeklyProgressActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linear_date"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/appbar_weekly_progress"
+            layout="@layout/app_bar_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:text="Tanggal"
+                android:layout_weight="0.3"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:background="@drawable/bg_field_empty_card"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_see_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:text="@string/text_see_all_in_report"
+            android:textColor="@color/blue4"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            android:layout_gravity="end"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintTop_toBottomOf="@id/tv_date"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/list_item_shimmer_weekly_progress"/>
+
+                <include
+                    layout="@layout/list_item_shimmer_weekly_progress"/>
+
+                <include
+                    layout="@layout/list_item_shimmer_weekly_progress"/>
+
+                <include
+                    layout="@layout/list_item_shimmer_weekly_progress"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list_weekly_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:visibility="gone"
+            tools:listitem="@layout/list_item_weekly_progress"/>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:text="@string/text_empty_weekly_progress"
+        android:layout_weight="0.3"
+        android:textColor="@color/neutral100"
+        android:textSize="@dimen/_12ssp"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:src="@drawable/fab_add"
+        android:layout_margin="@dimen/_10sdp"
+        app:tint="@android:color/white"
+        android:backgroundTint="@color/secondary_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

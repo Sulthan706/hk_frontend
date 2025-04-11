@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_trainer.myclass.ui.activity.QrAttendanceTrainingActivity">
+
+    <include
+        android:id="@+id/appbarQrAttendanceTraining"
+        layout="@layout/app_bar_training" />
+
+    <TextView
+        android:id="@+id/tv1QrAttendanceTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:gravity="center"
+        android:text="Tunjukkan QR Code berikut kepada peserta training"
+        android:textColor="@color/grey10"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/appbarQrAttendanceTraining" />
+
+    <TextView
+        android:id="@+id/tvTrainingQrAttendanceTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:gravity="center"
+        android:text="Tunjukkan QR Code berikut kepada peserta training"
+        android:textColor="@color/blue6"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="@font/poppinsbold"
+        app:layout_constraintTop_toBottomOf="@id/tv1QrAttendanceTraining" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPrintQrAttendanceTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:text="Print PDF"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11ssp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppinsmedium"
+        android:background="@drawable/bg_rounded_orange"
+        android:paddingVertical="@dimen/_8sdp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

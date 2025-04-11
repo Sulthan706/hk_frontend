@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuBeranda"
+        android:icon="@drawable/ic_beranda"
+        android:title="Beranda" />
+    <item
+        android:id="@+id/menuKomplain"
+        android:icon="@drawable/ic_support_agent"
+        android:title="Customer Talk"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/menuNotif"
+        android:icon="@drawable/ic_notif"
+        android:title="Notif"/>
+
+    <item
+        android:id="@+id/menuProfile"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile"/>
+
+</menu>

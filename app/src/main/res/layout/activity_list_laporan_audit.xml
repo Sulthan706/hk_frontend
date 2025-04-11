@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.inspeksi.audit.ui.activity.ListLaporanAuditActivity">
+
+    <include
+        android:id="@+id/appbarListLaporanAudit"
+        layout="@layout/app_bar_default"/>
+
+    <LinearLayout
+        android:id="@+id/ll1ListLaporanAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_8sdp"
+        android:background="@color/primary_color"
+        app:layout_constraintTop_toBottomOf="@id/appbarListLaporanAudit">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lokasi"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:drawableStart="@drawable/ic_lokasi"
+            android:drawablePadding="@dimen/_2sdp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvProjectListLaporanAudit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="Error Project"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2ListLaporanAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:orientation="horizontal"
+        android:weightSum="1.5"
+        app:layout_constraintTop_toBottomOf="@id/ll1ListLaporanAudit">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Periode"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+        <TextView
+            android:id="@+id/tvPeriodeListLaporanAudit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/_6sdp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_field"
+            android:text="Semua Periode"
+            android:textColor="@color/grey2"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:drawableEnd="@drawable/ic_next_grey"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvEmptyListLaporanAudit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:gravity="center"
+        android:text="Tidak ada data laporan audit. Silahkan membuat laporan audit saat berkunjung ke area."
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/ll2ListLaporanAudit"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerListLaporanAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/ll2ListLaporanAudit">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/shimmer_placeholder_list_meeting"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_list_meeting"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_list_meeting"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_list_meeting"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListLaporanAudit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:visibility="gone"
+        tools:listitem="@layout/list_audit_inspeksi"
+        app:layout_constraintTop_toBottomOf="@id/ll2ListLaporanAudit"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivCreateListLaporanAudit"
+        android:layout_width="@dimen/_62sdp"
+        android:layout_height="@dimen/_62sdp"
+        android:layout_margin="@dimen/_12sdp"
+        android:src="@drawable/ic_create_white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInfoListLaporanAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:background="@drawable/rounded_shape"
+        android:fontFamily="@font/poppinsregular"
+        android:paddingVertical="@dimen/_5sdp"
+        android:text="Anda sudah mengisi laporan audit pada periode ini"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_8ssp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

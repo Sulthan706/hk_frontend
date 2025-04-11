@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottom_sheets_background_white"
+
+    >
+
+    <ImageView
+        android:id="@+id/ivIconGreyBottomSheet"
+        android:layout_width="52dp"
+        android:layout_height="6dp"
+        android:src="@drawable/ic_bottomsheet_grey"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_18sdp"/>
+
+    <TextView
+        android:id="@+id/tvTitleBotSheetLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fitur Lokasi Saya"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/ivIconGreyBottomSheet"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/secondary_color"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/tvContentQuestionLoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/descQuestionLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleBotSheetLocation"
+        android:fontFamily="@font/poppinsregular"
+        android:paddingHorizontal="@dimen/_18sdp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/descSubQuestionLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tvContentQuestionLoc"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:paddingHorizontal="@dimen/_18sdp"
+        android:paddingBottom="@dimen/_32sdp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,598 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../Library/Android/sdk/platforms/android-31/data/res/layout/simple_dropdown_item_1line.xml" value="0.2635416666666667" />
+        <entry key="../../../Library/Android/sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.2635416666666667" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/bg_choose_shift.xml" value="0.186" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/bg_field.xml" value="0.239" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/bg_field_attendance_done.xml" value="0.186" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/bg_field_shadow.xml" value="0.2555" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/bg_field_tranparent.xml" value="0.145" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/bg_rectangle_blue.xml" value="0.2455" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/bg_rectangle_blue_attendance.xml" value="0.145" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/bg_rectangle_lightblue_attendance.xml" value="0.186" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/bg_rectangle_orange_attendance.xml" value="0.186" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/bg_rounded_blue_attendance.xml" value="0.145" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/bg_rounded_lightblue_attendance.xml" value="0.121" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/bg_transparent_attendance.xml" value="0.145" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/bg_transparent_attendance_actual.xml" value="0.2555" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/drawable/rounded_choose_shift.xml" value="0.239" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_already_absent_operator.xml" value="0.4" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_attendance_history.xml" value="0.2" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_attendance_list_operator.xml" value="0.264" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_fab_history_attendance_person.xml" value="0.1" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_fab_history_attendance_team.xml" value="0.536" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_history_attendance_detail_person.xml" value="0.264" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_home_management.xml" value="0.1" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_home_vendor.xml" value="0.23052536231884058" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_maps.xml" value="0.23052536231884058" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_my_team_management_profile_mgmnt.xml" value="0.12158054711246201" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_profile_management.xml" value="0.19927536231884058" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_profile_operational.xml" value="0.1431159420289855" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_project_management_operational.xml" value="0.19927536231884058" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/activity_shift_adapter_operator.xml" value="0.1" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/dialog_custom_edit_profile.xml" value="0.25" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/dialog_custom_phone_number.xml" value="0.4673469387755102" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/dialog_custom_phone_number_operator.xml" value="0.4" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/dialog_custom_rating_error_month.xml" value="0.264" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/fragment_already_attendance_staff.xml" value="0.23052536231884058" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/fragment_attendance_staff.xml" value="0.33124018838304553" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/fragment_home_management.xml" value="0.20833333333333334" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/fragment_home_vendor.xml" value="0.23052536231884058" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/fragment_rating_operational.xml" value="0.4" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/item_attendance_history_skeleton.xml" value="0.23052536231884058" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/item_attendance_staff_already_attendance.xml" value="0.536" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/item_attendance_staff_not_attendance.xml" value="0.23052536231884058" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/list_complaint_client.xml" value="0.12158054711246201" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/list_count_absent_operational.xml" value="0.15416666666666667" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/list_phone_number.xml" value="0.4" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/list_project.xml" value="0.19927536231884058" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/spinner_custom_layout.xml" value="0.25" />
+        <entry key="..\:/Agri FILE/careopsv1.0.7/careops_android/app/src/main/res/layout/spinner_custom_shift.xml" value="0.4" />
+        <entry key="..\:/AndroidStudioProjects/Sdk/platforms/android-31/data/res/layout/simple_dropdown_item_1line.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/Sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/Sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/careops_android_oct/careops_android/app/src/main/res/layout/activity_create_overtime_change_management.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/careops_android_oct/careops_android/app/src/main/res/layout/activity_create_overtime_change_mid.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_1_desember/careops_android/app/src/main/res/drawable/bg_rounded_blue_attendance.xml" value="0.3769230769230769" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_1_desember/careops_android/app/src/main/res/drawable/bg_rounded_lightblue_attendance.xml" value="0.3769230769230769" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_1_desember/careops_android/app/src/main/res/drawable/color_menu_bawah_client.xml" value="0.3769230769230769" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_1_desember/careops_android/app/src/main/res/drawable/ic_komplain.xml" value="0.3769230769230769" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_1_desember/careops_android/app/src/main/res/drawable/rounded_active_home_client.xml" value="0.3769230769230769" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_1_desember/careops_android/app/src/main/res/drawable/rounded_izinkan.xml" value="0.3769230769230769" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_1_desember/careops_android/app/src/main/res/drawable/rounded_near_expired_home_client.xml" value="0.3769230769230769" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_1_desember/careops_android/app/src/main/res/layout/activity_home_client.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_1_desember/careops_android/app/src/main/res/layout/fragment_home_client.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_1_desember/careops_android/app/src/main/res/layout/fragment_home_vendor.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_1_desember/careops_android/app/src/main/res/menu/bottom_menu_client.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_agustus/careops_android/app/src/main/res/drawable/bg_disable.xml" value="0.3828125" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_agustus/careops_android/app/src/main/res/layout/activity_create_complaint_internal_vendor.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_agustus/careops_android/app/src/main/res/layout/activity_detail_complaint_cftalk.xml" value="0.2956852791878173" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_agustus/careops_android/app/src/main/res/layout/activity_detail_complaint_internal.xml" value="0.18780096308186195" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_agustus/careops_android/app/src/main/res/layout/activity_list_complaint_vendor.xml" value="0.1796875" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_agustus/careops_android/app/src/main/res/layout/fragment_all_complaint_vendor.xml" value="0.1796875" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_agustus/careops_android/app/src/main/res/layout/list_complaint_client.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_sept_2/careops_android/app/src/main/res/layout/activity_create_overtime_change_management.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_sept_2/careops_android/app/src/main/res/layout/activity_detail_history_complaint.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_sept_2/careops_android/app/src/main/res/layout/activity_history_complaint_client.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_sept_2/careops_android/app/src/main/res/layout/activity_list_permission.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/careops_sprint_sept_2/careops_android/app/src/main/res/layout/fragment_choose_operator_dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/drawable/bg_field.xml" value="0.142" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/drawable/bg_field_material_transparent.xml" value="0.142" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/drawable/bg_field_tranparent.xml" value="0.142" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/activity_detail_overtime_change_tl.xml" value="0.21510416666666668" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/activity_edit_profile.xml" value="0.33" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/activity_edit_profile_client.xml" value="0.22" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/activity_home_vendor.xml" value="0.21510416666666668" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/activity_list_count_absent_opr_mgmnt.xml" value="0.21510416666666668" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/activity_overtime_teamlead.xml" value="0.21510416666666668" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/activity_setting_client.xml" value="0.18" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/activity_settings.xml" value="0.21510416666666668" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/custom_adapter_edit_profile.xml" value="0.203125" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/fragment_overtime_change_tl.xml" value="0.22" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/fragment_rating_operational_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/fragment_rating_operational_fragments.xml" value="0.21510416666666668" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/layout_bottom_sheets_absent_opr_mgmnt.xml" value="0.21510416666666668" />
+        <entry key="..\:/Users/User/Documents/careops_agri_dev/app/src/main/res/layout/spinner_item.xml" value="0.21510416666666668" />
+        <entry key="..\:/carefast/careops/careops_android/app/src/main/res/drawable/bg_field_material_transparent.xml" value="0.179" />
+        <entry key="..\:/carefast/careops/careops_android/app/src/main/res/layout/activity_attendance_history.xml" value="0.20833333333333334" />
+        <entry key="..\:/carefast/careops/careops_android/app/src/main/res/layout/activity_edit_profile.xml" value="0.264" />
+        <entry key="..\:/carefast/careops/careops_android/app/src/main/res/layout/activity_edit_profile_management.xml" value="0.264" />
+        <entry key="..\:/carefast/careops/careops_android/app/src/main/res/layout/activity_home_management.xml" value="0.12158054711246201" />
+        <entry key="..\:/carefast/careops/careops_android/app/src/main/res/layout/activity_list_project_management.xml" value="0.20833333333333334" />
+        <entry key="..\:/carefast/careops/careops_android/app/src/main/res/layout/activity_login.xml" value="0.20833333333333334" />
+        <entry key="..\:/carefast/careops/careops_android/app/src/main/res/layout/activity_settings.xml" value="0.4" />
+        <entry key="..\:/carefast/careops/careops_android/app/src/main/res/layout/app_bar_profile.xml" value="0.16032608695652173" />
+        <entry key="..\:/carefast/careops/careops_android/app/src/main/res/layout/fragment_list_all_operational.xml" value="0.1" />
+        <entry key="..\:/carefast/careops/careops_android/app/src/main/res/layout/fragment_overtime_change_tl.xml" value="0.24954710144927536" />
+        <entry key="..\:/carefast/careops/careops_android/app/src/main/res/layout/fragment_overtime_request_tl.xml" value="0.12158054711246201" />
+        <entry key="..\:/carefast/careops/careops_android/app/src/main/res/layout/fragment_rating_operational.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/drawable-v24/bg_field.xml" value="0.31145833333333334" />
+        <entry key="app/src/main/res/drawable-v24/ic_profile.xml" value="0.31145833333333334" />
+        <entry key="app/src/main/res/drawable/bg_activity.xml" value="0.3260416666666667" />
+        <entry key="app/src/main/res/drawable/bg_background_color.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_background_dashbooard_project.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_badge.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_blue4.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/drawable/bg_close.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_disable.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/drawable/bg_empty_card.xml" value="0.2753846153846154" />
+        <entry key="app/src/main/res/drawable/bg_field.xml" value="0.3260416666666667" />
+        <entry key="app/src/main/res/drawable/bg_field_blue.xml" value="0.22" />
+        <entry key="app/src/main/res/drawable/bg_field_disable.xml" value="0.2753846153846154" />
+        <entry key="app/src/main/res/drawable/bg_field_dotted_primary.xml" value="10.0" />
+        <entry key="app/src/main/res/drawable/bg_field_empty_card.xml" value="0.2753846153846154" />
+        <entry key="app/src/main/res/drawable/bg_field_green.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_field_green2.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/bg_field_history.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_field_lembur.xml" value="0.2753846153846154" />
+        <entry key="app/src/main/res/drawable/bg_field_lue.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_field_material_transparent.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_field_primart.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_field_red1.xml" value="0.27897435897435896" />
+        <entry key="app/src/main/res/drawable/bg_field_result.xml" value="0.2753846153846154" />
+        <entry key="app/src/main/res/drawable/bg_field_selected.xml" value="0.3260416666666667" />
+        <entry key="app/src/main/res/drawable/bg_field_spinner.xml" value="0.2235" />
+        <entry key="app/src/main/res/drawable/bg_field_tranparent.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_field_tranparent_grey.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_field_white_tranparent.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_green.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_grey1.xml" value="0.26851851851851855" />
+        <entry key="app/src/main/res/drawable/bg_home.xml" value="0.31145833333333334" />
+        <entry key="app/src/main/res/drawable/bg_home_client.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_home_dac.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/drawable/bg_home_new.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_home_secondary.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_lightblue_rounded.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/drawable/bg_menu_bawah.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_only_bottom_list.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_primary.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/drawable/bg_primary_new.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_primary_rounded.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_primary_rounded_1.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/bg_primary_rounded_bottom_inspeksi.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_primary_rounded_new.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_primary_rounded_new_bottom.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_primary_soft.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_rectangle_blue.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_rectangle_blue_attendance.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_rectangle_lightblue_attendance.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_red.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_report_soft.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/drawable/bg_rounded_blue_attendance.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_rounded_lightblue_attendance.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_secondary_bottom_radius.xml" value="0.2753846153846154" />
+        <entry key="app/src/main/res/drawable/bg_secondary_new.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_secondary_rounded_new.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_selected_blue.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/drawable/bg_service.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_shimmer.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_spinner.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_spinner_blue.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_spinner_default.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_spinner_disable.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_spinner_field_default.xml" value="0.2753846153846154" />
+        <entry key="app/src/main/res/drawable/bg_spinner_gray.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_spinner_no_padding.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_spinner_secondary.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_spinner_secondary_new.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_status_history_complaint_red.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/bg_white_card.xml" value="0.3260416666666667" />
+        <entry key="app/src/main/res/drawable/bg_white_card_20dp.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/bg_white_card_home.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/drawable/bg_white_rounded_20dp.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/drawable/bg_yellow_soft.xml" value="0.2740740740740741" />
+        <entry key="app/src/main/res/drawable/btn_area.xml" value="0.2753846153846154" />
+        <entry key="app/src/main/res/drawable/btn_disable.xml" value="0.17664473684210527" />
+        <entry key="app/src/main/res/drawable/btn_field_primary.xml" value="0.2962962962962963" />
+        <entry key="app/src/main/res/drawable/btn_green.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/btn_primary.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/btn_rounded_primary.xml" value="0.2962962962962963" />
+        <entry key="app/src/main/res/drawable/btn_rounded_secondary.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/drawable/circle_white.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/color_menu_bawah.xml" value="0.3260416666666667" />
+        <entry key="app/src/main/res/drawable/dotted_blue.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_absen.xml" value="0.3260416666666667" />
+        <entry key="app/src/main/res/drawable/ic_add_plus.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_add_plus_permission.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_add_white.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_administration_green.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_back_gray.xml" value="0.26481481481481484" />
+        <entry key="app/src/main/res/drawable/ic_badge_operator.xml" value="0.2388888888888889" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.26481481481481484" />
+        <entry key="app/src/main/res/drawable/ic_check_circle.xml" value="0.26296296296296295" />
+        <entry key="app/src/main/res/drawable/ic_check_circle_white.xml" value="0.26296296296296295" />
+        <entry key="app/src/main/res/drawable/ic_check_gray.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_checkbox.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_checkbox_border.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_checklist.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_circle_chooser.xml" value="0.26296296296296295" />
+        <entry key="app/src/main/res/drawable/ic_create_white.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_cross_red.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_done.xml" value="0.26296296296296295" />
+        <entry key="app/src/main/res/drawable/ic_done_success.xml" value="0.26296296296296295" />
+        <entry key="app/src/main/res/drawable/ic_dropdown.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_dropdown_blue.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_dropdown_white.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_kondisi_area_report.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_kontrol_area.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_kontrol_area_grey.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_lembur.xml" value="0.3260416666666667" />
+        <entry key="app/src/main/res/drawable/ic_management_project_green.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_management_project_grey.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_manpower_green.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_manpower_grey.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_material_stock_green.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_note_green.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_organization_green.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_progress_green.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/ic_progress_green_default.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/ic_progress_green_off.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/ic_progress_primary.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/ic_progress_red.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/ic_progress_secondary.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/ic_round_camera_alt_24.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_tune_white.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_uncheckbox.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_upload_photo.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/ic_work_result_green.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/rounded_ditolak.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/rounded_primary_1.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/rounded_primary_new.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/rounded_white.xml" value="0.2796875" />
+        <entry key="app/src/main/res/drawable/style_spinner.xml" value="0.31145833333333334" />
+        <entry key="app/src/main/res/layout/activity_approval_leader.xml" value="0.24818840579710144" />
+        <entry key="app/src/main/res/layout/activity_attendance_geo_management.xml" value="0.2606177606177606" />
+        <entry key="app/src/main/res/layout/activity_attendance_list_operator.xml" value="0.25679347826086957" />
+        <entry key="app/src/main/res/layout/activity_attendance_low_geo_location_photo.xml" value="0.1281661600810537" />
+        <entry key="app/src/main/res/layout/activity_attendance_mid_geo_location_photo.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/activity_attendance_photo_management.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/activity_calendar_team_area.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_cftalk_management.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/activity_change_schedule_operator.xml" value="0.2563405797101449" />
+        <entry key="app/src/main/res/layout/activity_change_schedule_teamlead.xml" value="0.2563405797101449" />
+        <entry key="app/src/main/res/layout/activity_checklist.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_checklist_on_area.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_checklist_spv.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_checklist_teamlead.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_choose_client_meeting.xml" value="0.30337078651685395" />
+        <entry key="app/src/main/res/layout/activity_complaint.xml" value="0.22043010752688172" />
+        <entry key="app/src/main/res/layout/activity_complaint_notification.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_complaint_vendor.xml" value="0.26721014492753625" />
+        <entry key="app/src/main/res/layout/activity_create_cftalk_project.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/layout/activity_create_complaint_internal_vendor.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_create_complaint_management.xml" value="0.29846014492753625" />
+        <entry key="app/src/main/res/layout/activity_create_overtime_change_management.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/activity_create_overtime_change_mid.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_create_overtime_management.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/layout/activity_create_permission.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_create_permission_management.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_dac.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_dac_absent_opr_mgmnt.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_dac_list.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_dashboard_inspeksi.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_dashboard_project_client.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_detail_absent_by_status_opr_mgmnt.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_detail_absent_opr_mgmnt.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_detail_area_checklist.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_detail_area_report_client.xml" value="0.27355072463768115" />
+        <entry key="app/src/main/res/layout/activity_detail_attendance_project_mgmnt.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_detail_change_schedule_tl.xml" value="0.2563405797101449" />
+        <entry key="app/src/main/res/layout/activity_detail_complaint_cftalk.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_detail_complaint_internal.xml" value="0.29842931937172773" />
+        <entry key="app/src/main/res/layout/activity_detail_complaint_management.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_detail_history_complaint.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/activity_detail_history_permission.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_detail_history_permission_management.xml" value="0.254981884057971" />
+        <entry key="app/src/main/res/layout/activity_detail_kondisi_area.xml" value="0.23777173913043478" />
+        <entry key="app/src/main/res/layout/activity_detail_meeting_inspeksi.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_detail_operator_checklist.xml" value="0.2884963768115942" />
+        <entry key="app/src/main/res/layout/activity_detail_overtime_change_client.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_detail_overtime_change_opr.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/activity_detail_overtime_change_tl.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_detail_overtime_request_client.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_detail_overtime_request_opr.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_detail_permission.xml" value="0.2877822240193685" />
+        <entry key="app/src/main/res/layout/activity_detail_permission_management.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_detail_staff_bertugas.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_detail_staff_bertugas_spv.xml" value="0.2706766917293233" />
+        <entry key="app/src/main/res/layout/activity_detail_staff_tl.xml" value="0.26403985507246375" />
+        <entry key="app/src/main/res/layout/activity_detail_visit_management.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/layout/activity_details_kondisi_area.xml" value="0.23777173913043478" />
+        <entry key="app/src/main/res/layout/activity_edit_profile.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_edit_profile_client.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_edit_profile_management.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_form_audit.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_form_kontrol_area.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_form_laporan_meeting.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_history_approval.xml" value="0.2563405797101449" />
+        <entry key="app/src/main/res/layout/activity_history_attendance_operational.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_history_attendance_project.xml" value="0.2911392405063291" />
+        <entry key="app/src/main/res/layout/activity_history_complaint.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/activity_history_complaint_client.xml" value="0.26721014492753625" />
+        <entry key="app/src/main/res/layout/activity_history_overtime_change_tl.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_history_overtime_req_client.xml" value="0.254981884057971" />
+        <entry key="app/src/main/res/layout/activity_history_permission.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_history_permission_management.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/layout/activity_home_bod_client.xml" value="0.302536231884058" />
+        <entry key="app/src/main/res/layout/activity_home_client.xml" value="0.26721014492753625" />
+        <entry key="app/src/main/res/layout/activity_home_management.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_home_vendor.xml" value="0.2617753623188406" />
+        <entry key="app/src/main/res/layout/activity_inspeksi_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_konfirmasi_checklist.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_laporan_kondisi_area.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_list_all_project_management.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_list_anggota_teamlead.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_list_area_operational_checklist.xml" value="0.2617753623188406" />
+        <entry key="app/src/main/res/layout/activity_list_area_report_client.xml" value="0.27355072463768115" />
+        <entry key="app/src/main/res/layout/activity_list_branch_absent_opr_mgmnt.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_list_branch_management.xml" value="0.26403985507246375" />
+        <entry key="app/src/main/res/layout/activity_list_branch_my_team_mgmn.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_list_branch_project_management.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_list_client_project_management.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_list_complaint_internal_vendor.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_list_complaint_management.xml" value="0.26721014492753625" />
+        <entry key="app/src/main/res/layout/activity_list_complaint_vendor.xml" value="0.26992753623188404" />
+        <entry key="app/src/main/res/layout/activity_list_count_absent_opr_mgmnt.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_list_kontrol_area.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_list_laporan_audit.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_list_mangement_mgmnt.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_list_meeting_inspeksi.xml" value="0.26264591439688717" />
+        <entry key="app/src/main/res/layout/activity_list_operational_management.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/activity_list_operational_mgmnt.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_list_operator_teamlead.xml" value="0.26721014492753625" />
+        <entry key="app/src/main/res/layout/activity_list_permission.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_list_project.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_list_project_ceo.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_list_project_complaint_management.xml" value="0.1281661600810537" />
+        <entry key="app/src/main/res/layout/activity_list_quality_audit.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_list_question_audit.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_list_staff_bertugas.xml" value="0.13645833333333332" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/layout/activity_maps_osm.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_mid_notif.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/activity_my_team_client_history_attendance.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_my_team_clients.xml" value="0.2630208333333333" />
+        <entry key="app/src/main/res/layout/activity_notif.xml" value="0.16644736842105262" />
+        <entry key="app/src/main/res/layout/activity_overtime_management.xml" value="0.24682971014492755" />
+        <entry key="app/src/main/res/layout/activity_overtime_teamlead.xml" value="0.24682971014492755" />
+        <entry key="app/src/main/res/layout/activity_penilaian_kondisi_object.xml" value="0.1671195652173913" />
+        <entry key="app/src/main/res/layout/activity_penilaian_manpower_inspeksi.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_permissions_approval_management.xml" value="0.254981884057971" />
+        <entry key="app/src/main/res/layout/activity_profile_management.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/activity_profile_operational.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/activity_profile_project_management.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/activity_projects_audit.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/layout/activity_projects_meeting.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_register_mekari.xml" value="0.36194563662374823" />
+        <entry key="app/src/main/res/layout/activity_report_calender.xml" value="0.2563405797101449" />
+        <entry key="app/src/main/res/layout/activity_report_cf_talk.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_report_cftalk_complaint_today.xml" value="0.25769927536231885" />
+        <entry key="app/src/main/res/layout/activity_schedule_new.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/activity_search_list_project.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/activity_search_project_attendance.xml" value="0.23731884057971014" />
+        <entry key="app/src/main/res/layout/activity_search_project_cftalk.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_send_laporan_meeting.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.1796875" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_team_area_project.xml" value="0.26395409494001043" />
+        <entry key="app/src/main/res/layout/activity_user_flying_report.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_visit_history_management.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_visit_tracking_management.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/app_bar_default_with_date_client.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/app_bar_default_with_history.xml" value="0.26132246376811596" />
+        <entry key="app/src/main/res/layout/app_bar_default_with_history_new.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/app_bar_default_with_history_permission.xml" value="0.26132246376811596" />
+        <entry key="app/src/main/res/layout/app_bar_default_with_history_permission_mid.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/app_bar_default_with_search_date.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/app_bar_profile.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/bottom_sheets_aktifitas_kunjungan.xml" value="0.254981884057971" />
+        <entry key="app/src/main/res/layout/bottom_sheets_aktivitas_kunjungan.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/bottom_sheets_area_inspeksi.xml" value="0.259963768115942" />
+        <entry key="app/src/main/res/layout/bottom_sheets_choose_date.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/bottom_sheets_choose_inspeksi.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/bottom_sheets_choose_partisipan.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/bottom_sheets_choose_position.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/bottom_sheets_date_picker.xml" value="0.3866822429906542" />
+        <entry key="app/src/main/res/layout/bottom_sheets_default_choose.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/bottom_sheets_foto_area_inspeksi.xml" value="0.3145933640545806" />
+        <entry key="app/src/main/res/layout/bottom_sheets_input_partisipan.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/bottom_sheets_object_inspeksi.xml" value="0.259963768115942" />
+        <entry key="app/src/main/res/layout/bottom_sheets_penilaian_inspeksi.xml" value="0.259963768115942" />
+        <entry key="app/src/main/res/layout/bottom_sheets_review_photo_inspeksi.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/bottom_sheets_time_picker.xml" value="0.19384057971014493" />
+        <entry key="app/src/main/res/layout/bottom_sheets_time_range.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/layout/bottom_sheets_time_range_picker.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/layout/bottom_sheets_work_report.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_custom_download_attendance_project.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/dialog_custom_edit_profile.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_custom_form_kontrol_area.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/dialog_custom_image_zoom.xml" value="0.16644736842105262" />
+        <entry key="app/src/main/res/layout/dialog_custom_laporan_area_inspeksi.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/dialog_custom_layout_attendance.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/dialog_custom_layout_not_attendance.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_custom_layout_permission.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_custom_layout_permission_denial.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_custom_list_project.xml" value="0.1281661600810537" />
+        <entry key="app/src/main/res/layout/dialog_custom_list_project_attendance.xml" value="0.2922077922077922" />
+        <entry key="app/src/main/res/layout/dialog_custom_move_project.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_custom_new_mekari.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_custom_penilaian_audit.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/dialog_custom_phone_number.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/dialog_custom_rating_error_month.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/dialog_custom_regis_mekari.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/dialog_custom_response_success_error.xml" value="0.24818840579710144" />
+        <entry key="app/src/main/res/layout/dialog_custom_success_submit_audit.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_custom_success_upload_document.xml" value="0.259963768115942" />
+        <entry key="app/src/main/res/layout/dialog_custom_sukses_create_permission.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/dialog_custom_sukses_upload_dokumen.xml" value="0.259963768115942" />
+        <entry key="app/src/main/res/layout/dialog_custom_update_app.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_custom_uploading_dokumen.xml" value="0.259963768115942" />
+        <entry key="app/src/main/res/layout/dialog_custom_warning_back_audit.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_custom_warning_decline_accept.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/dialog_custom_warning_inspeksi.xml" value="0.259963768115942" />
+        <entry key="app/src/main/res/layout/dialog_custom_warning_laporan_area_inspeksi.xml" value="0.259963768115942" />
+        <entry key="app/src/main/res/layout/dialog_custom_warning_meeting.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_custom_warning_submit_audit.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/dialog_success_update_profile.xml" value="0.24818840579710144" />
+        <entry key="app/src/main/res/layout/fragment_all_complaint_internal_vendor.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/fragment_all_complaint_management.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/fragment_all_complaint_vendor.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_all_detail_history_complaint_client.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/fragment_attendance_approval.xml" value="0.24818840579710144" />
+        <entry key="app/src/main/res/layout/fragment_choose_operator_dialog.xml" value="0.21921921921921922" />
+        <entry key="app/src/main/res/layout/fragment_choose_shift_dialog.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/fragment_close_complaint_internal_vendor.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/fragment_close_complaint_management.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/fragment_close_complaint_vendor.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/fragment_close_detail_history_complaint_client.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/fragment_done_complaint_internal_vendor.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/fragment_done_complaint_management.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/fragment_done_complaint_vendor.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/fragment_done_detail_history_complaint_client.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/fragment_greeting_completing_profile.xml" value="0.25769927536231885" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_home_bod_client.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_home_client.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_home_management.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_home_vendor.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_komplain.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/fragment_list_all_management.xml" value="0.15172101449275363" />
+        <entry key="app/src/main/res/layout/fragment_list_all_operational.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/fragment_lootie_confety.xml" value="0.1425925925925926" />
+        <entry key="app/src/main/res/layout/fragment_my_project_cftalk.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/fragment_no_data.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/fragment_notif.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/fragment_ongoing_cftalks_project.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_ongoing_complaint_internal_vendor.xml" value="0.11651469098277609" />
+        <entry key="app/src/main/res/layout/fragment_ongoing_complaint_management.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_ongoing_complaint_vendor.xml" value="0.26992753623188404" />
+        <entry key="app/src/main/res/layout/fragment_ongoing_detail_history_complaint_client.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/fragment_other_project_cftalk.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/fragment_overtime_change_client.xml" value="0.26721014492753625" />
+        <entry key="app/src/main/res/layout/fragment_overtime_change_management.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_overtime_change_opr.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/fragment_overtime_change_tl.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_overtime_request_client.xml" value="0.22900763358778625" />
+        <entry key="app/src/main/res/layout/fragment_overtime_request_management.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_overtime_request_tl.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_pagi_timku.xml" value="0.29583333333333334" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/fragment_rating_operational.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_report.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_service.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_service_management.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_waiting_complaint_internal_vendor.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/fragment_waiting_complaint_management.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/fragment_waiting_complaint_vendor.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/fragment_waiting_detail_history_complaint_client.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_attendance_daily.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_attendance_daily_act_all.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_attendance_daily_act_home.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_attendance_history.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_attendance_history_by_date.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_attendance_history_new.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_attendance_history_skeleton.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_attendance_staff_already_attendance.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_attendance_staff_not_attendance.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_bot_sheet_listproject.xml" value="0.26403985507246375" />
+        <entry key="app/src/main/res/layout/item_fab_history_attendance_person.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_history_schedule_result.xml" value="0.254981884057971" />
+        <entry key="app/src/main/res/layout/item_history_team_adapter.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_history_visit_report.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_kondisi_area.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_lembur_ganti.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_lembur_ganti_result.xml" value="0.254981884057971" />
+        <entry key="app/src/main/res/layout/item_list_branch_project.xml" value="0.16822916666666668" />
+        <entry key="app/src/main/res/layout/item_list_kondisi_area.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_my_team_clients_cfmanagement.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_my_team_clients_employee.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_notif_skeleton.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_person_history_result.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_schedule_calendar.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_schedule_calendar_low.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/item_shimmer.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/layout_bottom_sheets_absent_opr_mgmnt.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/layout_preview_upload_photo.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_all_management.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/list_all_operational.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/list_anggota_checklist.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/list_anggota_timku.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/list_area.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/list_area_checklist.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_area_dashboard_project.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/list_attendance_approval.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/list_audit_inspeksi.xml" value="0.26765015909101914" />
+        <entry key="app/src/main/res/layout/list_branch.xml" value="0.26403985507246375" />
+        <entry key="app/src/main/res/layout/list_choose_operator.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_client_meeting.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/list_complaint.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/list_complaint_client.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/list_complaint_internal.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/list_count_absent_operational.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/list_dac_team_client.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/list_daily_activity.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_date_project_visit.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/list_detail_count_absent_opr.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/list_employee_history_attendance_project.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_history_approval.xml" value="0.2563405797101449" />
+        <entry key="app/src/main/res/layout/list_item_chooser.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_kondisi_area_inspeksi.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_kondisi_object.xml" value="0.29257246376811596" />
+        <entry key="app/src/main/res/layout/list_kontrol_area_inspeksi.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_leader_myteam.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/list_meeting_inspeksi.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/list_operational_checklist.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_operator.xml" value="0.254981884057971" />
+        <entry key="app/src/main/res/layout/list_overtime_change.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_overtime_request.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/list_permission.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_permission_management.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_permission_mid_level.xml" value="0.26132246376811596" />
+        <entry key="app/src/main/res/layout/list_phone_number.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/list_project.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/list_project_ceo.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/list_project_meeting.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_question_audit.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_shift.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/list_shift_checklist.xml" value="0.1281661600810537" />
+        <entry key="app/src/main/res/layout/list_shift_myteam.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/list_shift_report.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/list_tracking_project.xml" value="0.3180650652658509" />
+        <entry key="app/src/main/res/layout/llist_staff.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/progress_dialog.xml" value="0.259963768115942" />
+        <entry key="app/src/main/res/layout/shimmer_attendance_approval.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/shimmer_placeholder_branch_list.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/shimmer_placeholder_choose_shift.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/shimmer_placeholder_complaint.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/shimmer_placeholder_list_meeting.xml" value="0.25317028985507245" />
+        <entry key="app/src/main/res/layout/shimmer_placeholder_operational_listalloperational.xml" value="0.25317028985507245" />
+        <entry key="app/src/main/res/layout/shimmer_placeholder_project_list.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/shimmer_placeholder_question_audit.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/layout/spinner_custom_layout.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/spinner_item.xml" value="0.16077898550724637" />
+        <entry key="app/src/main/res/layout/spinner_item_white.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/menu/bottom_menu_management.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/menu/bottom_menu_vendor.xml" value="0.2635416666666667" />
+        <entry key="app/src/main/res/menu/menu_bawah.xml" value="0.3098958333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="1.1" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

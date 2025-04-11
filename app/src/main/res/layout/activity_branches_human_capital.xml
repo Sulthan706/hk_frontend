@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homeScreenUpdated.humanCapital.ui.activity.BranchesHumanCapitalActivity">
+
+    <include
+        android:id="@+id/appbarBranchesHumanCapital"
+        layout="@layout/app_bar_default"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvErrorBranchesHumanCapital"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Failed to get data, please check your connection"
+        android:textAlignment="center"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black2"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/appbarBranchesHumanCapital"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:visibility="gone"
+        android:id="@+id/shimmerBranchesHumanCapital"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/appbarBranchesHumanCapital">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/shimmer_placeholder_branch_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/shimmer_placeholder_branch_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_branch_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_branch_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_branch_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_branch_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshBranchesHumanCapital"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appbarBranchesHumanCapital"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="visible"
+                android:id="@+id/clDashboardBranchesHumanCapital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_12sdp"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:elevation="@dimen/_6sdp"
+                android:background="@color/white"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvDateBranchesHumanCapital"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Today, 14 Dec 2024"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvNationalBranchesHumanCapital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="National"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_9ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintTop_toBottomOf="@id/tvDateBranchesHumanCapital"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAllBranchesHumanCapital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="All Branch"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintTop_toBottomOf="@id/tvNationalBranchesHumanCapital"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTotMpBranchesHumanCapital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="Total MP : 1.148"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_9ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintTop_toBottomOf="@id/tvAllBranchesHumanCapital"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTurnoverBranchesHumanCapital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:text="Daily Turnover"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_9ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintTop_toBottomOf="@id/tvDateBranchesHumanCapital"
+                    app:layout_constraintStart_toEndOf="@id/tvTotMpBranchesHumanCapital" />
+
+                <TextView
+                    android:id="@+id/tvTotTurnoverBranchesHumanCapital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="-1"
+                    android:textColor="@color/red4"
+                    android:textSize="@dimen/_9ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintTop_toBottomOf="@id/tvDateBranchesHumanCapital"
+                    app:layout_constraintStart_toEndOf="@id/tvTurnoverBranchesHumanCapital" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/tvTurnoverBranchesHumanCapital"
+                    app:layout_constraintBottom_toBottomOf="@id/tvTotMpBranchesHumanCapital"
+                    app:layout_constraintStart_toEndOf="@id/tvTotMpBranchesHumanCapital"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvResignBranchesHumanCapital"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Resign"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_9ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/tvTotResignBranchesHumanCapital"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/red1"
+                            android:textSize="@dimen/_14ssp"
+                            android:fontFamily="@font/poppinssemibold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvNewcomerBranchesHumanCapital"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Newcomer"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_9ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/tvTotNewcomerBranchesHumanCapital"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/green2"
+                            android:textSize="@dimen/_14ssp"
+                            android:fontFamily="@font/poppinssemibold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="visible"
+                android:id="@+id/rvBranchesHumanCapital"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                tools:listitem="@layout/branches_human_capital"
+                app:layout_constraintTop_toBottomOf="@id/clDashboardBranchesHumanCapital"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bottom_dialog_background_white">
+
+    <RelativeLayout
+        android:id="@+id/layout1BottomDialogScoringParticipant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/bottom_dialog_background_white"
+        android:elevation="@dimen/_4sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnCloseBottomDialogScoringParticipant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_closes_dark_grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beri Nilai Training"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivParticipantsBottomDialogScoringParticipant"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:src="@drawable/operation"
+        app:civ_border_width="@dimen/_1sdp"
+        app:layout_constraintTop_toBottomOf="@id/layout1BottomDialogScoringParticipant"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNameBottomDialogScoringParticipant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:text="Error"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black2"
+        app:layout_constraintTop_toTopOf="@id/ivParticipantsBottomDialogScoringParticipant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivParticipantsBottomDialogScoringParticipant"/>
+
+    <TextView
+        android:id="@+id/tvPositionBottomDialogScoringParticipant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:text="error"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivParticipantsBottomDialogScoringParticipant"
+        app:layout_constraintTop_toBottomOf="@id/tvNameBottomDialogScoringParticipant"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etScoreBottomDialogScoringParticipant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:textSize="@dimen/_11ssp"
+        android:textColor="@color/black2"
+        android:fontFamily="@font/poppinsregular"
+        android:inputType="number"
+        android:hint="Masukkan Nilai Training"
+        android:background="@drawable/bg_field"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/ivParticipantsBottomDialogScoringParticipant"/>
+
+    <TextView
+        android:id="@+id/tv1BottomDialogScoringParticipant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:text="Beri nilai antara 0 - 100"
+        android:textColor="@color/blue5"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/etScoreBottomDialogScoringParticipant"/>
+][
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etCommentBottomDialogScoringParticipant"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:gravity="top|start"
+        android:textSize="@dimen/_11ssp"
+        android:textColor="@color/black2"
+        android:fontFamily="@font/poppinsregular"
+        android:hint="Berikan komentar atau feedback"
+        android:background="@drawable/bg_field"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv1BottomDialogScoringParticipant"/>
+
+    <TextView
+        android:id="@+id/tv2BottomDialogScoringParticipant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:text="Opsional"
+        android:textColor="@color/blue5"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/etCommentBottomDialogScoringParticipant"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBottomDialogScoringParticipant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:background="@drawable/bg_second_color"
+        android:elevation="@dimen/_2sdp"
+        android:gravity="center"
+        android:text="Submit"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppinssemibold"
+        app:layout_constraintTop_toBottomOf="@id/tv2BottomDialogScoringParticipant"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/btnBottomDialogScoringParticipant" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

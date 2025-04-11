@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clListOvertimeChange"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_4sdp"
+    android:layout_marginTop="@dimen/_4sdp"
+    android:layout_marginBottom="@dimen/_6sdp"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_4sdp"
+    android:padding="@dimen/_12sdp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_listOvertimeChange"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:civ_border_color="@android:color/darker_gray"
+        app:civ_border_width="@dimen/_1sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/foto1" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/iv_listOvertimeChange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_namaListOvertimeChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Error Nama"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/tv_titleListOvertimeChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Error judul izin"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toEndOf="@id/iv_listOvertimeChange"
+            app:layout_constraintTop_toBottomOf="@id/tv_namaListOvertimeChange" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/iv_listOvertimeChange">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_dateListOvertimeChange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error tanggal"
+                android:maxLines="1"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/tv_timeListOvertimeChange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error shift"
+                android:textAlignment="textEnd"
+                android:maxLines="1"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll1ListOvertimeChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvLocListOvertimeChange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Digantikan oleh:"
+                android:maxLines="1"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/tvReplaceNameListOvertimeChange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Error"
+                android:maxLines="1"
+                android:textAlignment="textEnd"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvSubLocListOvertimeChange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error"
+                android:maxLines="1"
+                android:textAlignment="textEnd"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlListOvertimeChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/bg_red"
+            android:elevation="@dimen/_4sdp"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_6sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Cari Pengganti"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

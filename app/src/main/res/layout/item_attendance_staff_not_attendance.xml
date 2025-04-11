@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_item_attendance_choose_staff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_only_bottom_list"
+    android:layout_margin="@dimen/_1sdp"
+    android:padding="@dimen/_7sdp">
+
+    <ImageView
+        android:id="@+id/img_not_attendance"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/ll_staff_not_attendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/img_not_attendance"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_staff_not_attendance_name"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            tools:text="Name" />
+
+        <TextView
+            android:id="@+id/tv_staff_not_attendance_job_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_10ssp"
+            tools:text="jobCode" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llBtnCallAttendance"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_attendance_telp"
+            android:layout_marginRight="@dimen/_5sdp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_attendance_telp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

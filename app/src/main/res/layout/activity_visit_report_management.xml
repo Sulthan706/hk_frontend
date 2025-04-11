@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homeScreenUpdated.visitReport.ui.activity.VisitReportManagementActivity">
+
+    <include
+        android:id="@+id/appbarVisitReportManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/app_bar_default"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/rl1VisitReportManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20sdp"
+        android:background="@drawable/bg_primary_rounded_bottom"
+        app:layout_constraintTop_toBottomOf="@id/appbarVisitReportManagement">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:background="@drawable/bg_field_tranparent">
+
+            <TextView
+                android:id="@+id/tvThisMonthVisitReportManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This Month"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsmedium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <View
+                android:id="@+id/view1VisitReportManagement"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:background="@color/white"
+                app:layout_constraintStart_toEndOf="@id/tvThisMonthVisitReportManagement"
+                app:layout_constraintTop_toTopOf="@id/tvThisMonthVisitReportManagement"
+                app:layout_constraintBottom_toBottomOf="@id/tvThisMonthVisitReportManagement"/>
+
+            <TextView
+                android:id="@+id/tvDateVisitReportManagement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:text="1 Des 2024 - 10 Des 2024"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsmedium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/view1VisitReportManagement"
+                app:layout_constraintEnd_toStartOf="@id/ivCalendarVisitReportManagement"/>
+
+            <ImageView
+                android:id="@+id/ivCalendarVisitReportManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_schedule_management_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvThisMonthVisitReportManagement"
+                app:layout_constraintBottom_toBottomOf="@id/tvThisMonthVisitReportManagement"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvOverviewVisitReportManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Overview"
+        android:textColor="@color/brown2"
+        android:textSize="@dimen/_16ssp"
+        android:fontFamily="@font/poppinssemibold"
+        app:layout_constraintTop_toBottomOf="@id/rl1VisitReportManagement"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/clDataVisitReportManagement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvOverviewVisitReportManagement"
+        app:layout_constraintBottom_toTopOf="@id/btnDailyVisitReportManagement">
+
+        <TextView
+            android:id="@+id/tv2VisitReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="Target"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvTotTargetVisitReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="- days : - visits"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv2VisitReportManagement"/>
+
+        <TextView
+            android:id="@+id/tv3VisitReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_70sdp"
+            android:text="Realization"
+            android:textAlignment="center"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvPercentageRealVisitReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="0%"
+            android:textColor="@color/green2"
+            android:textSize="@dimen/_16ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toBottomOf="@id/tv3VisitReportManagement"
+            app:layout_constraintStart_toStartOf="@id/tv3VisitReportManagement"/>
+
+        <TextView
+            android:id="@+id/tvTotRealPlanVisitReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:text="-/-"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintStart_toEndOf="@id/tvPercentageRealVisitReportManagement"
+            app:layout_constraintBottom_toBottomOf="@id/tvPercentageRealVisitReportManagement"/>
+
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:id="@+id/horizontalBarChart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvTotTargetVisitReportManagement"/>
+
+        <TextView
+            android:id="@+id/tv4VisitReportManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:text="Total Visit"
+            android:textAlignment="center"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toBottomOf="@id/horizontalBarChart"/>
+
+        <View
+            android:id="@+id/view2VisitReportManagement"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@color/background"
+            app:layout_constraintTop_toBottomOf="@id/tv4VisitReportManagement"/>
+
+        <TextView
+            android:id="@+id/tv5VisitReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="Realization"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toBottomOf="@id/view2VisitReportManagement"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvTotRealVisitReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="Total : - visits"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv5VisitReportManagement"/>
+
+        <ImageView
+            android:id="@+id/iv1VisitReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:src="@drawable/ic_rectangle_green2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv6lVisitReportManagement"
+            app:layout_constraintBottom_toBottomOf="@id/tv6lVisitReportManagement"/>
+
+        <TextView
+            android:id="@+id/tv6lVisitReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="Planned"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintStart_toEndOf="@+id/iv1VisitReportManagement"
+            app:layout_constraintTop_toBottomOf="@id/tvTotRealVisitReportManagement"/>
+
+        <TextView
+            android:id="@+id/tvPlannedVisitReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="- visits"
+            android:textColor="@color/green2"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:drawableEnd="@drawable/ic_next_green2"
+            app:layout_constraintStart_toEndOf="@+id/tv6lVisitReportManagement"
+            app:layout_constraintTop_toBottomOf="@id/tvTotRealVisitReportManagement"/>
+
+        <ImageView
+            android:id="@+id/iv2VisitReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:src="@drawable/ic_rectangle_primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv7lVisitReportManagement"
+            app:layout_constraintBottom_toBottomOf="@id/tv7lVisitReportManagement"/>
+
+        <TextView
+            android:id="@+id/tv7lVisitReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Unplanned"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintStart_toEndOf="@+id/iv2VisitReportManagement"
+            app:layout_constraintTop_toBottomOf="@id/tv6lVisitReportManagement"/>
+
+        <TextView
+            android:id="@+id/tvUnplannedVisitReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="- visits"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:drawableEnd="@drawable/ic_next_primary"
+            app:layout_constraintStart_toEndOf="@+id/tv7lVisitReportManagement"
+            app:layout_constraintTop_toBottomOf="@id/tv6lVisitReportManagement"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChartVisitReportManagement"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:labelsSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view2VisitReportManagement"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/llEmptyDataVisitReportManagement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvOverviewVisitReportManagement"
+        app:layout_constraintBottom_toTopOf="@id/btnDailyVisitReportManagement">
+        
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/ivEmptyVisitReportManagement"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/empty_data"/>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="There's no summary visits report for selected period."
+            android:textAlignment="center"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsregular"/>
+        
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDailyVisitReportManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:drawableEnd="@drawable/ic_schedule_management_white"
+        android:drawablePadding="@dimen/_6sdp"
+        android:text="Daily Report"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_11ssp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppinsregular"
+        android:background="@drawable/bg_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

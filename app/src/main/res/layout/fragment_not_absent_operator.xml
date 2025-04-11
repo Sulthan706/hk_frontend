@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_22sdp"
+    tools:context=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.fragment.NotAbsentOperatorFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Staff yang belum absen"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_16ssp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_16sdp">
+
+                <Spinner
+                    android:id="@+id/spinner_shift_not_absent_operator"
+                    android:layout_width="@dimen/_135sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_spinner_secondary"
+                    android:entries="@array/noChoose"
+                    android:popupBackground="@color/secondary_color"
+                    android:popupElevation="@dimen/_4sdp" />
+
+                <TextView
+                    android:id="@+id/tv_count_not_absent_operator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="0 / 0"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp"
+                    app:drawableEndCompat="@drawable/ic_people_grey" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_not_absent_operator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_not_absent_operator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/shimmer_placeholder_teamlead_myteam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/shimmer_placeholder_teamlead_myteam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_teamlead_myteam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_teamlead_myteam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_teamlead_myteam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</LinearLayout>

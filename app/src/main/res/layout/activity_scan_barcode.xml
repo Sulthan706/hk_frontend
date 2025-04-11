@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:id="@+id/scanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:frameCornersRadius="16dp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="302dp"
+        android:layout_height="302dp"
+        app:lottie_url="https://assets5.lottiefiles.com/packages/lf20_c9uz3mrt.json"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTitleMainBarcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tempatkan QR Code di dalam area"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="103dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scanning akan dimulai secara otomatis"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleMainBarcode"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="13sp"
+        android:textColor="@color/white"
+       />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close_barcode"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="24dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

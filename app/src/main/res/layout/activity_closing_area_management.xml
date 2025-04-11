@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.closing.ui.activity.ClosingAreaManagementActivity">
+
+    <include
+        android:id="@+id/app_bar_closing_area"
+        layout="@layout/app_bar_default_with_history"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_closing_area"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_closing_area"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <include
+            layout="@layout/closing_area_shimmer"/>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <ScrollView
+        android:id="@+id/linear_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_closing_area"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/_15sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/text_date"
+                        android:textColor="@color/black2"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black2"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/text_pengawas"
+                        android:textColor="@color/black2"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                    <TextView
+                        android:id="@+id/tv_pengawas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black2"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/text_shift_pengawas"
+                        android:textColor="@color/black2"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                    <TextView
+                        android:id="@+id/tv_shift_pengawas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black2"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#d9d9d9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_ringkasan"
+                android:textColor="@color/black2"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsbold"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/text_total_settlement"
+                        android:textColor="@color/black2"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                    <TextView
+                        android:id="@+id/tv_total_settlement"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAlignment="textEnd"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:textColor="@color/black2"
+                        android:fontFamily="@font/poppinsbold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tv_done"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Realization"
+                        android:textColor="@color/black2"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/poppinsregular"/>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/tv_count_finish"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="9/10"
+                            android:textColor="@color/black2"
+                            android:textAlignment="textEnd"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/poppinsbold"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:layout_weight="0.01">
+
+                            <TextView
+                                android:id="@+id/tv_percent_finish"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="90%"
+                                android:textColor="@color/green2"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:paddingStart="@dimen/_15sdp"
+                                android:paddingEnd="@dimen/_15sdp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/poppinsbold"
+                                android:background="@drawable/background_closing_point"/>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="Belum Dikerjakan/ \nBelum Selesai"
+                        android:textColor="@color/black2"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_count_not_finish"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:textColor="@color/black2"
+                            android:textAlignment="textEnd"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/poppinsbold"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:layout_weight="0.01">
+
+                            <TextView
+                                android:id="@+id/tv_percent_not_finish"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="90%"
+                                android:textColor="@color/green2"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:paddingStart="@dimen/_15sdp"
+                                android:paddingEnd="@dimen/_15sdp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/poppinsbold"
+                                android:background="@drawable/background_closing_point"/>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_diversion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:text="@string/text_alihkan"
+                                android:background="@drawable/bg_primary_rounded_button"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/poppinsregular"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_approve"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/text_not_approve"
+                        android:textColor="@color/black2"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/poppinsregular"/>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/tv_count_not_approve"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:textColor="@color/black2"
+                            android:textAlignment="textEnd"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/poppinsbold"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:layout_weight="0.01">
+
+                            <TextView
+                                android:id="@+id/tv_percent_not_approve"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="90%"
+                                android:textColor="@color/green2"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:paddingStart="@dimen/_15sdp"
+                                android:paddingEnd="@dimen/_15sdp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/poppinsbold"
+                                android:background="@drawable/background_closing_point"/>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_approve"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:text="Approve"
+                                android:background="@drawable/bg_primary_rounded_button"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/poppinsregular"/>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#d9d9d9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_work_diversion"
+                android:textColor="@color/black2"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsbold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_15sdp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="Total Pekerjaan Dialihkan"
+                    android:textColor="@color/black2"
+                    android:fontFamily="@font/poppinsregular"/>
+
+                <TextView
+                    android:id="@+id/tv_total_diversion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:text="-"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:textColor="@color/black2"
+                    android:fontFamily="@font/poppinsbold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/closing_spv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="#d9d9d9" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_closing_pengawas"
+                    android:textColor="@color/black2"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppinsbold"/>
+
+                <LinearLayout
+                    android:id="@+id/linear_spv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_15sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/text_spv_has_closing"
+                        android:textColor="@color/black2"
+                        android:fontFamily="@font/poppinsregular"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_spv_closing"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:text="9/10"
+                        android:textColor="@color/black2"
+                        android:textAlignment="textEnd"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/poppinsbold"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_see_closing"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_see"
+                        android:background="@drawable/bg_primary_rounded_button"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppinsregular"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_tl_was_closing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_15sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="2"
+                        android:text="@string/text_team_leader_has_closing"
+                        android:textColor="@color/black2"
+                        android:fontFamily="@font/poppinsregular"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_tl_closing"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:text="9/10"
+                        android:textColor="@color/black2"
+                        android:textAlignment="textEnd"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/poppinsbold"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_tl_see_closing"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_see"
+                        android:background="@drawable/bg_primary_rounded_button"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppinsregular"/>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_closing"
+                android:layout_width="wrap_content"
+                android:paddingEnd="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:paddingStart="@dimen/_30sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_blue_rounded"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Closing Pekerjaan"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_32sdp"
+        android:background="@drawable/rounded_shape"
+        android:fontFamily="@font/poppinsregular"
+        android:paddingVertical="@dimen/_5sdp"
+        android:layout_marginTop="50dp"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:text="Harap melakukan absen dahulu"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

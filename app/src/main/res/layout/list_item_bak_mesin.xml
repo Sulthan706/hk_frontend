@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_margin="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:paddingStart="@dimen/_14sdp"
+            android:paddingEnd="@dimen/_14sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/ic_bg_status_weekly_report_finish"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linear_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_status"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kode Mesin :"
+                android:textColor="@color/black2"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <TextView
+                android:id="@+id/mechine_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Pekerjaan"
+                android:textColor="@color/black2"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppinsbold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tipe Mesin"
+                    android:layout_weight="0.6"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black2"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/poppinsregular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black2"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/poppinsregular"/>
+
+
+                <TextView
+                    android:id="@+id/mechine_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal Pekerjaan"
+                    android:layout_weight="1"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black2"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/poppinsregular"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Merek Mesin"
+                    android:layout_weight="0.6"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black2"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/poppinsregular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black2"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/poppinsregular"/>
+
+
+                <TextView
+                    android:id="@+id/mechine_merk"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal Pekerjaan"
+                    android:layout_weight="1"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black2"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/poppinsregular"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_margin="@dimen/_10sdp"
+           app:layout_constraintTop_toBottomOf="@id/linear_content"
+           app:layout_constraintBottom_toBottomOf="parent">
+
+           <com.google.android.material.card.MaterialCardView
+               android:id="@+id/card_front"
+               android:layout_width="@dimen/_56sdp"
+               android:layout_height="@dimen/_60sdp"
+               android:layout_marginEnd="@dimen/_12sdp"
+               android:backgroundTint="#DEDEDE"
+               app:cardCornerRadius="@dimen/_8sdp"
+               app:cardElevation="@dimen/_4sdp">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/ic_error_image" />
+
+               <ImageView
+                   android:id="@+id/iv_front"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/logo_new_careops"
+                   android:padding="20dp"
+                   android:visibility="gone"/>
+
+           </com.google.android.material.card.MaterialCardView>
+
+           <com.google.android.material.card.MaterialCardView
+               android:id="@+id/card_wide"
+               android:layout_width="@dimen/_56sdp"
+               android:layout_height="@dimen/_60sdp"
+               android:layout_marginEnd="@dimen/_12sdp"
+               android:backgroundTint="#DEDEDE"
+               app:cardCornerRadius="@dimen/_8sdp"
+               app:cardElevation="@dimen/_4sdp">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/ic_error_image" />
+
+               <ImageView
+                   android:id="@+id/iv_wide"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/logo_new_careops"
+                   android:padding="20dp"
+                   android:visibility="gone"/>
+
+           </com.google.android.material.card.MaterialCardView>
+
+       </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

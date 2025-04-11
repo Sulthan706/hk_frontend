@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_new"
+    tools:context=".features.features_vendor.homescreen.home.ui.old.fragment.HomeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="@string/home_app_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_shimmer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:layout_width="145dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="136dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                android:background="@drawable/bg_shimmer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="136dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="24dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="2"
+                android:background="@drawable/bg_shimmer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:layout_width="95dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="136dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="24dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                android:background="@drawable/bg_shimmer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/bg_white_card"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:padding="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="79dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:background="@drawable/bg_shimmer"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/h5" />
+
+                <TextView
+                    android:layout_width="96dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_shimmer"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/h5"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="66dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/bg_shimmer"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/h5" />
+
+                <TextView
+                    android:layout_width="81dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:background="@drawable/bg_shimmer"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/h5" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="2"
+                android:background="@drawable/bg_shimmer"
+                android:textColor="@color/information"
+                android:textSize="@dimen/bodyText"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

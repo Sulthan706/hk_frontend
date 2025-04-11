@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.activity.FormKontrolAreaActivity">
+
+    <include
+        android:id="@+id/appbarFormKontrolArea"
+        layout="@layout/app_bar_default"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appbarFormKontrolArea"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                android:padding="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_primary_soft"
+                app:layout_constraintTop_toBottomOf="@id/appbarFormKontrolArea">
+
+                <TextView
+                    android:id="@+id/tvBranchFormKontrolArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Error Branch"
+                    android:textAlignment="center"
+                    android:textColor="@color/brown1"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <TextView
+                    android:id="@+id/tvProjectFormKontrolArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="Error Project"
+                    android:textAlignment="center"
+                    android:textColor="@color/brown1"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <TextView
+                    android:id="@+id/tvDateFormKontrolArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Error date"
+                    android:textAlignment="center"
+                    android:textColor="@color/brown1"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Dibuat oleh"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsmedium"/>
+
+            <TextView
+                android:id="@+id/tvCreatedFormKontrolArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:padding="@dimen/_8sdp"
+                android:text="Error"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:background="@drawable/bg_field_empty_card"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Tujuan kunjungan"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsmedium"/>
+
+            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                android:id="@+id/spinnerFormKontrolArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/bg_spinner_no_padding"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:spinnerMode="dropdown"
+                android:entries="@array/noChoose"
+                app:smsp_arrowColor="@color/white"
+                app:smsp_arrowPaddingBottom="@dimen/_5sdp"
+                app:smsp_arrowPaddingLeft="@dimen/_1sdp"
+                app:smsp_enableFloatingLabel="false"
+                app:smsp_floatingLabelColor="@color/white"
+                app:smsp_floatingLabelText="Pilih tujuan"
+                app:smsp_hint="Pilih tujuan"
+                app:smsp_hintColor="@color/graybtn"
+                app:smsp_hintSize="@dimen/_11ssp"
+                app:smsp_isSearchable="false"
+                app:smsp_itemColor="@color/black2"
+                app:smsp_itemListColor="@color/black2"
+                app:smsp_itemListHintBackgroundColor="#808080"
+                app:smsp_itemListHintColor="@color/primary_color"
+                app:smsp_multilineError="false"
+                app:smsp_selectedItemListColor="@color/black2"
+                app:smsp_underlineColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="To Do Check"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsmedium"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Klik pada komponen yang akan dinilai"
+                android:textColor="@color/grayTxt"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="italic"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <RelativeLayout
+                android:id="@+id/rlManpowerFormKontrolArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/bg_field">
+
+                <ImageView
+                    android:id="@+id/ivManpowerFormKontrolArea"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:src="@drawable/ic_manpower_grey"/>
+
+                <TextView
+                    android:id="@+id/tvManpowerFormKontrolArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_toEndOf="@id/ivManpowerFormKontrolArea"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:gravity="center_vertical"
+                    android:text="Manpower"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tvCountManpowerFormKontrolArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_22sdp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true"
+                    android:text="-"
+                    android:textColor="@color/green2"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlKondisiAreaFormKontrolArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/bg_field">
+
+                <ImageView
+                    android:id="@+id/ivKondisiAreaFormKontrolArea"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:src="@drawable/ic_kontrol_area_grey"/>
+
+                <TextView
+                    android:id="@+id/tvKondisiAreaFormKontrolArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_22sdp"
+                    android:gravity="center_vertical"
+                    android:layout_toEndOf="@id/ivKondisiAreaFormKontrolArea"
+                    android:text="Kondisi Area"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <TextView
+                    android:id="@+id/tvCountKondisiAreaFormKontrolArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_22sdp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true"
+                    android:text="-"
+                    android:textColor="@color/green2"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmitDisableFormKontrolArea"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_margin="@dimen/_22sdp"
+                android:background="@drawable/bg_disable"
+                android:fontFamily="@font/poppinsmedium"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Submit"
+                android:visibility="visible"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmitEnableFormKontrolArea"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_margin="@dimen/_22sdp"
+                android:background="@drawable/bg_secondary"
+                android:fontFamily="@font/poppinsmedium"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Submit"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

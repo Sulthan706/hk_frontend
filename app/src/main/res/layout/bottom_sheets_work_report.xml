@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottom_sheets_background_white"
+    android:padding="@dimen/_18sdp">
+
+    <TextView
+        android:id="@+id/tvTitleBottomWorkReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Berikan Laporan Pengerjaan"
+        android:textAlignment="center"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvInfoBottomWorkReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Jelaskan secara singkat mengenai proses atau hasil pengerjaan."
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleBottomWorkReport"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etBottomWorkReport"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/bg_field_green2"
+        app:layout_constraintTop_toBottomOf="@id/tvInfoBottomWorkReport"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="top"
+        android:hint="Tuliskan balasanmu di sini"
+        android:inputType="text"
+        android:maxLength="200"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_12ssp"
+        app:counterEnabled="true"
+        app:counterMaxLength="200" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAppliedBottomDefaultChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bg_primary"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Selesaikan Komplain"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toBottomOf="@+id/etBottomWorkReport" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

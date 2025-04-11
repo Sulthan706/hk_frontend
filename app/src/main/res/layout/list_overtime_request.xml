@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/_8sdp"
+    android:background="@drawable/bg_white_card"
+    android:paddingBottom="@dimen/_12sdp"
+    android:elevation="@dimen/_8sdp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_listOvertimeReq"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        app:civ_border_color="@android:color/darker_gray"
+        app:civ_border_width="@dimen/_1sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/foto1" />
+
+    <LinearLayout
+        android:id="@+id/ll1_listOvertimeReq"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/iv_listOvertimeReq"
+        app:layout_constraintEnd_toStartOf="@id/rl_statusListOvertimeReq"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_namaListOvertimeReq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Error Nama"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/tv_titleListOvertimeReq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Error judul izin"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toEndOf="@id/iv_listOvertimeReq"
+            app:layout_constraintTop_toBottomOf="@id/tv_namaListOvertimeReq" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_statusListOvertimeReq"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/bg_status_history_complaint_secondary"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/ll1_listOvertimeReq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_statusOperatorMyTeam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_4sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Error"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8ssp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/iv_listOvertimeReq">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_dateListOvertimeReq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error tanggal"
+                    android:maxLines="1"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_11ssp" />
+
+                <TextView
+                    android:id="@+id/tv_timeListOvertimeReq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error shift"
+                    android:maxLines="1"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_11ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_locationListOvertimeReq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error area"
+                    android:maxLines="1"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_11ssp" />
+
+                <TextView
+                    android:id="@+id/tv_subLocListOvertimeReq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error sub area"
+                    android:maxLines="1"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_11ssp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

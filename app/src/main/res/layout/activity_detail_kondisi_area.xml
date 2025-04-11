@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.report.ui.new_.activity.DetailKondisiAreaActivity">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_30sdp">
+            <DatePicker
+                android:id="@+id/calendarDetailKondisiArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:datePickerMode="calendar"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:theme="@style/ClientDatePickerTheme"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/calendarDetailKondisiArea"/>
+
+            <LinearLayout
+                android:id="@+id/ll1CalendarTeamArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/view1">
+
+
+
+                <LinearLayout
+                    android:id="@+id/llAreaCalendarTeamArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_marginTop="@dimen/_8sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sub area"
+                        android:textColor="@color/grey2_client"
+                        android:textSize="@dimen/_13ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerSubAreaCalendarReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_spinner_no_padding"
+                        android:spinnerMode="dropdown"
+                        app:smsp_arrowColor="@color/white"
+                        app:smsp_arrowPaddingRight="@dimen/_2sdp"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_floatingLabelColor="@color/white"
+                        app:smsp_floatingLabelText="Pilih area"
+                        app:smsp_hint="Pilih sub area"
+                        app:smsp_hintColor="@color/graybtn"
+                        app:smsp_hintSize="@dimen/_11ssp"
+                        app:smsp_isSearchable="false"
+                        app:smsp_itemColor="@color/black2"
+                        app:smsp_itemListColor="@color/black2"
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="@color/primary_color"
+                        app:smsp_multilineError="false"
+                        app:smsp_searchHeaderBackgroundColor="@color/primary_color"
+                        app:smsp_searchHeaderText="Cari sub area"
+                        app:smsp_searchTextColor="@color/black2"
+                        app:smsp_selectedItemListColor="@color/black2"
+                        app:smsp_underlineColor="@color/white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llShiftCalendarTeamArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Shift"
+                        android:textColor="@color/grey2_client"
+                        android:textSize="@dimen/_13ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerShiftCalendarReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_spinner"
+                        android:spinnerMode="dropdown"
+                        app:smsp_arrowColor="@color/white"
+                        app:smsp_arrowPaddingRight="@dimen/_2sdp"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_floatingLabelColor="@color/white"
+                        app:smsp_floatingLabelText="Pilih area"
+                        app:smsp_hint="Pilih shift"
+                        app:smsp_hintColor="@color/graybtn"
+                        app:smsp_hintSize="@dimen/_11ssp"
+                        app:smsp_isSearchable="false"
+                        app:smsp_itemColor="@color/black2"
+                        app:smsp_itemListColor="@color/black2"
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="@color/primary_color"
+                        app:smsp_multilineError="false"
+                        app:smsp_searchHeaderBackgroundColor="@color/primary_color"
+                        app:smsp_searchHeaderText="Cari sub area"
+                        app:smsp_searchTextColor="@color/black2"
+                        app:smsp_selectedItemListColor="@color/black2"
+                        app:smsp_underlineColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jam kerja"
+                        android:textColor="@color/grey2_client"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tvWorkTimeCalendarReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="-"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/grey2_client"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_marginTop="20dp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/ll1CalendarTeamArea"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/tvReportHarian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Report kondisi area"
+                app:layout_constraintTop_toBottomOf="@id/view2"
+                android:textAlignment="center"
+                android:padding="@dimen/_10sdp"
+                android:fontFamily="@font/poppinssemibold"
+                android:textSize="@dimen/_12ssp"/>
+
+            <TextView
+                android:id="@+id/tvEmptyStateDetailKondisi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvReportHarian"
+                android:text="Pilih sub area dan shift terlebih dahulu"
+                android:textAlignment="center"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:padding="@dimen/_10sdp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clItemKondisiArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmptyStateDetailKondisi"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                >
+                <LinearLayout
+                    android:id="@+id/llItemDetailKondisi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_field"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingHorizontal="@dimen/_10sdp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dicek pada"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_11ssp"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textAlignment="textStart"/>
+                        <TextView
+                            android:id="@+id/tvDicekKondisiArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="13:26 WIB"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_11ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textAlignment="textEnd"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingHorizontal="@dimen/_10sdp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dicek oleh"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_11ssp"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textAlignment="textStart"/>
+                        <TextView
+                            android:id="@+id/tvDicekOlehKondisiArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_11ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textAlignment="textEnd"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingHorizontal="@dimen/_10sdp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kondisi"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_11ssp"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textAlignment="textStart"/>
+                        <TextView
+                            android:id="@+id/tvKondisiArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Standar"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_11ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textAlignment="textEnd"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/iv_pick_photo_complaint"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@drawable/rounded_dark_gray"
+                        android:padding="@dimen/_15sdp"
+                        android:src="@drawable/ic_camera_black"
+                        android:visibility="visible"
+                        android:layout_gravity="end"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Catatan Pengawas"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"/>
+                    <TextView
+                        android:id="@+id/tvCatatanPengawasKondisiArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak ada"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"/>
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <include
+                android:id="@+id/appbarKondisiAreaReport"
+                layout="@layout/app_bar_default_client"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

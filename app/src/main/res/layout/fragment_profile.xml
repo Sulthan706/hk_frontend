@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profileManagement"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_profile_project"
+    tools:context=".features.features_vendor.homescreen.home.ui.old.fragment.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMainProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_profile_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_settings"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_baseline_settings_24"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_profile"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_title">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                app:civ_border_color="@android:color/darker_gray"
+                app:civ_border_width="@dimen/_2sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/profile_ic" />
+
+            <LinearLayout
+                android:id="@+id/ll_subtract"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:background="@drawable/subtract_profile"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_name_user_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Name Unknown"
+                    android:textColor="#0A0A0A"
+                    android:textSize="@dimen/_13ssp" />
+
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/tv_job_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Job Position Unknown"
+                    android:textColor="#2B5281"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/tv_nuc_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="NUC Unknown"
+                    android:textColor="#969696"
+                    android:textSize="@dimen/_9ssp" />
+
+
+            </LinearLayout>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_title">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_foto_profile"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_shimmer" />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <LinearLayout
+                android:id="@+id/llMainContentProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:background="@drawable/subtract_profile"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_name_profile"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_shimmer" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:visibility="visible"
+                    android:id="@+id/shimmer_job_profile"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_shimmer" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_nuc_profile"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_shimmer" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlLocationProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_profile_lightcream"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/clMainProfile"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp">
+        <LinearLayout
+            android:id="@+id/llPlacementEmployee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_building_profile"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Penempatan"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="@dimen/_9ssp"
+                    android:layout_marginLeft="@dimen/_3sdp"/>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvProjectNames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/secondary_color"
+                android:textAlignment="center"
+                />
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerProjectNames"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_10sdp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_shimmer"/>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+            <TextView
+                android:id="@+id/tvActiveProjectEmployee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Aktif mulai: 1 September 2022"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="@dimen/_10ssp"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tvCompletedProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Melengkapi_profile"
+        app:layout_constraintTop_toBottomOf="@id/rlLocationProject"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="@dimen/_9ssp"
+        android:textStyle="italic"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:textColor="@color/red"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvCompletedProfile"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rlBtnProfileMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_field"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_3sdp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_profile_detail_main"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:gravity="center"
+                    android:text="Profile"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/secondary_color"/>
+                <ImageView
+                    android:id="@+id/ivCheckProfileFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_profile_false"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:visibility="visible"/>
+                <ImageView
+                    android:id="@+id/ivCheckProfileTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_profile_true"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right_blue"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/_3sdp"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlBtnProfileRekening"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_field"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_3sdp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_profile_detail_rekening"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:gravity="center"
+                    android:text="Rekening"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/secondary_color"/>
+                <ImageView
+                    android:id="@+id/ivCheckRekeningFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_profile_false"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:visibility="visible"/>
+                <ImageView
+                    android:id="@+id/ivCheckRekeningTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_profile_true"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right_blue"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/_3sdp"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlBtnProfileNomerKK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_field"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_3sdp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_profile_detail_nomerkk"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Nomor KK"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="@dimen/_12ssp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textColor="@color/secondary_color"/>
+                <ImageView
+                    android:id="@+id/ivCheckNumbFamilyFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_profile_false"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:visibility="visible"/>
+                <ImageView
+                    android:id="@+id/ivCheckNumbFamilyTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_profile_true"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right_blue"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/_3sdp"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rlBtnProfileDokumen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_field"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/_3sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_profile_detail_dokumen"/>
+                        <TextView
+                            android:id="@+id/tvCountDocProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="0"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textSize="@dimen/_14ssp"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/_10sdp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dokumen"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/secondary_color"
+                            />
+                        <ImageView
+                            android:id="@+id/ivCheckDokumenKtpFalse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/ic_profile_false"
+                            android:layout_marginLeft="@dimen/_4sdp"
+                            android:visibility="visible"/>
+                        <ImageView
+                            android:id="@+id/ivCheckDokumenKtpTrue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/ic_profile_true"
+                            android:layout_marginLeft="@dimen/_4sdp"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right_blue"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/_3sdp"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlBtnProfileSertifikatVaksin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_field"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/_2sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_profile_detail_sertifikatvaksin"/>
+                        <TextView
+                            android:id="@+id/tvCountCertiVaksinProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="0"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textSize="@dimen/_14ssp"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/_10sdp"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sertifikat Vaksin"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/secondary_color"/>
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_right_blue"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/_3sdp"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

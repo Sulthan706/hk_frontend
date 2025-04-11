@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.inspeksi.weeklyprogress.ui.activity.ListWeeklyProgressActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/appbarFormRoutineReport"
+            layout="@layout/app_bar_default"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:textColor="@color/white"
+                android:text="@string/text_project"
+                android:textAlignment="center"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <TextView
+                android:id="@+id/tv_visitation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:textColor="@color/white"
+                android:text="TEXT"
+                android:textAlignment="center"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsmedium"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll1ListRoutineVisited"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/appbarListRoutineVisited">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/text_date"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_12ssp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/poppinsmedium"/>
+
+            <TextView
+                android:id="@+id/tvDateListRoutineVisited"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/_6sdp"
+                android:text="@string/text_choose_date"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_field"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:drawableEnd="@drawable/ic_calendar_orange"
+                android:drawableTint="@color/grey2_client"
+                tools:ignore="UseCompatTextViewDrawableXml" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/text_status"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsmedium"/>
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerReasonChangeScheduleManagement"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/bg_dropdown"
+                android:entries="@array/filter_weekly_progress"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/list_item_shimmer_weekly_progress"/>
+
+                <include
+                    layout="@layout/list_item_shimmer_weekly_progress"/>
+
+                <include
+                    layout="@layout/list_item_shimmer_weekly_progress"/>
+
+                <include
+                    layout="@layout/list_item_shimmer_weekly_progress"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list_weekly_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:visibility="gone"
+            tools:listitem="@layout/list_item_weekly_progress"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/text_date"
+        android:textAlignment="center"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_9ssp"
+        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.inspeksi.audit.ui.activity.LaporanKondisiAreaActivity">
+
+    <include
+        android:id="@+id/appbarLaporanKondisiArea"
+        layout="@layout/app_bar_default"/>
+
+    <TextView
+        android:id="@+id/tv1LaporanKondisiArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Mulai membuat penilaian dengan klik tombol tambah penilaian di bawah"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/appbarLaporanKondisiArea"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLaporanKondisiArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/appbarLaporanKondisiArea"
+        app:layout_constraintBottom_toTopOf="@+id/rlCreateLaporanKondisiArea"
+        tools:listitem="@layout/list_kondisi_area_inspeksi"/>
+
+    <RelativeLayout
+        android:id="@+id/rlCreateLaporanKondisiArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/bg_field_dotted_blue"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmitEnableLaporanKondisiArea">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Penilaian"
+            android:textColor="@color/blue2"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:drawableStart="@drawable/ic_create_light_blue"
+            android:drawablePadding="@dimen/_4sdp"
+            android:layout_centerInParent="true"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitDisableLaporanKondisiArea"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_margin="@dimen/_22sdp"
+        android:background="@drawable/bg_disable"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Submit"
+        android:visibility="visible"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitEnableLaporanKondisiArea"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_margin="@dimen/_22sdp"
+        android:background="@drawable/bg_secondary"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Submit"
+        android:visibility="invisible"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

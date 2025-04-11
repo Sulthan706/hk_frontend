@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.service.overtime.ui.teamleader.activity.HistoryOvertimeChangeTlActivity">
+
+    <include
+        android:id="@+id/appbar_historyOvertimeChangeTl"
+        layout="@layout/app_bar_default"/>
+
+    <TextView
+        android:id="@+id/tvTitleOvertimeChangeTl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black2"
+        tools:text="Permintaan Lembur Ganti Izin"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/appbar_historyOvertimeChangeTl" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerHistoryOvertimeChangeTl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleOvertimeChangeTl"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/shimmer_placeholder_overtime_change"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/shimmer_placeholder_overtime_change"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_overtime_change"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout_historyOvertimeChangeTl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleOvertimeChangeTl">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_historyOvertimeChangeTl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12sdp"
+            android:visibility="gone" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_NoInternetHistoryOvertimeChangeTl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/layoutConnectionTimeout"
+            layout="@layout/fragment_connection_timeout" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_NoDataHistoryOvertimeChangeTl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/fragment_no_data" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

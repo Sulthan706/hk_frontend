@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_field"
+    android:padding="15dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginHorizontal="24dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <TextView
+                        android:id="@+id/tvBranchName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Branch name"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tvTotalPercentageBranch"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:text="71,42%"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:layout_weight="1"
+                        android:textAlignment="textEnd"
+                        android:layout_marginRight="@dimen/_20sdp"/>
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_right"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="4dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Project"
+                    android:fontFamily="@font/poppinsregular"/>
+
+                <TextView
+                    android:id="@+id/tvActiveProject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="7/2" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

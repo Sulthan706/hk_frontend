@@ -1,0 +1,5 @@
+rootProject.name = "HygieneKleen"
+include ':app'
+include ':academy'
+include ':app:academyoperational'
+include ':liveness'

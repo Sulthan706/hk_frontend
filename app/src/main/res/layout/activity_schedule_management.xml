@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homeScreenUpdated.schedule.ui.activity.ScheduleManagementActivity">
+
+    <include
+        android:id="@+id/appbarScheduleManagement"
+        layout="@layout/app_bar_default"/>
+
+    <TextView
+        android:id="@+id/tvMonthYearScheduleManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        tools:text="month"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="@font/poppinssemibold"
+        app:layout_collapseMode="parallax"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarScheduleManagement" />
+
+    <LinearLayout
+        android:id="@+id/layout2ScheduleManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/tvMonthYearScheduleManagement"
+        app:layout_constraintTop_toBottomOf="@id/appbarScheduleManagement">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_orange_dot" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Schedule"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="@color/black2"
+            android:textStyle="bold"
+            android:textSize="@dimen/_10ssp"/>
+
+    </LinearLayout>
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        android:id="@+id/calenderScheduleManagement"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        app:compactCalendarTargetHeight="250dp"
+        app:compactCalendarTextSize="@dimen/_11ssp"
+        app:compactCalendarBackgroundColor="@color/white"
+        app:compactCalendarTextColor="@color/black2"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="@color/primarySoft5"
+        app:compactCalendarCurrentDayBackgroundColor="@color/grey1"
+        app:compactCalendarMultiEventIndicatorColor="#fff"
+        app:compactCalendarEventIndicatorStyle="small_indicator"
+        app:compactCalendarDisplayOtherMonthDays="true"
+        app:layout_collapseMode="parallax"
+        app:layout_constraintTop_toBottomOf="@id/tvMonthYearScheduleManagement"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@color/background"
+        app:layout_constraintTop_toBottomOf="@id/calenderScheduleManagement" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rvScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        tools:listitem="@layout/list_schedule_management"
+        app:layout_constraintTop_toBottomOf="@+id/layout1"
+        app:layout_constraintBottom_toTopOf="@id/llButtonScheduleManagement" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvEmptyScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/empty_schedule_management"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/layout1"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/llButtonScheduleManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:background="@drawable/bg_primary"
+        android:orientation="horizontal"
+        android:elevation="@dimen/_4sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tvCreateScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:drawableStart="@drawable/ic_create_circle"
+            android:drawablePadding="@dimen/_4sdp"/>
+
+        <TextView
+            android:id="@+id/tvChangeScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="Change Plan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:drawableStart="@drawable/ic_change"
+            android:drawablePadding="@dimen/_4sdp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

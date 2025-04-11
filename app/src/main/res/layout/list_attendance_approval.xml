@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_list_complaint_client"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_14sdp"
+    android:layout_marginTop="@dimen/_2sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_8sdp"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivListAttendanceApproval"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:src="@drawable/foto1"
+            app:civ_border_color="@android:color/darker_gray"
+            app:civ_border_width="@dimen/_1sdp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_toEndOf="@id/ivListAttendanceApproval"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNamaListAttendanceApproval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppinssemibold"
+                android:maxLines="1"
+                android:text="Error Nama"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toEndOf="@id/iv_listComplaint"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNucJobListAttendanceApproval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                android:text="error nuc | error job"
+                android:textColor="@color/gray_dark"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toEndOf="@id/iv_listComplaint"
+                app:layout_constraintTop_toBottomOf="@id/tv_namaListComplaint" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tvShiftListAttendanceApproval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                android:text="Error shift"
+                android:textColor="@color/grey4"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/tvTimeListAttendanceApproval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                android:text="Error waktu"
+                android:textAlignment="textEnd"
+                android:textColor="@color/grey4"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_4sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="berada di luar area"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/bg_red"/>
+
+            <TextView
+                android:id="@+id/tvStatusInListAttendanceApproval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:padding="@dimen/_4sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                android:text="belum absen masuk"
+                android:textColor="@color/redTxt"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/bg_grey1"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvStatusOutListAttendanceApproval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:padding="@dimen/_4sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                android:text="sedang bekerja"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/bg_grey1"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvRequestListAttendanceApproval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/poppinsregular"
+            android:maxLines="1"
+            android:text="Request : Absen masuk di luar area"
+            android:textColor="@color/grey4"
+            android:textSize="@dimen/_11ssp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/poppinsregular"
+            android:maxLines="1"
+            android:text="Alasan"
+            android:textColor="@color/grey5"
+            android:textSize="@dimen/_8ssp" />
+
+        <TextView
+            android:id="@+id/tvDescListAttendanceApproval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_6sdp"
+            android:fontFamily="@font/poppinsregular"
+            android:maxLines="1"
+            android:text="Error alasan"
+            android:textColor="@color/grey4"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/bg_field"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/tvTimeCreatedListAttendanceApproval"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:text="error"
+                android:textColor="@color/grey5"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:drawableStart="@drawable/ic_schedule_grey"
+                android:drawablePadding="@dimen/_3sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDeclineListAttendanceApproval"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_27sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_weight="0.7"
+                android:text="Tolak"
+                android:textAllCaps="false"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsmedium"
+                android:background="@drawable/bg_field_red1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAcceptListAttendanceApproval"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_27sdp"
+                android:layout_weight="0.7"
+                android:text="Setujui"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsmedium"
+                android:background="@drawable/bg_green" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.inspeksi.audit.ui.activity.FormAuditActivity">
+
+    <include
+        android:id="@+id/appbarFormAudit"
+        layout="@layout/app_bar_default"/>
+
+    <LinearLayout
+        android:id="@+id/ll1FormAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_yellow_soft"
+        app:layout_constraintTop_toBottomOf="@id/appbarFormAudit">
+
+        <TextView
+            android:id="@+id/tvBranchFormAudit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error Branch"
+            android:textAlignment="center"
+            android:textColor="@color/brown1"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+        <TextView
+            android:id="@+id/tvProjectFormAudit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error Project"
+            android:textAlignment="center"
+            android:textColor="@color/brown1"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/poppinssemibold"/>
+
+        <TextView
+            android:id="@+id/tvDateFormAudit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error Date"
+            android:textAlignment="center"
+            android:textColor="@color/brown1"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2FormAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/ll1FormAudit">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:text="Auditor"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+        <TextView
+            android:id="@+id/tvAuditorFormAudit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:text="Error name"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll3FormAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/ll2FormAudit">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:text="Periode"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+        <TextView
+            android:id="@+id/tvPeriodeFormAudit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:text="Error periode"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv1FormAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="To Do Check"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintTop_toBottomOf="@id/ll3FormAudit"/>
+
+    <TextView
+        android:id="@+id/tv2FormAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Isi form dengan cara klik pada komponen yang akan dinilai berikut."
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_8ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/tv1FormAudit"/>
+
+    <RelativeLayout
+        android:id="@+id/rlAuditL1FormAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/bg_field"
+        app:layout_constraintTop_toBottomOf="@id/tv2FormAudit">
+
+        <ImageView
+            android:id="@+id/ivAuditL1FormAudit"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:src="@drawable/ic_note_grey"/>
+
+        <TextView
+            android:id="@+id/tvAuditL1FormAudit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_toEndOf="@id/ivAuditL1FormAudit"
+            android:fontFamily="@font/poppinssemibold"
+            android:gravity="center_vertical"
+            android:text="Audit L1"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvInfoAuditL1FormAudit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_26sdp"
+            android:layout_below="@id/tvAuditL1FormAudit"
+            android:text="auditee/objek informasi adalah penanggung jawab/pengawas proyek"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_8ssp"
+            android:fontFamily="@font/poppinsregular" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAuditL2FormAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/bg_field"
+        app:layout_constraintTop_toBottomOf="@id/rlAuditL1FormAudit">
+
+        <ImageView
+            android:id="@+id/ivAuditL2FormAudit"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:src="@drawable/ic_note_grey"/>
+
+        <TextView
+            android:id="@+id/tvAuditL2FormAudit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_toEndOf="@id/ivAuditL2FormAudit"
+            android:fontFamily="@font/poppinssemibold"
+            android:gravity="center_vertical"
+            android:text="Audit L2"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvInfoAuditL2FormAudit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_26sdp"
+            android:layout_below="@id/tvAuditL2FormAudit"
+            android:text="auditee/objek informasi adalah karyawan/operator dilokasi proyek"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_8ssp"
+            android:fontFamily="@font/poppinsregular" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAuditL3FormAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/bg_field"
+        app:layout_constraintTop_toBottomOf="@id/rlAuditL2FormAudit">
+
+        <ImageView
+            android:id="@+id/ivAuditL3FormAudit"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:src="@drawable/ic_note_grey"/>
+
+        <TextView
+            android:id="@+id/tvAuditL3FormAudit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_toEndOf="@id/ivAuditL3FormAudit"
+            android:fontFamily="@font/poppinssemibold"
+            android:gravity="center_vertical"
+            android:text="Audit L3"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvInfoAuditL3FormAudit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_26sdp"
+            android:layout_below="@id/tvAuditL3FormAudit"
+            android:text="auditee/objek informasi adalah manajemen klien dilokasi proyek"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_8ssp"
+            android:fontFamily="@font/poppinsregular" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitDisableFormKontrolArea"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_margin="@dimen/_22sdp"
+        android:background="@drawable/bg_disable"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Submit"
+        android:visibility="visible"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/rlAuditL3FormAudit" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitEnableFormKontrolArea"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_margin="@dimen/_22sdp"
+        android:background="@drawable/bg_secondary"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Submit"
+        android:visibility="invisible"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/rlAuditL3FormAudit"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

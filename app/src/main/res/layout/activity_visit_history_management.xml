@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.visitTracking.ui.activity.VisitHistoryManagementActivity">
+
+    <include
+        android:id="@+id/appbarVisitHistoryManagement"
+        layout="@layout/app_bar_default"/>
+
+    <RelativeLayout
+        android:id="@+id/rlChooseDateVisitHistoryManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:background="@drawable/bg_secondary"
+        app:layout_constraintTop_toBottomOf="@id/appbarVisitHistoryManagement">
+
+        <ImageView
+            android:id="@+id/ivDateVisitHistoryManagement"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_schedule_white"/>
+
+        <TextView
+            android:id="@+id/tvDateVisitHistoryManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_toEndOf="@id/ivDateVisitHistoryManagement"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="pilih tanggal"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/llInfoVisitHistoryManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/rlChooseDateVisitHistoryManagement">
+
+        <ImageView
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:src="@drawable/ic_info_gray"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:text="@string/visit_history_info"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="italic"
+            android:fontFamily="@font/poppinsregular"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvVisitHistoryManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Laporan Kunjungan"
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintTop_toBottomOf="@id/llInfoVisitHistoryManagement"/>
+
+    <TextView
+        android:id="@+id/tvNoDateHistoryVisitManagement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:gravity="center"
+        android:text="Pilih tanggal terlebih dahulu untuk menampilkan laporan"
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/tvVisitHistoryManagement"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/llTotVisitHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/btn_primary"
+        app:layout_constraintTop_toBottomOf="@id/tvVisitHistoryManagement">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total Kunjungan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+        <TextView
+            android:id="@+id/tvTotalProjectVisitHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="-"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/poppinssemibold"/>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHistoryVisitManagement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:visibility="gone"
+        tools:listitem="@layout/list_date_project_visit"
+        app:layout_constraintTop_toBottomOf="@id/llTotVisitHistory"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

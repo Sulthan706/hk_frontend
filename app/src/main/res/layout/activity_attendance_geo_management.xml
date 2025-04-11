@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.attendanceOSM.ui.activity.AttendanceGeoManagementActivity">
+
+    <include
+        android:id="@+id/layout_appbar"
+        layout="@layout/app_bar_default_with_history"
+        map:layout_constraintHorizontal_bias="0.0"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_map_schedule"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="#E5E5E5"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/layout_appbar">
+
+        <TextView
+            android:id="@+id/tv_map_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#E5E5E5"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="@dimen/_11ssp"
+            tools:text="Senin, 13 Januari 2022 " />
+
+<!--        <DigitalClock-->
+<!--            android:id="@+id/tv_map_schedule_time"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="#E5E5E5"-->
+<!--            android:fontFamily="@font/poppinsmedium"-->
+<!--            android:gravity="center"-->
+<!--            android:format="%H:%M"-->
+<!--            android:textSize="@dimen/_11ssp"-->
+<!--            tools:text="(07.30 WIB)" />-->
+        <TextView
+            android:id="@+id/tv_map_schedule_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#E5E5E5"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:format="%H:%M"
+            android:textSize="@dimen/_11ssp"
+            tools:text="(07.30 WIB)" />
+
+        <TextView
+            android:id="@+id/tvMapTimeZone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#E5E5E5"
+            android:fontFamily="@font/poppinsmedium"
+            android:text=" WIB"
+            android:textSize="@dimen/_11ssp" />
+    </LinearLayout>
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/ll_map_schedule" />
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/tv_empty_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_shape"
+        android:fontFamily="@font/poppinsregular"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:text="Anda saat ini tidak memiliki jadwal."
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/_20sdp"
+        map:layout_constraintBottom_toBottomOf="@+id/cl_attendance"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llCurrentProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_6sdp"
+        android:background="@drawable/bg_white_rounded_20dp"
+        android:elevation="@dimen/_4sdp"
+        android:orientation="vertical"
+        map:layout_constraintTop_toBottomOf="@id/ll_map_schedule">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dikunjungi"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_8ssp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvCurrentProjectAttendanceManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_center"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:src="@drawable/ic_menu_mylocation"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/llCurrentProject" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toggle_time_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        map:layout_constraintBottom_toTopOf="@+id/cl_attendance"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:singleSelection="false">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_out_disabled"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_disable_shift"
+            android:elevation="@dimen/_15sdp"
+            android:enabled="false"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingStart="@dimen/_25sdp"
+            android:text="Absen Keluar \n --:--"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9ssp"
+            map:layout_constraintRight_toRightOf="parent"
+            map:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_in_enabled"
+            android:layout_width="@dimen/_135sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_enable_shift"
+            android:elevation="@dimen/_15sdp"
+            android:enabled="false"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Absen Masuk \n --:--"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9ssp"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toggle_time_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        map:layout_constraintBottom_toTopOf="@+id/cl_attendance"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:singleSelection="false">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_in_disabled"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_disable_shift"
+            android:clickable="false"
+            android:elevation="@dimen/_15sdp"
+            android:enabled="false"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingEnd="@dimen/_25sdp"
+            android:text="Absen Masuk \n --:--"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9ssp"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_out_enabled"
+            android:layout_width="@dimen/_135sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_enable_shift"
+            android:elevation="@dimen/_15sdp"
+            android:enabled="false"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Absen Keluar \n --:--"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9ssp"
+            map:layout_constraintRight_toRightOf="parent"
+            map:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_attendance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_attendance_now"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_35sdp"
+            android:layout_marginBottom="@dimen/_45sdp"
+            android:background="@drawable/rounded_attendance"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_7sdp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintRight_toRightOf="parent"
+            map:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_check_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Harap tunggu..."
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/tvNotInsideRadius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:textColor="@color/redTxt"
+                android:text="Pastikan Anda berada di area project"
+                android:textSize="@dimen/_9ssp"
+                android:visibility="gone"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_check_in_enabled"
+                style="@style/Widget.App.ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:text="Absen Masuk" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_check_in_disabled"
+                style="@style/Widget.App.ButtonStyleDisabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:clickable="false"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                tools:text="Absen Masuk" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llExtendDurationAttendance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="perlu waktu tambahan?"
+                    android:gravity="center"
+                    android:textColor="@color/black2"
+                    android:fontFamily="@font/poppinsregular"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnExtendDurationAttendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:text="Perpanjang Durasi"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_color"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:background="@drawable/bg_field_primary" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnChooseProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:clickable="false"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:text="Pilih lokasi" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_attendance_done"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_35sdp"
+            android:layout_marginBottom="@dimen/_45sdp"
+            android:background="@drawable/rounded_attendance"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_7sdp"
+            android:visibility="gone"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintLeft_toLeftOf="parent"
+            map:layout_constraintRight_toRightOf="parent"
+            map:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_check_in_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Harap tunggu..."
+                android:textSize="@dimen/_11ssp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_check_in_disabled_done"
+                style="@style/Widget.App.ButtonStyleDisabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:text="Selesai"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                tools:text="Selesai" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

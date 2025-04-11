@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="jobList">
+        <item>Pilih Jabatan</item>
+        <item>Semua Jabatan</item>
+        <item>Operator</item>
+        <item>Pengawas</item>
+        <item>Management</item>
+        <item>BOD</item>
+        <item>CEO</item>
+    </string-array>
+    <string-array name="noChoice">
+        <item>Tidak ada pilihan</item>
+    </string-array>
+
+    <string-array name="yesOrNo">
+        <item>YA / TIDAK</item>
+        <item>YA</item>
+        <item>TIDAK</item>
+    </string-array>
+    <string-array name="publicOrPrivate">
+        <item>Pilih Kategori</item>
+        <item>PUBLIK</item>
+        <item>PRIVATE</item>
+    </string-array>
+    <string-array name="onlineOrOnsite">
+        <item>Pilih Jenis Kelas</item>
+        <item>ONLINE</item>
+        <item>ONSITE</item>
+    </string-array>
+    <string-array name="meetingApps">
+        <item>Pilih Nama Aplikasi</item>
+        <item>Zoom Meeting</item>
+        <item>Google Meet</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="14dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_white_card"
+    android:elevation="8dp">
+
+    <RelativeLayout
+        android:id="@+id/rv_barDac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_5sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:background="@drawable/bg_dac_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_timeDaily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/poppinsregular"
+            android:text="06:00 - 07:00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <LinearLayout
+            android:id="@+id/ll_penilaianDac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_checkTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_checkDac"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_check_circle_white"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_imageDac"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:src="@drawable/ic_image_white"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_beriNilai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Beri nilai"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rv_barDac">
+
+        <TextView
+            android:id="@+id/tv_activityDaily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Mall A"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_16ssp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

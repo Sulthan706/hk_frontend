@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.training.ui.activity.TrainingClientActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llTrainingHomeClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivBtnBackTraining"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_fab_arrow_back" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMainBannerTraining"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_65sdp"
+                android:background="@drawable/bg_lightblue_rounded"
+                android:paddingBottom="@dimen/_25sdp"
+                app:layout_constraintTop_toBottomOf="@+id/llTrainingHomeClient">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/_130sdp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/llBtnCalPencapaianTraining"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/bg_btn_main_training"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_calendar_white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:gravity="center"
+                            android:text="Lihat Agenda Training"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_field_tranparent"
+                        android:padding="@dimen/_5sdp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Training sedang berjalan"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="-"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/white" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:background="@drawable/bg_screen_banner_bottom"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/llTrainingHomeClient">
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:background="@drawable/bg_status_primary_left"
+                            android:padding="@dimen/_3sdp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsregular"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:text="Online Training"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_9sdp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginHorizontal="@dimen/_12sdp"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:visibility="gone"
+                            android:text="Kami menjawab kebutuhan dengan teknologi melalui aplikasi Carefast Academy"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp"
+                            android:textStyle="italic" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bg_screen_banner_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llTrainingHomeClient">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_status_history_complaint_primary"
+                    android:padding="@dimen/_3sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:text="Onsite Training"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9ssp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:text="Hygiene Kleen selalu meningkatkan kemampuan dan ketrampilan para karyawan dengan melalukan pelatihan"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/poppinssemibold"
+                android:gravity="center"
+                android:text="Training CF Team"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--            <RelativeLayout-->
+            <!--                android:id="@+id/rlBtnListPencapaianTraining"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginHorizontal="@dimen/_15sdp"-->
+            <!--                android:layout_marginTop="@dimen/_15sdp"-->
+            <!--                android:background="@drawable/bg_field"-->
+            <!--                android:elevation="@dimen/_2sdp"-->
+            <!--                android:padding="@dimen/_12sdp"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/rlMainBannerTraining">-->
+
+            <!--                <RelativeLayout-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content">-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:orientation="horizontal">-->
+
+            <!--                        <ImageView-->
+            <!--                            android:id="@+id/ivIconAchievement"-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:src="@drawable/ic_achievement_training" />-->
+
+
+            <!--                        <LinearLayout-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_marginHorizontal="@dimen/_8sdp"-->
+            <!--                            android:orientation="vertical">-->
+
+            <!--                            <TextView-->
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:fontFamily="@font/poppinsbold"-->
+            <!--                                android:text="Achievement"-->
+            <!--                                android:textColor="@color/secondary_color"-->
+            <!--                                android:textSize="@dimen/_14ssp" />-->
+
+            <!--                            <TextView-->
+            <!--                                android:layout_width="wrap_content"-->
+            <!--                                android:layout_height="wrap_content"-->
+            <!--                                android:fontFamily="@font/poppinsregular"-->
+            <!--                                android:text="Lihat pencapaian training CF Team"-->
+            <!--                                android:textColor="@color/grey2"-->
+            <!--                                android:textSize="@dimen/_10ssp" />-->
+
+            <!--                        </LinearLayout>-->
+
+            <!--                    </LinearLayout>-->
+
+
+            <!--                </RelativeLayout>-->
+            <!--                <ImageView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginLeft="@dimen/_30sdp"-->
+            <!--                    android:src="@drawable/ic_arrow_right_blue"-->
+            <!--                    android:layout_alignParentEnd="true"/>-->
+
+            <!--            </RelativeLayout>-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:fontFamily="@font/poppinssemibold"
+        android:paddingBottom="@dimen/_15sdp"
+        android:text="Coming soon"
+        android:textAlignment="center"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/nestedScrollView"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

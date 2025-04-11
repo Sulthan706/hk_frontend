@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="0dp"
+    android:backgroundTint="@color/black3"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginTop="15dp"
+    app:cardCornerRadius="10dp">
+
+        <TextView
+            android:id="@+id/tvToastMessageShareLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Berhasil mengirim lokasi"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/white"/>
+
+</androidx.cardview.widget.CardView>

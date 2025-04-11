@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_service"
+    tools:context=".features.features_vendor.homescreen.home.ui.new_.fragment.ServiceFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_60sdp">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/llLeaderMenuService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:background="@color/grayLine"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_izinService"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/search_new" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_lemburService"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/time_new" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_my_team"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/team_new" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_schedule"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/schedule_new" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_complaint_internal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/complain_internal_new" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Izin"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Lembur"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Timku"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Jadwal"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="CFTalk"
+                    android:visibility="gone"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:orientation="horizontal"
+                android:weightSum="4.7">
+
+                <LinearLayout
+                    android:id="@+id/llTrainingLeaders"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/training" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_mekari"
+                    android:visibility="visible"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <ImageView
+                        android:id="@+id/ivMekarii"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/ic_mekari_flex" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_resign"
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <ImageView
+                        android:id="@+id/ivResign"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/ic_resign" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_approvalService"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/btn_disable"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/ic_approval" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/ll_turnoverService"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/btn_disable"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/ic_turnover" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/ll_tukerJadwalService"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_disable"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/night_shift_new" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/night_shift_new" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_bak_leader"
+                    android:visibility="visible"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:layout_marginStart="10dp">
+
+                    <ImageView
+                        android:id="@+id/ivBakLeader"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/ic_bak_low" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4.7">
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Training"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9ssp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvMekariLeader"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Benefit\nKaryawan"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8ssp" />
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvResignLeader"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Ajukan Resign"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8ssp"
+                    />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Approval"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9ssp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Turnover"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9ssp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Tukar\nJadwal"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9ssp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="CFTalk"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/tvBakLeader"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="BAK\nMesin"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8ssp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+<!--operator-->
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/llOperatorMenuService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:background="@color/grayLine"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:id="@+id/llIzinOperator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/search_new" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llLemburOperator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/time_new" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTrainingOperator"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/training" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llMekariOperator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_9sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_mekari_flex" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llResignOperator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_9sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_resign" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/llTukerJadwalOperator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_disable"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/night_shift_new" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llOperatorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Izin"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Lembur"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Training"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvMekariOperator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Benefit\nKaryawan"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8ssp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvResignOperator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Ajukan Resign"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8ssp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Tukar\nJadwal"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9ssp" />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="5"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:id="@+id/ll_bak"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_8sdp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivBak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/ic_bak_low" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/time_new" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/training" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="invisible"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_mekari_flex" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llResignLeader"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_resign" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="invisible"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_disable"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/night_shift_new" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/tvBak"
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="BAK\nMesin"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8ssp" />
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Training"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:visibility="invisible"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Benefit\nKaryawan"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8ssp" />
+
+                <TextView
+                    android:visibility="invisible"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Ajukan Resign"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8ssp" />
+
+                <TextView
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Tukar\nJadwal"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9ssp" />
+
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="@dimen/_90sdp"
+            android:background="@drawable/bg_white_card"
+            android:elevation="10dp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvCurrentMonthDateService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Error"
+                android:textAlignment="center"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp" />
+
+            <LinearLayout
+                android:id="@+id/llInfo1ServiceManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCurrentMonthDateService"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_primary_rounded" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_2sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Jumlah"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_8ssp" />
+
+                <View
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_secondary_rounded" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_2sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Terpakai"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_8ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llInfo2ServiceManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llInfo1ServiceManagement"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal"
+                android:weightSum="4.2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_55sdp"
+                        android:layout_gravity="center">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarCuti"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:indeterminateOnly="false"
+                            android:progressDrawable="@drawable/circular_bar_progress"
+                            tools:progress="0" />
+
+                        <TextView
+                            android:id="@+id/tv_progressBarCuti"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="0 / 0"
+                            android:textAlignment="center"
+                            android:textColor="@color/secondary_color"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Cuti"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_55sdp"
+                        android:layout_gravity="center">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarIzin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:indeterminateOnly="false"
+                            android:progressDrawable="@drawable/circular_bar_progress"
+                            tools:progress="0" />
+
+                        <TextView
+                            android:id="@+id/tv_progressBarIzin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="0 / 0"
+                            android:textAlignment="center"
+                            android:textColor="@color/secondary_color"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Izin"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_55sdp"
+                        android:layout_gravity="center">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarAlfa"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:indeterminateOnly="false"
+                            android:progressDrawable="@drawable/circular_bar_progress"
+                            tools:progress="0" />
+
+                        <TextView
+                            android:id="@+id/tv_progressBarAlfa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="0 / 0"
+                            android:textAlignment="center"
+                            android:textColor="@color/secondary_color"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Alfa"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_55sdp"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:background="@drawable/bg_selected_blue">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/secondary_color"
+                            android:textSize="@dimen/_16ssp"
+                            android:gravity="center"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/tvApprovalIzinService"/>
+
+                        <TextView
+                            android:id="@+id/tvApprovalIzinService"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Kali"
+                            android:textAlignment="center"
+                            android:textColor="@color/secondary_color"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Tukar Jadwal"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llApprovalIzinService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_below="@id/llInfo2ServiceManagement"
+                android:background="@drawable/bg_red"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Approval Izin Tim"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <TextView
+                    android:id="@+id/tvCountApprovalIzinService"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Error"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llApprovalIzinService"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/info_service"
+                android:textColor="@color/grayTxt"
+                android:textSize="@dimen/_8ssp"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Service"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

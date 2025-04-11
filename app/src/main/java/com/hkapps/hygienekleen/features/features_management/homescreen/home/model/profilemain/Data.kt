@@ -1,0 +1,38 @@
+package com.hkapps.hygienekleen.features.features_management.homescreen.home.model.profilemain
+
+data class Data(
+    val adminMasterAddress: String,
+    val adminMasterBirthDate: Any,
+    val adminMasterEmail: String,
+    val adminMasterGender: String,
+    val adminMasterId: Int,
+    val adminMasterImage: String,
+    val adminMasterIsActive: Int,
+    val adminMasterJabatan: String,
+    val adminMasterMarriageStatus: String,
+    val adminMasterMother: String,
+    val adminMasterNUC: String,
+    val adminMasterName: String,
+    val adminMasterPhone: List<AdminMasterPhone>,
+    val adminMasterPlaceOfBirth: String,
+    val adminMasterRole: String,
+    val bankingName: Any,
+    val bankingNumber: Any,
+    val checkBankingAccount: Boolean,
+    val checkFamilyCard: Boolean,
+    val checkProfile: Boolean,
+    val checkImageKtp: Boolean,
+    val countDoc: Int,
+    val lastUpdatedProfile : String? = null,
+    val countVaccine: Int,
+    val familyCardNumber: Any,
+    val idCabang: Int,
+    val levelJabatan: String,
+    val levelPosition: Int,
+    val adminMasterAddressKtp: String,
+    val adminMasterReligion: String,
+    val adminMasterCountChildren: String,
+    val employeeNik:String,
+    val adminMasterNik: String
+
+)

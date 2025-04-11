@@ -1,0 +1,1463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.complaint.ui.activity.DetailComplaintManagementActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abl_complaintInternal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/appbarDetailComplaintInternal"
+            layout="@layout/app_bar_default" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--    isi layout nya-->
+
+    <LinearLayout
+        android:id="@+id/llProgressStatusBarDetailCftalk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:gravity="center"
+        android:elevation="@dimen/_4sdp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/abl_complaintInternal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="1dp">
+            <TextView
+                android:id="@+id/tvProgressWaitingDetailCftalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Menunggu"
+                android:fontFamily="@font/poppinsregular"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/grey3"/>
+            <ImageView
+                android:id="@+id/ivStatusWaitingDetailCftalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_progress_default"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="1dp">
+            <TextView
+                android:id="@+id/tvProgressOnProgressDetailCftalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dikerjakan"
+                android:fontFamily="@font/poppinsregular"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/grey3"/>
+            <ImageView
+                android:id="@+id/ivStatusOnprogressDetailCftalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_progress_default"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="1dp">
+            <TextView
+                android:id="@+id/tvProgressDoneDetailCftalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selesai"
+                android:fontFamily="@font/poppinsregular"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/grey3"/>
+            <ImageView
+                android:id="@+id/ivStatusDoneDetailCftalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_progress_default"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="1dp">
+            <TextView
+                android:id="@+id/tvProgressCloseDetailCftalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tutup"
+                android:fontFamily="@font/poppinsregular"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/grey3"/>
+            <ImageView
+                android:id="@+id/ivStatusCloseDetailCftalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_progress_default" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layoutComplaintInternal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llProgressStatusBarDetailCftalk">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_detailComplaintInternal"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:backgroundTint="#DEDEDE"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_complaintInternal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/ic_error_image"
+                    />
+                <ImageView
+                    android:id="@+id/ivComplaintVisitor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo_new_careops"
+                    android:padding="50dp"
+                    android:visibility="gone"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/lldetailComplaintInternal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/card_detailComplaintInternal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Masalah :"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/tv_titleDetailComplaintInternal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Error title"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_14ssp"
+                    android:maxLines="2"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Di area :"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/tv_locationDetailComplaintInternal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Error area"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_14ssp"
+                    android:maxLines="2"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Eskalasi :"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/tv_escalation_inDetailComplaintInternal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Error escalation"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_14ssp"
+                    android:maxLines="2"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_clientDetailComplaintInternal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/primarySoft2"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                app:layout_constraintTop_toBottomOf="@id/card_detailComplaintInternal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_clientComplaintInternal"
+                    android:layout_width="@dimen/_44sdp"
+                    android:layout_height="@dimen/_44sdp"
+                    android:src="@drawable/profile_default"
+                    app:civ_border_color="@android:color/darker_gray"
+                    app:civ_border_width="@dimen/_1sdp"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_44sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_toEndOf="@id/iv_clientComplaintInternal"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Dibuat oleh :"
+                        android:textColor="@color/grayTxt"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/tv_clientNameComplaintInternal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Unknown nama klien"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_13ssp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view1CfTalk"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/rl_clientDetailComplaintInternal"/>
+
+            <RelativeLayout
+                android:id="@+id/ll_DetailComplaintInternal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/bg_white_card"
+                android:padding="@dimen/_10sdp"
+                android:elevation="@dimen/_6sdp"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/view1CfTalk">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2.01"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Dibuat pada :"
+                            android:textColor="@color/grayTxt"
+                            android:textSize="@dimen/_9ssp" />
+
+                        <TextView
+                            android:id="@+id/tv_dateTimeDetailComplaintInternal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Error date"
+                            android:maxLines="2"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_11ssp" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grayLine"
+                        android:layout_weight="0.01"
+                        android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Diselesaikan pada :"
+                            android:textColor="@color/grayTxt"
+                            android:textSize="@dimen/_9ssp" />
+
+                        <TextView
+                            android:id="@+id/tv_dateTimeDoneDetailComplaintInternal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="-"
+                            android:maxLines="2"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_11ssp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view2CfTalk"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/ll_DetailComplaintInternal"/>
+
+            <LinearLayout
+                android:id="@+id/llIsiKomplainDetailCfTalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/view2CfTalk">
+
+                <TextView
+                    android:id="@+id/tvTitleObjekComplaintVisitor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Objek Komplain"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvObjekItemComplaintVisitor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_field_red1"
+                    android:fontFamily="@font/poppinsregular"
+                    android:maxLines="4"
+                    android:padding="@dimen/_12sdp"
+                    android:text="error"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Isi Komplain"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/tv_noteComplaintInternal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_field_red1"
+                    android:fontFamily="@font/poppinsregular"
+                    android:maxLines="4"
+                    android:padding="@dimen/_12sdp"
+                    android:text="error"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tvWorkTypeComplaintVisitor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Jenis Pekerjaan"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_workTypeComplaintInternal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:maxLines="4"
+                    android:padding="@dimen/_12sdp"
+                    android:text="error"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp"
+                    />
+
+                <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                    android:visibility="visible"
+                    android:id="@+id/spinnerWorkTypeComplaintInternal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/bg_field_red1"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:spinnerMode="dropdown"
+                    app:smsp_arrowColor="@color/grayTxt"
+                    app:smsp_arrowPaddingBottom="@dimen/_5sdp"
+                    app:smsp_arrowPaddingLeft="@dimen/_1sdp"
+                    app:smsp_enableFloatingLabel="false"
+                    app:smsp_floatingLabelColor="@color/white"
+                    app:smsp_floatingLabelText="Pilih area"
+                    app:smsp_hint="Pilih Jenis Pekerjaan"
+                    app:smsp_hintColor="@color/black2"
+                    app:smsp_hintSize="@dimen/_10sdp"
+                    app:smsp_isSearchable="false"
+                    app:smsp_itemColor="@color/black2"
+                    app:smsp_itemListColor="@color/black2"
+                    app:smsp_itemListHintBackgroundColor="#808080"
+                    app:smsp_itemListHintColor="@color/primary_color"
+                    app:smsp_multilineError="false"
+                    app:smsp_selectedItemListColor="@color/black2"
+                    app:smsp_underlineColor="#F5F6F8" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view3CfTalk"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/llIsiKomplainDetailCfTalk"/>
+
+            <LinearLayout
+                android:id="@+id/llReplyComplaintDetailCfTalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/view3CfTalk">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Balasan"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/tv_DateReplyFromLeaderComplaintClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="error date"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_field_primary">
+
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/tv_replyFromLeaderComplaintClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:maxLines="4"
+                        android:padding="@dimen/_12sdp"
+                        android:text="Unknown Balasan"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_replyFromLeaderComplaintInternal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="top"
+                        android:hint="Berikan balasan di sini"
+                        android:inputType="text"
+                        android:maxLength="100"
+                        android:padding="@dimen/_12sdp"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view4CfTalk"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/llReplyComplaintDetailCfTalk"/>
+
+<!--            ON PROCESS COMPLAINT        -->
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/ll_processComplaintInternal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/view4CfTalk">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Diproses oleh"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_workerComplaintInternal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_8sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_opsComplaintInternal"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:src="@drawable/foto1"
+                        app:civ_border_color="@android:color/darker_gray"
+                        app:civ_border_width="@dimen/_1sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_opsNameComplaintInternal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/iv_opsComplaintInternal"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Error name"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_12sdp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view5CfTalk"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@color/background"
+                    app:layout_constraintTop_toBottomOf="@id/rl_workerComplaintInternal"/>
+
+                <LinearLayout
+                    android:id="@+id/llJumlahOrangPekerja"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:visibility="visible"
+                        android:id="@+id/rlInputJumlahOrangPekerja"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_12sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Dikerjakan oleh"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etJumlahPekerja"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/tvInputJumlahOrangPekerja"
+                            android:background="@drawable/bg_field_primary"
+                            android:fontFamily="@font/poppinsregular"
+                            android:gravity="center"
+                            android:hint="Jumlah"
+                            android:inputType="number"
+                            android:padding="@dimen/_4sdp"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tvInputJumlahOrangPekerja"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text=" Orang"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rlJumlahOrangPekerja"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_12sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Dikerjakan oleh"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tvJumlahPekerja"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/tvJumlahOrangPekerja"
+                            android:background="@drawable/bg_field_primary"
+                            android:fontFamily="@font/poppinsregular"
+                            android:gravity="center"
+                            android:padding="@dimen/_4sdp"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tvJumlahOrangPekerja"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/ivEditJumlahOrangPekerja"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text=" Orang "
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <ImageView
+                            android:id="@+id/ivEditJumlahOrangPekerja"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/ic_edit" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view6CfTalk"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@color/background"
+                    app:layout_constraintTop_toBottomOf="@id/llJumlahOrangPekerja"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Foto Pengerjaan"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp" />
+
+<!--                visitor foto pengerjaan per objek-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvKomplainVisitorObjek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_ctalk_visitor"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:id="@+id/llFotoPengerjaanImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/rl_uploadBeforeImageComplaintInternal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#DEDEDE"
+                        app:cardCornerRadius="@dimen/_8sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <ImageView
+                            android:id="@+id/iv_beforeDefault"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:alpha="0.25"
+                            android:src="@drawable/ic_camera_black"
+                            android:visibility="visible"
+                            app:tint="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/iv_beforeComplaintInternal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"
+                            tools:src="@tools:sample/backgrounds/scenic" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/rl_uploadProcessImageComplaintInternal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#DEDEDE"
+                        app:cardCornerRadius="@dimen/_8sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <ImageView
+                            android:id="@+id/iv_processDefault"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:alpha="0.25"
+                            android:src="@drawable/ic_camera_black"
+                            android:visibility="visible"
+                            app:tint="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/iv_processComplaintInternal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"
+                            tools:src="@tools:sample/backgrounds/scenic" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/rl_uploadAfterImageComplaintInternal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#DEDEDE"
+                        app:cardCornerRadius="@dimen/_8sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <ImageView
+                            android:id="@+id/iv_afterDefault"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:alpha="0.25"
+                            android:src="@drawable/ic_camera_black"
+                            android:visibility="visible"
+                            app:tint="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/iv_afterComplaintInternal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"
+                            tools:src="@tools:sample/backgrounds/scenic" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!--                        <RelativeLayout-->
+                    <!--                            android:id="@+id/rl_uploadAfterImageComplaintNotif"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:layout_margin="@dimen/_3sdp"-->
+                    <!--                            android:layout_weight="1"-->
+                    <!--                            android:background="@drawable/bg_disable">-->
+
+                    <!--                            <ImageView-->
+                    <!--                                android:id="@+id/iv_afterDefault"-->
+                    <!--                                android:layout_width="wrap_content"-->
+                    <!--                                android:layout_height="wrap_content"-->
+                    <!--                                android:layout_centerInParent="true"-->
+                    <!--                                android:src="@drawable/ic_camera_black"-->
+                    <!--                                android:visibility="visible" />-->
+
+                    <!--                            <ImageView-->
+                    <!--                                android:id="@+id/iv_afterComplaintNotification"-->
+                    <!--                                android:layout_width="match_parent"-->
+                    <!--                                android:layout_height="match_parent"-->
+                    <!--                                android:layout_centerInParent="true"-->
+                    <!--                                android:paddingHorizontal="@dimen/_15sdp"-->
+                    <!--                                android:paddingVertical="@dimen/_5sdp"-->
+                    <!--                                android:scaleType="centerCrop"-->
+                    <!--                                android:src="@drawable/googleg_disabled_color_18"-->
+                    <!--                                android:visibility="gone" />-->
+
+                    <!--                        </RelativeLayout>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFotoPengerjaan"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Before"
+                            android:textAlignment="center"
+                            android:textColor="@color/grey2_client"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Process"
+                            android:textAlignment="center"
+                            android:textColor="@color/grey2_client"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="After"
+                            android:textAlignment="center"
+                            android:textColor="@color/grey2_client"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view7CfTalk"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@color/background"
+                    app:layout_constraintTop_toBottomOf="@id/llFotoPengerjaan"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp">
+
+                    <TextView
+                        android:id="@+id/tvBahanChemicalOpsional"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_24sdp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Menggunakan bahan chemical : "
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_toEndOf="@+id/tvBahanChemicalOpsional"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="center_vertical"
+                        android:text="(opsional)"
+                        android:textColor="@color/red1"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <ImageView
+                        android:id="@+id/ivEditBahanChemicalCfTalk"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/ic_edit"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:id="@+id/rvBahanChemicalCfTalk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp" />
+
+                <TextView
+                    android:id="@+id/tvAddBahanChemicalCftalk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:paddingHorizontal="@dimen/_95sdp"
+                    android:text="Tambah"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/primary_color"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:drawableStart="@drawable/ic_add_primary"
+                    android:background="@drawable/bg_field_dotted_primary"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+
+                <View
+                    android:id="@+id/view8CfTalk"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@color/background"
+                    app:layout_constraintTop_toBottomOf="@id/tvAddBahanChemicalCftalk"/>
+
+            </LinearLayout>
+
+<!--            DONE COMPLAINT              -->
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/llDoneComplaintInternal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/ll_processComplaintInternal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Laporan Pengerjaan"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_laporanFromLeaderComplaintClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:padding="@dimen/_12sdp"
+                    android:background="@drawable/bg_field_green2"
+                    android:fontFamily="@font/poppinsregular"
+                    android:maxLines="4"
+                    android:text="Unknown Laporan"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp" />
+
+<!--                <RelativeLayout-->
+<!--                        android:id="@+id/rlLaporanComplaintInternal"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/_100sdp"-->
+<!--                        android:layout_marginHorizontal="@dimen/_3sdp"-->
+<!--                        android:layout_marginTop="@dimen/_8sdp"-->
+<!--                        android:background="@drawable/bg_white_card"-->
+<!--                        android:elevation="@dimen/_8sdp">-->
+
+<!--                    <androidx.appcompat.widget.AppCompatEditText-->
+<!--                        android:id="@+id/et_laporanFromLeaderComplaintInternal"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="@null"-->
+<!--                        android:fontFamily="@font/poppinsregular"-->
+<!--                        android:gravity="top"-->
+<!--                        android:hint="Masukan laporan atau komentar"-->
+<!--                        android:inputType="text"-->
+<!--                        android:maxLength="200"-->
+<!--                        android:padding="@dimen/_6sdp"-->
+<!--                        android:textColor="@color/black2"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+<!--                        android:visibility="invisible"-->
+<!--                        app:counterEnabled="true"-->
+<!--                        app:counterMaxLength="200" />-->
+
+<!--                </RelativeLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/llStatusComplaintInternal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Status"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tvTimeStatusDoneComplaintInternal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:text="00:00"
+                            android:maxLength="5"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_11ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:drawableStart="@drawable/ic_status_default"
+                            android:drawablePadding="@dimen/_4sdp"
+                            tools:ignore="UseCompatTextViewDrawableXml" />
+
+                        <TextView
+                            android:id="@+id/tvStatusDoneComplaintInternal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:text="Sudah selesai dikerjakan, sedang menunggu ditutup"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_11ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:paddingStart="@dimen/_10sdp"/>
+
+                        <TextView
+                            android:id="@+id/tvTimeStatusCloseComplaintInternal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:text="00:00"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_11ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:drawableStart="@drawable/ic_status_aktive"
+                            android:drawablePadding="@dimen/_4sdp"
+                            tools:ignore="UseCompatTextViewDrawableXml" />
+
+                        <TextView
+                            android:id="@+id/tvStatusCloseComplaintInternal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:text="Komplain ditutup oleh pembuat komplain"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_11ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:paddingStart="@dimen/_10sdp"/>
+
+                    </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26sdp" />
+
+            </LinearLayout>
+<!--            button visitor-->
+
+
+            <!--                Button Proses-->
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/ll_buttonProcessComplaintInternal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/llDoneComplaintInternal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_buttonProcessComplaintInternal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_23sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:background="@drawable/bg_disable"
+                    android:elevation="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_4sdp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_processComplaintInternal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Proses Komplain"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26sdp" />
+
+            </LinearLayout>
+
+            <!--                Button Submit-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_buttonSubmitComplaintInternal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/llDoneComplaintInternal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_buttonSubmitComplaintInternal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_23sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:background="@drawable/bg_primary"
+                    android:elevation="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    app:layout_constraintTop_toBottomOf="@id/llDoneComplaintInternal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_submitComplaintInternal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Selesaikan Komplain"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26sdp" />
+
+            </LinearLayout>
+
+            <!--                Button Close-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_buttonCloseComplaintInternal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/llDoneComplaintInternal">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@color/grayLine"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_buttonCloseComplaintInternal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_23sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:background="@drawable/bg_primary"
+                    android:elevation="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_4sdp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_closeComplaintInternal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Tutup"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_buttonProcessComplaintVisitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/llDoneComplaintInternal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_buttonNotSubmitComplaintVisitor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_23sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:background="@drawable/bg_disable"
+                    android:elevation="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_4sdp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnDoneComplaintVisitor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Selesaikan Komplain"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rlbuttonSubmitComplaintVisitor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_23sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:background="@drawable/bg_primary"
+                    android:elevation="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnDoneSubmitComplaintVisitor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Selesaikan Komplain"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26sdp" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--    preview upload image-->
+
+    <LinearLayout
+        android:id="@+id/ll_result_upload_image_complaintInternal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/image_preview_card_process_complaintInternal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:layout_weight="1.5"
+            app:cardElevation="@dimen/_8sdp"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_gravity="center"
+                android:alpha="0.25"
+                android:src="@drawable/ic_code_scanner_auto_focus_on"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/iv_result_upload_complaintInternal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Foto"
+                android:textColor="@color/black"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_18ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Pastikan foto terlihat jelas"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_primary">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_upload_image_complaintInternal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

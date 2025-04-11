@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_permission_mid"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_8sdp"
+    android:layout_marginVertical="@dimen/_6sdp"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_4sdp"
+    android:paddingHorizontal="@dimen/_12sdp"
+    android:paddingVertical="@dimen/_8sdp">
+
+    <TextView
+        android:id="@+id/tv1ListMeetingInspeksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_4sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:background="@drawable/bg_shimmer"
+        android:text="Meeting"
+        android:textColor="@color/shimmer"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll1ItemListMeetingInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv1ListMeetingInspeksi">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:fontFamily="@font/poppinsregular"
+            android:background="@drawable/bg_shimmer"
+            android:textColor="@color/shimmer"
+            android:textSize="@dimen/_9ssp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="@color/shimmer"
+            android:textSize="@dimen/_9ssp"
+            android:background="@drawable/bg_shimmer"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2ItemListMeetingInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/ll1ItemListMeetingInspeksi">
+
+        <TextView
+            android:id="@+id/tvDateItemListMeetingInspeksi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Error date"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_11ssp"/>
+
+        <TextView
+            android:id="@+id/tvTimeItemListMeetingInspeksi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Error time"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_11ssp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv2ItemListMeetingInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Topik Diskusi"
+        android:textColor="@color/shimmer"
+        android:textSize="@dimen/_9ssp"
+        android:background="@drawable/bg_shimmer"
+        app:layout_constraintTop_toBottomOf="@id/ll2ItemListMeetingInspeksi"/>
+
+    <TextView
+        android:id="@+id/tvTopicItemListMeetingInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Error topic"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_11ssp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tv2ItemListMeetingInspeksi"/>
+
+    <TextView
+        android:id="@+id/tvLaporanItemListMeetingInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        android:background="@drawable/bg_shimmer"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Lihat Laporan"
+        android:textAlignment="center"
+        android:textColor="@color/shimmer"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvTopicItemListMeetingInspeksi"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

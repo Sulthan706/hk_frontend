@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:maxHeight="@dimen/_125sdp"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25">
+
+        <ImageView
+            android:id="@+id/iv_checkDAC"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_34sdp"
+            android:gravity="center"
+            android:src="@drawable/ic_baseline_circle"
+            android:tag="null" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.05" />
+
+    <LinearLayout
+        android:id="@+id/layout_item_attendance_daily"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.7"
+        android:background="@drawable/rounded_attendance_disabled_dac"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_8sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/tv_item_daily_attendance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppinsbold"
+                android:gravity="left"
+                android:maxLines="2"
+                android:text="Error"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                tools:text="Daily satu" />
+
+            <TextView
+                android:id="@+id/tv_time_item_daily_attendance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:fontFamily="@font/poppinsbold"
+                android:gravity="right"
+                android:text="Error"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                tools:text="07:00" />
+        </LinearLayout>
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandable_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_duration="300"
+            app:el_expanded="true"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/custom_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_1sdp"
+                    android:weightSum="2">
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="left|center_vertical"
+                        android:text="Object"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <TextView
+                        android:id="@+id/tv_exp_object"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="left"
+                        android:text=": error"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_1sdp"
+                    android:weightSum="2">
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="left|center_vertical"
+                        android:text="Mesin"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <TextView
+                        android:id="@+id/tv_exp_machine"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="left"
+                        android:text=": error"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_1sdp"
+                    android:weightSum="2">
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="left|center_vertical"
+                        android:text="Aksesoris"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <TextView
+                        android:id="@+id/tv_exp_accecories"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="left"
+                        android:text=": error"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_1sdp"
+                    android:weightSum="2">
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="left|center_vertical"
+                        android:text="Chemical"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <TextView
+                        android:id="@+id/tv_exp_chemical"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="left"
+                        android:text=": error"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_1sdp"
+                    android:weightSum="2">
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="left|center_vertical"
+                        android:text="Alat Kebersihan"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <TextView
+                        android:id="@+id/tv_exp_tools"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="left"
+                        android:text=": error"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp" />
+                </LinearLayout>
+            </LinearLayout>
+        </net.cachapa.expandablelayout.ExpandableLayout>
+    </LinearLayout>
+</LinearLayout>

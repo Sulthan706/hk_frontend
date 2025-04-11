@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="@dimen/_20sdp"
+    tools:context=".features.features_management.service.overtime.ui.fragment.OvertimeRequestManagementFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Fitur belum tersedia karena masih dalam pengembangan. Sementara, silakan lakukan proses secara manual terlebih dahulu."
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsregular"/>
+
+</FrameLayout>

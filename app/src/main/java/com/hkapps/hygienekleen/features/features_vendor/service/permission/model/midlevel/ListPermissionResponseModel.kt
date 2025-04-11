@@ -1,0 +1,32 @@
+package com.hkapps.hygienekleen.features.features_vendor.service.permission.model.midlevel
+
+class ListPermissionResponseModel(
+    val permissionId: Int,
+    val permissionEmployeeId: Int,
+    val employeeId: Int,
+    val employeeCode: String,
+    val employeeName: String,
+    val employeePhotoProfile: String,
+    val replaceByEmployeeId: Int,
+    val employeeReplaceCode: String,
+    val employeeReplaceName: String,
+    val employeeReplacePhotoProfile: String,
+    val approveByEmployeeId: Int,
+    val shiftId: Int,
+    val idDetailEmployeeProject: Int,
+    val projectId: String,
+    val statusPermission: String,
+    val title: String,
+    val description: String,
+    val plottingId: Int,
+    val atDate: String,
+    val startDate: String,
+    val endDate: String,
+    val shiftDescription: String,
+    val startAt: String,
+    val endAt: String,
+    val locationName: String,
+    val subLocationName: String,
+    val image: String,
+    val createdAt: String
+)

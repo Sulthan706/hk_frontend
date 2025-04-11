@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_trainer.myclass.ui.activity.DetailTrainingTrainerActivity">
+
+    <include
+        android:id="@+id/appbarDetailTrainingTrainer"
+        layout="@layout/app_bar_training" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appbarDetailTrainingTrainer"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvLevelDetailTrainingTrainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_2sdp"
+                android:text="BASIC"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp"
+                android:fontFamily="@font/poppinssemibold"
+                android:background="@drawable/bg_rounded_orange2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitleDetailTrainingTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:gravity="bottom"
+                android:text="Error Title Training"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/poppinsbold"
+                app:layout_constraintTop_toBottomOf="@id/tvLevelDetailTrainingTrainer" />
+
+            <TextView
+                android:id="@+id/tv1DetailTrainingTrainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:text="Tanggal"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleDetailTrainingTrainer"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDateDetailTrainingTrainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:gravity="end"
+                android:text="error"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleDetailTrainingTrainer"
+                app:layout_constraintStart_toEndOf="@id/tv1DetailTrainingTrainer" />
+
+            <TextView
+                android:id="@+id/tv2DetailTrainingTrainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:text="Jam"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toBottomOf="@id/tv1DetailTrainingTrainer"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTimeDetailTrainingTrainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:gravity="end"
+                android:text="error"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv1DetailTrainingTrainer"
+                app:layout_constraintStart_toEndOf="@id/tv2DetailTrainingTrainer" />
+
+            <View
+                android:id="@+id/view1DetailTrainingTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@color/background"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv2DetailTrainingTrainer" />
+
+            <TextView
+                android:id="@+id/tv3DetailTrainingTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Modul Training"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toBottomOf="@id/view1DetailTrainingTrainer" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view2DetailTrainingTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/bg_rounded_background"
+                app:layout_constraintTop_toBottomOf="@id/tv3DetailTrainingTrainer">
+
+                <TextView
+                    android:id="@+id/tvModuleDetailTrainingTrainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:text="Error title module"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintEnd_toStartOf="@id/btnReadDetailTrainingTrainer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/btnReadDetailTrainingTrainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:paddingVertical="@dimen/_3sdp"
+                    android:text="Baca"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:background="@drawable/bg_second_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view3DetailTrainingTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@color/background"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@id/view2DetailTrainingTrainer" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view4DetailTrainingTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:padding="@dimen/_12sdp"
+                android:background="@drawable/bg_rounded_background"
+                app:layout_constraintTop_toBottomOf="@id/view3DetailTrainingTrainer">
+
+                <TextView
+                    android:id="@+id/tvTrainingTypeDetailTrainingTrainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:text="ONSITE TRAINING"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:background="@drawable/bg_rounded_orange2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvProjectAppDetailTrainingTrainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:text="error"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_9ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvTrainingTypeDetailTrainingTrainer"
+                    app:layout_constraintStart_toEndOf="@id/tvTrainingTypeDetailTrainingTrainer" />
+
+                <TextView
+                    android:id="@+id/tvAddressDetailTrainingTrainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:text="error"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_9ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivCopyLinkDetailTrainingTrainer"
+                    app:layout_constraintTop_toBottomOf="@id/tvTrainingTypeDetailTrainingTrainer" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/ivCopyLinkDetailTrainingTrainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:src="@drawable/ic_copy_blue"
+                    app:layout_constraintTop_toBottomOf="@id/tvTrainingTypeDetailTrainingTrainer"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view5DetailTrainingTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@color/background"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@id/view4DetailTrainingTrainer" />
+
+            <TextView
+                android:id="@+id/tv4DetailTrainingTrainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:text="Training Untuk"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toBottomOf="@id/view5DetailTrainingTrainer"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvParticipantDetailTrainingTrainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:gravity="end"
+                android:text="error"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view5DetailTrainingTrainer"
+                app:layout_constraintStart_toEndOf="@id/tv4DetailTrainingTrainer" />
+
+            <TextView
+                android:id="@+id/tv5DetailTrainingTrainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:text="Dibuka Untuk"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toBottomOf="@id/tv4DetailTrainingTrainer"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProjectDetailTrainingTrainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:gravity="end"
+                android:text="error"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv4DetailTrainingTrainer"
+                app:layout_constraintStart_toEndOf="@id/tv5DetailTrainingTrainer" />
+
+            <TextView
+                android:id="@+id/tv6DetailTrainingTrainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:text="Kategori Kelas"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toBottomOf="@id/tv5DetailTrainingTrainer"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCategoryDetailTrainingTrainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:gravity="end"
+                android:text="error"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv5DetailTrainingTrainer"
+                app:layout_constraintStart_toEndOf="@id/tv6DetailTrainingTrainer" />
+
+            <TextView
+                android:id="@+id/tvInfoDetailTrainingTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="@string/info_private_class"
+                android:textColor="@color/blue5"
+                android:textSize="@dimen/_8ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toBottomOf="@id/tv6DetailTrainingTrainer"/>
+
+            <LinearLayout
+                android:id="@+id/view6DetailTrainingTrainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:weightSum="2"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/bg_rounded_blue10"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@id/btnInviteDetailTrainingTrainer"
+                app:layout_constraintTop_toBottomOf="@id/tvInfoDetailTrainingTrainer"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvParticipantsDetailTrainingTrainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kuota Peserta : "
+                        android:textColor="@color/secondary_color"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppinsregular" />
+
+                    <TextView
+                        android:id="@+id/tvCountParticipantDetailTrainingTrainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textColor="@color/secondary_color"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppinssemibold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llPublicDetailTrainingTrainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tersisa : "
+                        android:textColor="@color/red1"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppinsregular" />
+
+                    <TextView
+                        android:id="@+id/tvCountKuotaDetailTrainingTrainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textColor="@color/red1"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppinssemibold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnInviteDetailTrainingTrainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:padding="@dimen/_6sdp"
+                android:text="Invite"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinssemibold"
+                android:background="@drawable/bg_second_color"
+                app:layout_constraintTop_toBottomOf="@id/tvInfoDetailTrainingTrainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/view6DetailTrainingTrainer"/>
+
+            <View
+                android:id="@+id/view7DetailTrainingTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@color/background"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@id/view6DetailTrainingTrainer" />
+
+            <TextView
+                android:id="@+id/tv7DetailTrainingTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Aktivitas Kelas &amp; Penilaian"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppinsbold"
+                app:layout_constraintTop_toBottomOf="@id/view7DetailTrainingTrainer" />
+
+            <LinearLayout
+                android:id="@+id/view8DetailTrainingTrainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/bg_rounded_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@id/btnDoneDetailTrainingTrainer"
+                app:layout_constraintTop_toBottomOf="@id/tv7DetailTrainingTrainer"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status Kelas : "
+                    android:textColor="@color/secondary_color"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/poppinsregular" />
+
+                <TextView
+                    android:id="@+id/tvStatusClassDetailTrainingTrainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selesaikan untuk beri nilai"
+                    android:textColor="@color/red1"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/poppinssemibold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnDoneDetailTrainingTrainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:padding="@dimen/_6sdp"
+                android:text="Selesai"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinssemibold"
+                android:background="@drawable/bg_rounded_green2"
+                app:layout_constraintBottom_toBottomOf="@id/view8DetailTrainingTrainer"
+                app:layout_constraintTop_toBottomOf="@id/tv7DetailTrainingTrainer"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clAbsensiDetailTrainingTrainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/bg_second_color"
+                app:layout_constraintEnd_toStartOf="@id/clPenilaianDetailTrainingTrainer"
+                app:layout_constraintTop_toBottomOf="@id/view8DetailTrainingTrainer"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/tv8DetailTrainingTrainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Absensi"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvAttendanceDetailTrainingTrainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0/1 peserta"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintTop_toBottomOf="@id/tv8DetailTrainingTrainer"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPenilaianDetailTrainingTrainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/bg_rounded_orange"
+                app:layout_constraintStart_toEndOf="@id/clAbsensiDetailTrainingTrainer"
+                app:layout_constraintTop_toBottomOf="@id/view8DetailTrainingTrainer"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/tv9DetailTrainingTrainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Penilaian"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvScoringDetailTrainingTrainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0/1 peserta"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintTop_toBottomOf="@id/tv9DetailTrainingTrainer"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                app:layout_constraintTop_toBottomOf="@id/clAbsensiDetailTrainingTrainer"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

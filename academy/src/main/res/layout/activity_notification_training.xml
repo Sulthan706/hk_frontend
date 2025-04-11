@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_participants.homescreen.notification.ui.activity.NotificationTrainingActivity">
+
+    <include
+        android:id="@+id/appbarNotifTraining"
+        layout="@layout/app_bar_training" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvEmptyNotifTraining"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Tidak ada notifikasi"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/appbarNotifTraining"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/tvTerbaruNotifTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Terbaru"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/appbarNotifTraining" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:visibility="visible"
+        android:id="@+id/swipeNotifTraining"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTerbaruNotifTraining"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNotifTraining"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_notification_training" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

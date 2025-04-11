@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayLine">
+
+    <include
+        android:id="@+id/layout_appbar"
+        layout="@layout/app_bar_default" />
+
+    <!--    <com.github.sundeepk.compactcalendarview.CompactCalendarView-->
+    <!--        android:id="@+id/cal_view"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="@dimen/_220sdp"-->
+    <!--        android:layout_marginTop="@dimen/_5sdp"-->
+    <!--        app:compactCalendarBackgroundColor="@android:color/white"-->
+    <!--        app:compactCalendarCurrentDayBackgroundColor="@color/primary_color"-->
+    <!--        app:compactCalendarCurrentSelectedDayBackgroundColor="@color/white"-->
+    <!--        app:compactCalendarMultiEventIndicatorColor="@color/red"-->
+    <!--        app:compactCalendarTargetHeight="@dimen/_250sdp"-->
+    <!--        app:compactCalendarTextColor="@color/black"-->
+    <!--        app:compactCalendarTextSize="@dimen/_12ssp"-->
+    <!--        app:flow_wrapMode="none"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/layout_appbar" />-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cl_cal_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_appbar">
+
+        <DatePicker
+            android:id="@+id/cal_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:datePickerMode="calendar"
+            android:theme="@style/MyDatePickerDialogTheme" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_cal_view">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:background="@drawable/bottom_sheets_background"
+                android:paddingTop="@dimen/_15sdp"
+                android:id="@+id/rv_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                tools:listitem="@layout/item_schedule_calendar" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <Button
+            android:id="@+id/btn_date_schedule"
+            style="@style/Widget.App.TimeAttendanceEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Pilih Tanggal"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_color"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/flConnectionTimeout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_appbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

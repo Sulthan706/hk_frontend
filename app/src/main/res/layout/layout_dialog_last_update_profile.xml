@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_18sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_16sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/_20sdp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_las_edit_profile"/>
+
+            <TextView
+                android:id="@+id/tv_tittle_dialog_last_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/text_tittle_dialog_last_update"
+                android:textAlignment="center"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/secondary_color"
+                android:fontFamily="@font/poppinssemibold"/>
+
+            <TextView
+                android:id="@+id/tv_desc_dialog_last_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_dialog_last_update_profile"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:text="Ya, Sudah Lengkap"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppinsmedium"
+                android:background="@drawable/bg_secondary"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_update_profile"
+                android:layout_width="wrap_content"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingStart="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_outlined_blue"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_update_data"
+                android:textAllCaps="false"
+                android:textColor="@color/blue4"
+                android:textSize="@dimen/_10ssp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

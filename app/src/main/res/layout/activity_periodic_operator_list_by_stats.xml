@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.monthlyworkreport.ui.activity.operator.PeriodicOperatorListByStatsActivity">
+
+    <include
+        android:id="@+id/appbarListRkb"
+        layout="@layout/app_bar_default"/>
+    <TextView
+        android:id="@+id/tvDateListRkb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="date"
+        android:paddingVertical="15dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/white"
+        android:background="#FF954D"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/appbarListRkb"/>
+    <LinearLayout
+        android:id="@+id/llEmptyListByStatusRkb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="164dp"
+            android:src="@drawable/ic_empty_rkb"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tidak ada daftar pekerjaan"
+            android:fontFamily="@font/poppinsregular"
+            android:textAlignment="center"
+            android:layout_marginTop="17dp"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rvListStatusRkb"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateListRkb"
+        tools:listitem="@layout/item_monthly_workreport_card"
+        />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabscrolltotop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_chevron_top_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:fab_colorNormal="@color/primary_color"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

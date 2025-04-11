@@ -1,0 +1,31 @@
+package com.hkapps.hygienekleen.features.features_vendor.service.permission.model.lowlevel
+
+class ListHistoryPermission(
+    val permissionEmployeeId: Int,
+    val employeeId: Int,
+    val employeeCode: String,
+    val employeeName: String,
+    val employeePhotoProfile: String,
+    val image: String,
+    val replaceByEmployeeId: Int,
+    val employeeReplaceCode: String,
+    val employeeReplaceName: String,
+    val employeeReplacePhotoProfile: String,
+    val approveByEmployeeId: Int,
+    val idDetailEmployeeProject: Int,
+    val projectId: String,
+    val statusPermission: String,
+    val title: String,
+    val description: String,
+    val plottingId: Int,
+    val atDate: String,
+    val shiftId: Int,
+    val shiftDescription: String,
+    val startAt: String,
+    val endAt: String,
+    val locationName: String,
+    val subLocationName: String,
+    val startDate: String,
+    val endDate: String,
+    val createdAt: String
+)

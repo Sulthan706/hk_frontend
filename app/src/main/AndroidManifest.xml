@@ -1,0 +1,1336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <meta-data android:name="isMonitoringTool" android:value="enterprise_management" />
+    <application
+        android:name=".app.CarefastOperationApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CarefastOperation">
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.humanCapital.ui.activity.ProfileEmployeeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.humanCapital.ui.activity.SearchHumanCapitalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.humanCapital.ui.activity.ListHumanCapitalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.humanCapital.ui.activity.BranchesHumanCapitalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.project.ui.activity.ProjectsNewManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.project.ui.activity.BranchesProjectManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOSM.ui.activity.ResultFacePhotoManagementInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOSM.ui.activity.AttendanceOutManagementLivenessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOSM.ui.activity.AttendanceInManagementLivenessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.AttendanceMidGeoLocationLivenessOutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.lowlevel.new_.AttendanceLowGeoLocationLivenessOutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.AttendanceMidGeoLocationLivenessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.lowlevel.new_.AttendanceLowGeoLocationLivenessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.facerecog.ui._new.ResultFacePhotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.facerecog.ui._new.ConfirmFacePhotoManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.facerecog.ui._new.ConfirmFacePhotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.facerecog.ui._new.LivenessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.schedule.ui.activity.UnplannedScheduleManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.schedule.ui.activity.ProjectsScheduleManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.schedule.ui.activity.CreateScheduleManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.visitReport.ui.activity.DailyVisitManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.visitReport.ui.activity.UnplannedVisitsManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.visitReport.ui.activity.PlannedVisitsManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.visitReport.ui.activity.VisitReportManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.closing.ui.activity.HistoryClosingManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.AbsenOperationalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOSM.ui.activity.ExtendVisitDurationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.home.ui.activity.TurnOverClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.grafik.ui.TurnOverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.closing.ui.activity.FormDiversionManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.MRManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.damagereport.ui.activity.ListMachineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.home.ui.activity.ListMachineClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.home.ui.activity.MRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.home.ui.activity.GrafikClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.MRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.damagereport.ui.activity.ListBakMachineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.closing.ui.activity.ClosingManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.closing.ui.activity.ListClosingProjectManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.closing.ui.activity.ApprovalWorkManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.closing.ui.activity.DiversionManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.closing.ui.activity.ClosingAreaManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.closing.ui.activity.DailyClosingManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.grafik.ui.GrafikActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.closing.ui.ApprovalWorkClosingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.closing.ui.ChooseClientClosingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.closing.ui.ClosingSpvActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.closing.ui.ListPendingClosingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.closing.ui.FormDiversionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.closing.ui.HistoryClosingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.closing.ui.DiversionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.closing.ui.ClosingAreaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.reportHighMngmnt.ui.activity.AttendanceReportHighActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.weeklyprogress.ui.activity.ProjectWeeklyProgressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.weeklyprogress.ui.activity.OverviewImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.weeklyprogress.ui.activity.DetailWeeklyProgressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.weeklyprogress.ui.activity.ListWeeklyProgressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.weeklyprogress.ui.activity.FormWeeklyProgressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.weeklyprogress.ui.activity.WeeklyProgressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.operational.ui.activity.newoperational.ListEmployeeOperationalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.operational.ui.activity.newoperational.ListManagementOperationalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.PdfViewSalaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.rutin.ui.activity.ProjectsRoutineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.rutin.ui.activity.DetailRoutineReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.rutin.ui.activity.ListRoutineVisitedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.rutin.ui.activity.SendRoutineReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.rutin.ui.activity.FormRoutineReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.fragment.webViewManagment.TurnOverWebViewManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.schedule.ui.activity.ScheduleManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homeScreenUpdated.schedule.ui.activity.ChangeScheduleManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.updateprofilemngmnt.ChangePassManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.service.resign.ui.activity.ResignReasonDecActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.service.resign.ui.activity.ResignReasonAccActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.resign.ui.activity.FormReqResignVendorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.resign.ui.activity.ListReqResignVendorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.damagereport.ui.activity.ViewPagerBakManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.complaint.ui.activity.DashboardCtalkClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.complaint.ui.activity.visitor.DashboardComplaintVisitorClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.damagereport.ui.activity.UploadBakManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.damagereport.ui.activity.DetailDamageReportVendorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.damagereport.ui.activity.ListDamageReportVendorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.damagereport.ui.activity.DetailDamageReportManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.damagereport.ui.activity.ListDamageReportManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.complaint.ui.activity.visitor.ListComplaintVisitorClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.complaint_internal.ui.activity.CameraVisitorObjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.complaint.ui.activity.DashboardComplaintManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.complaint.ui.new_.activity.DashboardComplaintVendorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.ZoomNewsVendorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.ZoomNewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.report.ui.activity.DetailLateReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.report.ui.activity.DetailAttendanceReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.monthlyworkreport.ui.activity.operator.PeriodicOperatorDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.monthlyworkreport.ui.activity.operator.PeriodicOperatorListByStatsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.monthlyworkreport.ui.activity.operator.PeriodicOperatorCalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.monthlyworkreport.ui.activity.operator.PeriodicOperatorHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.DetailNewsManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.HomeNewsManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.shareloc.ui.activity.HistoryManagementLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.monthlyworkreportclient.ui.activity.ListByStatusRkbClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.monthlyworkreportclient.ui.activity.DetailClientRkbActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.monthlyworkreportclient.ui.activity.MainViewPagerRkbActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.shareloc.ui.activity.DetailAllManagamentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.shareloc.ui.activity.bod.DetailManagementLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.shareloc.ui.activity.bod.ListManagementLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.shareloc.ui.activity.ShareLocManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.shareloc.ui.activity.bod.MainListShareLocManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.monthlyworkreport.ui.activity.PeriodicVendorResultImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.monthlyworkreportmanagement.ui.activity.PeriodicManagementByStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.monthlyworkreportmanagement.ui.activity.PeriodicManagementDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.monthlyworkreportmanagement.ui.activity.PeriodicManagementCalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.monthlyworkreportmanagement.ui.activity.PeriodicManagementMonitorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.monthlyworkreportmanagement.ui.activity.PeriodicManagementHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.facerecog.ui.CamFaceRecogManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.facerecog.ui.RegisterFaceRecogManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.facerecog.ui.StatsVerifyManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.monthlyworkreport.ui.activity.PeriodicVendorListByStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.monthlyworkreport.ui.activity.PeriodicVendorDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.monthlyworkreport.ui.activity.PeriodicVendorCalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.monthlyworkreport.ui.activity.PeriodicVendorHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.service.overtime.ui.activity.CreateOvertimeChangeManagementsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.facerecog.ui.StatsVerifyRecogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.facerecog.ui.CamFaceRecogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.facerecog.ui.RegisterFaceRecogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.approval.ui.activity.HistoryApprovalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.approval.ui.activity.ApprovalLeaderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.lowlevel.new_.UserFlyingReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.updateprofilemngmnt.UploadBpjsJamsosMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.updateprofilemngmnt.UpdateJamsostekManagamentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.updateprofilemngmnt.UpdateBpjsManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.UploadDocumentBpjsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.UpdateBpjsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.UpdateJamsostekActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.scanbarcode.ScanBarcodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.report.ui.activity.ListBranchMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.report.ui.activity.ReportRecapTotalDailyCtalkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.report.ui.activity.ReportDailyAbsentCtalkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.report.ui.activity.ReportCtalkResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.report.ui.activity.ReportCtalkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.report.ui.activity.ReportRecapTotalDailyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.report.ui.activity.ReportDetailProjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.report.ui.activity.ReportCftalkResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.report.ui.activity.DetailComplaintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.report.ui.activity.ReportCfTalkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.updateprofilemngmnt.ChangeVaccineManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.updateprofilemngmnt.UploadVaccineManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.updateprofilemngmnt.OpenDocumentManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.updateprofilemngmnt.UploadDocumentManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.updateprofilemngmnt.ListVaccineManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.updateprofilemngmnt.UpdateDocumentManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.updateprofilemngmnt.UpdateNumAccountManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.updateprofilemngmnt.UpdateNumberFamilyManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.OpenDocumentUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.ChangeCertificateVaksinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.UploadCertiVaccineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.ListCertificateVaksinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.UploadDocumentPhotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.DetailNewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.HomeNewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.ChangeDocumentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.UpdateFamilyNumbActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.UpdateBankAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.mekari.ui.activity.RegisterMekariActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.audit.ui.activity.DetailsKondisiAreaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.audit.ui.activity.ListQuestionAuditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.audit.ui.activity.ListQualityAuditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.audit.ui.activity.FormAuditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.audit.ui.activity.ProjectsAuditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.audit.ui.activity.ListLaporanAuditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.meeting.activity.ProjectsMeetingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.meeting.activity.ChooseClientMeetingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.meeting.activity.SendLaporanMeetingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.visitreport.ui.activity.HistoryVisitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.visitreport.ui.activity.LaporanMeetingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.visitreport.ui.activity.LaporanAuditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.visitreport.ui.activity.MainVisitReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.training.ui.activity.detailpencapaiantraining.DetailSertifikatTrainingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.training.ui.activity.detailpencapaiantraining.DetailOnsiteTrainingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.training.ui.activity.detailpencapaiantraining.DetailOnlineTrainingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.training.ui.activity.DetailListPencapaianTrainingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.training.ui.activity.SearchListPencapaianTrainingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.training.ui.activity.ListPencapaianTrainingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.training.ui.activity.AgendaTrainingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.training.ui.activity.TrainingClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.report.ui.new_.activity.ReportAbsensiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.report.ui.new_.activity.DetailKondisiAreaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.report.ui.new_.activity.KondisiAreaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.report.ui.new_.activity.ReportCalenderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.report.ui.new_.activity.ReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.activity.ListKontrolAreaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.meeting.activity.DetailMeetingInspeksiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.meeting.activity.ListMeetingInspeksiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.meeting.activity.FormLaporanMeetingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.audit.ui.activity.LaporanKondisiAreaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.activity.PenilaianManpowerInspeksiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.activity.FormKontrolAreaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.activity.DashboardInspeksiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.activity.InspeksiMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.myteam.ui.new_.activity.MyTeamAttendanceHistoryDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.myteam.ui.new_.activity.MyTeamClientEmployeeDetail"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.myteam.ui.new_.activity.MyTeamClientScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.myteam.ui.new_.activity.MyTeamClientHistoryAttendanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.myteam.ui.new_.activity.MyTeamClientsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.dashboardProject.ui.activity.HistoryAttendanceProjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.dashboardProject.ui.activity.CalendarTeamAreaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.dashboardProject.ui.activity.TeamAreaProjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.dashboardProject.ui.activity.DashboardProjectClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.notifcation.ui.new_.activity.NotifMidActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.myteam.ui.new_.activity.MyTeamClientsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.service.overtime.ui.activity.CreateOvertimeChangeManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.service.overtime.ui.activity.OvertimeManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.overtime.ui.teamleader.activity.CreateOvertimeChangeMidActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.service.permission.ui.activity.DetailHistoryPermissionManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.service.permission.ui.activity.DetailPermissionManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.service.permission.ui.activity.CreatePermissionManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.service.permission.ui.activity.HistoryPermissionManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.service.permission.ui.activity.PermissionsApprovalManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.PersonHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.FabSearchAttendanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.HistoryAttendanceDetailPerson"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.FabHistoryAttendancePersonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.FabHistoryAttendanceTeamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.AlreadyAbsentOperatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.permission.ui.activity.midlevel.DetailHistoryPermissionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.visitTracking.ui.activity.DetailVisitManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.visitTracking.ui.activity.VisitHistoryManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.visitTracking.ui.activity.VisitTrackingManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOSM.ui.activity.AttendanceOutManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOSM.ui.activity.AttendanceInManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOSM.ui.activity.SearchProjectAttendanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOSM.ui.activity.AttendanceGeoManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.EditProfileManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.cftalk.ui.activity.SearchProjectCftalkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.cftalk.ui.activity.ProjectsCftalkManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.cftalk.ui.activity.CreateCftalkProjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.cftalk.ui.activity.CftalksByProjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.cftalk.ui.activity.CftalkManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.complaint.ui.activity.CreateComplaintManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.operational.ui.activity.ListOperationalProfileProjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.project.ui.activity.ListClientProjectManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.operational.ui.activity.SearchManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.operational.ui.activity.SearchOperationalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOpr.ui.activity.DacAbsentOprMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.operational.ui.activity.HistoryAttendanceOperationalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.bodClient.HomeBodClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.operational.ui.activity.MyTeamManagementProfileMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOpr.ui.activity.DetailAbsentByStatusOprMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.project.ui.activity.DetailAttendanceProjectMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.myteam.ui.activity.ListMangementMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.myteam.ui.activity.ListOperationalMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.project.ui.activity.ProfileProjectManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOpr.ui.activity.SearchProjectAbsentOprMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOpr.ui.activity.DetailAbsentOprMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOpr.ui.activity.FilterAbsentOprMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOpr.ui.activity.ListCountAbsentOprMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOpr.ui.activity.ListProjectAbsentOprMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.attendanceOpr.ui.activity.ListBranchAbsentOprMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.operational.ui.activity.ProjectManagementOperationalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.operational.ui.activity.MyTeamManagementOperationalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.operational.ui.activity.ProfileManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.operational.ui.activity.ProfileOperationalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.operational.ui.activity.ListOperationalManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.project.ui.activity.ListAllProjectManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.project.ui.activity.ListBranchProjectManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.project.ui.activity.SearchProjectManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.complaint_internal.ui.activity.CreateComplaintInternalVendorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.myteam.ui.activity.SearchProjectMyTeamMgmntActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.myteam.ui.activity.ListBranchMyTeamMgmnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.complaint_internal.ui.activity.DetailComplaintInternalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.complaint_internal.ui.activity.ListComplaintInternalVendorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.report.ui.old.activity.DetailAreaReportClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.report.ui.old.activity.ListAreaReportClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.report.ui.old.activity.ListShiftReportClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.new_.activity.SearchOperatorChecklistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.new_.activity.SearchAreaChecklistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.new_.activity.DetailOperatorChecklistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.new_.activity.DetailAreaChecklistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.new_.activity.ListAreaOperationalChecklist"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.new_.activity.ListShiftChecklistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.myteam.ui.old.MyTeamClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.complaint.ui.activity.SearchProjectComplaintManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.complaint.ui.new_.activity.ListComplaintVendorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.complaint.ui.activity.ListBranchComplaintManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.complaint.ui.activity.DetailComplaintManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.complaint.ui.activity.ListComplaintManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.complaint.ui.activity.ListProjectComplaintManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.setting.ui.activity.ImagePickerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_client.setting.ui.activity.ChangePassClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.setting.ui.activity.EditProfileClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.setting.ui.activity.SettingClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.myteam.ui.activity.MyTeamManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.myteam.ui.activity.ListProjectManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.ListProjectManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.overtime.ui.teamleader.activity.DetailOvertimeChangeTlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.overtime.ui.teamleader.activity.HistoryOvertimeChangeTlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.overtime.ui.activity.DetailOvertimeRequestClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.overtime.ui.activity.HistoryOvertimeReqClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.overtime.ui.activity.DetailOvertimeChangeClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.overtime.ui.activity.OvertimeClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.HomeManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.changeSchedule.ui.teamlead.activity.DetailChangeScheduleTlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.changeSchedule.ui.teamlead.activity.ChangeScheduleTeamleadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.myteam.ui.chiefspv.activity.MyteamChiefActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.changeSchedule.ui.operator.activity.ChangeScheduleOperatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.NotAbsentOperatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.permission.ui.activity.lowlevel.HistoryPermissionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.permission.ui.activity.midlevel.HistoryPermissionMidActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.permission.ui.activity.lowlevel.CreatePermissionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.permission.ui.activity.lowlevel.CreatePermissionFixActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.permission.ui.activity.midlevel.CreatePermissionMidActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.permission.ui.activity.midlevel.CreatePermissionMidFixActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.dac.ui.activity.DacList"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.schedule.ui.CoordinatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.notifcation.ui.activity.NotifClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.notifcation.ui.old.activity.NotifVendorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.notifcation.ui.old.activity.NotifVendorMidLevelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.HomeVendorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.schedule.ui.activity.lowlevel.ScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.schedule.ui.activity.midlevel.ScheduleMidActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.permission.ui.activity.midlevel.ListPermission"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.permission.ui.activity.midlevel.DetailPermissionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.complaint.ui.activity.HistoryComplaintClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.complaint.ui.activity.DetailHistoryComplaintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.complaint.ui.activity.ComplaintActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" /> <!-- client -->
+        <activity
+            android:name=".features.features_vendor.service.complaint.ui.old.activity.HistoryComplaintActivity"
+            android:exported="false" /> <!-- vendor -->
+        <activity
+            android:name=".features.features_vendor.service.complaint.ui.old.activity.DetailHistoryComplaintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.complaint.ui.old.activity.ComplaintActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" /> <!-- client -->
+        <activity
+            android:name=".features.features_vendor.notifcation.ui.old.activity.ComplaintNotificationActivity"
+            android:exported="false" /> <!-- vendor -->
+        <activity
+            android:name=".features.features_vendor.notifcation.ui.old.activity.NotificationTeamleadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.overtime.ui.teamleader.activity.OvertimeTeamleadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.overtime.ui.operator.activity.DetailOvertimeRequestOprActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.overtime.ui.operator.activity.DetailOvertimeChangeOprActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.service.overtime.ui.operator.activity.OvertimeOperatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_client.home.ui.activity.HomeClientActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.lowlevel.new_.AttendanceLowGeoLocationPhotoOut"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.AttendanceMidGeoLocationOSMNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.AttendanceMidGeoLocationPhoto"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.AttendanceMidGeoLocationPhotoOut"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.AttendanceMidGeoLocationOSMOneSch"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.old.spv.activity.ChecklistFilterSpvActivity"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name=".features.features_vendor.homescreen.checklist.ui.old.teamlead.activity.ChecklistFilterTlActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".features.features_vendor.profile.ui.activity.ChangePass"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.profile.ui.activity.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.old.teamlead.activity.DetailStaffTlActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.old.teamlead.activity.ChecklistTeamleadActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.myteam.ui.teamlead.activity.SearchStaffMyteamTlActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.lowlevel.old.AttendanceFixLowLevelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.profile.ui.activity.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_management.homescreen.home.ui.activity.SettingsManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.dac.ui.activity.DacActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.dac.ui.activity.DacNewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.auth.register.ui.activity.DaftarPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.auth.register.ui.activity.VerfikasiDaftarActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.auth.register.ui.activity.DaftarEmailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.auth.register.ui.activity.DaftarNucNikActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.auth.forgotpass.ui.activity.ForgotPassChangePass"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.auth.forgotpass.ui.activity.ForgotPassOTP"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_old.ui.activity.AttendanceHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_old.ui.activity.TestCamera"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_old.ui.activity.QRCodeGenerator"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_old.ui.activity.AttendanceChooseStaffCheckInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_old.ui.activity.AttendanceChooseStaffCheckOutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_old.ui.activity.AttendanceDailyCheckOutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_old.ui.activity.AttendanceDailyCheckInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.myteam.ui.spv.activity.ListOperatorTeamleadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.myteam.ui.spv.activity.MyteamSpvActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.myteam.ui.teamlead.activity.MyteamTeamleadActivity"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name=".features.features_vendor.homescreen.checklist.ui.activity.PenilaianByTeamLeadActivity" -->
+        <!-- android:exported="false" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_old.ui.activity.AttendanceDailyActAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_old.ui.activity.AttendanceChooseStaffActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.old.teamlead.activity.ListStaffTlActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.old.teamlead.activity.PenilaianKondisiObjectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_old.ui.activity.highLevel.AttendanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_old.ui.activity.lowLevel.AttendanceLowLevelActivity"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name=".features.features_vendor.homescreen.checklist.ui.activity.KonfirmasiChecklistActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <!-- <activity -->
+        <!-- android:name=".features.features_vendor.homescreen.checklist.ui.activity.PenilaianStaffActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.old.spv.activity.ChecklistSearchSpvActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.old.activity.SearchListProject"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.old.activity.ListProjectPro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.old.activity.ListProjectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.old.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.auth.login.ui.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.auth.forgotpass.ui.activity.ForgotPassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.splash.ui.activity.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- from deeplink -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="careops" />
+                <data android:host="carefast_operation" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.lowlevel.new_.AttendanceLowGeoLocationPhoto"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.QRCodeGenerator"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.lowlevel.old.AttendanceFixLowDailyCheckOutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.AttendanceFixHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.lowlevel.old.AttendanceFixLowDailyCheckInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.lowlevel.new_.AttendanceLowGeoLocation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.old.AttendanceMidGeoLocationOSM"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.old.AttendanceFixMidActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.old.AttendanceFixMidDailyCheckInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.old.AttendanceFixMidDailyCheckOutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.profile.ui.activity.ImagePickerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.attendance_fix.ui.activity.lowlevel.new_.AttendanceLowGeoLocationOSM"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".features.features_vendor.homescreen.checklist.ui.old.spv.activity.DetailStaffSpvActivity" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.old.spv.activity.ChecklistSpvActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.old.teamlead.activity.ChecklistFilterTlActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".features.features_vendor.homescreen.checklist.ui.old.teamlead.activity.ChecklistSearchTlActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="" />
+
+        <meta-data android:name="isMonitoringTool" android:value="enterprise_management" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver
+            android:name=".utils.NetworkChangeReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver> <!-- uCrop cropping activity -->
+        <service
+            android:name=".features.pushnotification.MyFirebaseService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".features.services.CheckGpsService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".utils.InternetCheckService"
+            android:exported="false" />
+    </application>
+
+    <queries>
+
+        <!-- Specify the packages your app needs to query information about -->
+        <!-- because uses permission queryallpackage is restricted by google -->
+        <package android:name="com.mekari.flex.dev" />
+        <package android:name="com.mekari.flex" />
+        <package android:name="com.lexa.fakegps" />
+        <package android:name="com.blogspot.newapphorizons.fakegps" />
+        <package android:name="com.just4funtools.fakegpslocationprofessional" />
+        <package android:name="com.gsmartstudio.fakegps" />
+        <!-- Add more packages if needed -->
+    </queries>
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+</manifest>

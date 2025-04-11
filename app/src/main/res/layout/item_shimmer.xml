@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_item_attendance_choose_staff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/_1sdp"
+    android:padding="@dimen/_7sdp">
+
+    <ImageView
+        android:id="@+id/img_not_attendance"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/bg_shimmer" />
+
+    <ImageView
+        android:src="@drawable/bg_shimmer_cardview"
+        android:id="@+id/ll_staff_not_attendance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_7sdp"/>
+
+</LinearLayout>

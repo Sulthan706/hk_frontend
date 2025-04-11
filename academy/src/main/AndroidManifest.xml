@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application android:usesCleartextTraffic="true">
+        <activity
+            android:name=".features.features_trainer.myclass.ui.activity.ReadModuleActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_trainer.myclass.ui.activity.ParticipantsDetailTrainingActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_trainer.myclass.ui.activity.TrainingScoreParticipantsActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_trainer.myclass.ui.activity.QrAttendanceTrainingActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_trainer.myclass.ui.activity.AttendanceParticipantTrainingActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_trainer.myclass.ui.activity.DetailTrainingTrainerActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_trainer.myclass.ui.activity.SelectInviteParticipantActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_trainer.myclass.ui.activity.SearchParticipantActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_trainer.myclass.ui.activity.ProjectPositionInviteActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_trainer.myclass.ui.activity.InviteParticipantTrainingActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_trainer.myclass.ui.activity.FinishedCreateClassActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_trainer.myclass.ui.activity.SummaryCreateClassActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_trainer.myclass.ui.activity.CreateClassActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_trainer.homescreen.home.ui.activity.HomeTrainerActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_participants.classes.ui.activity.SearchClassesActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_participants.classes.ui.activity.ClassesParticipantActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_participants.homescreen.notification.ui.activity.NotificationTrainingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_notification_training"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_participants.homescreen.home.ui.activity.HomeTrainingActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.features_participants.training.ui.activity.HistoryTrainingScheduleActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <activity
+            android:name=".features.authentication.splashscreen.IntroTrainingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.CarefastAcademy" />
+        <meta-data android:name="isMonitoringTool" android:value="child_monitoring" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

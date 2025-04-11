@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.inspeksi.audit.ui.activity.ListQualityAuditActivity">
+
+    <include
+        android:id="@+id/appbarListQualityAudit"
+        layout="@layout/app_bar_default"/>
+
+    <TextView
+        android:id="@+id/tv1ListQualityAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Audit Kualitas"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintTop_toBottomOf="@id/appbarListQualityAudit"/>
+
+    <TextView
+        android:id="@+id/tv2ListQualityAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Isi form dengan cara klik pada komponen yang akan dinilai berikut."
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_8ssp"
+        android:textStyle="italic"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/tv1ListQualityAudit"/>
+
+    <TextView
+        android:id="@+id/tvManpowerListQualityAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="Manpower"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:background="@drawable/bg_field"
+        android:drawableStart="@drawable/ic_manpower_grey"
+        android:drawablePadding="@dimen/_4sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv2ListQualityAudit"
+        tools:ignore="UseCompatTextViewDrawableXml" />
+
+    <TextView
+        android:id="@+id/tvOrganizationListQualityAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="Organisasi"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:background="@drawable/bg_field"
+        android:drawableStart="@drawable/ic_organization_grey"
+        android:drawablePadding="@dimen/_4sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvManpowerListQualityAudit"
+        tools:ignore="UseCompatTextViewDrawableXml" />
+
+    <TextView
+        android:id="@+id/tvManagementProjectListQualityAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="Manajemen Project"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:background="@drawable/bg_field"
+        android:drawableStart="@drawable/ic_management_project_grey"
+        android:drawablePadding="@dimen/_4sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvOrganizationListQualityAudit"
+        tools:ignore="UseCompatTextViewDrawableXml" />
+
+    <TextView
+        android:id="@+id/tvMaterialStockListQualityAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="Material &amp; Stock"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:background="@drawable/bg_field"
+        android:drawableStart="@drawable/ic_material_stock_grey"
+        android:drawablePadding="@dimen/_4sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvManagementProjectListQualityAudit"
+        tools:ignore="UseCompatTextViewDrawableXml" />
+
+    <TextView
+        android:id="@+id/tvAdministrationListQualityAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="Administrasi"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:background="@drawable/bg_field"
+        android:drawableStart="@drawable/ic_administration_grey"
+        android:drawablePadding="@dimen/_4sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvMaterialStockListQualityAudit"
+        tools:ignore="UseCompatTextViewDrawableXml" />
+
+    <TextView
+        android:id="@+id/tvWorkResultListQualityAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="Hasil Kerja"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:background="@drawable/bg_field"
+        android:drawableStart="@drawable/ic_work_result_grey"
+        android:drawablePadding="@dimen/_4sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvAdministrationListQualityAudit"
+        tools:ignore="UseCompatTextViewDrawableXml" />
+
+    <TextView
+        android:id="@+id/tv3ListQualityAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Audit Kualitas"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintTop_toBottomOf="@id/tvWorkResultListQualityAudit"/>
+
+    <TextView
+        android:id="@+id/tvAuditResultListQualityAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="Pilih hasil audit"
+        android:textColor="@color/grayLine"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:background="@drawable/bg_field"
+        android:drawableEnd="@drawable/ic_next_grey_2"
+        android:drawablePadding="@dimen/_4sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv3ListQualityAudit"
+        tools:ignore="UseCompatTextViewDrawableXml" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitDisableListQualityAudit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_margin="@dimen/_22sdp"
+        android:background="@drawable/bg_disable"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Simpan"
+        android:visibility="visible"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvAuditResultListQualityAudit" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitEnableListQualityAudit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_margin="@dimen/_22sdp"
+        android:background="@drawable/bg_secondary"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Simpan"
+        android:visibility="invisible"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvAuditResultListQualityAudit"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

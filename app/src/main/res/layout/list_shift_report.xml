@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_12sdp"
+    android:paddingVertical="@dimen/_8sdp"
+    android:orientation="vertical"
+    android:elevation="@dimen/_4sdp"
+    android:layout_margin="@dimen/_6sdp"
+    android:background="@drawable/bg_white_card">
+
+    <TextView
+        android:id="@+id/tv_shiftListShiftReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Error Shift"
+        android:textColor="@color/neutral100"
+        android:textSize="@dimen/_14ssp" />
+
+    <TextView
+        android:id="@+id/tv_timeListShiftReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="00:00 - 00:00"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/grayTxt"
+        android:fontFamily="@font/poppinssemibold"/>
+
+</LinearLayout>

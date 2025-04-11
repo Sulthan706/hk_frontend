@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.home.ui.old.fragment.HomeFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayoutHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_home_new"
+            android:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerLayoutHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="25dp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <include
+                        layout="@layout/shimmer_placeholder_home_new"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="@string/home_app_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/h3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_home_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <ImageView
+                        android:id="@+id/iv_fotoUserHome"
+                        android:layout_width="@dimen/_75sdp"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/foto1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_userNameHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="134dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="25dp"
+                        android:autoSizeTextType="uniform"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"
+                        android:maxLines="1"
+                        android:text="@string/user_name"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_nucHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="134dp"
+                        android:layout_marginEnd="25dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:maxLines="1"
+                        android:text="@string/user_nuc"
+                        android:textColor="@color/white"
+                        android:textSize=                                                                                                                                                                           "@dimen/_14ssp"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_userNameHome" />
+
+                    <TextView
+                        android:id="@+id/tv_userJobHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="134dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="25dp"
+                        android:autoSizeTextType="uniform"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"
+                        android:maxLines="1"
+                        android:text="@string/user_job"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nucHome" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerLayoutHomeProjectStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/bg_white_card"
+                    android:elevation="10dp"
+                    android:padding="@dimen/_8sdp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_home_profile">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_shimmer" />
+
+                            <Space
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:background="@drawable/bg_shimmer" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_marginTop="50dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:background="@drawable/bg_shimmer" />
+
+                            <Space
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.7" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:background="@drawable/bg_shimmer" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/bg_white_card"
+                    android:elevation="10dp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_home_profile">
+
+                    <LinearLayout
+                        android:id="@+id/ll_projectHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/poppinsregular"
+                            android:gravity="left"
+                            android:text="Project :"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_14ssp" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_pilihProject"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tv_projectHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/bg_field"
+                                android:fontFamily="@font/poppinsregular"
+                                android:paddingHorizontal="10dp"
+                                android:text="@string/pilih_project"
+                                android:textColor="@color/neutral100"
+                                android:textSize="@dimen/_12ssp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tv_projectUserHome"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:autoSizeMinTextSize="@dimen/_16ssp"
+                                android:fontFamily="@font/poppinsregular"
+                                android:text="@string/user_project"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/neutral100"
+                                android:textSize="@dimen/_14ssp"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Status :"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_14ssp" />
+
+                        <TextView
+                            android:id="@+id/tv_statusHome"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Error"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_14ssp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_infoHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:maxLines="2"
+                        android:text="@string/home_info_bertugas"
+                        android:textColor="@color/information"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_menuHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_30sdp"
+                    android:layout_marginTop="25dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+                    <!--        absen & izin -->
+                    <RelativeLayout
+                        android:id="@+id/rl_absenIzinMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_absen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_absenHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_absen" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppinsregular"
+                                android:maxLines="1"
+                                android:text="Absen"
+                                android:textColor="@color/neutral100"
+                                android:textSize="@dimen/_11ssp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_izin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_toEndOf="@id/ll_absen"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_izinHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_izin" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppinsregular"
+                                android:maxLines="1"
+                                android:text="Lihat DAC"
+                                android:textColor="@color/neutral100"
+                                android:textSize="@dimen/_11ssp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <!--        timku & checklist -->
+                    <RelativeLayout
+                        android:id="@+id/rl_timkuChecklistMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_toEndOf="@id/rl_absenIzinMenu"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_timKuHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_timku" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppinsregular"
+                                android:maxLines="1"
+                                android:text="Tim Ku"
+                                android:textColor="@color/neutral100"
+                                android:textSize="@dimen/_11ssp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_toEndOf="@id/linearLayout3"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_checklistHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_checklist" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppinsregular"
+                                android:maxLines="1"
+                                android:text="Checklist"
+                                android:textColor="@color/neutral100"
+                                android:textSize="@dimen/_11ssp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <!--        plotting, lembur, jadkar -->
+                    <RelativeLayout
+                        android:id="@+id/rl_plottingLemburJadkar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_timkuChecklistMenu"
+                        android:layout_marginTop="24dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_plottingHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_plotting" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppinsregular"
+                                android:maxLines="1"
+                                android:text="Plotting"
+                                android:textColor="@color/neutral100"
+                                android:textSize="@dimen/_11ssp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_toEndOf="@id/linearLayout4"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_lemburHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_lembur" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppinsregular"
+                                android:maxLines="1"
+                                android:text="Lembur"
+                                android:textColor="@color/neutral100"
+                                android:textSize="@dimen/_11ssp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_toEndOf="@id/linearLayout5"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/iv_jadKarHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_jadkar" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsregular"
+                                android:text="Jad Kar"
+                                android:textAlignment="center"
+                                android:textColor="@color/neutral100"
+                                android:textSize="@dimen/_11ssp"
+                                tools:layout_editor_absoluteX="42dp"
+                                tools:layout_editor_absoluteY="416dp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

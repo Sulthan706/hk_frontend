@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.auth.forgotpass.ui.activity.ForgotPassChangePass">
+
+    <include
+        android:id="@+id/layout_forgotpass_changepass"
+        layout="@layout/app_bar_not_back" />
+
+    <TextView
+        android:id="@+id/tv_forgot_changepass_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Buat Password Baru"
+        android:textColor="@color/black"
+        android:textSize="@dimen/h4"
+        app:layout_constraintTop_toBottomOf="@+id/layout_forgotpass_changepass" />
+
+    <TextView
+        android:id="@+id/tv_forgot_changepass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/tv_forgotpass"
+        android:textSize="@dimen/h5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgot_changepass_title" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_newpass"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Password Baru"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgot_changepass">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="100" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_newpass_confirm"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Konfirmasi password"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_newpass">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="100" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_forgotpass_changepass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_rounded_primary"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/smallRounded"
+        app:layout_constraintTop_toBottomOf="@+id/et_newpass_confirm" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

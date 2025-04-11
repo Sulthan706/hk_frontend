@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".features.features_vendor.notifcation.ui.old.activity.ComplaintNotificationActivity">
+
+    <!--    appbar nya-->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abl_complaintNotif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/appbarComplaintNotification"
+            layout="@layout/app_bar_default" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--    isi layout nya-->
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layoutComplaintNotification"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/abl_complaintNotif">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_detailComplaintNotification"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:backgroundTint="#DEDEDE"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_complaintNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/ic_error_image" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/lldetailComplaintNotification1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/card_detailComplaintNotification">
+
+                <TextView
+                    android:id="@+id/tv_titleDetailComplaintNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Error title"
+                    android:textAlignment="center"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_16ssp"
+                    android:maxLines="2"/>
+
+                <TextView
+                    android:id="@+id/tv_locationDetailComplaintNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error area"
+                    android:textAlignment="center"
+                    android:maxLines="2"
+                    android:textColor="@color/neutral80"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_subLocDetailComplaintNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error sub area"
+                    android:textAlignment="center"
+                    android:maxLines="1"
+                    android:textColor="@color/neutral80"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_escalation_inDetailComplaintNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error eskalasi"
+                    android:textAlignment="center"
+                    android:maxLines="2"
+                    android:textColor="@color/neutral80"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_DetailComplaintNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/bg_white_card"
+                android:padding="@dimen/_10sdp"
+                android:elevation="@dimen/_6sdp"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/lldetailComplaintNotification1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2.01"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Dibuat :"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tv_dateDetailComplaintNotification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Error date"
+                            android:maxLines="2"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tv_timeDetailComplaintNotification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:maxLength="5"
+                            android:text="Error waktu"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/neutral100"
+                        android:layout_weight="0.01"
+                        android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Diselesaikan :"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tv_dateDoneDetailComplaintNotification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text=""
+                            android:maxLines="2"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tv_timeDoneDetailComplaintNotification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text=""
+                            android:maxLength="5"
+                            android:maxLines="1"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_24sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/ll_DetailComplaintNotification">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Pembuat CTalk:"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/bg_white_card"
+                    android:elevation="@dimen/_8sdp"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_clientComplaintNotification"
+                        android:layout_width="@dimen/_44sdp"
+                        android:layout_height="@dimen/_44sdp"
+                        android:src="@drawable/profile_default"
+                        app:civ_border_color="@android:color/darker_gray"
+                        app:civ_border_width="@dimen/_1sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_clientNameComplaintNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_toEndOf="@id/iv_clientComplaintNotification"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Unknown nama klien"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_14ssp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Keterangan CTalk"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/bg_white_card"
+                    android:elevation="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/tv_noteComplaintNotification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:maxLines="4"
+                        android:padding="@dimen/_12sdp"
+                        android:text=" Unknown Keterangan"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Balasan Pengawas"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/bg_white_card"
+                    android:elevation="@dimen/_8sdp">
+
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/tv_replyFromLeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:maxLines="4"
+                        android:padding="@dimen/_12sdp"
+                        android:text="Unknown Balasan"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:visibility="invisible"
+                        android:id="@+id/et_replyFromLeader"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Masukan Balasan Pengawas">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_input_replyFromLeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppinsregular"
+                            android:inputType="text"
+                            android:maxLength="100"
+                            android:gravity="top"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/bodyText" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <!--                Layout upload image & choose ops-->
+                <LinearLayout
+                    android:id="@+id/ll_processComplaintNotif"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Foto kondisi"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_120sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/rl_uploadBeforeImageComplaintNotif"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#DEDEDE"
+                            app:cardCornerRadius="@dimen/_8sdp"
+                            app:cardElevation="@dimen/_4sdp">
+
+                            <ImageView
+                                android:id="@+id/iv_beforeDefault"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:alpha="0.25"
+                                android:src="@drawable/ic_camera_black"
+                                android:visibility="visible"
+                                app:tint="@color/black" />
+
+                            <ImageView
+                                android:id="@+id/iv_beforeComplaintNotification"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:visibility="gone"
+                                tools:src="@tools:sample/backgrounds/scenic" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/rl_uploadProcessImageComplaintNotif"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#DEDEDE"
+                            app:cardCornerRadius="@dimen/_8sdp"
+                            app:cardElevation="@dimen/_4sdp">
+
+                            <ImageView
+                                android:id="@+id/iv_processDefault"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:alpha="0.25"
+                                android:src="@drawable/ic_camera_black"
+                                android:visibility="visible"
+                                app:tint="@color/black" />
+
+                            <ImageView
+                                android:id="@+id/iv_processComplaintNotification"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:visibility="gone"
+                                tools:src="@tools:sample/backgrounds/scenic" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/rl_uploadAfterImageComplaintNotif"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#DEDEDE"
+                            app:cardCornerRadius="@dimen/_8sdp"
+                            app:cardElevation="@dimen/_4sdp">
+
+                            <ImageView
+                                android:id="@+id/iv_afterDefault"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:alpha="0.25"
+                                android:src="@drawable/ic_camera_black"
+                                android:visibility="visible"
+                                app:tint="@color/black" />
+
+                            <ImageView
+                                android:id="@+id/iv_afterComplaintNotification"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:visibility="gone"
+                                tools:src="@tools:sample/backgrounds/scenic" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!--                        <RelativeLayout-->
+                        <!--                            android:id="@+id/rl_uploadAfterImageComplaintNotif"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="match_parent"-->
+                        <!--                            android:layout_margin="@dimen/_3sdp"-->
+                        <!--                            android:layout_weight="1"-->
+                        <!--                            android:background="@drawable/bg_disable">-->
+
+                        <!--                            <ImageView-->
+                        <!--                                android:id="@+id/iv_afterDefault"-->
+                        <!--                                android:layout_width="wrap_content"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:layout_centerInParent="true"-->
+                        <!--                                android:src="@drawable/ic_camera_black"-->
+                        <!--                                android:visibility="visible" />-->
+
+                        <!--                            <ImageView-->
+                        <!--                                android:id="@+id/iv_afterComplaintNotification"-->
+                        <!--                                android:layout_width="match_parent"-->
+                        <!--                                android:layout_height="match_parent"-->
+                        <!--                                android:layout_centerInParent="true"-->
+                        <!--                                android:paddingHorizontal="@dimen/_15sdp"-->
+                        <!--                                android:paddingVertical="@dimen/_5sdp"-->
+                        <!--                                android:scaleType="centerCrop"-->
+                        <!--                                android:src="@drawable/googleg_disabled_color_18"-->
+                        <!--                                android:visibility="gone" />-->
+
+                        <!--                        </RelativeLayout>-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_32sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="Before"
+                                android:textAlignment="center"
+                                android:textColor="@color/neutral100"
+                                android:textSize="@dimen/_12ssp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="Process"
+                                android:textAlignment="center"
+                                android:textColor="@color/neutral100"
+                                android:textSize="@dimen/_12ssp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="After"
+                                android:textAlignment="center"
+                                android:textColor="@color/neutral100"
+                                android:textSize="@dimen/_12ssp" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Diproses Oleh:"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_workerComplaintNotification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:background="@drawable/bg_white_card"
+                        android:elevation="@dimen/_4sdp"
+                        android:paddingVertical="@dimen/_16sdp"
+                        android:paddingStart="@dimen/_12sdp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_opsComplaintNotification"
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:src="@drawable/foto1"
+                            app:civ_border_color="@android:color/darker_gray"
+                            app:civ_border_width="@dimen/_1sdp" />
+
+                        <TextView
+                            android:id="@+id/tv_opsNameComplaintNotification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/iv_opsComplaintNotification"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Error name"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_14ssp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--                Button Proses-->
+                <RelativeLayout
+                    android:id="@+id/rl_buttonProcessComplaintNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:background="@drawable/bg_primary"
+                    android:elevation="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_processComplaintNotification"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Proses"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp" />
+
+                </RelativeLayout>
+
+                <!--                Button Submit-->
+                <RelativeLayout
+                    android:id="@+id/rl_buttonSubmitComplaintNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:background="@drawable/bg_primary"
+                    android:elevation="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_submitComplaintNotification"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Kirim"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp" />
+
+                </RelativeLayout>
+
+<!--                <Space-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/_22sdp" />-->
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--    preview upload image-->
+
+    <LinearLayout
+        android:id="@+id/ll_result_upload_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/image_preview_card_process_complaint"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:layout_weight="1.5"
+            app:cardElevation="@dimen/_8sdp"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_gravity="center"
+                android:alpha="0.25"
+                android:src="@drawable/ic_code_scanner_auto_focus_on"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/iv_result_upload_complaint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Foto"
+                android:textColor="@color/black"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_18ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Pastikan foto terlihat jelas"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_primary">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_upload_image_complaint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

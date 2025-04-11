@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.training.ui.activity.AgendaTrainingActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <DatePicker
+                android:id="@+id/calendarTeamArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:datePickerMode="calendar"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:theme="@style/ClientDatePickerTheme"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_120sdp"/>
+
+            <RelativeLayout
+                android:id="@+id/MainTitleAgendaTraining"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_my_team_clients"
+                app:layout_constraintTop_toBottomOf="@+id/appbarAgendaTraining">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    android:layout_marginTop="@dimen/_20sdp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_field_tranparent"
+                        android:layout_marginHorizontal="@dimen/_30sdp"
+                        android:padding="@dimen/_10sdp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sedang Berjalan"
+                            android:textColor="@color/white"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/poppinsregular"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/poppinsregular" />
+                    </RelativeLayout>
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/llBtnPencapaianTraining"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/bg_lightblue_rounded_small"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:padding="@dimen/_10sdp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:elevation="@dimen/_10sdp"-->
+<!--                        android:layout_marginHorizontal="@dimen/_30sdp">-->
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:src="@drawable/ic_achievement_training_white"-->
+<!--                            android:layout_marginRight="@dimen/_5sdp"/>-->
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Lihat Pencapaian Training Tim"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:fontFamily="@font/poppinsregular"-->
+<!--                            android:textSize="@dimen/_10ssp"/>-->
+<!--                    </LinearLayout>-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Lihat agenda training pada kalender berikut"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9ssp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginHorizontal="@dimen/_25sdp"/>
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tvKelasTrainingAgenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kelas Training"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintTop_toBottomOf="@+id/calendarTeamArea"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_10sdp"/>
+            <TextView
+                android:id="@+id/tvEmptyStateAgendaTraining"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="Tidak ada agenda training pada tanggal ini"
+                app:layout_constraintTop_toBottomOf="@+id/tvKelasTrainingAgenda"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"
+                android:fontFamily="@font/poppinsregular"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvEmptyStateAgendaTraining"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                tools:listitem="@layout/item_agenda_kelas_training"
+                android:visibility="gone"/>
+
+
+            <include
+                android:id="@+id/appbarAgendaTraining"
+                layout="@layout/app_bar_default_client" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

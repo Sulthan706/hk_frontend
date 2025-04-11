@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.complaint.ui.activity.DetailComplaintManagementActivity">
+
+    <include
+        android:id="@+id/appbarDetailComplaintManagement"
+        layout="@layout/app_bar_default" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarDetailComplaintManagement">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_detailComplaintManagement"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:backgroundTint="#DEDEDE"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_detailComplaintManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/ic_error_image" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/lldetailComplaintManagement1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/card_detailComplaintManagement">
+
+                <TextView
+                    android:id="@+id/tv_titleDetailComplaintManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Error title"
+                    android:textAlignment="center"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_16ssp"
+                    android:maxLines="2"/>
+
+                <TextView
+                    android:id="@+id/tv_locationDetailComplaintManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error area"
+                    android:textAlignment="center"
+                    android:maxLines="2"
+                    android:textColor="@color/neutral80"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_subLocDetailComplaintManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error sub area"
+                    android:textAlignment="center"
+                    android:maxLines="1"
+                    android:textColor="@color/neutral80"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_escalation_inDetailComplaintManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error eskalasi"
+                    android:textAlignment="center"
+                    android:maxLines="2"
+                    android:textColor="@color/neutral80"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_projectDetailComplaintManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error project name"
+                    android:textAlignment="center"
+                    android:maxLines="2"
+                    android:visibility="gone"
+                    android:textColor="@color/neutral80"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_DetailComplaintManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/bg_white_card"
+                android:padding="@dimen/_10sdp"
+                android:elevation="@dimen/_6sdp"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/lldetailComplaintManagement1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2.01"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Dibuat :"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tv_dateDetailComplaintManagement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Error date"
+                            android:maxLines="2"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tv_timeDetailComplaintManagement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:maxLength="5"
+                            android:text="Error waktu"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/neutral100"
+                        android:layout_weight="0.01"
+                        android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Diselesaikan :"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tv_dateDoneDetailComplaintManagement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text=""
+                            android:maxLines="2"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tv_timeDoneDetailComplaintManagement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text=""
+                            android:maxLength="5"
+                            android:maxLines="1"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_pembuatKomplaintManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginHorizontal="@dimen/_22sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Pembuat Komplain:"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintTop_toBottomOf="@id/ll_DetailComplaintManagement" />
+
+            <RelativeLayout
+                android:id="@+id/rl_clientDetailComplaintInternal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_white_card"
+                android:elevation="@dimen/_4sdp"
+                android:paddingVertical="@dimen/_16sdp"
+                android:paddingStart="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv_pembuatKomplaintManagement">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_clientDetailComplaintManagement"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    app:civ_border_color="@android:color/darker_gray"
+                    app:civ_border_width="@dimen/_1sdp"
+                    android:src="@drawable/foto1" />
+
+                <TextView
+                    android:id="@+id/tv_clientNameDetailComplaintManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_clientDetailComplaintManagement"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error Name"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_noteDetailComplaintManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_24sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/rl_clientDetailComplaintInternal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Keterangan"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/bg_empty_card"
+                    android:elevation="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/tv_noteDetailComplaintManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:padding="@dimen/_12sdp"
+                        android:text="Error Keterangan"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Balasan Pengawas"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/bg_white_card"
+                    android:elevation="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/tv_replyFromLeaderDetailComplaintManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:maxLines="4"
+                        android:padding="@dimen/_12sdp"
+                        android:text="Unknown Balasan"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_22sdp" />
+
+            </LinearLayout>
+
+            <!--                Layout upload image & choose ops-->
+            <LinearLayout
+                android:id="@+id/ll_processDetailComplaintManagement"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_22sdp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/ll_noteDetailComplaintManagement">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Foto kondisi"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardBeforeDetailComplaintManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#DEDEDE"
+                        app:cardCornerRadius="@dimen/_8sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <ImageView
+                            android:id="@+id/iv_beforeDefaultDetailComplaintManagement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:alpha="0.25"
+                            android:src="@drawable/ic_camera_black"
+                            android:visibility="visible"
+                            app:tint="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/iv_beforeDetailComplaintManagement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"
+                            tools:src="@tools:sample/backgrounds/scenic" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardProcessDetailComplaintManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#DEDEDE"
+                        app:cardCornerRadius="@dimen/_8sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <ImageView
+                            android:id="@+id/iv_processDefaultDetailComplaintManagement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:alpha="0.25"
+                            android:src="@drawable/ic_camera_black"
+                            android:visibility="visible"
+                            app:tint="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/iv_processDetailComplaintManagement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"
+                            tools:src="@tools:sample/backgrounds/scenic" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardAfterDetailComplaintManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#DEDEDE"
+                        app:cardCornerRadius="@dimen/_8sdp"
+                        app:cardElevation="@dimen/_4sdp">
+
+                        <ImageView
+                            android:id="@+id/iv_afterDefaultDetailComplaintManagement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:alpha="0.25"
+                            android:src="@drawable/ic_camera_black"
+                            android:visibility="visible"
+                            app:tint="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/iv_afterDetailComplaintManagement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"
+                            tools:src="@tools:sample/backgrounds/scenic" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_32sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Before"
+                            android:textAlignment="center"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Process"
+                            android:textAlignment="center"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="After"
+                            android:textAlignment="center"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Diproses Oleh:"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_workerDetailComplaintManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="@drawable/bg_white_card"
+                    android:elevation="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_16sdp"
+                    android:paddingStart="@dimen/_12sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_opsDetailComplaintManagement"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        app:civ_border_color="@android:color/darker_gray"
+                        app:civ_border_width="@dimen/_1sdp"
+                        android:src="@drawable/foto1" />
+
+                    <TextView
+                        android:id="@+id/tv_opsNameDetailComplaintManagement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/iv_opsDetailComplaintManagement"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Error Name"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_14ssp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_statusDetailComplaintManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:background="@drawable/bg_disable"
+                    android:elevation="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_12sdp">
+
+                    <TextView
+                        android:id="@+id/tv_statusDetailComplaintManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Sedang Proses"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp" />
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCloseComplaintManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tutup"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="20dp"
+                    android:elevation="2dp"
+                    android:background="@drawable/btn_rounded_secondary"
+                    android:visibility="gone"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_listProject"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8sdp"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_6sdp"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/tvBranchListProjectNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:text="JAKARTA"
+        android:maxLines="1"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProjectListProjectNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="MALL KOTA KASABLANKA"
+        android:maxLines="1"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvBranchListProjectNew"/>
+
+    <TextView
+        android:id="@+id/tv1ListProjectNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="End Date"
+        android:maxLines="1"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectListProjectNew"/>
+
+    <TextView
+        android:id="@+id/tvDateListProjectNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="2025-01-31"
+        android:maxLines="1"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toEndOf="@id/tv1ListProjectNew"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectListProjectNew"/>
+
+    <TextView
+        android:id="@+id/tvNearExpiryListProjectNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Near Expiry"
+        android:maxLines="1"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toEndOf="@id/tvDateListProjectNew"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectListProjectNew"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

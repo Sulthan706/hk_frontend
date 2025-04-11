@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.dashboardProject.ui.activity.DashboardProjectClientActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_24sdp">
+
+        <RelativeLayout
+            android:id="@+id/rlDashboardProjectClient"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_172sdp"
+            android:padding="@dimen/_16sdp"
+            android:background="@drawable/bg_project_client"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivBackDashboardProjectClient"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:src="@drawable/ic_back_gray"
+                android:padding="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/circle_white"
+                android:elevation="@dimen/_4sdp"/>
+
+            <TextView
+                android:id="@+id/tvTitleDashboardProjectClient"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppinssemibold"
+                android:gravity="center"
+                android:text="Info Project"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp" />
+
+            <TextView
+                android:id="@+id/tvProjectNameDashboardProjectClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_9sdp"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/poppinssemibold"
+                android:gravity="center"
+                android:text="Error Project Name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp"
+                android:textAllCaps="true"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llManpowerAktifDashboardProjectClient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_22sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:background="@drawable/bg_background_color"
+            app:layout_constraintTop_toBottomOf="@id/rlDashboardProjectClient"
+            app:layout_constraintEnd_toStartOf="@id/llCfManajemenDashboardProjectClient"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tvManpowerAktifDashboardProjectClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryNew"
+                android:textSize="@dimen/_16ssp"
+                android:fontFamily="@font/poppinssemibold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manpower Aktif"
+                android:textAlignment="center"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCfManajemenDashboardProjectClient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_22sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:background="@drawable/bg_background_color"
+            app:layout_constraintTop_toBottomOf="@id/rlDashboardProjectClient"
+            app:layout_constraintStart_toEndOf="@id/llManpowerAktifDashboardProjectClient"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvCfManajemenDashboardProjectClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryNew"
+                android:textSize="@dimen/_16ssp"
+                android:fontFamily="@font/poppinssemibold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CF Manajemen"
+                android:textAlignment="center"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textview1DashboardProjectClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_22sdp"
+            android:text="Kehadiran hari ini"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintTop_toBottomOf="@id/llManpowerAktifDashboardProjectClient"
+            app:layout_constraintEnd_toStartOf="@id/llDateTimeTodayAttendanceDashboardProject"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/llDateTimeTodayAttendanceDashboardProject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_22sdp"
+            app:layout_constraintTop_toBottomOf="@id/llManpowerAktifDashboardProjectClient"
+            app:layout_constraintStart_toEndOf="@id/textview1DashboardProjectClient"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/tvDateTodayAttendanceDashboardProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:text="Error date "
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <DigitalClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@color/grey2_client"
+                tools:text="(07.30 WIB)" />
+
+            <TextView
+                android:id="@+id/tvTimeZoneAttendanceDashboardProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" WIB"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textview2DashboardProjectClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:text="Live report kehadiran akan terus update hingga shift malam (jika ada). Silakan cek secara berkala."
+            android:textColor="@color/greyInfo"
+            android:textSize="@dimen/_8ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/textview1DashboardProjectClient"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clHistoryAttendanceDashoardProjectClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/bg_background_dashbooard_project"
+            app:layout_constraintTop_toBottomOf="@id/textview2DashboardProjectClient">
+
+            <TextView
+                android:id="@+id/tvOffDashboardProjectClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Libur"
+                android:textColor="@color/grayTxt"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsmedium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvCountOffDashboardProjectClient"/>
+
+            <TextView
+                android:id="@+id/tvCountOffDashboardProjectClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="error"
+                android:textAlignment="textEnd"
+                android:textColor="@color/grayTxt"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvOffDashboardProjectClient"/>
+
+            <TextView
+                android:id="@+id/tvNotAbsentDashboardProjectClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Belum absen"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsmedium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCountOffDashboardProjectClient"
+                app:layout_constraintEnd_toStartOf="@id/tvCountNotAbsentDashboardProjectClient"/>
+
+            <TextView
+                android:id="@+id/tvCountNotAbsentDashboardProjectClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="error"
+                android:textAlignment="textEnd"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCountOffDashboardProjectClient"
+                app:layout_constraintStart_toEndOf="@id/tvNotAbsentDashboardProjectClient"/>
+
+            <TextView
+                android:id="@+id/tvWorkingDashboardProjectClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sedang bekerja"
+                android:textColor="@color/blue1"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsmedium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCountNotAbsentDashboardProjectClient"
+                app:layout_constraintEnd_toStartOf="@id/tvCountWorkingDashboardProjectClient"/>
+
+            <TextView
+                android:id="@+id/tvCountWorkingDashboardProjectClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="error"
+                android:textAlignment="textEnd"
+                android:textColor="@color/blue1"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCountNotAbsentDashboardProjectClient"
+                app:layout_constraintStart_toEndOf="@id/tvWorkingDashboardProjectClient"/>
+
+            <TextView
+                android:id="@+id/tvFinishDashboardProjectClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Selesai bekerja"
+                android:textColor="@color/green2"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsmedium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCountWorkingDashboardProjectClient"
+                app:layout_constraintEnd_toStartOf="@id/tvCountFinishDashboardProjectClient"/>
+
+            <TextView
+                android:id="@+id/tvCountFinishDashboardProjectClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="error"
+                android:textAlignment="textEnd"
+                android:textColor="@color/green2"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCountWorkingDashboardProjectClient"
+                app:layout_constraintStart_toEndOf="@id/tvFinishDashboardProjectClient"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/btnHistoryAttendanceDashboardProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:text="Lihat riwayat kehadiran"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/bg_secondary_bottom_radius"
+            android:padding="@dimen/_8sdp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/clHistoryAttendanceDashoardProjectClient"/>
+
+        <TextView
+            android:id="@+id/textview3DashboardProjectClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_22sdp"
+            android:text="Area kerja &amp; Tim"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintTop_toBottomOf="@id/btnHistoryAttendanceDashboardProject"
+            app:layout_constraintEnd_toStartOf="@id/tvCountAreaDashboardProject"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvCountAreaDashboardProject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_22sdp"
+            android:textAlignment="textEnd"
+            android:text="Error"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintTop_toBottomOf="@id/btnHistoryAttendanceDashboardProject"
+            app:layout_constraintStart_toEndOf="@id/textview3DashboardProjectClient"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListAreaDashboardProjectClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:visibility="gone"
+            tools:listitem="@layout/list_area_dashboard_project"
+            app:layout_constraintTop_toBottomOf="@id/textview3DashboardProjectClient"/>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerDashboardProjectClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/textview3DashboardProjectClient">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/shimmer_placeholder_choose_shift"/>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    layout="@layout/shimmer_placeholder_choose_shift"/>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

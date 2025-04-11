@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".features.features_management.homescreen.attendanceOpr.ui.activity.DetailAbsentByStatusOprMgmntActivity">
+
+    <include
+        android:id="@+id/appbarDetailAbsentByStatusOprMgmnt"
+        layout="@layout/app_bar_default"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_daily_absent_by_status_opr_mgmnt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/appbarDetailAbsentByStatusOprMgmnt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_attendance_daily_act_home" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_dac_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Tidak ada data." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

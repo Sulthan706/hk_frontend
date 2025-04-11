@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.inspeksi.audit.ui.activity.ProjectsAuditActivity">
+
+    <include
+        android:id="@+id/appbarProjectsAudit"
+        layout="@layout/app_bar_default"/>
+
+    <TextView
+        android:id="@+id/tvProjectsAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Pilih project untuk membuat atau melihat laporan"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/appbarProjectsAudit"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProjectsAudit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        tools:listitem="@layout/list_project_inspeksi"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectsAudit"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerProjectsAudit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectsAudit"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

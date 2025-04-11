@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.report.ui.activity.ReportCfTalkActivity">
+
+
+
+            <include
+                android:id="@+id/layout_appbar"
+                layout="@layout/app_bar_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <LinearLayout
+                android:id="@+id/llPeriodeReportMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layout_appbar"
+                android:weightSum="2"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tvDateTodayCftalk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_field"
+                    android:text="Semua Periode"
+                    android:textSize="12sp"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_marginRight="3dp"/>
+
+                <TextView
+                    android:id="@+id/tvProjectName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_field"
+                    android:fontFamily="@font/poppinsregular"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Semua Project"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCountTotalComplaint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/llPeriodeReportMain"
+                android:weightSum="2"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tvComplaint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Komplain"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/tvtotalComplaint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 Komplain"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/black"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lldetailCountReportCftalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/llCountTotalComplaint"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_light_cream"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:id="@+id/llCleaness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginVertical="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kebersihan"
+                        android:textSize="12sp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+                    <TextView
+                        android:id="@+id/tvCleaness"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:layout_weight="1"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llManPower"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginVertical="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tenaga Kerja"
+                        android:textSize="12sp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+                    <TextView
+                        android:id="@+id/tvManpower"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:layout_weight="1"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llBrokenFacility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginVertical="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fasilitas Rusak"
+                        android:textSize="12sp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+                    <TextView
+                        android:id="@+id/tvBrokenFacility"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:layout_weight="1"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llAttitude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginVertical="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sikap dan Perilaku"
+                        android:textSize="12sp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+                    <TextView
+                        android:id="@+id/tvAttitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:layout_weight="1"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llSecurity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginVertical="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Keamanan"
+                        android:textSize="12sp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+                    <TextView
+                        android:id="@+id/tvSecurity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:layout_weight="1"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSafetyHealth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:layout_marginVertical="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Keselamatan dan Kesehatan"
+                        android:textSize="12sp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+                    <TextView
+                        android:id="@+id/tvSafetyHealth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:layout_weight="2"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llPestControl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginVertical="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Gangguan Hama"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvPestControl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:layout_weight="1"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/poppinsregular"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llCountProgressCftalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/lldetailCountReportCftalk"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/llWaiting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_report_red_rounded"
+                    android:paddingHorizontal="21dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="6dp"
+                    android:layout_marginRight="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Waiting"
+                        android:textColor="@color/red"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/tvWaitingCftalk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:text="0"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llOnprogress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_report_orange_rounded"
+                    android:paddingHorizontal="11dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="6dp"
+                    android:layout_marginRight="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="On progress"
+                        android:textSize="10sp"
+                        android:textColor="@color/primary_color"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/tvOnprogressCftalk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_color"
+                        android:text="0"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_report_green_rounded"
+                    android:paddingHorizontal="29dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="6dp"
+                    android:layout_marginRight="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Done"
+                        android:textSize="10sp"
+                        android:textColor="@color/green1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/tvDoneCftalk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/green1"
+                        android:text="0"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_report_blue_rounded"
+                    android:paddingHorizontal="23dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="6dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Closed"
+                        android:textAlignment="center"
+                        android:textColor="@color/secondary_color"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tvCloseCftalk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary_color"
+                        android:text="0"
+                        android:textSize="14sp"
+                        android:paddingHorizontal="5dp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/rlRekapDailyAllProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/llCountProgressCftalk"
+                android:background="@drawable/bg_secondary"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="40dp"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Lihat Rekap Jumlah Komplain Harian "
+                    android:textSize="14sp"
+                    android:paddingVertical="11dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textAlignment="center"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tvEmtpyDataProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/rlRekapDailyAllProject"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Tidak ada daftar komplain pada periode atau project yang dipilih. Silakan pilih periode atau project lainnya."
+                android:textAlignment="center"
+                android:gravity="center"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="12sp"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:visibility="visible"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvComplaintCftalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                tools:listitem="@layout/item_complaint_cftalk"
+                app:layout_constraintTop_toBottomOf="@+id/rlRekapDailyAllProject"
+                android:visibility="gone"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

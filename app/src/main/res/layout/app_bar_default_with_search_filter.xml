@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_appbar"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary_color"
+    android:orientation="horizontal"
+    android:padding="@dimen/_14sdp">
+
+    <ImageView
+        android:id="@+id/iv_appbar_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_appbar_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_appbar_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_toStartOf="@id/iv_appbar_tune"
+        android:layout_toEndOf="@id/iv_appbar_back"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="JUDUL"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_appbar_back"
+        app:layout_constraintEnd_toStartOf="@id/iv_appbar_tune"/>
+
+    <ImageView
+        android:id="@+id/iv_appbar_tune"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_toStartOf="@id/iv_appbar_search"
+        android:src="@drawable/ic_filter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_appbar_title"
+        app:layout_constraintEnd_toStartOf="@id/iv_appbar_search"/>
+
+    <ImageView
+        android:id="@+id/iv_appbar_search"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_search"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_appbar_tune"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

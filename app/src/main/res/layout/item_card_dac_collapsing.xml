@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_dac_home"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_9sdp"
+    app:cardElevation="@dimen/_3sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_item_attendance_daily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="@dimen/_125sdp">
+
+        <LinearLayout
+            android:id="@+id/ll_date_daily_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_home_dac"
+            android:padding="@dimen/_3sdp"
+            android:weightSum="3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_daily_home_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsregular"
+                android:gravity="left"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:text="Error"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                tools:text="01-01-1990" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+
+                <TextView
+                    android:id="@+id/tv_daily_home_shift"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="right"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:text="Error"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    tools:text="shift middle 1" />
+                <ImageView
+                    android:id="@+id/ivChevronDownDac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_downn"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:backgroundTint="@color/white"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--        gone layout-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clContentHide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ll_date_daily_home"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/tv_daily_home_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="right"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:text="Error"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:text="06:00 - 07:00"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/ll_area"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:paddingTop="@dimen/_1sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:weightSum="4"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_daily_home_time">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="left"
+                    android:maxLines="2"
+                    android:text="Area:"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_daily_home_area"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_2sdp"
+                    android:layout_weight="1.4"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:text="Area error"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    tools:text="Lantai 1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="left"
+                    android:maxLines="2"
+                    android:text="Sub Area:"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_daily_home_sub_area"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_2sdp"
+                    android:layout_weight="1.4"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:text="Sub Area error"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    tools:text="Toilet 2" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

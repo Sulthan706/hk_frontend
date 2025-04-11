@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.profile.ui.activity.ChangePass">
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/app_bar_profile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pass_old"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Password Lama"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_pass_old"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:enabled="true"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:hint="Password Lama"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pass_old">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_pass_olds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLength="100" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tv_pass_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Password Baru"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_pass_old" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_pass_new"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:enabled="true"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:hint="Password Baru"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pass_new">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_pass_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLength="100" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tv_pass_new_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Ulangi Password Baru"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_pass_new" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_pass_new_confirm"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:enabled="true"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:hint="Ulangi Password Baru"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pass_new_confirm">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_pass_new_confirms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLength="100" />
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

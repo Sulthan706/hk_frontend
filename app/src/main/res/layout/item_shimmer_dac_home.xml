@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_item_attendance_choose_staff"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_65sdp"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/_1sdp"
+    android:padding="@dimen/_7sdp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_rectangle_rounded" />
+
+</LinearLayout>

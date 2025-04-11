@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.inspeksi.weeklyprogress.ui.activity.ProjectWeeklyProgressActivity">
+
+
+    <include
+        android:id="@+id/app_bar_weekly_progress"
+        layout="@layout/app_bar_default"/>
+
+    <TextView
+        android:id="@+id/tvProjectsRoutine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Pilih project untuk membuat atau melihat laporan"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_weekly_progress"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProjectsRoutine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        tools:listitem="@layout/list_project_inspeksi"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectsRoutine"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerProjectsRoutine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectsRoutine"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_choose_shift"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:src="@drawable/fab_add"
+        android:layout_margin="@dimen/_10sdp"
+        app:tint="@android:color/white"
+        android:backgroundTint="@color/secondary_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_32sdp"
+        android:background="@drawable/rounded_shape"
+        android:fontFamily="@font/poppinsregular"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:text="Silahkan absen masuk terlebih dahulu di project yang akan dikunjungi"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

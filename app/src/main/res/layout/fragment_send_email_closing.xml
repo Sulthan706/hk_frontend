@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.features_vendor.homescreen.closing.ui.fragment.SendEmailClosingFragment">
+
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_15sdp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Tanggal laporan"
+                    android:textColor="@color/black2"
+                    android:fontFamily="@font/poppinsregular"/>
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="30 Oktober 2024"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black2"
+                    android:fontFamily="@font/poppinsregular"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Dibuat oleh"
+                    android:textColor="@color/black2"
+                    android:fontFamily="@font/poppinsregular"/>
+
+                <TextView
+                    android:id="@+id/tv_pengawas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gabriella Kambey"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black2"
+                    android:fontFamily="@font/poppinsregular"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#d9d9d9" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Laporan Harian"
+                android:layout_weight="1"
+                android:textColor="@color/black2"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsbold"/>
+
+            <TextView
+                android:id="@+id/tv_see_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_see_file"
+                android:textColor="@color/blue2"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsbold"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambahkan nama dan email untuk mengirim laporan harian"
+            android:layout_margin="@dimen/_12sdp"
+            android:textColor="@color/black2"
+            android:fontFamily="@font/poppinsregular"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_client"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/footer"/>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/relative_email_to"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/bg_field_dotted_blue">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableStart="@drawable/ic_create_light_blue"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Email to"
+                    android:textColor="@color/blue2"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_email_cc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/bg_field_dotted_blue">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableStart="@drawable/ic_create_light_blue"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Email CC"
+                    android:textColor="@color/blue2"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_send_email_disabled"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/bg_disable"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Submit &amp; Kirim Email"
+            android:visibility="visible"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_send_email_enabled"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/bg_secondary"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Submit &amp; Kirim Email"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

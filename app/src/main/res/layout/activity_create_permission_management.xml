@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.service.permission.ui.activity.CreatePermissionManagementActivity">
+
+    <include
+        android:id="@+id/appbarCreatePermissionManagement"
+        layout="@layout/app_bar_default"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarCreatePermissionManagement">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/tvTitlePermissionManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Judul izin"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerCreatePermissionManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/bg_spinner"
+                android:elevation="@dimen/_6sdp"
+                android:entries="@array/permissionTitle"
+                android:paddingVertical="@dimen/_4sdp"
+                android:paddingStart="@dimen/_10sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitlePermissionManagement" />
+
+            <TextView
+                android:id="@+id/tvDescPermissionManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Alasan izin"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintTop_toBottomOf="@id/spinnerCreatePermissionManagement"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etDescPermissionManagement"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:hintEnabled="false"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescPermissionManagement">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etInputDescPermissionManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_field"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:gravity="top|left"
+                    android:hint="Alasan izin"
+                    android:maxLength="500"
+                    android:textSize="@dimen/_12ssp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvDatePermissionManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Tanggal"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintTop_toBottomOf="@id/etDescPermissionManagement"/>
+
+            <LinearLayout
+                android:id="@+id/llDate1CreatePermissionManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tvDatePermissionManagement">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Dari"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_14ssp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Sampai"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_14ssp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDateCreatePermissionManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/llDate1CreatePermissionManagement">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_4sdp"
+                    android:background="@drawable/bg_field"
+                    android:layout_marginEnd="@dimen/_2sdp">
+
+                    <TextView
+                        android:id="@+id/tvStartDatePermissionManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/ivStartDatePermissionManagement"
+                        android:fontFamily="@font/poppinsregular"
+                        android:paddingVertical="@dimen/_4sdp"
+                        android:text="Pilih tanggal"
+                        android:textAlignment="center"
+                        android:textColor="@color/grayTxt"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <ImageView
+                        android:id="@+id/ivStartDatePermissionManagement"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_calendar_orange" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_4sdp"
+                    android:background="@drawable/bg_field"
+                    android:layout_marginStart="@dimen/_2sdp">
+
+                    <TextView
+                        android:id="@+id/tvEndDatePermissionManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/_4sdp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Pilih tanggal"
+                        android:textAlignment="center"
+                        android:textColor="@color/grayTxt"
+                        android:textSize="@dimen/_11ssp"
+                        android:layout_toStartOf="@id/ivEndDatePermissionManagement"/>
+
+                    <ImageView
+                        android:id="@+id/ivEndDatePermissionManagement"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_calendar_orange" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvUploadPermissionManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Unggah foto"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llDateCreatePermissionManagement" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text="(Optional)"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/secondaryNew"
+                android:fontFamily="@font/poppinsmedium"
+                app:layout_constraintStart_toEndOf="@id/tvUploadPermissionManagement"
+                app:layout_constraintTop_toBottomOf="@+id/llDateCreatePermissionManagement"/>
+
+            <TextView
+                android:id="@+id/tvInfoUploadPhotoPermissionManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info_upload_photo_permission"
+                android:textSize="@dimen/_8ssp"
+                android:textColor="@color/grayTxt"
+                android:fontFamily="@font/poppinsregular"
+                android:textStyle="italic"
+                app:layout_constraintTop_toBottomOf="@+id/tvUploadPermissionManagement"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPhotoCreatePermissionManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInfoUploadPhotoPermissionManagement">
+
+                <ImageView
+                    android:id="@+id/ivPickPhotoPermissionManagement"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/rounded_dark_gray"
+                    android:padding="@dimen/_15sdp"
+                    android:src="@drawable/ic_camera_black"
+                    android:visibility="visible"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivResultPhotoPermissionManagement"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:padding="@dimen/_15sdp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmitPermissionManagementDisable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/_25sdp"
+                android:background="@drawable/btn_disable"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clPhotoCreatePermissionManagement" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmitPermissionManagementEnable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/_25sdp"
+                android:background="@drawable/btn_enabled"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clPhotoCreatePermissionManagement" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

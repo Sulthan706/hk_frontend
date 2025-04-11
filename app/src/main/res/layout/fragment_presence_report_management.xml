@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.features_management.reportHighMngmnt.ui.fragment.PresenceReportManagementFragment">
+
+    <TextView
+        android:id="@+id/tvOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Overview"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintBottom_toBottomOf="@id/spinnerBranchPresenceReportManagement"
+        app:layout_constraintTop_toTopOf="@id/spinnerBranchPresenceReportManagement"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerBranchPresenceReportManagement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:background="@drawable/bg_dropdown"
+        android:entries="@array/noChoose"
+        android:spinnerMode="dropdown"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvOverview"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Period:"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rlPeriodPresenceReportManagement"
+        app:layout_constraintBottom_toBottomOf="@id/rlPeriodPresenceReportManagement"/>
+
+    <RelativeLayout
+        android:id="@+id/rlPeriodPresenceReportManagement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/bg_field"
+        app:layout_constraintTop_toBottomOf="@id/spinnerBranchPresenceReportManagement"
+        app:layout_constraintStart_toEndOf="@id/tvPeriod"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvPeriodPresenceReportManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:text="error date"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"/>
+
+        <ImageView
+            android:layout_width="@dimen/_14sdp"
+            android:layout_height="@dimen/_14sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_calendar_grey"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvSortBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Sort by:"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintBottom_toBottomOf="@id/spinnerSortPresenceReportManagement"
+        app:layout_constraintTop_toTopOf="@id/spinnerSortPresenceReportManagement"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerSortPresenceReportManagement"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:background="@drawable/bg_dropdown"
+        android:entries="@array/sortBy"
+        android:spinnerMode="dropdown"
+        app:layout_constraintTop_toBottomOf="@id/rlPeriodPresenceReportManagement"
+        app:layout_constraintStart_toEndOf="@id/tvSortBy"
+        app:layout_constraintEnd_toStartOf="@id/spinnerProjectPresenceReportManagement"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerProjectPresenceReportManagement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:background="@drawable/bg_dropdown"
+        android:entries="@array/noChoose"
+        android:spinnerMode="dropdown"
+        app:layout_constraintTop_toBottomOf="@id/rlPeriodPresenceReportManagement"
+        app:layout_constraintStart_toEndOf="@id/spinnerSortPresenceReportManagement"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TableLayout
+        android:id="@+id/tablePresenceReportManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/spinnerSortPresenceReportManagement">
+
+        <TableRow>
+
+            <TextView
+                style="@style/table_header"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_column="0"
+                android:layout_weight="0.3"
+                android:textAlignment="center"
+                android:text="No."/>
+
+            <TextView
+                style="@style/table_header"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="Employee"/>
+
+            <TextView
+                style="@style/table_header"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_column="2"
+                android:layout_weight="0.2"
+                android:textAlignment="center"
+                android:text="HK"/>
+
+            <TextView
+                style="@style/table_header"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_column="3"
+                android:layout_weight="0.6"
+                android:textAlignment="center"
+                android:text="PRESENT"/>
+
+            <TextView
+                style="@style/table_header"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_column="4"
+                android:layout_weight="0.6"
+                android:textAlignment="center"
+                android:text="Late"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTablePresenceReportManagement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        tools:listitem="@layout/item_table_attendance_report_management"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablePresenceReportManagement"
+        app:layout_constraintBottom_toTopOf="@id/tvPagePresenceReportManagement">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tvPagePresenceReportManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="Showing ..."
+        android:textColor="@color/black3"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvCopyrightPresenceReportManagement"/>
+
+    <ImageView
+        android:id="@+id/ivNextPresenceReportManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_next_greys"
+        app:layout_constraintTop_toTopOf="@id/tvPagePresenceReportManagement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvCopyrightPresenceReportManagement" />
+
+    <ImageView
+        android:id="@+id/ivPrevPresenceReportManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_prev_greys"
+        app:layout_constraintTop_toTopOf="@id/tvPagePresenceReportManagement"
+        app:layout_constraintEnd_toStartOf="@id/ivNextPresenceReportManagement"
+        app:layout_constraintBottom_toTopOf="@id/tvCopyrightPresenceReportManagement" />
+
+    <TextView
+        android:id="@+id/tvCopyrightPresenceReportManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:text="Copyright ©2022 PT Hygiene Kleen. All Rights Reserved."
+        android:textAlignment="center"
+        android:textColor="@color/black3"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

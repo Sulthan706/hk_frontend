@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.shareloc.ui.activity.bod.MainListShareLocManagementActivity">
+
+    <include
+        android:id="@+id/appbarShareLocBod"
+        layout="@layout/appbar_default_with_replay" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCountListAllShareLoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/appbarShareLocBod"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBotSheetSearchManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="12dp"
+            android:background="#FF954D">
+            <TextView
+                android:id="@+id/tvTimeNowShareBod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="9 Okt 2023, 17:54 WIB"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/white"
+                android:layout_marginTop="1dp"/>
+            <TextView
+                android:id="@+id/tvCountAllShareLoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="45 orang"
+                android:fontFamily="@font/poppinssemibold"
+                android:layout_alignParentEnd="true"
+                app:layout_constraintRight_toLeftOf="@id/ivListShareLocManagament"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="6dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="1dp"/>
+            <ImageView
+                android:id="@+id/ivListShareLocManagament"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_chevron_left_rounded"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapViewCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbarShareLocBod"/>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="57dp"
+        app:cardCornerRadius="24dp">
+        <LinearLayout
+            android:id="@+id/llEmtpyStateManagementLoc"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:text="Klik marker untuk menampilkan detail info. Geser map untuk melihat area lain."
+                android:fontFamily="@font/poppinssemibold"
+                android:layout_marginHorizontal="26dp"
+                android:textColor="@color/black3"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSelectedManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:layout_marginStart="16dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivImageUserManagement"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_logo_cf"
+                    />
+                <TextView
+                    android:id="@+id/tvNameManagementAllLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="User Management"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="16dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_calendar_bod"/>
+                <TextView
+                    android:id="@+id/tvDateManagementAllLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="9 Oktober 2023, 17:10 WIB"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/black3"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="16dp"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_gps_bod"/>
+
+                <TextView
+                    android:id="@+id/tvAddressAllManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black3"
+                    android:textSize="12sp"
+                    tools:text="Mall Kota Kasablanka
+Jl. Raya Casablanca, Menteng Dalam, Kec. Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12870" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

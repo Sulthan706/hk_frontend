@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.features_vendor.homescreen.home.ui.new_.fragment.ReportFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_30sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_147sdp"
+            android:background="@drawable/bg_main_report_management"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <LinearLayout
+            android:id="@+id/llMainReportDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_38sdp"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:background="@drawable/bg_field"
+            android:orientation="vertical"
+            android:elevation="@dimen/_2sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_red_rounded"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/_7sdp"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Project"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/_12ssp"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="@dimen/_16sdp"/>
+                <TextView
+                    android:id="@+id/tvTotalCountProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginRight="@dimen/_16sdp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_4sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Aktif"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:id="@+id/tvCountActiveProject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="0"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_4sdp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Near Expiry"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_10ssp"
+                        android:paddingLeft="@dimen/_10sdp"/>
+                    <TextView
+                        android:id="@+id/tvCountNearExpired"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_info"
+                        android:paddingRight="@dimen/_3sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_4sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinslight"
+                        android:text="project near expiry jika sudah memasuki periode 3 bulan sebelum tanggal terakhir project"
+                        android:textColor="@color/grey2"
+                        android:textSize="@dimen/_6ssp"
+                        android:textStyle="italic"
+                        android:layout_marginTop="@dimen/_4sdp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_4sdp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Expired"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"/>
+                    <TextView
+                        android:id="@+id/tvCountExpired"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lihat daftar project"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/blue2"
+                    android:textAlignment="center"
+                    android:layout_marginTop="12dp"/>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTurnoverManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/llMainReportDashboard"
+            android:background="@drawable/bg_field"
+            android:orientation="vertical"
+            android:elevation="2dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginHorizontal="24dp">
+
+            <LinearLayout
+                android:id="@+id/llTurnoverManagementWebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="13dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_turnover_management" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Turnover"
+                        android:textColor="@color/secondary_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Daily &amp; Monthly overview. Download PDF report."
+                        android:textColor="@color/secondary_color"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/llTurnoverManagement"
+            android:background="@drawable/bg_field"
+            android:orientation="vertical"
+            android:elevation="2dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginHorizontal="24dp"
+            >
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="13dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_manpower_secondary_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Kebutuhan MP"
+                        android:textColor="@color/secondary_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Monitoring pemenuhan MP Monthly."
+                        android:textColor="@color/secondary_color"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

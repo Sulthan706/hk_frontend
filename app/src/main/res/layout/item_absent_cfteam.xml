@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+   <LinearLayout
+       android:id="@+id/llAbsentTop"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:weightSum="2"
+       app:layout_constraintTop_toTopOf="parent"
+       android:paddingLeft="@dimen/_8sdp">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Absen Masuk :"
+           android:fontFamily="@font/poppinsregular"
+           android:layout_weight="1"/>
+
+       <TextView
+           android:id="@+id/tvAbsenMasuk"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:fontFamily="@font/poppinsregular"
+           android:text="-"
+           android:textAlignment="textEnd" />
+   </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAbsentBot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@id/llAbsentTop">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Absen Keluar :"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/_8sdp"/>
+        <TextView
+            android:id="@+id/tvAbsenKeluar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"/>
+    </LinearLayout>
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/llAbsentBot"
+        android:id="@+id/tvLemburTitle"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Lembur"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvLemburTitle">
+        <TextView
+            android:id="@+id/tvLemburGantiResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lembur Ganti : -"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/_8sdp"/>
+        <TextView
+            android:id="@+id/tvLemburGantiStatus"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:fontFamily="@font/poppinssemibold"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

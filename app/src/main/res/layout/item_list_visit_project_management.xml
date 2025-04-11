@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_8sdp"
+    android:layout_marginHorizontal="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:background="@drawable/bg_field">
+
+    <TextView
+        android:id="@+id/tvBranchListVisitProjectManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvProjectListVisitProjectManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:autoSizeTextType="uniform"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/tvBranchListVisitProjectManagement"/>
+
+    <TextView
+        android:id="@+id/tv3ListVisitProjectManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:text="Check in"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectListVisitProjectManagement"/>
+
+    <TextView
+        android:id="@+id/tvCheckInListVisitProjectManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:text="--:--"
+        android:textColor="@color/blue1"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintStart_toEndOf="@id/tv3ListVisitProjectManagement"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectListVisitProjectManagement"/>
+
+    <TextView
+        android:id="@+id/tv4ListVisitProjectManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:text="Check out"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintStart_toEndOf="@id/tvCheckInListVisitProjectManagement"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectListVisitProjectManagement"/>
+
+    <TextView
+        android:id="@+id/tvCheckOutListVisitProjectManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:text="--:--"
+        android:textColor="@color/green2"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintStart_toEndOf="@id/tv4ListVisitProjectManagement"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectListVisitProjectManagement"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

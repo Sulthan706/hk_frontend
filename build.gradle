@@ -1,0 +1,64 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+//    ext.kotlin_version = "1.4.31"
+    ext.kotlin_version = "1.9.10"
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.0'
+//        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10'
+        classpath 'com.google.gms:google-services:4.4.0'
+//        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.6.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+    ext {
+        BASE_URL_ASSET_DEV = '" your url "'
+        BASE_URL_ASSET_UAT = '" your url "'
+        BASE_URL_DEV = '"http://13.215.81.247:3000"'
+        BASE_URL = '"http://13.215.81.247:3000"'
+        BASE_URL_DEV = '"http://13.215.81.247:3000/"'
+        BASE_URL = '"http://13.215.81.247:3000/"'
+        BASE_URL_UAT = '" your url "'
+        ASSETS_URL_DEV = '" your url "'
+        ASSETS_URL_UAT = '" your url "'
+        BASE_URL_ASSET_PROD = '" your url "'
+        BASE_URL_PROD = '"http://13.215.81.247:3000"'
+        ASSETS_URL_PROD = '" your url "'
+//        BASE_URL_ASSET_DEV = '" your url "'
+//        BASE_URL_ASSET_UAT = '" your url "'
+//        BASE_URL_DEV = '"http://54.251.83.205:3000"'
+//        BASE_URL = '"http://54.251.83.205:3000"'
+//        BASE_URL_DEV = '"http://54.251.83.205:3000/"'
+//        BASE_URL = '"http://54.251.83.205:3000/"'
+//        BASE_URL_UAT = '" your url "'
+//        ASSETS_URL_DEV = '" your url "'
+//        ASSETS_URL_UAT = '" your url "'
+//        BASE_URL_ASSET_PROD = '" your url "'
+//        BASE_URL_PROD = '"http://54.251.83.205:3000"'
+//        ASSETS_URL_PROD = '" your url "'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter() // Warning: this repository is going to shut down soon
+        mavenCentral{
+            url 'https://jitpack.io'
+        }
+    }
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KaptGenerateStubs).configureEach{
+        kotlinOptions{
+            jvmTarget= JavaVersion.VERSION_1_8
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_16sdp"
+    app:cardCornerRadius="@dimen/_16sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/_16sdp">
+
+        <TextView
+            android:id="@+id/tvTitleDialogWarningChoices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:text="Title Text"
+            android:gravity="center"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/black2"
+            android:fontFamily="@font/poppinssemibold"/>
+
+        <TextView
+            android:id="@+id/tvInfoDialogWarningChoices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:fontFamily="@font/poppinsregular"
+            android:text="error info"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_10ssp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn1DialogWarningChoices"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:text="Oke"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsmedium"
+                android:background="@drawable/bg_rounded_background"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn2DialogWarningChoices"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:text="Oke"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsmedium"
+                android:background="@drawable/bg_rounded_background"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

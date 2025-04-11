@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_12sdp">
+
+    <LinearLayout
+        android:id="@+id/llListQuestionShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1.5"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvQuestionListQuestionShimmer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/bg_shimmer"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvListQuestionShimmer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:textAlignment="center"
+            android:textColor="@color/grayLine"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/bg_shimmer"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvScoreListQuestionShimmer"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:background="@drawable/bg_shimmer"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llListQuestionShimmer"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

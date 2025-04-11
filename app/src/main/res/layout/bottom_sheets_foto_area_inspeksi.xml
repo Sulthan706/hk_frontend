@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottom_sheets_background_white"
+    android:padding="@dimen/_18sdp">
+
+    <ImageView
+        android:id="@+id/ivCloseBottomFotoAreaInspeksi"
+        android:layout_width="@dimen/_21sdp"
+        android:layout_height="@dimen/_21sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:src="@drawable/ic_close_bottom_sheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv1BottomFotoAreaInspeksi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Foto Kondisi Area"
+        android:textAlignment="center"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv2BottomFotoAreaInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Waktunya foto obyek yang dicek"
+        android:textAlignment="center"
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintTop_toBottomOf="@id/ivCloseBottomFotoAreaInspeksi"/>
+
+    <RelativeLayout
+        android:id="@+id/rlTakePhotoBottomFotoAreaInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/bg_field_dotted_blue"
+        app:layout_constraintTop_toBottomOf="@id/tv2BottomFotoAreaInspeksi">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ambil Foto"
+            android:textColor="@color/blue2"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:drawableStart="@drawable/ic_create_light_blue"
+            android:drawablePadding="@dimen/_4sdp"
+            android:layout_centerInParent="true"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_4sdp"
+    android:layout_marginHorizontal="@dimen/_6sdp"
+    android:layout_marginBottom="@dimen/_8sdp">
+
+    <RelativeLayout
+        android:id="@+id/rl1_countAbsentOpr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rl2_CountAbsentOpr">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_countAbsentOpr"
+            android:layout_width="@dimen/_42sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_centerVertical="true"
+            app:civ_border_color="@android:color/darker_gray"
+            app:civ_border_width="@dimen/_1sdp"
+            android:src="@drawable/foto1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_toEndOf="@+id/iv_countAbsentOpr"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_countAbsentOpr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:maxLines="2"
+                android:text="Error Operator Name"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_12ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4.5">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCountHadir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/secondary_color"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:text="Hadir"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_8ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCountAlfa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/secondary_color"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:text="Alfa"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_8ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCountIzin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/secondary_color"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:text="Izin"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_8ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCountLemburGanti"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/secondary_color"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:text="Lembur Ganti"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_8ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvCountLemburTagih"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/secondary_color"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:text="Lembur Tagih"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_8ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2_CountAbsentOpr"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rl1_countAbsentOpr"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressBarCountAbsentOpr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:progress="0"
+            app:indicatorColor="@color/primary_color"
+            app:indicatorDirectionCircular="clockwise"
+            app:indicatorInset="5dp"
+            app:indicatorSize="@dimen/_42sdp"
+            app:trackColor="@color/orangeDisable"
+            app:trackCornerRadius="@dimen/_9sdp"
+            app:trackThickness="@dimen/_6sdp"
+            tools:progress="0" />
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progressBarCountAbsentOpr"-->
+<!--            android:layout_width="@dimen/_50sdp"-->
+<!--            android:layout_height="@dimen/_50sdp"-->
+<!--            android:indeterminateOnly="false"-->
+<!--            android:progressDrawable="@drawable/circular_bar_progress_green"-->
+<!--            tools:progress="50" />-->
+
+        <TextView
+            android:id="@+id/tv_progressBarCountAbsentOpr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="0%"
+            android:textAlignment="center"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_10ssp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

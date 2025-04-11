@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.damagereport.ui.activity.ListDamageReportManagementActivity">
+
+    <include
+        android:id="@+id/appbarDamageReportManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/app_bar_default"/>
+
+    <LinearLayout
+        android:id="@+id/llDamageReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/appbarDamageReportManagement">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter by"
+            android:fontFamily="@font/poppinssemibold"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="20dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etCalendarDamageReportManagement"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:hint="Pilih tanggal"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_calendar_orange"
+            app:endIconTint="@color/primary_color"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            android:focusable="false">
+
+            <AutoCompleteTextView
+                android:id="@+id/tvCalenderDamageReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/black"
+                android:padding="10dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/llDamageReport"/>
+    <TextView
+        android:id="@+id/tvTitleDamageReportManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daftar kerusakan mesin"
+        app:layout_constraintTop_toBottomOf="@+id/llDamageReport"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvEmptyListBakManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tidak ada data"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbarDamageReportManagement"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDamageReportManagement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleDamageReportManagement"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/item_list_damage_report_management"
+        android:layout_marginHorizontal="20dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:elevation="@dimen/_2sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_field">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_vaccine">
+            <ImageView
+                android:id="@+id/ivCardVaccine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:src="@drawable/bg_primary"
+
+                android:scaleType="centerCrop"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvDosisType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dosis Vaksin"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/black"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                />
+            <TextView
+                android:id="@+id/tvDateDosis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diupload pada :"
+                android:fontFamily="@font/poppinsregular"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".features.features_management.homescreen.closing.ui.fragment.GenerateFileManagementFragment">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_closing_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/closing_area_shimmer"/>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+   <LinearLayout
+       android:id="@+id/linear_content"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:visibility="gone"
+       android:orientation="vertical">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_margin="@dimen/_15sdp">
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="0.5"
+                   android:text="Tanggal laporan"
+                   android:textColor="@color/black2"
+                   android:fontFamily="@font/poppinsregular"/>
+
+               <TextView
+                   android:id="@+id/tv_date"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:text="30 Oktober 2024"
+                   android:textAlignment="textEnd"
+                   android:textColor="@color/black2"
+                   android:fontFamily="@font/poppinsregular"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="@dimen/_5sdp">
+
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="0.5"
+                   android:text="Dibuat oleh"
+                   android:textColor="@color/black2"
+                   android:fontFamily="@font/poppinsregular"/>
+
+               <TextView
+                   android:id="@+id/tv_user"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:text="Gabriella Kambey"
+                   android:textAlignment="textEnd"
+                   android:textColor="@color/black2"
+                   android:fontFamily="@font/poppinsregular"/>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="8dp"
+           android:background="#d9d9d9" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/text_ringkasan"
+           android:textColor="@color/black2"
+           android:layout_marginTop="@dimen/_15sdp"
+           android:layout_marginStart="@dimen/_15sdp"
+           android:textSize="16sp"
+           android:fontFamily="@font/poppinsbold"/>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/_10sdp"
+           android:layout_marginStart="@dimen/_15sdp"
+           android:orientation="vertical">
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:text="Target Penyelesaian"
+                   android:textColor="@color/black2"
+                   android:fontFamily="@font/poppinsregular"/>
+
+               <TextView
+                   android:id="@+id/tv_total_settlement"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:textAlignment="textEnd"
+                   android:text="20 pekerjaan"
+                   android:layout_marginEnd="@dimen/_15sdp"
+                   android:textColor="@color/black2"
+                   android:fontFamily="@font/poppinsbold"/>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="@dimen/_10sdp">
+
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:text="Realization"
+                   android:textColor="@color/black2"
+                   android:fontFamily="@font/poppinsregular"/>
+
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_weight="2">
+
+                   <TextView
+                       android:id="@+id/tv_count_finish"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="0.5"
+                       android:text="9/10"
+                       android:textColor="@color/black2"
+                       android:textAlignment="textEnd"
+                       android:layout_marginEnd="@dimen/_5sdp"
+                       android:layout_gravity="center_vertical"
+                       android:fontFamily="@font/poppinsbold"/>
+
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="end"
+                       android:layout_marginEnd="@dimen/_15sdp"
+                       android:layout_weight="0.01">
+
+                       <TextView
+                           android:id="@+id/tv_percent_finish"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="90%"
+                           android:textColor="@color/green2"
+                           android:paddingTop="2dp"
+                           android:paddingBottom="2dp"
+                           android:paddingStart="@dimen/_15sdp"
+                           android:paddingEnd="@dimen/_15sdp"
+                           android:textAlignment="center"
+                           android:fontFamily="@font/poppinsbold"
+                           android:background="@drawable/background_closing_point"/>
+
+
+                   </LinearLayout>
+
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/linear_approve"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:visibility="gone"
+               android:layout_marginTop="@dimen/_10sdp">
+
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:text="@string/text_not_approve"
+                   android:textColor="@color/black2"
+                   android:fontFamily="@font/poppinsregular"/>
+
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_weight="2">
+
+                   <TextView
+                       android:id="@+id/tv_count_not_approve"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="0.5"
+                       android:text="9/10"
+                       android:textColor="@color/black2"
+                       android:textAlignment="textEnd"
+                       android:layout_marginEnd="@dimen/_5sdp"
+                       android:layout_gravity="center_vertical"
+                       android:fontFamily="@font/poppinsbold"/>
+
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="end"
+                       android:layout_marginEnd="@dimen/_15sdp"
+                       android:layout_weight="0.01">
+
+                       <TextView
+                           android:id="@+id/tv_percent_not_approve"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="90%"
+                           android:textColor="@color/green2"
+                           android:paddingTop="2dp"
+                           android:paddingBottom="2dp"
+                           android:paddingStart="@dimen/_15sdp"
+                           android:paddingEnd="@dimen/_15sdp"
+                           android:textAlignment="center"
+                           android:fontFamily="@font/poppinsbold"
+                           android:background="@drawable/background_closing_point"/>
+
+                       <androidx.appcompat.widget.AppCompatButton
+                           android:id="@+id/btn_approve"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="@dimen/_5sdp"
+                           android:text="Approve"
+                           android:background="@drawable/bg_primary_rounded_button"
+                           android:textAllCaps="false"
+                           android:textColor="@color/white"
+                           android:fontFamily="@font/poppinsregular"/>
+
+
+                   </LinearLayout>
+
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="8dp"
+           android:layout_marginTop="@dimen/_10sdp"
+           android:background="#d9d9d9" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/text_work_diversion"
+           android:textColor="@color/black2"
+           android:layout_marginTop="@dimen/_15sdp"
+           android:layout_marginStart="@dimen/_15sdp"
+           android:textSize="16sp"
+           android:fontFamily="@font/poppinsbold"/>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="@dimen/_10sdp"
+           android:layout_marginStart="@dimen/_15sdp">
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="Total pekerjaan dialihkan"
+               android:textColor="@color/black2"
+               android:fontFamily="@font/poppinsregular"/>
+
+           <TextView
+               android:id="@+id/tv_total_diversion"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:textAlignment="textEnd"
+               android:text="2"
+               android:layout_marginEnd="@dimen/_15sdp"
+               android:textColor="@color/black2"
+               android:fontFamily="@font/poppinsbold"/>
+
+       </LinearLayout>
+
+
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/btn_closing"
+           android:layout_width="wrap_content"
+           android:paddingEnd="@dimen/_30sdp"
+           android:layout_marginTop="@dimen/_50sdp"
+           android:paddingStart="@dimen/_30sdp"
+           android:layout_height="@dimen/_38sdp"
+           android:layout_gravity="center_horizontal"
+           android:background="@drawable/bg_blue_rounded"
+           android:fontFamily="@font/poppinsmedium"
+           android:text="Generate Laporan Harian"
+           android:textAllCaps="false"
+           android:textColor="@color/white"
+           android:textSize="@dimen/_12ssp" />
+
+   </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_12sdp"
+    android:layout_margin="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/llCardResign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginHorizontal="@dimen/_7sdp"
+                    android:layout_marginTop="46dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_calender_resign"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvCreateResignVendor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="center"
+                        android:text="Dibuat pada : 17 Apr 2024, 07:45"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvStatsResign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_status_notif"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:paddingHorizontal="@dimen/_11ssp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:text="Selesai"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Project Sekarang:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/tvUserProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="MALL KOTA KASABLANKA"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="left"
+                    android:text="Tanggal Resign"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvUserRequestResignDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="24 April 2024"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="15dp"
+                    android:background="@drawable/bg_field_tranparent"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rlButtonRejectInformationResign"
+            android:visibility="gone"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_stroke_blue"
+            android:padding="8dp"
+            android:layout_margin="13dp"
+            app:layout_constraintTop_toBottomOf="@id/llCardResign"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lihat Balasan Atasan"
+                android:fontFamily="@font/poppinssemibold"
+                android:textAlignment="center"
+                android:textColor="@color/secondary_color"/>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

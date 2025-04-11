@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    tools:context=".features.features_management.homescreen.home.ui.fragment.ReportHighManagementFragment">
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:padding="@dimen/_20sdp"
+        android:background="@drawable/bg_main_report_management"
+        app:layout_constraintTop_toTopOf="parent">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Report"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/poppinssemibold"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Manpower"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinssemibold"
+        app:layout_constraintTop_toBottomOf="@id/layout1"/>
+
+    <LinearLayout
+        android:id="@+id/llAttendanceReportHighManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:background="@drawable/bg_white_card"
+        android:padding="@dimen/_10sdp"
+        android:elevation="@dimen/_4sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/textview">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Attendance Report"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:drawableStart="@drawable/ic_attendance_report"
+            android:drawablePadding="@dimen/_4sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="Monthly or weekly employee attendance report"
+            android:textColor="@color/grey4"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinsregular"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

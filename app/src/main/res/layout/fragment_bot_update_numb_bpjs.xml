@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottom_sheets_background_white"
+    android:padding="@dimen/_18sdp"
+    >
+
+    <ImageView
+        android:id="@+id/ivCloseBottomBpjs"
+        android:layout_width="@dimen/_21sdp"
+        android:layout_height="@dimen/_21sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:src="@drawable/ic_close_bottom_sheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv1BottomFotoAreaInspeksi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Lengkapi Nomor"
+        android:textAlignment="center"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTitleUpdateNumbBpjs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Nomor BPJS Ketenagakerjaan"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/ivCloseBottomBpjs"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etBotNumbBpjs"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:enabled="true"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:hint="Masukan nomor"
+        app:helperTextTextColor="@color/red"
+
+        app:layout_constraintTop_toBottomOf="@id/tvTitleUpdateNumbBpjs">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvBotNumbBpjs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:inputType="number"
+            android:maxLength="11"
+            android:gravity="left"
+            android:maxLines="2"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUploadDocumentBpjsEmtpy"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        app:layout_constraintTop_toBottomOf="@+id/etBotNumbBpjs"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Simpan"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/grey2"
+        app:cornerRadius="8dp"
+        android:layout_marginTop="36dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUploadDocumentBpjs"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        app:layout_constraintTop_toBottomOf="@+id/etBotNumbBpjs"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Simpan"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/secondary_color"
+        app:cornerRadius="8dp"
+        android:layout_marginTop="36dp"
+        android:visibility="gone"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

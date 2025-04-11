@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_field"
+    app:cardElevation="@dimen/_5sdp"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_created_at"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/bg_shimmer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_created_at"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/bg_shimmer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rlTypeMonthlyWorkReport"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/text_created_at"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_10ssp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/text_created_at"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp">
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/text_created_at"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_10ssp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="10dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/text_created_at"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/bg_shimmer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#d9d9d9"/>
+
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="10dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_created_at"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_shimmer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_created_at"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_shimmer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_created_at"
+                android:layout_weight="1"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <View
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_created_at"
+                android:layout_gravity="end"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_shimmer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_detail_diversion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/rounded_dark_gray"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Dialihkan ke"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_weight="0.5"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="LANTAI GF"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Shift"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_weight="0.5"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="LANTAI GF"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

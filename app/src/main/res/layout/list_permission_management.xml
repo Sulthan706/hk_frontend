@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_permission_mid"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_8sdp"
+    android:layout_marginVertical="@dimen/_6sdp"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_4sdp"
+    android:paddingHorizontal="@dimen/_12sdp"
+    android:paddingVertical="@dimen/_8sdp">
+
+    <LinearLayout
+        android:id="@+id/ll_permission_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_list_permission_"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_weight="0.6"
+            android:background="@drawable/bg_shimmer"
+            app:civ_border_color="@android:color/darker_gray"
+            app:civ_border_width="@dimen/_1sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/foto1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_56sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_weight="2.4"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/iv_clientList_permission"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_nama_list_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error Nama"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toEndOf="@id/iv_list_permission_"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title_list_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Tidak ada judul izin"
+                android:textColor="@color/gray_dark"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toEndOf="@id/iv_list_permission_"
+                app:layout_constraintTop_toBottomOf="@id/tv_namaList_permission" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/ll_permission_history">
+
+        <TextView
+            android:id="@+id/tv_date_list_permission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Error tanggal"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_shift_list_permission"/>
+
+        <TextView
+            android:id="@+id/tv_shift_list_permission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Error shift"
+            android:textAlignment="textEnd"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_date_list_permission"/>
+
+        <TextView
+            android:id="@+id/tv_project_list_permission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Project :"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintTop_toBottomOf="@id/tv_date_list_permission"/>
+
+        <TextView
+            android:id="@+id/tv_projectName_list_permission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Error project"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintTop_toBottomOf="@id/tv_project_list_permission" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_result_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_ditolak"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_2sdp"
+            android:text="Permohonan di . . ."
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintTop_toBottomOf="@id/tv_projectName_list_permission"/>
+
+        <LinearLayout
+            android:id="@+id/ll_tolak_izin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_2sdp"
+            android:visibility="visible"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@id/tv_projectName_list_permission">
+
+            <TextView
+                android:id="@+id/tv_tolak"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_field"
+                android:fontFamily="@font/poppinsregular"
+                android:gravity="center"
+                android:text="Tolak"
+                android:textColor="#969696"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/tv_izinkan"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_izinkan"
+                android:fontFamily="@font/poppinsregular"
+                android:gravity="center"
+                android:text="Izinkan"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

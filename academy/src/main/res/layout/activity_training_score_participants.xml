@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_trainer.myclass.ui.activity.TrainingScoreParticipantsActivity">
+
+    <include
+        android:id="@+id/appbarTrainingScoreParticipants"
+        layout="@layout/app_bar_training" />
+
+    <TextView
+        android:id="@+id/tv1TrainingScoreParticipants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Tanggal Training"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/appbarTrainingScoreParticipants"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDateTrainingScoreParticipants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="end"
+        android:text="error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarTrainingScoreParticipants"
+        app:layout_constraintStart_toEndOf="@id/tv1TrainingScoreParticipants" />
+
+    <TextView
+        android:id="@+id/tv2TrainingScoreParticipants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Jam"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/tv1TrainingScoreParticipants"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTimeTrainingScoreParticipants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="end"
+        android:text="error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1TrainingScoreParticipants"
+        app:layout_constraintStart_toEndOf="@id/tv2TrainingScoreParticipants" />
+
+    <View
+        android:id="@+id/viewTrainingScoreParticipants"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_3sdp"
+        android:background="@color/background"
+        android:layout_marginTop="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvTimeTrainingScoreParticipants" />
+
+    <TextView
+        android:id="@+id/tv3TrainingScoreParticipants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Daftar peserta training :"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/viewTrainingScoreParticipants"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvParticipantsTrainingScoreParticipants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="end"
+        android:text="error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTrainingScoreParticipants"
+        app:layout_constraintStart_toEndOf="@id/tv3TrainingScoreParticipants" />
+
+    <LinearLayout
+        android:id="@+id/llTrainingScoreParticipants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_6sdp"
+        android:weightSum="3"
+        android:background="@color/light_blue"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv3TrainingScoreParticipants">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Nama Peserta"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nilai Training"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTrainingScoreParticipants"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        tools:listitem="@layout/list_participant_training_score"
+        app:layout_constraintTop_toBottomOf="@id/llTrainingScoreParticipants"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

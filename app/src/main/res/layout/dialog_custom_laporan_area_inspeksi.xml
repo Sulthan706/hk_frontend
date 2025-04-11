@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_5sdp"
+    tools:context=".features.features_vendor.homescreen.dac.ui.fragment.ConfirmDacChecklistDialog">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_16sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_18sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Laporan Kondisi Area"
+                android:textAlignment="center"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_13ssp"/>
+
+            <TextView
+                android:id="@+id/tvAreaKomponenTitleDialogLaporanAreaInspeksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Area/Komponen"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_12ssp"/>
+
+            <TextView
+                android:id="@+id/tvAreaKomponenDialogLaporanAreaInspeksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:padding="@dimen/_8sdp"
+                android:background="@drawable/bg_field"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_12ssp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Obyek"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_12ssp"/>
+
+            <TextView
+                android:id="@+id/tvObjectDialogLaporanAreaInspeksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:padding="@dimen/_8sdp"
+                android:background="@drawable/bg_field"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error object"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_12ssp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Foto Kondisi"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_12ssp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_75sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:backgroundTint="@color/grayLine"
+                app:cardCornerRadius="@dimen/_6sdp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ivPreviewDialogLaporanAreaInspeksi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:src="@drawable/ic_error_image" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tvPenilaianDialogLaporanAreaInspeksi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:padding="@dimen/_8sdp"
+                    android:background="@drawable/bg_field"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Pilih penilaian"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_12ssp"/>
+
+                <TextView
+                    android:id="@+id/tvScoreDialogLaporanAreaInspeksi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="-"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Keterangan Tambahan "
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_12ssp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="(opsional)"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_10ssp"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp"
+                android:background="@drawable/bg_field"
+                android:layout_marginTop="@dimen/_4sdp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etNoteDialogLaporanAreaInspeksi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:background="@null"
+                    android:fontFamily="@font/poppinsregular"
+                    android:hint="bisa cantumkan detail lokasi area, contoh: Lantai 1, Lantai GF, dsb"
+                    android:maxLength="50"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_12ssp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnBackDialogLaporanAreaInspeksi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_red"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnYesDialogLaporanAreaInspeksi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_primary"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottom_sheets_background_white"
+    android:padding="@dimen/_18sdp">
+
+    <ImageView
+        android:id="@+id/ivCloseBottomCategory"
+        android:layout_width="@dimen/_21sdp"
+        android:layout_height="@dimen/_21sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:src="@drawable/ic_close_bottom_sheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFilterBy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Filter by"
+        android:textAlignment="center"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/bg_purple"
+        app:layout_constraintTop_toBottomOf="@id/tvFilterBy">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Project"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlStatusComplaint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/bg_purple"
+        app:layout_constraintTop_toBottomOf="@id/rlProject"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Status Komplain"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlTitleComplaint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/bg_purple"
+        app:layout_constraintTop_toBottomOf="@id/rlStatusComplaint"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Judul Komplain"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:layout_centerInParent="true"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

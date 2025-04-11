@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_trainer.myclass.ui.activity.SummaryCreateClassActivity">
+
+    <include
+        android:id="@+id/appbarSumCreateClass"
+        layout="@layout/app_bar_training" />
+
+    <TextView
+        android:id="@+id/tv1SumCreateClass"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:gravity="bottom"
+        android:text="Jadwal Kelas Anda"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinsbold"
+        app:layout_constraintTop_toBottomOf="@id/appbarSumCreateClass" />
+
+    <TextView
+        android:id="@+id/tvEditSumCreateClass"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:gravity="bottom"
+        android:text="Edit"
+        android:textColor="@color/blue5"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintTop_toBottomOf="@id/appbarSumCreateClass"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv2SumCreateClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Trainer"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/tv1SumCreateClass"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTrainerSumCreateClass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="end"
+        android:text="error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1SumCreateClass"
+        app:layout_constraintStart_toEndOf="@id/tv2SumCreateClass" />
+
+    <TextView
+        android:id="@+id/tv3SumCreateClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Tanggal"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/tv2SumCreateClass"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDateSumCreateClass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="end"
+        android:text="error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv2SumCreateClass"
+        app:layout_constraintStart_toEndOf="@id/tv3SumCreateClass" />
+
+    <TextView
+        android:id="@+id/tv4SumCreateClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Jam"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/tv3SumCreateClass"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTimeSumCreateClass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="end"
+        android:text="error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv3SumCreateClass"
+        app:layout_constraintStart_toEndOf="@id/tv4SumCreateClass" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout1SumCreateClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_12sdp"
+        android:background="@drawable/bg_field"
+        app:layout_constraintTop_toBottomOf="@id/tv4SumCreateClass" >
+
+        <TextView
+            android:id="@+id/tvLevelTrainingSumCreateClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            android:text="BASIC"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:background="@drawable/bg_rounded_orange2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitleTrainingSumCreateClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="BASIC CLEANING PROGRAM"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsbold"
+            app:layout_constraintTop_toBottomOf="@id/tvLevelTrainingSumCreateClass" />
+
+        <TextView
+            android:id="@+id/tv5SumCreateClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="Training Untuk"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleTrainingSumCreateClass"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTrainingForSumCreateClass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:gravity="end"
+            android:text="error"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleTrainingSumCreateClass"
+            app:layout_constraintStart_toEndOf="@id/tv5SumCreateClass"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv6SumCreateClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="Modul"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintTop_toBottomOf="@id/tv5SumCreateClass"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvModuleTrainingSumCreateClass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:gravity="end"
+            android:text="error"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toBottomOf="@id/tv5SumCreateClass"
+            app:layout_constraintStart_toEndOf="@id/tv6SumCreateClass"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout2SumCreateCLass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_12sdp"
+        android:background="@drawable/bg_rounded_blue10"
+        app:layout_constraintTop_toBottomOf="@id/layout1SumCreateClass">
+
+        <TextView
+            android:id="@+id/tvInfoSumCreateClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_public_class"
+            android:textColor="@color/blue5"
+            android:textSize="@dimen/_8ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv7SumCreateClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="Kuota Peserta"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintTop_toBottomOf="@id/tvInfoSumCreateClass"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvKuotaSumCreateClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="0"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toBottomOf="@id/tvInfoSumCreateClass"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout3SumCreateClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_12sdp"
+        android:background="@drawable/bg_rounded_background"
+        app:layout_constraintTop_toBottomOf="@id/layout2SumCreateCLass">
+
+        <TextView
+            android:id="@+id/tvTrainingTypeSumCreateClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            android:text="ONSITE TRAINING"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:background="@drawable/bg_rounded_orange"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvOnlineMeetingSumCreateClass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:text="ZOOM meeting"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvTrainingTypeSumCreateClass" />
+
+        <TextView
+            android:id="@+id/tvAddressTrainingSumCreateClass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:text="error"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivCopyLinkSumCreateClass"
+            app:layout_constraintTop_toBottomOf="@id/tvTrainingTypeSumCreateClass" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/ivCopyLinkSumCreateClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:src="@drawable/ic_copy_blue"
+            app:layout_constraintTop_toBottomOf="@id/tvTrainingTypeSumCreateClass"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnSumCreateClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:padding="@dimen/_18sdp"
+        android:elevation="@dimen/_6sdp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_second_color"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="Buat Kelas"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/bg_summary_card_list_checklist">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:background="@drawable/bg_list_summary_list_checklist">
+
+        <TextView
+            android:id="@+id/tv1_shimmerShiftChecklist"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:maxLines="1"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/secondary_color"
+            android:textSize="15sp"
+            android:background="@drawable/bg_shimmer"/>
+
+        <TextView
+            android:id="@+id/tv_timeListShiftChecklist"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:maxLines="1"
+            android:background="@drawable/bg_shimmer"
+            android:textSize="15sp"
+            android:textColor="#969696"
+            android:fontFamily="@font/poppinssemibold"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_shimmer"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="28dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_progressDetailAbsentProjectMgmnt"
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_75sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_shimmer">
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_shimmer"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_shimmer"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"/>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_shimmer"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_field"
+                    android:padding="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_shimmer"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_field"
+                    android:padding="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_shimmer"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_field"
+                    android:padding="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_shimmer"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_shimmer"
+            app:cornerRadius="8dp"
+            android:elevation="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

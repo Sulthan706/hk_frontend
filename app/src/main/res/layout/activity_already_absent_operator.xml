@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.AlreadyAbsentOperatorActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/layoutAppbarAttendanceOperator"
+            layout="@layout/app_bar_default" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/llTitleShift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/abl"
+        android:layout_margin="@dimen/_12sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hari ini:"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginRight="@dimen/_12sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shift yang sedang dilihat:"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginLeft="@dimen/_49sdp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFieldAttendance"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/llTitleShift">
+
+          <TextView
+            android:id="@+id/tvDateNowAttendance"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_field_attendance_done"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:textSize="@dimen/_12ssp"
+            android:paddingVertical="@dimen/_3sdp"
+            android:text="7 sep 2022"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/tvShiftDoneAttendance"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_field_attendance_done"
+            android:text="Shift pagi"
+            android:textSize="@dimen/_12ssp"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_3sdp"/>
+
+    </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvNotesAttendance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Catatan kehadiran"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginTop="@dimen/_33sdp"
+            app:layout_constraintTop_toBottomOf="@id/llFieldAttendance"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/_12ssp"
+            android:textSize="@dimen/_12ssp"/>
+
+        <TextView
+            android:id="@+id/tvCountAlreadyAbsent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            app:layout_constraintTop_toBottomOf="@+id/llFieldAttendance"
+            android:layout_marginTop="@dimen/_33sdp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvEmptyStateAlready"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data kehadiran staff belum tersedia. Silakan kembali ke halaman sebelumnya."
+            app:layout_constraintTop_toBottomOf="@+id/tvNotesAttendance"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:visibility="gone"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAlreadyAttendanceStaff"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_12ssp"
+            android:layout_marginHorizontal="@dimen/_12ssp"
+            app:layout_constraintTop_toBottomOf="@+id/tvNotesAttendance"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

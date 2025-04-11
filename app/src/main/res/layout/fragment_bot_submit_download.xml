@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.features_management.report.ui.fragment.BotSubmitDownloadFragment"
+    android:background="@drawable/bottom_sheets_background_white"
+    android:padding="@dimen/_18sdp">
+
+    <ImageView
+        android:id="@+id/ivBtnCloseBottomCftalk"
+        android:layout_width="@dimen/_21sdp"
+        android:layout_height="@dimen/_21sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:src="@drawable/ic_close_bottom_sheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleChooseDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Report Komplain"
+        android:textAlignment="center"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/tvProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleChooseDate"
+        android:text="Project"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/grey2"
+        android:layout_marginTop="36dp"/>
+    <RelativeLayout
+        android:id="@+id/rlProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvProject"
+        android:background="@drawable/bg_field_tranparent"
+        android:padding="13dp"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:id="@+id/tvProjectName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="NAMA PROJECT"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvPeriode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rlProject"
+        android:text="Periode"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/grey2"
+        android:layout_marginTop="26dp"/>
+    <LinearLayout
+        android:id="@+id/llPeriodeDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvPeriode"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mulai dari"
+                android:fontFamily="@font/poppinsregular"
+                android:textAlignment="textStart"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sampai dengan"
+                android:fontFamily="@font/poppinsregular"
+                android:textAlignment="textStart"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="6dp">
+            <RelativeLayout
+                android:id="@+id/rlStartDateDownload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvProject"
+                android:background="@drawable/bg_field_tranparent"
+                android:padding="13dp"
+                android:layout_weight="1"
+                android:layout_marginRight="2dp">
+
+                <TextView
+                    android:id="@+id/tvStartDateDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="awal tanggal"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlEndDateDownload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvProject"
+                android:background="@drawable/bg_field_tranparent"
+                android:padding="13dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp">
+
+                <TextView
+                    android:id="@+id/tvtvEndDateDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Akhir tanggal"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rlDownloadFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/llPeriodeDownload"
+        android:layout_marginTop="68dp">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDownloadFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lanjut"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/secondary_color"
+            android:fontFamily="@font/poppinssemibold"
+            app:cornerRadius="8dp"
+            android:elevation="@dimen/_2sdp"/>
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/btnDownloadFile"
+            android:visibility="gone"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="5" />
+    </RelativeLayout>
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rlDownloadingFile"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/llPeriodeDownload"-->
+<!--        android:background="@drawable/bg_field"-->
+<!--        android:paddingVertical="@dimen/_5sdp"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_marginTop="68dp">-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvDownloadingfile"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Downloading file.."-->
+<!--            android:fontFamily="@font/poppinssemibold"-->
+<!--            android:textColor="@color/secondary_color"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_marginStart="@dimen/_80sdp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginTop="@dimen/_2sdp"/>-->
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progress_bars"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_toEndOf="@+id/tvDownloadingfile"-->
+<!--            android:indeterminate="false"-->
+<!--            android:max="100"-->
+<!--            android:progress="0"-->
+<!--            android:visibility="visible"-->
+<!--            />-->
+<!--    </RelativeLayout>-->
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

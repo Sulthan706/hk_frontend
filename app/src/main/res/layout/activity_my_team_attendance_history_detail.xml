@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.myteam.ui.new_.activity.MyTeamAttendanceHistoryDetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <DatePicker
+                android:id="@+id/llCalendarCfTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:datePickerMode="calendar"
+                android:fitsSystemWindows="true"
+                android:theme="@style/ClientDatePickerTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/lineAttendanceDetail"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@+id/llCalendarCfTeam" />
+            <LinearLayout
+                android:id="@+id/llCountStatusAttendance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/lineAttendanceDetail"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:text="Overview:"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/_2sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvMonthTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="December 2022"
+                        android:textAlignment="textStart" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_10sdp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_20sdp">
+
+                        <TextView
+                            android:id="@+id/tvCountHadirResult"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="16"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Hadir"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_20sdp">
+
+                        <TextView
+                            android:id="@+id/tvCountAlpaResult"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="16"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Alpa"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_20sdp">
+
+                        <TextView
+                            android:id="@+id/tvCountIzinResult"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="16"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="izin"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/tvCountLemburGantiResult"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="16"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Lembur Ganti"
+                            android:paddingTop="@dimen/_1sdp"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:id="@+id/lineAttendanceeDetail"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@+id/llCountStatusAttendance" />
+            <LinearLayout
+                android:id="@+id/llEmtpyCountHarian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/llCountStatusAttendance"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="visible"
+                android:paddingVertical="@dimen/_70sdp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Data tidak ada"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="@dimen/_11ssp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llReportToday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/llCountStatusAttendance">
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Report Harian"
+                    android:layout_marginBottom="@dimen/_5sdp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:paddingVertical="@dimen/_2sdp">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Tanggal"
+                        />
+                    <TextView
+                        android:id="@+id/tvDateScheduleResult"
+                        android:textAlignment="textEnd"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="2 november 2022"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:paddingVertical="@dimen/_2sdp">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Jam Kerja"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvTimeScheduleResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="06:40-15:25"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:paddingVertical="@dimen/_2sdp">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Kehadiran"
+                        />
+                    <TextView
+                        android:id="@+id/tvScheduleStatusResult"
+                        android:textAlignment="textEnd"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="--"
+                        />
+                </LinearLayout>
+                <!--        perabsenan-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCfteamAbsen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
+
+            </LinearLayout>
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/abl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <include
+                    android:id="@+id/layoutAppbarCfteam"
+                    layout="@layout/app_bar_default_client" />
+            </com.google.android.material.appbar.AppBarLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

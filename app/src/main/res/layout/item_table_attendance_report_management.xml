@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_2sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TableLayout
+        android:id="@+id/table_heading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvNoAttendanceReport"
+                style="@style/table_row_item"
+                android:layout_width="0dp"
+                android:layout_column="0"
+                android:layout_margin="1dp"
+                android:layout_weight="0.3"
+                android:padding="@dimen/_1sdp"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="1."/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:padding="@dimen/_1sdp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNucAttendanceReport"
+                    style="@style/table_row_item"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:text="12345678"/>
+
+                <TextView
+                    android:id="@+id/tvNameAttendanceReport"
+                    style="@style/table_row_item"
+                    android:layout_width="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:text="GABRIELLA EYRENE IRIANI KAMBEY"/>
+
+                <TextView
+                    android:id="@+id/tvProjectAttendanceReport"
+                    style="@style/table_row_item"
+                    android:layout_width="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="MALL KOTA KASABLANKA"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvHkAttendanceReport"
+                style="@style/table_row_item"
+                android:layout_width="0dp"
+                android:layout_column="2"
+                android:layout_margin="1dp"
+                android:layout_weight="0.2"
+
+                android:padding="@dimen/_1sdp"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="26"/>
+
+            <LinearLayout
+                android:id="@+id/llAttendanceReport"
+                android:layout_width="0dp"
+                android:layout_column="3"
+                android:layout_margin="1dp"
+                android:layout_weight="0.6"
+                android:padding="@dimen/_1sdp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvPresenceAttendanceReport"
+                    style="@style/table_row_item"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:text="26 hari"/>
+
+                <TextView
+                    android:id="@+id/tvPresenceTotAttendanceReport"
+                    style="@style/table_row_item"
+                    android:background="@color/white"
+                    android:layout_width="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="100%"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12ssp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_column="4"
+                android:layout_margin="1dp"
+                android:layout_weight="0.6"
+                android:padding="@dimen/_1sdp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/tvNoLateAttendanceReport"
+                    style="@style/table_row_item"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:textStyle="bold"
+                    android:text="-"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvLateAttendanceReport"
+                    style="@style/table_row_item"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:text="26 hari"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvLateTotAttendanceReport"
+                    style="@style/table_row_item"
+                    android:layout_width="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="100%"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12ssp"/>
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:background="@color/background"
+        app:layout_constraintTop_toBottomOf="@id/table_heading_layout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

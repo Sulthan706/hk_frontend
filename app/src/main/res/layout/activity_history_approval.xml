@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.service.approval.ui.activity.HistoryApprovalActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_32sdp">
+
+            <DatePicker
+                android:id="@+id/calendarHistoryApproval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:datePickerMode="calendar"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:theme="@style/ClientDatePickerTheme"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/btnPilihTanggalHistoryApproval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:background="@drawable/bg_secondary_new"
+                android:text="Pilih tanggal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsmedium"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/view1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/calendarHistoryApproval"/>
+
+            <TextView
+                android:id="@+id/tvFilterHistoryApproval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_22sdp"
+                android:padding="@dimen/_8sdp"
+                android:text="Absensi"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:background="@drawable/bg_spinner"
+                app:layout_constraintTop_toBottomOf="@id/view1"/>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/tvFilterHistoryApproval"/>
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/llEmptyHistoryApproval"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_22sdp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/view2">
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:src="@drawable/ic_completed"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="tidak riwayat approval yang dilakukan"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinslight"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/rvHistoryApproval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_18sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                tools:listitem="@layout/list_history_approval"
+                app:layout_constraintTop_toBottomOf="@id/view2"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/appbarHistoryApproval"
+        layout="@layout/app_bar_default"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

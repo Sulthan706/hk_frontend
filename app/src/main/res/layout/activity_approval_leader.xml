@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.service.approval.ui.activity.ApprovalLeaderActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/appbarApprovalLeader"
+            layout="@layout/app_bar_default_with_history_new" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutListComplaintVendor"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:background="@color/primary1"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/white"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabRippleColor="@color/white"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/TabLayoutStyle"
+            app:tabTextColor="#FFBA8A">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Turnover" />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Absensi" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerApprovalLeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/abl" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

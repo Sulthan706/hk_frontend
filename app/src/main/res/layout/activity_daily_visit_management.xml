@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homeScreenUpdated.visitReport.ui.activity.DailyVisitManagementActivity">
+
+    <include
+        android:id="@+id/appbarDailyVisitManagement"
+        layout="@layout/app_bar_default"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarDailyVisitManagement">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvMonthYearDailyVisitManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                tools:text="month"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_collapseMode="parallax"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/layout2DailyVisitManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toEndOf="@id/tvMonthYearDailyVisitManagement"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/ic_orange_dot" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Schedule"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black2"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_10ssp"/>
+
+            </LinearLayout>
+
+            <com.github.sundeepk.compactcalendarview.CompactCalendarView
+                android:id="@+id/calenderDailyVisitManagement"
+                android:layout_width="fill_parent"
+                android:layout_height="250dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                app:compactCalendarTargetHeight="250dp"
+                app:compactCalendarTextSize="@dimen/_11ssp"
+                app:compactCalendarBackgroundColor="@color/white"
+                app:compactCalendarTextColor="@color/black2"
+                app:compactCalendarCurrentSelectedDayBackgroundColor="@color/primarySoft5"
+                app:compactCalendarCurrentDayBackgroundColor="@color/grey1"
+                app:compactCalendarMultiEventIndicatorColor="#fff"
+                app:compactCalendarEventIndicatorStyle="small_indicator"
+                app:compactCalendarDisplayOtherMonthDays="true"
+                app:layout_collapseMode="parallax"
+                app:layout_constraintTop_toBottomOf="@id/tvMonthYearDailyVisitManagement"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/layout1DailyVisitManagement"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/calenderDailyVisitManagement" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="gone"
+                android:id="@+id/clDataDailyVisitManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_22sdp"
+                app:layout_constraintTop_toBottomOf="@id/layout1DailyVisitManagement">
+
+                <TextView
+                    android:id="@+id/tvTotScheduleDailyVisitManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total 0"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv1DailyVisitManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:text="Planned"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintTop_toTopOf="@id/tvTotScheduleDailyVisitManagement"
+                    app:layout_constraintBottom_toBottomOf="@id/tvTotScheduleDailyVisitManagement"
+                    app:layout_constraintStart_toEndOf="@id/tvTotScheduleDailyVisitManagement"/>
+
+                <TextView
+                    android:id="@+id/tvTotPlannedDailyVisitManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:text="0"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv1DailyVisitManagement"/>
+
+                <TextView
+                    android:id="@+id/tv2DailyVisitManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:text="Unplanned"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintTop_toTopOf="@id/tvTotPlannedDailyVisitManagement"
+                    app:layout_constraintBottom_toBottomOf="@id/tvTotPlannedDailyVisitManagement"
+                    app:layout_constraintStart_toEndOf="@id/tvTotPlannedDailyVisitManagement"/>
+
+                <TextView
+                    android:id="@+id/tvTotUnplannedDailyVisitManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:text="0"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv2DailyVisitManagement"/>
+
+                <TextView
+                    android:id="@+id/tvInfoDailyVisitManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="@string/info_daily_visit_management"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="italic"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintTop_toBottomOf="@id/tvTotScheduleDailyVisitManagement"/>
+
+                <TextView
+                    android:id="@+id/tv3DailyVisitManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Realization"
+                    android:textAlignment="center"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvInfoDailyVisitManagement"/>
+
+                <TextView
+                    android:id="@+id/tvPercentRealDailyVisitManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="0%"
+                    android:textColor="@color/green2"
+                    android:textSize="@dimen/_16ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv3DailyVisitManagement" />
+
+                <TextView
+                    android:id="@+id/tvTotRealPlanDailyVisitManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:text="1/2"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintStart_toEndOf="@id/tvPercentRealDailyVisitManagement"
+                    app:layout_constraintBottom_toBottomOf="@id/tvPercentRealDailyVisitManagement"/>
+
+                <TextView
+                    android:id="@+id/tv4DailyVisitManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:text="Unvisited"
+                    android:textAlignment="center"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintStart_toEndOf="@id/tvTotRealPlanDailyVisitManagement"
+                    app:layout_constraintTop_toBottomOf="@id/tvInfoDailyVisitManagement"/>
+
+                <TextView
+                    android:id="@+id/tvPercentVisitsDailyVisitManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="0%"
+                    android:textColor="@color/red1"
+                    android:textSize="@dimen/_16ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintStart_toStartOf="@id/tv4DailyVisitManagement"
+                    app:layout_constraintTop_toBottomOf="@id/tv4DailyVisitManagement" />
+
+                <TextView
+                    android:id="@+id/tvTotVisitsPlanDailyVisitManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:text="1/2"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintStart_toEndOf="@id/tvPercentVisitsDailyVisitManagement"
+                    app:layout_constraintBottom_toBottomOf="@id/tvPercentVisitsDailyVisitManagement"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDailyVisitManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    tools:listitem="@layout/list_schedule_management"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPercentRealDailyVisitManagement" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvEmptyDailyVisitManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_100sdp"
+                android:gravity="center"
+                android:text="@string/empty_schedule_management_english"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toBottomOf="@id/layout1DailyVisitManagement"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

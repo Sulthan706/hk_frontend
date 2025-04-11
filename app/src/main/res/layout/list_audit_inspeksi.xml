@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_permission_mid"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_8sdp"
+    android:layout_marginVertical="@dimen/_6sdp"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_4sdp"
+    android:paddingHorizontal="@dimen/_12sdp"
+    android:paddingVertical="@dimen/_8sdp">
+
+    <LinearLayout
+        android:id="@+id/ll1ListAuditInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvPeriodeListAuditInspeksi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:paddingVertical="@dimen/_2sdp"
+            android:background="@drawable/bg_grey1"
+            android:text="Error Periode"
+            android:textAlignment="center"
+            android:textColor="@color/blue3"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvDateTimeListAuditInspeksi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Error Time"
+            android:textAlignment="textEnd"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_10ssp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2ListAuditInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/ll1ListAuditInspeksi">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Auditor"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_11ssp"/>
+
+        <TextView
+            android:id="@+id/tvAuditorListAuditInspeksi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:text="Error Name"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll3ListAuditInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/ll2ListAuditInspeksi">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Penilaian"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_11ssp"/>
+
+        <TextView
+            android:id="@+id/tvL1ListAuditInspeksi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:fontFamily="@font/poppinsregular"
+            android:text="L1"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_11ssp"
+            android:drawableStart="@drawable/ic_circle_chooser"
+            android:drawablePadding="@dimen/_2sdp"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/tvL2ListAuditInspeksi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:fontFamily="@font/poppinsregular"
+            android:text="L2"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_11ssp"
+            android:drawableStart="@drawable/ic_done_circle_green"
+            android:drawablePadding="@dimen/_2sdp"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/tvL3ListAuditInspeksi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:fontFamily="@font/poppinsregular"
+            android:text="L3"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_11ssp"
+            android:drawableStart="@drawable/ic_done_circle_green"
+            android:drawablePadding="@dimen/_2sdp"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Lihat Laporan"
+        android:textColor="@color/blue3"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll3ListAuditInspeksi"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

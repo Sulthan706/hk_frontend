@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_68sdp"
+    android:layout_height="@dimen/_88sdp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_4sdp"
+    android:layout_margin="@dimen/_4sdp"
+    android:padding="@dimen/_8sdp">
+
+    <TextView
+        android:id="@+id/tvTotalListDetailAbsentOpr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/neutral100"
+        android:textSize="@dimen/_15ssp"
+        android:fontFamily="@font/poppinsmedium"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hari"
+        android:textAlignment="center"
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"/>
+
+    <TextView
+        android:id="@+id/tvStatusListDetailAbsentOpr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:text="Status"
+        android:textAlignment="center"
+        android:textColor="@color/secondary_color"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsmedium"/>
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".features.features_management.homescreen.closing.ui.activity.DailyClosingManagementActivity">
+
+    <include
+        android:id="@+id/app_bar_closing"
+        layout="@layout/app_bar_default"/>
+
+    <TextView
+        android:id="@+id/tv_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/black2"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:background="#F5F6F8"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:gravity="center"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/list_item_shimmer_daily_closing_spv"/>
+
+            <include
+                layout="@layout/list_item_shimmer_daily_closing_spv"/>
+
+            <include
+                layout="@layout/list_item_shimmer_daily_closing_spv"/>
+
+            <include
+                layout="@layout/list_item_shimmer_daily_closing_spv"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_closing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tidak ada data closing pekerjaan"
+        android:fontFamily="@font/poppinsregular"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</LinearLayout>

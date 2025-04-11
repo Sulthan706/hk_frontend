@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primary_color"
+    android:orientation="horizontal"
+    android:padding="20dp"
+    android:weightSum="3">
+
+    <ImageView
+        android:id="@+id/iv_appbar_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/tv_appbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_toStartOf="@id/iv_appbar_date"
+        android:layout_toEndOf="@id/iv_appbar_back"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppinsmedium"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        tools:text="JUDUL" />
+
+    <ImageView
+        android:id="@+id/iv_appbar_date"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_toStartOf="@id/iv_appbar_search"
+        android:src="@drawable/ic_calendar_white" />
+
+    <ImageView
+        android:id="@+id/iv_appbar_search"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_search" />
+
+</RelativeLayout>

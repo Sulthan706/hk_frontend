@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.service.permission.ui.activity.DetailPermissionManagementActivity">
+
+    <include
+        android:id="@+id/appbarDetailPermissionManagement"
+        layout="@layout/app_bar_default" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clDetailPermissionManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/bg_white_card"
+        android:elevation="@dimen/_4sdp"
+        app:layout_constraintTop_toBottomOf="@id/appbarDetailPermissionManagement">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPhotoDetailPermissionManagement"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_140sdp"
+            android:backgroundTint="@color/grayLine"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivPreviewPhotoDetailPermissionManagement"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:src="@drawable/ic_error_image"/>
+
+            <ImageView
+                android:id="@+id/ivDefaultPhotoDetailPermissionManagement"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_error_image"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_140sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardPhotoDetailPermissionManagement">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Error title"
+                android:textColor="@color/black1"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppinsmedium"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvDateDetailPermissionManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Error date"
+                android:textColor="@color/black1"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="2"
+                app:layout_constraintBottom_toTopOf="@id/tvShiftDetailPermissionManagement"/>
+
+            <TextView
+                android:id="@+id/tvShiftDetailPermissionManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Error shift"
+                android:textColor="@color/black1"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                app:layout_constraintBottom_toTopOf="@id/tvLocDetailPermissionManagement"/>
+
+            <TextView
+                android:id="@+id/tvLocDetailPermissionManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Error area"
+                android:textColor="@color/black1"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintBottom_toTopOf="@id/tvSubLocDetailPermissionManagement"/>
+
+            <TextView
+                android:id="@+id/tvSubLocDetailPermissionManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Error sub area"
+                android:textColor="@color/black1"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvPemohonDetailPermissionManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Pemohon"
+        android:textColor="@color/black1"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintTop_toBottomOf="@id/clDetailPermissionManagement"/>
+
+    <RelativeLayout
+        android:id="@+id/rlPemohonDetailPermissionManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/bg_field"
+        app:layout_constraintTop_toBottomOf="@id/tvPemohonDetailPermissionManagement">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivPemohonDetailPermissionManagement"
+            android:layout_width="@dimen/_42sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:background="@drawable/bg_shimmer"
+            app:civ_border_color="@android:color/darker_gray"
+            app:civ_border_width="@dimen/_1sdp"
+            android:src="@drawable/foto1"/>
+
+        <TextView
+            android:id="@+id/tvNamaPemohonDetailPermissionManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_centerVertical="true"
+            android:text="Error nama pemohon"
+            android:textColor="@color/black1"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_toEndOf="@id/ivPemohonDetailPermissionManagement"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv2DetailPermissionManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Alasan izin"
+        android:textColor="@color/black1"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintTop_toBottomOf="@id/rlPemohonDetailPermissionManagement"/>
+
+    <TextView
+        android:id="@+id/tvDescDetailPermissionManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_24sdp"
+        android:text="Error keterangan"
+        android:textColor="@color/black1"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:background="@drawable/bg_field"
+        app:layout_constraintTop_toBottomOf="@id/tv2DetailPermissionManagement"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

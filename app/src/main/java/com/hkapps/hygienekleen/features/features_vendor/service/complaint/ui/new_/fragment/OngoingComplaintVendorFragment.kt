@@ -1,0 +1,162 @@
+package com.hkapps.hygienekleen.features.features_vendor.service.complaint.ui.new_.fragment
+
+import android.content.Intent
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.hkapps.hygienekleen.databinding.FragmentOngoingComplaintVendorBinding
+import com.hkapps.hygienekleen.features.features_vendor.service.complaint.model.historyComplaint.ListHistoryComplaint
+import com.hkapps.hygienekleen.features.features_vendor.service.complaint.ui.new_.adapter.ComplaintByStatusVendorAdapter
+import com.hkapps.hygienekleen.features.features_vendor.service.complaint.viewmodel.VendorComplaintViewModel
+import com.hkapps.hygienekleen.features.features_vendor.service.complaint_internal.ui.activity.DetailComplaintInternalActivity
+import com.hkapps.hygienekleen.pref.CarefastOperationPref
+import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+
+class OngoingComplaintVendorFragment : Fragment(), ComplaintByStatusVendorAdapter.ComplaintStatusCallback {
+
+    private lateinit var binding: FragmentOngoingComplaintVendorBinding
+    private lateinit var rvAdapter: ComplaintByStatusVendorAdapter
+    private val projectCode = CarefastOperationPref.loadString(CarefastOperationPrefConst.USER_PROJECT_CODE, "")
+    private var page = 0
+    private var isLastPage = false
+    private val status: String = "ON PROGRESS"
+    private var reloadNeeded = true
+
+    companion object MyApplication {
+        private val globalArrayList = ArrayList<String>()
+
+        fun getGlobalArrayList(): ArrayList<String> {
+            return globalArrayList
+        }
+
+        fun setGlobalArrayList(items: ArrayList<String>) {
+            globalArrayList.clear()
+            globalArrayList.addAll(items.distinct())
+        }
+    }
+
+    var combinedArrayList: String = ""
+
+    private val viewModel: VendorComplaintViewModel by lazy {
+        ViewModelProviders.of(this).get(VendorComplaintViewModel::class.java)
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        binding = FragmentOngoingComplaintVendorBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // set shimmer effect
+//        binding.shimmerListComplaintVendorOngoing.startShimmerAnimation()
+//        binding.shimmerListComplaintVendorOngoing.visibility = View.VISIBLE
+        binding.rvListComplaintVendorOngoing.visibility = View.GONE
+
+        // set recycler view
+        val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        binding.rvListComplaintVendorOngoing.layoutManager = layoutManager
+
+        // set scroll listener
+        val scrollListener = object : EndlessScrollingRecyclerView(layoutManager) {
+            override fun onLoadMore(totalItemsCount: Int, recyclerView: RecyclerView) {
+                if (!isLastPage) {
+                    page++
+                    loadData(combinedArrayList)
+                }
+            }
+        }
+
+        binding.rvListComplaintVendorOngoing.addOnScrollListener(scrollListener)
+
+        setObserver()
+        val items = getGlobalArrayList()
+        items.clear()
+        items.add("COMPLAINT_CLIENT")
+        items.add("COMPLAINT_MANAGEMENT_CLIENT")
+        items.add("COMPLAINT_VISITOR")
+        combinedArrayList = globalArrayList.joinToString(",")
+        loadData(combinedArrayList)
+
+        Log.d("agri", combinedArrayList)
+    }
+
+    private fun setObserver() {
+        viewModel.isLoading?.observe(requireActivity(), Observer<Boolean?> { isLoading ->
+            if (isLoading != null) {
+                if (isLoading) {
+                    Toast.makeText(requireContext(), "Terjadi kesalahan.", Toast.LENGTH_SHORT).show()
+                } else {
+                    Handler(Looper.getMainLooper()).postDelayed(Runnable {
+//                        binding.shimmerListComplaintVendorOngoing.stopShimmerAnimation()
+//                        binding.shimmerListComplaintVendorOngoing.visibility = View.GONE
+                        binding.rvListComplaintVendorOngoing.visibility = View.VISIBLE
+                    }, 1500)
+                }
+            }
+        })
+        viewModel.clientComplaintHistoryResponseModel.observe(requireActivity()) { it ->
+            if (it.code == 200) {
+                if (it.data.content.isNotEmpty()) {
+                    binding.llEmptyListComplaintVendorOngoing.visibility = View.GONE
+                    isLastPage = it.data.last
+                    if (page == 0) {
+                        // set rv adapter
+                        rvAdapter = ComplaintByStatusVendorAdapter(
+                            requireContext(),
+                            it.data.content as ArrayList<ListHistoryComplaint>,
+                            status
+                        ). also { it.setListener(this) }
+                        binding.rvListComplaintVendorOngoing.adapter = rvAdapter
+                    } else {
+                        rvAdapter.listComplaint.addAll(it.data.content)
+                        rvAdapter.notifyItemRangeChanged(
+                            rvAdapter.listComplaint.size - it.data.content.size,
+                            rvAdapter.listComplaint.size
+                        )
+                    }
+                } else {
+                    Handler(Looper.getMainLooper()).postDelayed(Runnable {
+                        binding.llEmptyListComplaintVendorOngoing.visibility = View.VISIBLE
+                    }, 1500)
+                    Log.d("indi","<3")
+                }
+            } else {
+                Toast.makeText(requireContext(), "Error ${it.code}", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun loadData(complaintTypes: String) {
+        viewModel.getHistoryComplaint(page, projectCode, complaintTypes)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        loadData(combinedArrayList)
+    }
+
+    override fun onClickComplaint(complaintId: Int) {
+        CarefastOperationPref.saveInt(CarefastOperationPrefConst.COMPLAINT_ID_NOTIFICATION, complaintId)
+        CarefastOperationPref.saveString(CarefastOperationPrefConst.DETAIL_COMPLAINT_CLICK_FROM, "cTalk")
+        val i = Intent(requireContext(), DetailComplaintInternalActivity::class.java)
+        startActivity(i)
+    }
+
+}

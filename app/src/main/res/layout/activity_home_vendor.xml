@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.home.ui.new_.activity.HomeVendorActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_homeVendor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="flHomeVendor" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabCradleMargin="@dimen/_8sdp"
+        app:fabCradleRoundedCornerRadius="@dimen/_10sdp"
+        app:fabCradleVerticalOffset="@dimen/_10sdp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/smsp_transparent_color"
+            app:itemIconTint="@drawable/color_menu_bawah"
+            app:itemTextAppearanceActive="@style/Widget.BottomNavigationView"
+            app:itemTextAppearanceInactive="@style/Widget.BottomNavigationView"
+            app:itemTextColor="@drawable/color_menu_bawah"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_menu_vendor" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabs"
+        style="@style/Widget.App.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_6sdp"
+        android:src="@drawable/ic_assignment_client"
+        android:visibility="invisible"
+        app:fabCustomSize="@dimen/_55sdp"
+        app:layout_anchor="@id/bottomAppbar"
+        app:maxImageSize="@dimen/_30sdp" />
+
+    <LinearLayout
+        android:id="@+id/fab"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/bgcircle"
+        android:padding="@dimen/_15sdp"
+        app:layout_anchor="@+id/fabs"
+        app:layout_anchorGravity="center">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/done" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

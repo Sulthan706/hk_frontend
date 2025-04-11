@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tv_profile_birthdate" type="id" />
+    <item name="tv_birth_placedate" type="id" />
+    <item name="tvProfileBirthdate" type="id" />
+    <item name="tvPlaceProfile" type="id" />
+    <item name="etPlaceProfile" type="id" />
+    <item name="dPStartDate" type="id" />
+
+</resources>

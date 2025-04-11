@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottom_sheets_background_white"
+    android:padding="@dimen/_18sdp">
+
+    <ImageView
+        android:id="@+id/ivCloseBottomReviewPhotoInspeksi"
+        android:layout_width="@dimen/_21sdp"
+        android:layout_height="@dimen/_21sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:src="@drawable/ic_close_bottom_sheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv1BottomReviewPhotoInspeksi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Foto Kondisi Area"
+        android:textAlignment="center"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv2BottomReviewPhotoInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Area"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/ivCloseBottomReviewPhotoInspeksi"/>
+
+    <TextView
+        android:id="@+id/tvAreaBottomReviewPhotoInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/bg_field"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Error area"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/tv2BottomReviewPhotoInspeksi"/>
+
+    <TextView
+        android:id="@+id/tv3BottomReviewPhotoInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Obyek"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvAreaBottomReviewPhotoInspeksi"/>
+
+    <TextView
+        android:id="@+id/tvObjectBottomReviewPhotoInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/bg_field"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Error object"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/tv3BottomReviewPhotoInspeksi"/>
+
+    <TextView
+        android:id="@+id/tv4BottomReviewPhotoInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Foto Kondisi"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvObjectBottomReviewPhotoInspeksi"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/layoutPreviewBottomReviewPhotoInspeksi"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:backgroundTint="@color/grayLine"
+        app:cardCornerRadius="@dimen/_6sdp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/tv4BottomReviewPhotoInspeksi"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/ivPreviewBottomReviewPhotoInspeksi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:src="@drawable/ic_error_image" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnChooseBottomSheetPenilaianInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:background="@drawable/bg_secondary_new"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Lanjut"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toBottomOf="@+id/layoutPreviewBottomReviewPhotoInspeksi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

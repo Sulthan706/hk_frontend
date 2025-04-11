@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6F8">
+
+    <include
+        android:id="@+id/appbar_permission"
+        layout="@layout/app_bar_default_with_history_permission_mid" />
+
+    <TextView
+        android:id="@+id/tv_empty_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Tidak ada izin yang diajukan oleh tim."
+        android:textSize="@dimen/_12ssp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/tv1ListPermission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_18sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/appbar_permission">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Daftar Permohonan Izin Tim"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/neutral100"
+            app:layout_constraintTop_toBottomOf="@id/appbar_permission"/>
+
+        <TextView
+            android:id="@+id/tvPositionListPermission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_6sdp"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_32sdp"
+            android:background="@drawable/bg_spinner"
+            android:text="Semua posisi"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_permission"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1ListPermission">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_permission"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:visibility="gone"
+                tools:listitem="@layout/list_permission_mid_level"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_permission"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1ListPermission">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/shimmer_placeholder_permission_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/shimmer_placeholder_permission_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_permission_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_create_complaint"
+        android:layout_width="@dimen/_62sdp"
+        android:layout_height="@dimen/_62sdp"
+        android:layout_margin="@dimen/_12sdp"
+        android:src="@drawable/ic_create_permission_mid"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInfoValidationCreateComplaint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_62sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:background="@drawable/rounded_shape"
+        android:fontFamily="@font/poppinsregular"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:text="Maaf, Anda tidak bisa mengajukan izin sampai izin sebelumnya diproses"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_8ssp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_create_complaint"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

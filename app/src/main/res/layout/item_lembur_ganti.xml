@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_margin="@dimen/_4sdp"
+    android:background="@drawable/bg_field"
+    android:elevation="@dimen/_8sdp">
+
+
+        <RelativeLayout
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/frame_2237"
+            android:layout_width="106dp"
+            android:layout_height="28dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="259dp"
+            android:layout_alignParentTop="true"
+            android:clipToOutline="true"
+            android:background="@drawable/bg_field_lembur_main">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disetujui"
+                android:fontFamily="@font/poppinssemibold"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llMainTitleLembur"
+            android:layout_margin="@dimen/_12sdp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivImageTeamProfile"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/foto1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/llTitleNameLembur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/ivImageTeamProfile"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Nama CSO"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JobCode"
+                    android:fontFamily="@font/poppinsregular"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rlDatenShiftLembur"
+            app:layout_constraintTop_toBottomOf="@+id/llMainTitleLembur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rabu, 5/10/2022"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="1dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Shift Pagi"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tvBtnSubmitLemburGanti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cari Pengganti"
+            app:layout_constraintTop_toBottomOf="@+id/rlDatenShiftLembur"
+            android:fontFamily="@font/poppinssemibold"
+            android:background="@drawable/bg_field_lembur"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/_5ssp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_23sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

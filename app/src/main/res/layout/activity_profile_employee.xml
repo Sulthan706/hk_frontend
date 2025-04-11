@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homeScreenUpdated.humanCapital.ui.activity.ProfileEmployeeActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_140sdp"
+        android:background="@drawable/bg_home_primary"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_15sdp">
+
+        <TextView
+            android:id="@+id/tvProfileEmployee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivBackProfileEmployee"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:src="@drawable/ic_back_my_teams_clients"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="visible"
+            android:id="@+id/clProfileEmployee"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvProfileEmployee">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileEmployee"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                app:civ_border_color="@android:color/darker_gray"
+                app:civ_border_width="@dimen/_2sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/profile_ic" />
+
+            <LinearLayout
+                android:id="@+id/llProfileEmployee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:background="@drawable/subtract_profile"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvNameProfileEmployee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="Name Unknown"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinssemibold" />
+
+                <TextView
+                    android:id="@+id/tvJobProfileEmployee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Job Position Unknown"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tvNucProfileEmployee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="NUC Unknown"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_10ssp" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clOverviewProfileEmployee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:padding="@dimen/_12sdp"
+                android:background="@drawable/bg_field"
+                app:layout_constraintTop_toBottomOf="@id/llProfileEmployee">
+
+                <TextView
+                    android:id="@+id/tvOverviewProfileEmployee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Overview"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_spinner"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvRecentMonthProfileEmployee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_18sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="error"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvDaysTimeWorkProfileEmployee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="error"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_9ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintTop_toBottomOf="@id/tvOverviewProfileEmployee"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlProgressBarProfileEmployee"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvPercentageProfileEmployee"
+                    app:layout_constraintTop_toBottomOf="@id/tvDaysTimeWorkProfileEmployee">
+
+                    <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                        android:id="@+id/progressBarProfileEmployee"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_centerInParent="true"
+                        app:rpbBackgroundColor="@color/grayLine"
+                        app:rpbProgressColor="@color/green2"
+                        app:rpbCornerRadius="@dimen/_12sdp"
+                        app:rpbProgressTextColor="@color/white"
+                        app:rpbTextPadding="@dimen/_12sdp"
+                        app:rpbTextSize="@dimen/_1ssp"
+                        app:rpbProgress="50"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvPercentageProfileEmployee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:text="error"
+                    android:textColor="@color/grey4"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/rlProgressBarProfileEmployee"
+                    app:layout_constraintTop_toBottomOf="@id/tvDaysTimeWorkProfileEmployee"/>
+
+                <LinearLayout
+                    android:id="@+id/llAttendanceProfileEmployee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/rlProgressBarProfileEmployee">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:paddingVertical="@dimen/_10sdp"
+                        android:paddingHorizontal="@dimen/_6sdp"
+                        android:background="@drawable/bg_grey7">
+
+                        <LinearLayout
+                            android:id="@+id/llPresentProfileEmployee"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/view1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Presence"
+                                android:textAlignment="center"
+                                android:textColor="@color/black2"
+                                android:textSize="@dimen/_8ssp"
+                                android:fontFamily="@font/poppinsregular"/>
+
+                            <TextView
+                                android:id="@+id/tvPresentProfileEmployee"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="@color/green2"
+                                android:textSize="@dimen/_14ssp"
+                                android:fontFamily="@font/poppinssemibold"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="1dp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_marginHorizontal="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:background="@color/graybtn"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/llPermissionProfileEmployee"
+                            app:layout_constraintStart_toEndOf="@id/llPresentProfileEmployee"/>
+
+                        <LinearLayout
+                            android:id="@+id/llPermissionProfileEmployee"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/view2"
+                            app:layout_constraintStart_toEndOf="@id/view1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Permission"
+                                android:textAlignment="center"
+                                android:textColor="@color/black2"
+                                android:textSize="@dimen/_8ssp"
+                                android:fontFamily="@font/poppinsregular"/>
+
+                            <TextView
+                                android:id="@+id/tvPermissionProfileEmployee"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="@color/primary_color"
+                                android:textSize="@dimen/_14ssp"
+                                android:fontFamily="@font/poppinssemibold"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="1dp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_marginHorizontal="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:background="@color/graybtn"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/llAbsentProfileEmployee"
+                            app:layout_constraintStart_toEndOf="@id/llPermissionProfileEmployee"/>
+
+                        <LinearLayout
+                            android:id="@+id/llAbsentProfileEmployee"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/view2">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Absence"
+                                android:textAlignment="center"
+                                android:textColor="@color/black2"
+                                android:textSize="@dimen/_8ssp"
+                                android:fontFamily="@font/poppinsregular"/>
+
+                            <TextView
+                                android:id="@+id/tvAbsentProfileEmployee"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="@color/red1"
+                                android:textSize="@dimen/_14ssp"
+                                android:fontFamily="@font/poppinssemibold"/>
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:paddingTop="@dimen/_12sdp"
+                        android:background="@drawable/bg_whitered">
+
+                        <LinearLayout
+                            android:id="@+id/llLateProfileEmployee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Lateness"
+                                android:textAlignment="center"
+                                android:textColor="@color/black2"
+                                android:textSize="@dimen/_8ssp"
+                                android:fontFamily="@font/poppinsregular"/>
+
+                            <TextView
+                                android:id="@+id/tvLateProfileEmployee"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="- times"
+                                android:textAlignment="center"
+                                android:textColor="@color/red1"
+                                android:textSize="@dimen/_8ssp"
+                                android:fontFamily="@font/poppinssemibold"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvDetailLateProfileEmployee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingVertical="@dimen/_4sdp"
+                            android:text="View Detail"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8ssp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:background="@drawable/bg_red"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvOvertimeProfileEmployee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Overtime"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintTop_toBottomOf="@id/llAttendanceProfileEmployee"/>
+
+                <TextView
+                    android:id="@+id/tvBackupProfileEmployee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:text="Backup"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvTotBackupProfileEmployee"
+                    app:layout_constraintTop_toBottomOf="@id/tvOvertimeProfileEmployee"/>
+
+                <TextView
+                    android:id="@+id/tvTotBackupProfileEmployee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:text="- days"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvBackupProfileEmployee"
+                    app:layout_constraintTop_toBottomOf="@id/tvOvertimeProfileEmployee"/>
+
+                <TextView
+                    android:id="@+id/tvRequestedProfileEmployee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Client-requested"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvTotRequestedProfileEmployee"
+                    app:layout_constraintTop_toBottomOf="@id/tvTotBackupProfileEmployee"/>
+
+                <TextView
+                    android:id="@+id/tvTotRequestedProfileEmployee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- days"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvRequestedProfileEmployee"
+                    app:layout_constraintTop_toBottomOf="@id/tvTotBackupProfileEmployee"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/llMenuProfileEmployee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="4"
+                app:layout_constraintTop_toBottomOf="@+id/clOverviewProfileEmployee">
+
+                <LinearLayout
+                    android:id="@+id/llHistoryProfileEmployee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_12sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_8sdp"
+                            android:src="@drawable/ic_history_profile_employee" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="History"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRatingProfileEmployee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_12sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_8sdp"
+                            android:src="@drawable/ic_rating_profile_employee" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Rating"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_12sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_8sdp"
+                            android:src="@drawable/ic_history_profile_employee" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="History"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_12sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_8sdp"
+                            android:src="@drawable/ic_history_profile_employee" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="History"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9ssp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
+            android:id="@+id/clShimmerProfileEmployee"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvProfileEmployee">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_foto_profile"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_shimmer" />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_subtract_shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:background="@drawable/subtract_profile"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_name_profile"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_shimmer" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:visibility="visible"
+                    android:id="@+id/shimmer_job_profile"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_shimmer" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_nuc_profile"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_shimmer" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_project_name"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_7sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_shimmer" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

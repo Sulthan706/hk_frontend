@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".features.features_management.homescreen.attendanceOpr.ui.activity.DacAbsentOprMgmntActivity">
+
+    <include
+        android:id="@+id/appbarDacAbsentOprMgmnt"
+        layout="@layout/app_bar_default"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appbarDacAbsentOprMgmnt"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_DacAbsentOprMgmnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_22sdp"
+                android:background="@color/white"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_DacAbsentOprMgmnt"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_130sdp"
+                    android:backgroundTint="#DEDEDE"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="@dimen/_4sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_DacAbsentOprMgmnt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/ic_error_image" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/ll1_DacAbsentOprMgmnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/card_DacAbsentOprMgmnt">
+
+                    <TextView
+                        android:id="@+id/tv_operatorDacAbsentOprMgmnt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:text="Error name"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <TextView
+                        android:id="@+id/tv_jobDacAbsentOprMgmnt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:maxLines="1"
+                        android:text="Error job"
+                        android:textColor="@color/grayTxt"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:id="@+id/tv_statusOprDacAbsentOprMgmnt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:text="Error status"
+                        android:textColor="@color/lembur"
+                        android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2_DacAbsentOprMgmnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                app:layout_constraintTop_toBottomOf="@id/rl_DacAbsentOprMgmnt">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Absen Masuk"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tv_checkInTimeDacAbsentOprMgmnt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Error Absen Masuk"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/neutral100"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Absen Pulang"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tv_checkOutTimeDacAbsentOprMgmnt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Error Absen Pulang"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/neutral100"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3_DacAbsentOprMgmnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll2_DacAbsentOprMgmnt">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kode Plotting"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tv_codePlottingDacAbsentOprMgmnt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Error Kode Plotting"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/neutral100"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Area"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tv_areaDacAbsentOprMgmnt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Error Area"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/neutral100"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sub Area"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tv_subAreaDacAbsentOprMgmnt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Error Sub Area"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/neutral100"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Shift"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tv_shiftDacAbsentOprMgmnt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Error Shift"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/neutral100"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/ll3_DacAbsentOprMgmnt">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:text="Daily Activity"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerDacAbsentOprMgmnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_22sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_55sdp"
+                            android:background="@drawable/bg_shimmer_cardview"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_55sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/bg_shimmer_cardview"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_55sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/bg_shimmer_cardview"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_55sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/bg_shimmer_cardview"/>
+
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_DacAbsentOprMgmnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:visibility="gone"
+                    tools:listitem="@layout/item_attendance_daily_act_all" />
+
+                <TextView
+                    android:id="@+id/tv_emptyDacAbsentOprMgmnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_52sdp"
+                    android:fontFamily="@font/poppinslight"
+                    android:text="Tidak ada data."
+                    android:textSize="@dimen/_12ssp"
+                    android:gravity="center"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

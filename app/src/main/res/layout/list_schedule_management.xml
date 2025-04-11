@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_dac_home"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardElevation="@dimen/_3sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvProjectNameListScheduleManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Error" />
+
+        <TextView
+            android:id="@+id/tvProjectCodeListScheduleManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Error"
+            app:layout_constraintTop_toBottomOf="@id/tvProjectNameListScheduleManagement"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:paddingVertical="@dimen/_4sdp"
+            android:weightSum="4"
+            android:background="@color/grey1"
+            app:layout_constraintTop_toBottomOf="@+id/tvProjectCodeListScheduleManagement">
+
+            <TextView
+                android:id="@+id/tvInScheduleManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:text="in"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvTimeInScheduleManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/blue1"
+                android:textSize="@dimen/_10ssp"
+                tools:text="--:--"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvInScheduleManagement"/>
+
+            <TextView
+                android:id="@+id/tvOutScheduleManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:text="out"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvTimeInScheduleManagement"/>
+
+            <TextView
+                android:id="@+id/tvTimeOutScheduleManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/green2"
+                android:textSize="@dimen/_10ssp"
+                tools:text="--:--"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvOutScheduleManagement"/>
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/tvPlanningInfoScheduleManagement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:fontFamily="@font/poppinsregular"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_10ssp"
+                tools:text="Planned"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvTimeOutScheduleManagement"
+                app:layout_constraintEnd_toStartOf="@id/tvDivertedInfoScheduleManagement"/>
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/tvDivertedInfoScheduleManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/_10ssp"
+                tools:text="Unplanned"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

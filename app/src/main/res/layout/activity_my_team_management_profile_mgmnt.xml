@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".features.features_management.homescreen.operational.ui.activity.MyTeamManagementProfileMgmntActivity">
+
+    <include
+        android:id="@+id/appbarMyTeamManagementProfileMgmnt"
+        layout="@layout/app_bar_default"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerMyTeamManagementProfileMgmnt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_12sdp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarMyTeamManagementProfileMgmnt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/shimmer_placeholder_operator_myteam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_operator_myteam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_operator_myteam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_operator_myteam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_operator_myteam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_operator_myteam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_operator_myteam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeMyTeamManagementProfileMgmnt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarMyTeamManagementProfileMgmnt">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_MyTeamManagementProfileMgmnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_22sdp"
+            android:visibility="gone"
+            tools:listitem="@layout/list_leader_myteam"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_MyTeamManagementProfileMgmntNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/fragment_no_data" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_MyTeamManagementProfileMgmntNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/layoutConnectionTimeout"
+            layout="@layout/fragment_connection_timeout" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

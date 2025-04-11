@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "716390711582",
+    "project_id": "hygienekleen-e67d2",
+    "storage_bucket": "hygienekleen-e67d2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716390711582:android:39e083f1eccc5cd22c490f",
+        "android_client_info": {
+          "package_name": "com.hkapps.hygienekleen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBz9NAs6x-8HG4mNYgE2inJMp6aizQhKjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

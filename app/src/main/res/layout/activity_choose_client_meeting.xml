@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.meeting.activity.ChooseClientMeetingActivity">
+
+    <include
+        android:id="@+id/appbarChooseClientMeeting"
+        layout="@layout/app_bar_default"/>
+
+    <TextView
+        android:id="@+id/tv1ChooseClientMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Pilih nama Klien yang mengikuti meeting"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/appbarChooseClientMeeting"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLaporanKondisiArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/tv1ChooseClientMeeting"
+        app:layout_constraintBottom_toTopOf="@+id/btnEnableChooseClientMeeting"
+        tools:listitem="@layout/list_client_meeting"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDisableChooseClientMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_margin="@dimen/_22sdp"
+        android:background="@drawable/btn_disable"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Pilih"
+        android:visibility="visible"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEnableChooseClientMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_margin="@dimen/_22sdp"
+        android:background="@drawable/bg_secondary"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Pilih"
+        android:visibility="invisible"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEmptyChooseClientMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:gravity="center"
+        android:text="Tidak ada daftar klien di project ini. Silakan kembali dan pilih tambah manual."
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/appbarChooseClientMeeting"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

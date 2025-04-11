@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_listBranch"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_14sdp"
+    android:layout_marginVertical="@dimen/_4sdp"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_6sdp"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/tvCodeBranchesProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="National"
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNameBranchesProject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:text="All Branch"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/tvCodeBranchesProject"
+        app:layout_constraintEnd_toStartOf="@id/llStatisticBrancesProject"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTotBranchesProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Total Project : 1.148"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/tvNameBranchesProject"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStatisticBranchesProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:text="National Statistic"
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvTotBranchesProject" />
+
+    <LinearLayout
+        android:id="@+id/llStatisticBrancesProject"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvStatisticBranchesProject"
+        app:layout_constraintBottom_toBottomOf="@id/tvTotBranchesProject"
+        app:layout_constraintStart_toEndOf="@id/tvTotBranchesProject"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvActiveBranchesProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Active"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_9ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvPercentActiveBranchesProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="88,88%"
+                android:textColor="@color/green2"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvTotActiveBranchesProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text="888"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvPercentActiveBranchesProject"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvClosedBranchesProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Closed"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_9ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvPercentClosedBranchesProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="88,88%"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvTotClosedBranchesProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text="888"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvPercentClosedBranchesProject"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_next_grey"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

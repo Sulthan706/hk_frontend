@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_14sdp">
+
+        <FrameLayout
+            android:id="@+id/fl_shiftPagiNoData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include layout="@layout/fragment_no_data" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_shiftPagiNoInternet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/layoutConnectionTimeout"
+                layout="@layout/fragment_connection_timeout" />
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_anggotaShiftPagi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_450sdp"
+            android:visibility="gone"
+            tools:listitem="@layout/list_anggota_timku" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerShiftPagi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/shimmer_placeholder_operator_myteam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_operator_myteam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_operator_myteam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_operator_myteam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_operator_myteam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_operator_myteam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </RelativeLayout>
+</LinearLayout>

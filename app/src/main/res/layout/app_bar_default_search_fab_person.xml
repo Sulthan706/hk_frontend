@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_appbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary_color"
+    android:orientation="horizontal"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="20dp">
+
+    <ImageView
+        android:id="@+id/iv_appbar_back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/et_appbar_search"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_marginStart="15dp"-->
+    <!--        android:layout_marginEnd="15dp"-->
+    <!--        android:background="@null"-->
+    <!--        android:fontFamily="@font/poppinsmedium"-->
+    <!--        android:hint="Search staff..."-->
+    <!--        android:imeOptions="actionSearch"-->
+    <!--        android:singleLine="true"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textColorHint="@color/white"-->
+    <!--        android:textSize="@dimen/textInput" />-->
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_appbar_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/SearchViewAppbar"
+        app:iconifiedByDefault="false"
+        app:queryHint="Cari nama..."
+        app:searchIcon="@drawable/ic_search"
+        app:searchHintIcon="@drawable/ic_search"
+        app:closeIcon="@drawable/ic_close_white"/>
+
+</LinearLayout>

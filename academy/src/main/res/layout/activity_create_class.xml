@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_trainer.myclass.ui.activity.CreateClassActivity">
+
+    <include
+        android:id="@+id/appbarCreateClass"
+        layout="@layout/app_bar_training" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollViewCreateClass"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appbarCreateClass"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Trainer"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold" />
+
+            <TextView
+                android:id="@+id/tvTrainerNameCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="Error name"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:background="@drawable/bg_field_disable" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Nama Kelas Training"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etClassNameCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:padding="@dimen/_10sdp"
+                android:hint="Masukkan Nama Kelas"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:background="@drawable/bg_field" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Training Untuk"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerTrainingForCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/bg_dropdown"
+                android:entries="@array/jobList"
+                android:spinnerMode="dropdown" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Modul Training"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerModuleTrainingCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/bg_dropdown"
+                android:entries="@array/jobList"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:id="@+id/tvLevelModuleTrainingCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Level :"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_8ssp"
+                android:fontFamily="@font/poppinssemibold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Assign Online Tes?"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerAssignOnlineCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/bg_dropdown"
+                android:entries="@array/jobList"
+                android:spinnerMode="dropdown" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Kategori Kelas"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerClassCategoryCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/bg_dropdown"
+                android:entries="@array/jobList"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="@string/note_class_category"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_8ssp"
+                android:fontFamily="@font/poppinsregular" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Kuota Peserta yang Apply"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etKuotaCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:padding="@dimen/_10sdp"
+                android:hint="Masukkan kuota"
+                android:inputType="number"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:background="@drawable/bg_field_disable" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Kelas Dibuka Untuk Project"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold" />
+
+            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                android:id="@+id/spinnerProjectCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/bg_dropdown"
+                android:spinnerMode="dropdown"
+                app:smsp_arrowColor="@color/white"
+                app:smsp_arrowPaddingRight="@dimen/_2sdp"
+                app:smsp_enableFloatingLabel="false"
+                app:smsp_floatingLabelColor="@color/white"
+                app:smsp_floatingLabelText="Pilih Project"
+                app:smsp_hint="Pilih Project"
+                app:smsp_hintColor="@color/black2"
+                app:smsp_hintSize="@dimen/_11ssp"
+                app:smsp_isSearchable="true"
+                app:smsp_itemColor="@color/black2"
+                app:smsp_itemListColor="@color/black2"
+                app:smsp_itemListHintBackgroundColor="#808080"
+                app:smsp_itemListHintColor="@color/blue6"
+                app:smsp_multilineError="false"
+                app:smsp_searchHeaderBackgroundColor="@color/blue6"
+                app:smsp_searchHeaderText="Pilih Project"
+                app:smsp_searchTextColor="@color/black2"
+                app:smsp_selectedItemListColor="@color/black2"
+                app:smsp_underlineColor="@color/white"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Tanggal Training"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold" />
+
+            <TextView
+                android:id="@+id/tvDateTrainingCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/bg_field"
+                android:drawableEnd="@drawable/ic_training_blue8"
+                android:drawablePadding="@dimen/_2sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:padding="@dimen/_10sdp"
+                android:text="Pilih Tanggal"
+                android:textColor="@color/smsp_hint_color"
+                android:textSize="@dimen/_11ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:text="Mulai Dari"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinssemibold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:text="Sampai"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinssemibold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvStartTimeCreateClass"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:background="@drawable/bg_field"
+                    android:fontFamily="@font/poppinsregular"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Pilih Jam"
+                    android:textColor="@color/smsp_hint_color"
+                    android:textSize="@dimen/_11ssp" />
+
+                <TextView
+                    android:id="@+id/tvEndTimeCreateClass"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:background="@drawable/bg_field"
+                    android:fontFamily="@font/poppinsregular"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Pilih Jam"
+                    android:textColor="@color/smsp_hint_color"
+                    android:textSize="@dimen/_11ssp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Jenis Kelas"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinssemibold" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerClassTypeCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/bg_dropdown"
+                android:entries="@array/jobList"
+                android:spinnerMode="dropdown" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llOnlineCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:text="Link Training"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinssemibold" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerLinkTrainingCreateClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/jobList"
+                    android:spinnerMode="dropdown" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etLinkTrainingCreateClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:hint="Masukkan Link Training"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:background="@drawable/bg_field" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llOnsiteCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:text="Lokasi Training"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinssemibold" />
+
+                <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                    android:id="@+id/spinnerLocationTrainingCreateClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:background="@drawable/bg_dropdown"
+                    android:spinnerMode="dropdown"
+                    app:smsp_arrowColor="@color/white"
+                    app:smsp_arrowPaddingRight="@dimen/_2sdp"
+                    app:smsp_enableFloatingLabel="false"
+                    app:smsp_floatingLabelColor="@color/white"
+                    app:smsp_floatingLabelText="Pilih Lokasi"
+                    app:smsp_hint="Pilih Lokasi"
+                    app:smsp_hintColor="@color/black2"
+                    app:smsp_hintSize="@dimen/_11ssp"
+                    app:smsp_isSearchable="true"
+                    app:smsp_itemColor="@color/black2"
+                    app:smsp_itemListColor="@color/black2"
+                    app:smsp_itemListHintBackgroundColor="#808080"
+                    app:smsp_itemListHintColor="@color/blue6"
+                    app:smsp_multilineError="false"
+                    app:smsp_searchHeaderBackgroundColor="@color/blue6"
+                    app:smsp_searchHeaderText="Pilih Lokasi"
+                    app:smsp_searchTextColor="@color/black2"
+                    app:smsp_selectedItemListColor="@color/black2"
+                    app:smsp_underlineColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/tvLocationTrainingCreateClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:background="@drawable/bg_field_disable"
+                    android:fontFamily="@font/poppinsregular"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Alamat Lokasi"
+                    android:textColor="@color/smsp_hint_color"
+                    android:textSize="@dimen/_11ssp" />
+
+                <LinearLayout
+                    android:id="@+id/llCheckOtherLocCreateClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:orientation="horizontal" >
+                    
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/ivCheckOtherLocCreateClass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_check_box" />
+
+                    <ImageView
+                        android:visibility="visible"
+                        android:id="@+id/ivUncheckOtherLocCreateClass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_check_box_border" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:text="Pilih Lokasi Lain"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_9ssp"
+                        android:fontFamily="@font/poppinsregular" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etLocationTrainingCreateClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:hint="Alamat Lokasi Lain"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:background="@drawable/bg_field_disable" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp" />
+
+            <RelativeLayout
+                android:id="@+id/btnNextCreateClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_18sdp"
+                android:elevation="@dimen/_6sdp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="Lanjut"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:background="@drawable/bg_second_color" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

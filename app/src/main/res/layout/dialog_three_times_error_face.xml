@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDialog"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fitsSystemWindows="true"
+        android:layout_margin="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_12sdp">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Verifikasi Absensi"
+                android:textAlignment="center"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                android:textColor="@color/black3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Silakan masukkan password yang Anda gunakan saat login"
+                android:textAlignment="center"
+                android:textSize="@dimen/_10ssp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etPasswordAttendanceErrorFaceLow"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleDrawable="@drawable/ic_password_toogle"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:enabled="true"
+                android:focusable="false"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                android:focusableInTouchMode="true"
+                android:hint="Password"
+                app:layout_constraintTop_toBottomOf="@+id/cvImagePeriodicUpload">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvPasswordAttendanceErrorFaceLow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:visibility="gone"
+                android:id="@+id/btnSubmitAttendanceLoginLow"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:text="Submit"
+                app:cornerRadius="8dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppinssemibold">
+            </com.google.android.material.button.MaterialButton>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmitAttendanceLoginLowDisable"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:text="Submit"
+                android:backgroundTint="@color/gray_dark"
+                app:cornerRadius="8dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppinssemibold">
+            </com.google.android.material.button.MaterialButton>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

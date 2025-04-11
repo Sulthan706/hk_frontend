@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/clListParticipant"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_8sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivListParticipant"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/operation"
+        app:civ_border_width="@dimen/_1sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/ivCheckListParticipant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_round_check_circle"
+        app:layout_constraintEnd_toEndOf="@id/ivListParticipant"
+        app:layout_constraintBottom_toBottomOf="@id/ivListParticipant" />
+
+    <TextView
+        android:id="@+id/tvNameListParticipant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:text="Sulthan Akbar"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivListParticipant"/>
+
+    <TextView
+        android:id="@+id/tvPositionProjectListParticipant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:text="Employeecode | jobcode"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivListParticipant"
+        app:layout_constraintBottom_toBottomOf="@id/ivListParticipant"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

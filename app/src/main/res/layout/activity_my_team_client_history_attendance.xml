@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".features.features_client.myteam.ui.new_.activity.MyTeamClientHistoryAttendanceActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/abl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <include
+                    android:id="@+id/layoutAppbarCfteam"
+                    layout="@layout/app_bar_default_client" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <DatePicker
+                android:id="@+id/llCalendarCfTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:datePickerMode="calendar"
+                android:fitsSystemWindows="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:theme="@style/ClientDatePickerTheme"
+                />
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/llCalendarCfTeam"/>
+            <LinearLayout
+                android:id="@+id/llProgressBarCfteam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/llCalendarCfTeam"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jadwal libur"
+                        android:textAlignment="textStart"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="#B9B9B9"/>
+                    <TextView
+                        android:id="@+id/tvScheduleOffCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0 Orang"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="#B9B9B9"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jadwal masuk"
+                        android:textAlignment="textStart"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="#607080"/>
+                    <TextView
+                        android:id="@+id/tvScheduleInCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0 Orang"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="#607080"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/llCountKehadiranAll">
+
+                    <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                        android:id="@+id/rounded_progress_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        app:rpbBackgroundColor="#DEDEDE"
+                        app:rpbBackgroundTextColor="#FFFFFF"
+                        app:rpbCornerRadius="20dp"
+                        app:rpbProgressColor="#00BD8C"
+                        app:rpbProgressTextColor="#FFFFFF"
+                        app:rpbTextPadding="12dp"
+                        app:rpbTextSize="16sp"
+
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/llattendanceStatusCfteam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:layout_marginTop="@dimen/_2sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinsregular"
+                                android:text="Hadir"
+                                android:textColor="#00BD8C"
+                                android:textSize="@dimen/_9ssp" />
+
+                            <TextView
+                                android:id="@+id/tvCountHadirPercent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_3sdp"
+                                android:fontFamily="@font/poppinsregular"
+                                android:text="0 Orang"
+                                android:textColor="#00BD8C"
+                                android:textSize="@dimen/_9ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="end">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tidak Hadir"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="@dimen/_9ssp"
+                                android:textColor="#FF5656"/>
+                            <TextView
+                                android:id="@+id/tvCountTidakHadirPercent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0 Orang"
+                                android:layout_marginLeft="@dimen/_3sdp"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="@dimen/_9ssp"
+                                android:textColor="#FF5656"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvEmptyStateKehadiranAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Data kehadiran belum tersedia"
+                    android:fontFamily="@font/poppinsregular"
+                    android:padding="@dimen/_14sdp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/llProgressBarCfteam"/>
+            <LinearLayout
+                android:id="@+id/llEmptyLembur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/view2"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="visible">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Data lembur belum tersedia"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppinsregular"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llLemburCountAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/llEmptyLembur"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvCountLemburAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Jadwal Lembur"
+                    android:textAlignment="textStart"
+                    android:textColor="#607080"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
+                <LinearLayout
+                    android:id="@+id/llLemburGantiHistoryAttendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@id/tvCountLemburAll">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Lembur Ganti"
+                        android:textAlignment="textStart"
+                        android:textColor="#607080" />
+
+                    <TextView
+                        android:id="@+id/tvCountLemburgantiRiwayat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="8 Orang"
+                        android:textAlignment="textEnd"
+                        android:textColor="#607080" />
+                </LinearLayout>
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/llLemburTagihAttendance"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:weightSum="2"-->
+<!--                    android:layout_marginHorizontal="@dimen/_10sdp"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/llLemburGantiHistoryAttendance">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:fontFamily="@font/poppinsregular"-->
+<!--                        android:text="Lembur Tagih"-->
+<!--                        android:textAlignment="textStart"-->
+<!--                        android:textColor="#607080" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvCountLemburgantiRiwayatCount"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:fontFamily="@font/poppinssemibold"-->
+<!--                        android:text="0 Orang"-->
+<!--                        android:textAlignment="textEnd"-->
+<!--                        android:textColor="#607080" />-->
+<!--                </LinearLayout>-->
+
+            </LinearLayout>
+
+<!--            button-->
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/llLemburCountAll"-->
+<!--                android:background="@drawable/bg_secondary"-->
+<!--                android:padding="@dimen/_10sdp"-->
+<!--                android:layout_marginHorizontal="@dimen/_10sdp"-->
+<!--                android:layout_marginTop="@dimen/_13sdp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                android:layout_marginBottom="@dimen/_10sdp"-->
+<!--                android:elevation="@dimen/_2sdp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Download Report"-->
+<!--                    android:fontFamily="@font/poppinsregular"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textAlignment="center"/>-->
+<!--            </RelativeLayout>-->
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

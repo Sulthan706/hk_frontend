@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottom_sheets_background_white"
+    android:paddingTop="@dimen/_22sdp"
+    android:paddingHorizontal="@dimen/_22sdp"
+    android:paddingBottom="@dimen/_54sdp">
+
+    <ImageView
+        android:visibility="visible"
+        android:id="@+id/ivCloseBottomDefaultChoose"
+        android:layout_width="@dimen/_21sdp"
+        android:layout_height="@dimen/_21sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:src="@drawable/ic_close_bottom_sheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleBottomDefaultChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="error title"
+        android:textAlignment="center"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvInfoBottomDefaultChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="error info"
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleBottomDefaultChoose"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rvBottomDefaultChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        tools:listitem="@layout/list_item_chooser"
+        app:layout_constraintTop_toBottomOf="@id/tvInfoBottomDefaultChoose"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:visibility="gone"
+        android:id="@+id/btnAppliedBottomDefaultChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bg_secondary_new"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Pilih"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toBottomOf="@+id/rvBottomDefaultChoose" />
+
+    <TextView
+        android:id="@+id/tvErrorBottomDefaultChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Error title"
+        android:textAlignment="center"
+        android:textColor="@color/red1"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_6sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_6sdp"
+        android:drawableStart="@drawable/ic_info_red"
+        android:background="@drawable/bg_field_red_soft"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleBottomDefaultChoose"/>
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/tvInfoErrorBottomDefaultChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="error info"
+        android:textAlignment="center"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvErrorBottomDefaultChoose"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

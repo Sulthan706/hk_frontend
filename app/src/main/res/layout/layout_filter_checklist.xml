@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="24dp"
+    android:orientation="vertical"
+    tools:context=".features.features_vendor.homescreen.checklist.ui.fragment.ChecklistFinalFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_chooseShift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center_vertical"
+            android:text="Pilih Shift"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/h5" />
+
+        <Spinner
+            android:id="@+id/spinner_shift"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_spinner"
+            android:entries="@array/noChoose" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_chooseArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center_vertical"
+            android:text="Pilih Area"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/h5" />
+
+        <Spinner
+            android:id="@+id/spinner_area"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_spinner"
+            android:entries="@array/pilihLantai" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_chooseSubArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center_vertical"
+            android:text="Pilih Sub Area"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/h5" />
+
+        <Spinner
+            android:id="@+id/spinner_subArea"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_spinner"
+            android:entries="@array/noChoose" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_terapkaChecklist"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/btn_disable"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Terapkan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/bodyText"/>
+
+</LinearLayout>

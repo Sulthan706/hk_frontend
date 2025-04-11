@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.visitTracking.ui.activity.VisitTrackingManagementActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl1VisitTracking"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:padding="@dimen/_16sdp"
+        android:background="@drawable/bg_tracking_activity"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBackVisitTracking"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/tvTitleVisitTracking"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_toEndOf="@id/ivBackVisitTracking"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center_vertical"
+            android:text="Tracking Kunjungan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_9sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingVertical="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_white_card">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_schedule_brown"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:text="Lihat riwayat"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/brown"
+                android:fontFamily="@font/poppinsmedium"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llVisitTracking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:padding="@dimen/_14sdp"
+        android:background="@drawable/bg_actual_color"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvOverviewVisitTrackingManagement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Overview"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvMonthsVisitTrackingManagement"/>
+
+            <TextView
+                android:id="@+id/tvMonthsVisitTrackingManagement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="error"
+                android:textColor="@color/brown"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:background="@drawable/bg_spinner_white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvOverviewVisitTrackingManagement"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/tvKunjunganVisitTrackingManagement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Total Kunjungan"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvTotProjectVisitTracking"/>
+
+            <TextView
+                android:id="@+id/tvTotProjectVisitTracking"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvKunjunganVisitTrackingManagement"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/llHistoryVisitTracking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_4sdp"
+            android:paddingHorizontal="@dimen/_18sdp"
+            android:drawableStart="@drawable/ic_calendar_new_white"
+            android:drawablePadding="@dimen/_4sdp"
+            android:text="Lihat Rekap Kunjungan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/btn_primary"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:visibility="invisible"
+        android:id="@+id/spinnerVisitTrackingManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:background="@drawable/bg_spinner_secondary_new"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_18sdp"
+        android:paddingVertical="@dimen/_2sdp"
+        android:spinnerMode="dropdown"
+        android:entries="@array/noChoose"
+        android:dropDownVerticalOffset="@dimen/_76sdp"
+        app:layout_constraintTop_toBottomOf="@id/rl1VisitTracking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/tvBranchVisitTracking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_24sdp"
+        android:text="Error Branch"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:background="@drawable/bg_secondary_new"
+        app:layout_constraintTop_toBottomOf="@id/rl1VisitTracking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/llTotProjectVisitTracking"
+        android:layout_width="@dimen/_165sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvBranchVisitTracking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:text="Total Project"
+            android:textAlignment="center"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textAlignment="center"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_16ssp"
+            android:fontFamily="@font/poppinsbold"
+            android:background="@drawable/bg_selected_blue"
+            android:paddingVertical="@dimen/_4sdp"
+            android:paddingHorizontal="@dimen/_8sdp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv1VisitTracking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Kunjungan Hari Ini"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/grayTxt"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintTop_toBottomOf="@id/llVisitTracking"/>
+
+    <LinearLayout
+        android:id="@+id/llTodayProjectVisitTracking"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:background="@drawable/bg_primary_rounded"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv1VisitTracking"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvTodayProjectVisitTracking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22ssp"
+            android:fontFamily="@font/poppinsbold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp"
+            android:text="project"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsregular"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv2VisitTracking"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:text="@string/visit_tracking_info"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/grayTxt"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/tv1VisitTracking"
+        app:layout_constraintStart_toEndOf="@id/llTodayProjectVisitTracking"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvVisitTracking"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        tools:listitem="@layout/list_tracking_project"
+        app:layout_constraintTop_toBottomOf="@id/llTodayProjectVisitTracking"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivAbsentVisitTrackingManagement"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:src="@drawable/ic_absent_project_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

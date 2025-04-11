@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.attendance_fix.ui.activity.lowlevel.new_.UserFlyingReportActivity">
+
+    <include
+        android:id="@+id/appbarUserFlyingReport"
+        layout="@layout/app_bar_default"/>
+
+    <LinearLayout
+        android:id="@+id/llUserFlyingReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_14sdp"
+        android:background="@drawable/rounded_primary_1"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/appbarUserFlyingReport">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivUserFlyingReport"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/foto1"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="@dimen/_1sdp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvNameUserFlyingReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="Error Name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/poppinssemibold"/>
+
+        <TextView
+            android:id="@+id/tvNucJobUserFlyingReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error NUC | Error Job"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDateUserFlyingReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Error date"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <DigitalClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:fontFamily="@font/poppinsregular"
+                tools:text="(07.30 WIB)" />
+
+            <TextView
+                android:id="@+id/tvTimeZoneUserFlyingReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:text="Error"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:text="|"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <TextView
+                android:id="@+id/tvStatusAttendanceUserFlyingReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:text="Error status absen"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Melakukan absen di luar area absensi"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:padding="@dimen/_6sdp"
+            android:background="@drawable/bg_primary_rounded_1"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvUserFlyingReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="Alasan"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintTop_toBottomOf="@id/llUserFlyingReport"/>
+
+    <RelativeLayout
+        android:id="@+id/rlUserFlyingReport"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:background="@drawable/bg_field"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvUserFlyingReport">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etDescUserFlyingReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="Berikan alasan atau keterangan"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsregular"/>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDisableUserFlyingReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_22sdp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:text="Kirim Laporan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsmedium"
+        android:background="@drawable/btn_disable"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEnableUserFlyingReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_22sdp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:text="Kirim Laporan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsmedium"
+        android:background="@drawable/bg_secondary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginVertical="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/tv_choose_staff_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Staff yang sudah absen"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_choose_shift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_choose_staff_title">
+
+            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                android:id="@+id/spinner_choose_shift"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:background="@drawable/rounded_choose_shift"
+                android:paddingHorizontal="@dimen/_10sdp"
+                app:smsp_arrowColor="@color/white"
+                app:smsp_arrowPaddingBottom="@dimen/_5sdp"
+                app:smsp_arrowPaddingLeft="@dimen/_1sdp"
+                app:smsp_enableFloatingLabel="false"
+                app:smsp_floatingLabelColor="@color/white"
+                app:smsp_floatingLabelText="Pilih Shift"
+                app:smsp_hint="Pilih Shift"
+                app:smsp_hintColor="@color/white"
+                app:smsp_hintSize="@dimen/_10sdp"
+                app:smsp_isSearchable="true"
+                app:smsp_itemColor="@color/white"
+                app:smsp_itemListColor="@color/secondary_color"
+                app:smsp_itemListHintBackgroundColor="#808080"
+                app:smsp_itemListHintColor="@color/primary_color"
+                app:smsp_multilineError="false"
+                app:smsp_searchHeaderText="Search Shift"
+                app:smsp_searchTextColor="@color/primary_color"
+                app:smsp_selectedItemListColor="@color/secondary_color" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center|right"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tv_already_attendance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/primary_color"
+                    tools:text="5 " />
+
+                <TextView
+                    android:id="@+id/tv_total_staff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+                    tools:text="/20" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:src="@drawable/ic_profile" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:weightSum="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_choose_shift">
+
+            <LinearLayout
+                android:id="@+id/img_already_attendance_already_found"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:src="@drawable/scheduling"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:fontFamily="@font/poppinslight"
+                    android:gravity="center"
+                    android:text="Pilih shift terlebih dahulu"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_staff_already_attendance"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.6"
+                android:visibility="visible" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

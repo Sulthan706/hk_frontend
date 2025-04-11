@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homeScreenUpdated.project.ui.activity.ProjectsNewManagementActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            android:background="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="gone"
+                android:id="@+id/clDashboardProjectsNewManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_12sdp">
+
+                <TextView
+                    android:id="@+id/tvTotProjectsNewManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="Total : 512"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTotPercentProjectsNewManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="45,21% of all project"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_9ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintTop_toBottomOf="@id/tvTotProjectsNewManagement"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/llActiveClosedProjectsNewManagement"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/tvTotPercentProjectsNewManagement"
+                    app:layout_constraintStart_toEndOf="@id/tvTotPercentProjectsNewManagement"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvActiveProjectsNewManagement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Active"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_9ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/tvPercentActiveProjectsNewManagement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="88,88%"
+                            android:textColor="@color/green2"
+                            android:textSize="@dimen/_14ssp"
+                            android:fontFamily="@font/poppinssemibold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/tvTotActiveProjectsNewManagement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:text="8888"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_11ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/tvPercentActiveProjectsNewManagement"
+                            app:layout_constraintStart_toEndOf="@id/tvPercentActiveProjectsNewManagement"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvClosedProjectsNewManagement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Closed"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_9ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/tvPercentClosedProjectsNewManagement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="88,88%"
+                            android:textColor="@color/red1"
+                            android:textSize="@dimen/_14ssp"
+                            android:fontFamily="@font/poppinssemibold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/tvTotClosedProjectsNewManagement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:text="8888"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_11ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tvPercentClosedProjectsNewManagement"
+                            app:layout_constraintStart_toEndOf="@id/tvPercentClosedProjectsNewManagement"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv1ProjectsNewManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_rectangle_green2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv1ProjectsNewManagement"
+                    app:layout_constraintBottom_toBottomOf="@id/tv1ProjectsNewManagement"/>
+
+                <TextView
+                    android:id="@+id/tv1ProjectsNewManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="Active :"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintStart_toEndOf="@+id/iv1ProjectsNewManagement"
+                    app:layout_constraintTop_toBottomOf="@id/llActiveClosedProjectsNewManagement"/>
+
+                <TextView
+                    android:id="@+id/tvActiveChartProjectsNewManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="123"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintStart_toEndOf="@+id/tv1ProjectsNewManagement"
+                    app:layout_constraintTop_toBottomOf="@id/llActiveClosedProjectsNewManagement"/>
+
+                <ImageView
+                    android:id="@+id/iv2ProjectsNewManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_rectangle_primary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv2ProjectsNewManagement"
+                    app:layout_constraintBottom_toBottomOf="@id/tv2ProjectsNewManagement"/>
+
+                <TextView
+                    android:id="@+id/tv2ProjectsNewManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="Near Expiry :"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintStart_toEndOf="@+id/iv2ProjectsNewManagement"
+                    app:layout_constraintTop_toBottomOf="@id/tv1ProjectsNewManagement"/>
+
+                <TextView
+                    android:id="@+id/tvNearExpiryChartProjectsNewManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="123"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintStart_toEndOf="@+id/tv2ProjectsNewManagement"
+                    app:layout_constraintTop_toBottomOf="@id/tv1ProjectsNewManagement"/>
+
+                <TextView
+                    android:id="@+id/tv3ProjectsNewManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:text="Active date ends in 90 days"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintStart_toEndOf="@+id/iv2ProjectsNewManagement"
+                    app:layout_constraintTop_toBottomOf="@id/tv2ProjectsNewManagement"/>
+
+                <ImageView
+                    android:id="@+id/iv3ProjectsNewManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_rectangle_red1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv4ProjectsNewManagement"
+                    app:layout_constraintBottom_toBottomOf="@id/tv4ProjectsNewManagement"/>
+
+                <TextView
+                    android:id="@+id/tv4ProjectsNewManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="Closed :"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintStart_toEndOf="@+id/iv3ProjectsNewManagement"
+                    app:layout_constraintTop_toBottomOf="@id/tv3ProjectsNewManagement"/>
+
+                <TextView
+                    android:id="@+id/tvClosedChartProjectsNewManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="123"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintStart_toEndOf="@+id/tv4ProjectsNewManagement"
+                    app:layout_constraintTop_toBottomOf="@id/tv3ProjectsNewManagement"/>
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChartProjectsNewManagement"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:labelsSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/llActiveClosedProjectsNewManagement"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="pin"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" >
+
+                <include
+                    android:id="@+id/appbarProjectsNewManagement"
+                    layout="@layout/app_bar_default_with_search"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="visible"
+        android:id="@+id/clListProjectsNewManagement"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
+            android:id="@+id/clInfoProjectsNewManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:paddingVertical="@dimen/_12sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv5ProjectsNewManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Project"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvTotInfoProjectsNewManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv5ProjectsNewManagement"/>
+
+            <TextView
+                android:id="@+id/tvStatusInfoProjectsNewManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Status"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintStart_toEndOf="@id/tv5ProjectsNewManagement"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvPercentStatusProjectsNewManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100%"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintStart_toStartOf="@id/tvStatusInfoProjectsNewManagement"
+                app:layout_constraintTop_toBottomOf="@id/tvStatusInfoProjectsNewManagement"/>
+
+            <TextView
+                android:id="@+id/tvTotStatusProjectsNewManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text="10"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintStart_toEndOf="@id/tvPercentStatusProjectsNewManagement"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPercentStatusProjectsNewManagement"
+                app:layout_constraintTop_toBottomOf="@id/tvStatusInfoProjectsNewManagement"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/viewProjectsNewManagement"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_4sdp"
+            android:background="@color/background"
+            app:layout_constraintTop_toBottomOf="@id/clInfoProjectsNewManagement"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStatusProjectsNewManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            tools:listitem="@layout/list_tabmenu_jobrole"
+            app:layout_constraintTop_toBottomOf="@+id/viewProjectsNewManagement"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/rvProjectsNewManagement"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            tools:listitem="@layout/list_project_new"
+            app:layout_constraintTop_toBottomOf="@id/rvStatusProjectsNewManagement"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerProjectsNewManagement"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_12sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/rvStatusProjectsNewManagement"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/shimmer_placeholder_project_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_project_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_project_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_project_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_project_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_project_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_project_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

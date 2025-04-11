@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl1shimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="243dp"
+            android:layout_height="4dp"
+            android:background="@color/primary_color" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_konfirmasiPengecekan_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Konfirmasi pengecekan"
+        android:textColor="@color/neutral100"
+        android:textSize="@dimen/h5"
+        app:layout_constraintTop_toBottomOf="@id/rl1shimmer"/>
+
+    <TextView
+        android:id="@+id/tvDicekOlehShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Dicek oleh"
+        android:textColor="@color/neutral100"
+        android:textSize="@dimen/bodyText"
+        app:layout_constraintTop_toBottomOf="@id/tv_konfirmasiPengecekan_shimmer"/>
+
+    <TextView
+        android:id="@+id/tv_dicekOleh"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_shimmer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDicekOlehShimmer"/>
+
+    <TextView
+        android:id="@+id/tvPosisiShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Posisi"
+        android:textColor="@color/neutral100"
+        android:textSize="@dimen/bodyText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dicekOleh" />
+
+    <TextView
+        android:id="@+id/tv_posisi"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_shimmer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPosisiShimmer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeHomeManagementUpdated"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.features_management.homeScreenUpdated.homeUpdated.ui.fragment.HomeManagementUpdatedFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayoutHomeVendor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_55sdp"
+            android:background="@drawable/bg_home_new"
+            android:visibility="visible">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayoutHomeVendor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/bg_primary"
+                android:padding="@dimen/_12sdp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <include
+                    layout="@layout/shimmer_placeholder_home_vendor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <ImageView
+                android:id="@+id/textView"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:src="@drawable/hk_home"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvVersionHome"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginStart="@dimen/_70sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/app_version"
+                android:textSize="@dimen/_9ssp"
+                android:fontFamily="@font/poppinsmedium"
+                android:textColor="@color/grayTxt"
+                android:gravity="bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivBtnHomeNewsManagement"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_48sdp"
+                    android:src="@drawable/ic_home_news"
+                    android:tint="@color/primary_color"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivNewNewsManagement"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/ic_news_new"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_17sdp"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivNotifHomeManagement"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:src="@drawable/ic_notif_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clHomeManagementUpdated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bg_primary_soft5_rounded"
+                android:elevation="@dimen/_4sdp"
+                app:layout_constraintTop_toBottomOf="@id/textView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clVisitHomeManagementUpdated"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/llMyReportHomeManagementUpdated"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_report_management"
+                            android:tint="@color/primary_color"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:text="My Report"
+                            android:textColor="@color/primary_color"
+                            android:textSize="@dimen/_12ssp"
+                            android:fontFamily="@font/poppinssemibold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMyScheduleHomeManagementUpdated"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tint="@color/primary_color"
+                            android:src="@drawable/ic_schedule_management" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:text="My Schedule"
+                            android:textColor="@color/primary_color"
+                            android:textSize="@dimen/_12ssp"
+                            android:fontFamily="@font/poppinssemibold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clVisitHomeManagementUpdated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_18sdp"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:background="@drawable/bg_white_rounded_20dp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv1HomeManagementUpdated"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_100sdp"
+                        android:text="Project Visit"
+                        android:textColor="@color/brown2"
+                        android:textSize="@dimen/_11ssp"
+                        android:fontFamily="@font/poppinssemibold"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tvInfoVisitHomeManagementUpdated"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:text="You have no visits planned for today"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_11ssp"
+                        android:fontFamily="@font/poppinsregular"
+                        app:layout_constraintTop_toBottomOf="@id/tv1HomeManagementUpdated"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:visibility="gone"
+                        android:id="@+id/clDailyVisitHomeManagementUpdated"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/bg_field"
+                        app:layout_constraintTop_toBottomOf="@id/tvInfoVisitHomeManagementUpdated">
+
+                        <LinearLayout
+                            android:id="@+id/llDailyVisitHomeManagementUpdated"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tvTargetHomeManagementUpdated"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Daily Target: - visits"
+                                android:textColor="@color/black2"
+                                android:textSize="@dimen/_11ssp"
+                                android:fontFamily="@font/poppinsregular"/>
+
+                            <TextView
+                                android:id="@+id/tvPlanningHomeManagementUpdated"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Planning: - visits"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/black2"
+                                android:textSize="@dimen/_11ssp"
+                                android:fontFamily="@font/poppinsregular"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llRealizationHomeManagementUpdated"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toBottomOf="@id/llDailyVisitHomeManagementUpdated">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Realization: "
+                                android:textColor="@color/black2"
+                                android:textSize="@dimen/_11ssp"
+                                android:fontFamily="@font/poppinsregular"/>
+
+                            <TextView
+                                android:id="@+id/tvTotRealizationHomeManagementUpdated"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/green2"
+                                android:textSize="@dimen/_11ssp"
+                                android:fontFamily="@font/poppinsbold"/>
+
+                            <TextView
+                                android:id="@+id/tvTotPlanningnHomeManagementUpdated"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/0"
+                                android:textColor="@color/black2"
+                                android:textSize="@dimen/_11ssp"
+                                android:fontFamily="@font/poppinsbold"/>
+
+                        </LinearLayout>
+                        
+                        <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                            android:id="@+id/progressBarHomeManagementUpdated"
+                            android:layout_width="@dimen/_200sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            app:rpbCornerRadius="14dp"
+                            app:rpbBackgroundColor="#DEDEDE"
+                            app:rpbProgressColor="#00BD8C"
+                            app:rpbBackgroundTextColor="@color/white"
+                            app:rpbProgressTextColor="@color/white"
+                            app:rpbShowProgressText="false"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/tvPercentageHomeManagementUpdated"
+                            app:layout_constraintBottom_toBottomOf="@id/tvPercentageHomeManagementUpdated" />
+                        
+                        <TextView
+                            android:id="@+id/tvPercentageHomeManagementUpdated"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:text="0%"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/grey4"
+                            android:fontFamily="@font/poppinssemibold"
+                            app:layout_constraintTop_toBottomOf="@id/llRealizationHomeManagementUpdated"
+                            app:layout_constraintStart_toEndOf="@id/progressBarHomeManagementUpdated"/>
+                        
+                        <TextView
+                            android:id="@+id/tvUnvisitedPlanHomeManagementUpdated"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:text="Unvisited Plan"
+                            android:textColor="@color/red1"
+                            android:textSize="@dimen/_11ssp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:drawableEnd="@drawable/ic_down_arrow_rounded_red"
+                            android:drawablePadding="@dimen/_4sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/progressBarHomeManagementUpdated"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:visibility="gone"
+                        android:id="@+id/clLastVisitHomeManagementUpdated"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        app:layout_constraintTop_toBottomOf="@id/clDailyVisitHomeManagementUpdated">
+
+                        <TextView
+                            android:id="@+id/tv2HomeManagementUpdated"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Last visit to:"
+                            android:textColor="@color/grey2_client"
+                            android:textSize="@dimen/_10ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/tvProjectHomeManagementUpdated"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:text="No visit yet"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_13ssp"
+                            android:fontFamily="@font/poppinssemibold"
+                            app:layout_constraintTop_toBottomOf="@id/tv2HomeManagementUpdated"/>
+
+                        <TextView
+                            android:id="@+id/tv3HomeManagementUpdated"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_13sdp"
+                            android:text="Check in"
+                            android:textColor="@color/grey2_client"
+                            android:textSize="@dimen/_10ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvProjectHomeManagementUpdated"/>
+
+                        <TextView
+                            android:id="@+id/tvCheckInHomeManagementUpdated"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_13sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:text="--:--"
+                            android:textColor="@color/blue1"
+                            android:textSize="@dimen/_10ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            app:layout_constraintStart_toEndOf="@id/tv3HomeManagementUpdated"
+                            app:layout_constraintTop_toBottomOf="@id/tvProjectHomeManagementUpdated"/>
+
+                        <TextView
+                            android:id="@+id/tv4HomeManagementUpdated"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_13sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:text="Check out"
+                            android:textColor="@color/grey2_client"
+                            android:textSize="@dimen/_10ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            app:layout_constraintStart_toEndOf="@id/tvCheckInHomeManagementUpdated"
+                            app:layout_constraintTop_toBottomOf="@id/tvProjectHomeManagementUpdated"/>
+
+                        <TextView
+                            android:id="@+id/tvCheckOutHomeManagementUpdated"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_13sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:text="--:--"
+                            android:textColor="@color/green2"
+                            android:textSize="@dimen/_10ssp"
+                            android:fontFamily="@font/poppinsregular"
+                            app:layout_constraintStart_toEndOf="@id/tv4HomeManagementUpdated"
+                            app:layout_constraintTop_toBottomOf="@id/tvProjectHomeManagementUpdated"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clHeaderHomeManagementUpdated"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:paddingVertical="@dimen/_18sdp"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:background="@drawable/bg_primary_actual_rounded"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivUserHomeManagementUpdated"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        app:civ_border_color="@android:color/darker_gray"
+                        app:civ_border_width="@dimen/_1sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:src="@drawable/profile_ic" />
+
+                    <TextView
+                        android:id="@+id/tvWelcomeHomeManagementUpdated"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:text="Welcome"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        android:fontFamily="@font/poppinsregular"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserHomeManagementUpdated" />
+
+                    <TextView
+                        android:id="@+id/tvNameHomeManagementUpdated"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:text="Error"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        app:layout_constraintTop_toBottomOf="@id/tvWelcomeHomeManagementUpdated"
+                        app:layout_constraintBottom_toTopOf="@id/tvNucHomeManagementUpdated"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserHomeManagementUpdated" />
+
+                    <TextView
+                        android:id="@+id/tvNucHomeManagementUpdated"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:text="Error"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppinsregular"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserHomeManagementUpdated"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivUserHomeManagementUpdated"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--            menu bod ceo-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="visible"
+                android:id="@+id/clMenuBodCeoHomeManagementUpdated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                app:layout_constraintTop_toBottomOf="@id/clHomeManagementUpdated">
+
+                <LinearLayout
+                    android:id="@+id/llMenu1BodCeo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/llAttendanceBodCeo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_white_card"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_absent_management" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Absen"
+                            android:textColor="@color/color_brown"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llProjectBodCeo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_white_card"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_project_management"/>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Project"
+                            android:textColor="@color/color_brown"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llHumanCapitalBodCeo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_8sdp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_white_card"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_operation_management" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Human Capital"
+                            android:textAlignment="center"
+                            android:textColor="@color/color_brown"
+                            android:textSize="@dimen/_9ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llManagementBodCeo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_8sdp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_white_card"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_management_bodceo" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Management"
+                            android:textAlignment="center"
+                            android:textColor="@color/color_brown"
+                            android:textSize="@dimen/_7ssp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMenu2BodCeo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    app:layout_constraintTop_toBottomOf="@id/llMenu1BodCeo">
+
+                    <LinearLayout
+                        android:id="@+id/llTurnoverBodCeo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_white_card"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_turnover" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Turnover"
+                            android:textColor="@color/color_brown"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llCftalkBodCeo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_8sdp"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_white_card"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_cftalk_management" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Cftalk"
+                            android:textColor="@color/color_brown"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llBranchBodCeo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_white_card"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_branch"/>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Branch"
+                            android:textAlignment="center"
+                            android:textColor="@color/color_brown"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llRealtimeAttendBodCeo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_white_card"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_share_location_management" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Real-time Attendance"
+                            android:textAlignment="center"
+                            android:textColor="@color/color_brown"
+                            android:textSize="@dimen/_9ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:id="@+id/llTimesheetBodCeo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_white_card"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_timesheet" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Timesheet"
+                            android:textColor="@color/color_brown"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/llMenu3BodCeo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    app:layout_constraintTop_toBottomOf="@id/llMenu2BodCeo">
+
+                    <LinearLayout
+                        android:id="@+id/llAlatBodCeo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_white_card"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_mesin"/>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Alat"
+                            android:textAlignment="center"
+                            android:textColor="@color/color_brown"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMrBodCeo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_white_card"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_mr" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="MR"
+                            android:textAlignment="center"
+                            android:textColor="@color/color_brown"
+                            android:textSize="@dimen/_10ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        android:elevation="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_white_card"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_turnover" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Turnover"
+                            android:textColor="@color/color_brown"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="invisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_white_card"
+                            android:padding="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_turnover" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="-"
+                            android:textColor="@color/color_brown"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--            menu management-->
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llMenuManagementHomeUpdated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_marginTop="@dimen/_24sdp"
+                app:layout_constraintTop_toBottomOf="@id/clHomeManagementUpdated">
+
+                <LinearLayout
+                    android:id="@+id/llAttendanceManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_white_card"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_absent_management" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Absen"
+                        android:textColor="@color/color_brown"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llProjectManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_white_card"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_project_management"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Project"
+                        android:textColor="@color/color_brown"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llHumanCapitalManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_8sdp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_white_card"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_operation_management" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Human Capital"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_brown"
+                        android:textSize="@dimen/_9ssp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCftalkManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_8sdp"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_white_card"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_cftalk_management" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="CFTalk"
+                        android:textColor="@color/color_brown"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+<!--            menu teknisi-->
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llMenuTeknisiHomeManagementUpdated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_marginTop="@dimen/_24sdp"
+                app:layout_constraintTop_toBottomOf="@id/clHomeManagementUpdated">
+
+                <LinearLayout
+                    android:id="@+id/llAttendanceTeknisi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_white_card"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_absent_management" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Absen"
+                        android:textColor="@color/color_brown"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llProjectTeknisi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_white_card"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_project_management"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Project"
+                        android:textColor="@color/color_brown"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llBakMesinTeknisi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_8sdp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_white_card"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_bak_menu" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="BAK Mesin"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_brown"
+                        android:textSize="@dimen/_9ssp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_white_card"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_cftalk_management" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="-"
+                        android:textColor="@color/color_brown"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

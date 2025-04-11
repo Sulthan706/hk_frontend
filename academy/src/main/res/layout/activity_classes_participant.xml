@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_participants.classes.ui.activity.ClassesParticipantActivity">
+
+    <include
+        android:id="@+id/appbarClassesParticipant"
+        layout="@layout/app_bar_training_search" />
+
+    <TextView
+        android:id="@+id/tvDateFilterClassesParticipant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:padding="@dimen/_10sdp"
+        android:text="Pilih Tanggal Training"
+        android:textColor="@color/greyDisable"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:background="@drawable/bg_field"
+        android:drawableEnd="@drawable/ic_training_blue8"
+        android:drawablePadding="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@id/appbarClassesParticipant"
+        app:layout_constraintEnd_toStartOf="@id/tvAllClassesParticipant"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAllClassesParticipant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:text="Semua"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsmedium"
+        android:background="@drawable/bg_rounded_disable"
+        android:elevation="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarClassesParticipant" />
+
+    <View
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:background="@color/background"
+        app:layout_constraintTop_toBottomOf="@id/tvDateFilterClassesParticipant" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvEmptyClassesParticipant"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Tidak ada jadwal kelas publik saat ini"
+        android:textColor="@color/grey5"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/layout1"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="visible"
+        android:id="@+id/rvClassesParticipant"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        tools:listitem="@layout/item_training_schedule"
+        app:layout_constraintTop_toBottomOf="@id/layout1"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

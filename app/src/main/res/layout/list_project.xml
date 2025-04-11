@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_listProject"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8sdp"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_6sdp"
+    android:padding="@dimen/_10sdp">
+
+    <LinearLayout
+        android:id="@+id/ll_listProject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_nameListProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Error project name"
+            android:maxLines="2"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_branchCodeListProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error branch code"
+                android:textColor="#969696"
+                android:maxLines="1"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_nameListProject"/>
+
+            <TextView
+                android:id="@+id/view_listProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@color/neutral100"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_nameListProject"
+                app:layout_constraintStart_toEndOf="@id/tv_branchCodeListProject"/>
+
+            <TextView
+                android:id="@+id/tv_projectCodeListProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error project code"
+                android:textColor="#969696"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toEndOf="@id/view_listProject"
+                app:layout_constraintTop_toBottomOf="@id/tv_nameListProject"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_notifListProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/_3sdp"
+        android:maxLines="1"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="0"
+        android:textColor="@color/neutral100"
+        android:textSize="@dimen/_14ssp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ll_listProject"
+        app:drawableEndCompat="@drawable/notif" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".features.features_client.report.ui.old.activity.ListShiftReportClientActivity">
+
+    <include
+        android:id="@+id/appbarListShiftReportClient"
+        layout="@layout/app_bar_default_client"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerListShiftReportClient"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/appbarListShiftReportClient"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:orientation="vertical">
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/shimmer_placeholder_branch_list"/>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                layout="@layout/shimmer_placeholder_branch_list"/>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                layout="@layout/shimmer_placeholder_branch_list"/>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                layout="@layout/shimmer_placeholder_branch_list"/>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                layout="@layout/shimmer_placeholder_branch_list"/>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                layout="@layout/shimmer_placeholder_branch_list"/>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                layout="@layout/shimmer_placeholder_branch_list"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_ListShiftReportClient"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/appbarListShiftReportClient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/list_shift_report" />
+
+    <FrameLayout
+        android:id="@+id/fl_NoInternetListShiftReportClient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/layoutConnectionTimeout"
+            layout="@layout/fragment_connection_timeout" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_NoDataListShiftReportClient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/fragment_no_data" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinsregular"/>
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/expandable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:el_duration="500"
+        app:el_expanded="false"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <include
+            android:id="@+id/profile"
+            layout="@layout/layout_card_cftalk"/>
+
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+</androidx.cardview.widget.CardView>

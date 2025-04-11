@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clListTrackingProject"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_12sdp"
+    android:paddingVertical="@dimen/_8sdp"
+    android:background="@drawable/bg_primary_soft"
+    android:layout_marginBottom="@dimen/_8sdp">
+
+    <TextView
+        android:id="@+id/tvProjectListTrackingProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:maxLines="2"
+        android:text="Error Project Name"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/llDateListTrackingProject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectListTrackingProject"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/llTimeInListTrackingProject">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Pada"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/tvDateListTrackingProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:maxLines="1"
+            android:text="-"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTimeInListTrackingProject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectListTrackingProject"
+        app:layout_constraintStart_toEndOf="@id/llDateListTrackingProject"
+        app:layout_constraintEnd_toStartOf="@id/llTimeOutListTrackingProject">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Jam Masuk"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/tvTimeInListTrackingProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:maxLines="1"
+            android:text="--:--"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTimeOutListTrackingProject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvProjectListTrackingProject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/llTimeInListTrackingProject">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Jam Keluar"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/tvTimeOutListTrackingProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:maxLines="1"
+            android:text="--:--"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

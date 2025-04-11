@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".features.grafik.ui.TurnOverActivity">
+
+    <include
+        android:id="@+id/app_bar_grafik"
+        layout="@layout/app_bar_default"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlMonthListShiftChecklist"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bg_month_list_shift_checklist">
+                <TextView
+                    android:id="@+id/tv_date_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/black2"
+                android:textSize="16sp"
+                android:background="#F5F6F8"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_field"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black2"
+                    android:textSize="12sp"
+                    android:padding="8dp"
+                    android:text="Total"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:textAlignment="center"
+                    android:gravity="center"/>
+
+
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/black2"
+                    android:textSize="12sp"
+                    android:padding="8dp"
+                    android:text="0 MP"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:textAlignment="center"
+                    android:gravity="center"/>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <ir.mahozad.android.PieChart
+                        android:id="@+id/pieChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:labelsSize="10sp"
+                        android:layout_gravity="center_vertical"
+                        app:centerLabelSize="10sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black2"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:layout_weight="1"
+                            android:text="Resign"
+                            android:layout_gravity="center_vertical"
+                            android:textAlignment="center"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tv_resign"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black2"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:layout_weight="0.5"
+                            android:text="0/0"
+                            android:layout_gravity="center_vertical"
+                            android:textAlignment="center"
+                            android:gravity="center"/>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_field"
+                            android:padding="4dp"
+                            android:layout_weight="0.5"
+                            android:layout_gravity="center_vertical">
+                            <TextView
+                                android:id="@+id/tv_percent_resign"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="@color/red"
+                                android:textSize="14sp"
+                                android:gravity="center"
+                                tools:text="25%"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black2"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:layout_weight="1"
+                            android:text="New"
+                            android:layout_gravity="center_vertical"
+                            android:textAlignment="center"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tv_new"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black2"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:layout_weight="0.5"
+                            android:text="0/0"
+                            android:layout_gravity="center_vertical"
+                            android:textAlignment="center"
+                            android:gravity="center"/>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_field"
+                            android:padding="4dp"
+                            android:layout_weight="0.5"
+                            android:layout_gravity="center_vertical">
+                            <TextView
+                                android:id="@+id/tv_percent_new"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="@color/blue"
+                                android:textSize="14sp"
+                                android:gravity="center"
+                                tools:text="75%"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black2"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:layout_weight="1"
+                            android:text="Mutasi"
+                            android:layout_gravity="center_vertical"
+                            android:textAlignment="center"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tv_mutasi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black2"
+                            android:textSize="12sp"
+                            android:padding="8dp"
+                            android:layout_weight="0.5"
+                            android:text="0/0"
+                            android:layout_gravity="center_vertical"
+                            android:textAlignment="center"
+                            android:gravity="center"/>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_field"
+                            android:padding="4dp"
+                            android:layout_weight="0.5"
+                            android:layout_gravity="center_vertical">
+                            <TextView
+                                android:id="@+id/tv_percent_mutasi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="@color/green"
+                                android:textSize="14sp"
+                                android:gravity="center"
+                                tools:text="0%"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#F5F6F8"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="250dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"/>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

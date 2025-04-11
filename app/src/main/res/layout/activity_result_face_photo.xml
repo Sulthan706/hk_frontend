@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.facerecog.ui._new.ResultFacePhotoActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_month_list_shift_checklist">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_back"/>
+        <TextView
+            android:id="@+id/tvMonthNowListChecklist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Absensi Karyawan"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_appbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/ivLogoCarfast"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_logo_cf"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvNotif"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Berhasil"
+                    android:textAlignment="center"
+                    android:textColor="#00BD8C"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivLogoCarfast" />
+
+                <TextView
+                    android:id="@+id/tv_notif_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Anda berhasil melakukan absensi"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNotif"
+                    android:layout_marginTop="5dp"/>
+
+                <ImageView
+                    android:id="@+id/imgProfileUser"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_notif_desc"
+                    android:visibility="gone"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lootie"
+                    android:layout_width="190dp"
+                    android:layout_height="210dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivLogoCarfast"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/tv_message_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Wajah tidak cocok dengan user"
+                    android:textAlignment="center"
+                    android:visibility="invisible"
+                    android:textColor="@color/red"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_loading" />
+
+                <TextView
+                    android:id="@+id/tv_reabsent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="80dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Ulangi absensi"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:background="@drawable/bg_stroke_rounded_primary"
+                    android:textAlignment="center"
+                    android:visibility="invisible"
+                    android:textColor="@color/primary_color"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_message_error"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/message_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Gagal Absen"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textSize="24sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lootie" />
+
+                <TextView
+                    android:id="@+id/tv_loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Harap tunggu! Kami sedang verifikasi \nidentitas anda."
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:visibility="invisible"
+                    app:layout_constraintTop_toBottomOf="@+id/message_error"
+                    android:layout_marginTop="5dp"/>
+
+                <LinearLayout
+                    android:id="@+id/llNameDetailStatsVerify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/imgProfileUser"
+                    android:background="@drawable/bg_field"
+                    android:layout_marginHorizontal="24dp"
+                    android:padding="14dp"
+                    android:layout_marginTop="15dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvNameUserVerify"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:maxLines="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="usernamea" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/nuc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="NUC"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/gray"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:id="@+id/tvIdProjectUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="0101029"
+                            android:layout_marginStart="10dp"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/llNameDetailStatsVerify">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/location"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/gray"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            tools:text="Lokasi" />
+
+                        <TextView
+                            android:id="@+id/tvNameProjectVendorVerify"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:text="10 Juli 2023" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/gray"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            tools:text="Tanggal" />
+
+                        <TextView
+                            android:id="@+id/tvDateVerify"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:text="10 Juli 2023" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/gray"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            tools:text="Jam" />
+
+                        <TextView
+                            android:id="@+id/tvHourVerify"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:text="10 Juli 2023" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_item_attendance_daily"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxHeight="@dimen/_125sdp"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="@drawable/rounded_attendance_enabled"
+    android:padding="@dimen/_6sdp">
+
+    <TextView
+        android:id="@+id/tv_time_item_daily_attendance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="left"
+        android:text="Error"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="06:00 - 07:00" />
+
+    <TextView
+        android:id="@+id/tv_item_daily_attendance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="left"
+        android:maxLines="2"
+        android:text="Error"
+        android:layout_marginVertical="@dimen/_14sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time_item_daily_attendance"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:text="Daily satu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

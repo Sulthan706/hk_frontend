@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_240sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingVertical="@dimen/_16sdp"
+    android:background="@drawable/bg_custom_dialog"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_5sdp">
+
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_baseline_warning_24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Tunggu Dulu!"
+        android:textAlignment="center"
+        android:textColor="@color/red3"
+        android:textSize="@dimen/_16sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Anda belum dapat melakukan absen keluar project"
+        android:textAlignment="center"
+        android:textColor="@color/red3"
+        android:textSize="@dimen/_12ssp" />
+
+    <TextView
+        android:id="@+id/tvInfoNotAttendanceManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Waktu kunjungan project adalah 2 jam. Silakan coba lagi dalam : \n15 menit"
+        android:textAlignment="center"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnInfoNotAttendanceManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_gravity="center"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:background="@drawable/bg_field_primary"
+        android:text="Kembali"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/_12ssp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppinssemibold"/>
+
+</LinearLayout>

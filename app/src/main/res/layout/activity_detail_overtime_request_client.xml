@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.overtime.ui.activity.DetailOvertimeRequestClientActivity">
+
+    <include
+        android:id="@+id/appbar_detailOvertimeRequestClient"
+        layout="@layout/app_bar_default_client"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appbar_detailOvertimeRequestClient"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_16sdp">
+
+            <RelativeLayout
+                android:id="@+id/rl1_DetailOvertimeRequestClient"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_white_card"
+                android:elevation="@dimen/_6sdp"
+                android:padding="@dimen/_10sdp"
+                android:layout_margin="@dimen/_8sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_imageDetailOvertimeRequestClient"
+                    android:layout_width="@dimen/_88sdp"
+                    android:layout_height="@dimen/_130sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:backgroundTint="#DEDEDE"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="@dimen/_4sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_defaultDetailOvertimeRequestClient"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:alpha="0.25"
+                        android:src="@drawable/ic_camera_black"
+                        android:visibility="visible"
+                        app:tint="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/iv_OvertimeDetailOvertimeRequestClient"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        tools:src="@tools:sample/backgrounds/scenic" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tv_titleDetailOvertimeRequestClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/card_imageDetailOvertimeRequestClient"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Error Title"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_13ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/tv_titleDetailOvertimeRequestClient"
+                    android:layout_toEndOf="@id/card_imageDetailOvertimeRequestClient">
+
+                    <TextView
+                        android:id="@+id/tv_dateDetailOvertimeRequestClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Error date"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_11ssp"/>
+
+                    <TextView
+                        android:id="@+id/tv_timeDetailOvertimeRequestClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Error time"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_11ssp"/>
+
+                    <TextView
+                        android:id="@+id/tv_locDetailOvertimeRequestClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Error location"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_11ssp"/>
+
+                    <TextView
+                        android:id="@+id/tv_subLocDetailOvertimeRequestClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Error sub location"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_11ssp"/>
+
+                    <TextView
+                        android:id="@+id/tv_workerDetailOvertimeRequestClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Error total operator"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_11ssp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2_detailOvertimeRequestClient"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/rl1_DetailOvertimeRequestClient">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Alasan Lembur"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_130sdp"
+                    android:background="@drawable/bg_white_card"
+                    android:elevation="@dimen/_6sdp"
+                    android:layout_margin="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/tv_descDetailOvertimeRequestClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_8sdp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Error alasan lembur"
+                        android:maxLines="3"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3_detailOvertimeRequestClient"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll2_detailOvertimeRequestClient">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Operational"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_noOpsDetailOvertimeRequestClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_empty_card"
+                    android:elevation="@dimen/_4sdp"
+                    android:layout_margin="@dimen/_8sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_8sdp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Belum terdapat pekerja"
+                        android:maxLines="3"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp"/>
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_detailOvertimeRequestClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:visibility="gone"
+                    tools:listitem="@layout/list_operator"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_disableDetailOvertimeRequestClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_disable"
+                android:text="Batalkan"
+                android:textColor="@color/white"
+                android:elevation="@dimen/_4sdp"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_13ssp"
+                android:visibility="invisible"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:layout_marginBottom="@dimen/_22sdp"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll3_detailOvertimeRequestClient"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_enableDetailOvertimeRequestClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_field_primary"
+                android:text="Batalkan"
+                android:textColor="@color/primary_color"
+                android:elevation="@dimen/_4sdp"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_13ssp"
+                android:visibility="visible"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:layout_marginBottom="@dimen/_22sdp"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll3_detailOvertimeRequestClient"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                app:layout_constraintTop_toBottomOf="@id/btn_disableDetailOvertimeRequestClient"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

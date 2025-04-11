@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/clMainRkbCard"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_field"
+    android:layout_marginHorizontal="24dp"
+    android:elevation="2dp"
+    android:layout_marginTop="10dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDivertedValidation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="48dp"
+        app:cardCornerRadius="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/bg_field_tranparent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Dialihkan ke tanggal:"
+                android:fontFamily="@font/poppinsregular"
+                android:gravity="center"
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@color/black2"
+                />
+            <TextView
+                android:id="@+id/tvDateDivertedTo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:text="date"
+                android:fontFamily="@font/poppinssemibold"
+                android:gravity="center"
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@color/black2"
+
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTypeMonthlyRkb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <TextView
+                android:id="@+id/tvTypeRkb"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:textSize="11sp"
+                android:text="Daily"
+                android:maxLines="1"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:paddingHorizontal="2dp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:orientation="horizontal"
+            android:layout_marginEnd="15dp">
+            <ImageView
+                android:id="@+id/ivStampRkb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="4dp"
+                tools:src="@drawable/ic_stamp"
+                android:visibility="gone"/>
+            <ImageView
+                android:id="@+id/ivChecklistRkb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="4dp"
+                tools:src="@drawable/ic_checklist_radial"
+                android:visibility="gone"/>
+            <ImageView
+                android:id="@+id/ivRealizationRkb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="4dp"
+                tools:src="@drawable/ic_realization_rkb"
+                android:visibility="gone"/>
+            <ImageView
+                android:id="@+id/ivBaRkb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="4dp"
+                tools:src="@drawable/ic_ba"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/rlTypeMonthlyWorkReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/clTypeMonthlyRkb"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="12dp">
+        <TextView
+            android:id="@+id/tvTypeWorkRkb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="SWEEPING"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"
+            android:layout_marginEnd="30dp"
+            android:maxLines="2"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_right"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:foregroundGravity="center"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rlTypeMonthlyWorkReport"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Area"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="13sp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/tvAreaItemRkb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LANTAI GF"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="13sp"
+                android:layout_weight="1"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Subarea"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="13sp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/tvSubAreaItemRkb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOBBY GF"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="13sp"
+                android:layout_weight="1"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Shift"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="13sp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/tv_shift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOBBY GF"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="13sp"
+                android:layout_weight="1"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

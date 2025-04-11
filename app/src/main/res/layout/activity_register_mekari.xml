@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.service.mekari.ui.activity.RegisterMekariActivity">
+    <FrameLayout
+        android:id="@+id/flRegisterMekari"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="flRegisterMekari"/>
+    <include
+        android:id="@+id/appbarRegisterMekari"
+        layout="@layout/app_bar_default"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollRegisterMekari"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appbarRegisterMekari"
+        app:layout_constraintBottom_toTopOf="@id/rlRegisMekari">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv1RegisMekari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:src="@drawable/mekari1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv1RegisMekari"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_20sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:text="Dukung Kesejahteraan Karyawan, Berikan Benefit Sesuai Kebutuhan"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsmedium"
+                android:background="@drawable/bg_secondary"
+                android:elevation="@dimen/_4sdp"
+                app:layout_constraintTop_toBottomOf="@id/iv1RegisMekari"/>
+
+            <LinearLayout
+                android:id="@+id/llRegisMekari"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_65sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:padding="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_white_card"
+                android:elevation="@dimen/_4sdp"
+                app:layout_constraintTop_toBottomOf="@id/iv1RegisMekari">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Earned Wage Access"
+                    android:textColor="@color/black4"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:drawableStart="@drawable/ic_rupiah_secondary"
+                    android:drawablePadding="@dimen/_2sdp"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Akses gaji lebih awal, fleksibel untuk memenuhi kebutuhan dasar dan tanpa bunga untuk karyawan"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_9ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="Flexible Benefits"
+                    android:textColor="@color/black4"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:drawableStart="@drawable/ic_benefit_secondary"
+                    android:drawablePadding="@dimen/_2sdp"
+                    tools:ignore="UseCompatTextViewDrawableXml"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pilihan benefit yang beragam dan berdasarkan budget yang sudah ditetapkan sebelumnya."
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_9ssp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="Flex Installment"
+                    android:textColor="@color/black4"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:drawableStart="@drawable/ic_installment_secondary"
+                    android:drawablePadding="@dimen/_2sdp"
+                    tools:ignore="UseCompatTextViewDrawableXml"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Akomodir kebutuhan pendanaan aman dan terpercaya untuk kebutuhan darurat karyawan"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_9ssp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv2RegisMekari"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="Pastikan stres finansial tidak menghambat produktivitasmu. Lupakan sistem kasbon yang membutuhkan alokasi budget khusus. Dana dapat segera dicairkan ke rekening karyawan tanpa memerlukan deposit apa pun dari perusahaan."
+                android:textAlignment="center"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toBottomOf="@id/llRegisMekari"/>
+
+            <ImageView
+                android:id="@+id/iv2RegisMekari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/mekari2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv2RegisMekari" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlRegisMekari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20sdp"
+        android:elevation="@dimen/_8sdp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegisMekari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:background="@drawable/bg_primary_rounded"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Mulai, Daftar Sekarang"
+            android:textAllCaps="false"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

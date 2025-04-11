@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_12sdp"
+    android:background="@drawable/bg_field">
+
+    <TextView
+        android:id="@+id/tvStatusTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Online"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:background="@drawable/bg_rounded_orange"
+        android:paddingHorizontal="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/tvDaysTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_11sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:text="2 hari"
+        android:textColor="@color/blue6"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsmedium"
+        android:background="@drawable/bg_rounded_grey1"
+        app:layout_constraintStart_toEndOf="@id/tvStatusTraining"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTimeTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_11sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:text="60 menit"
+        android:textColor="@color/blue6"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsmedium"
+        android:background="@drawable/bg_rounded_grey1"
+        app:layout_constraintStart_toEndOf="@id/tvDaysTraining"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTitleTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="PROFESSIONAL TRAINING PROGRAM"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinssemibold"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusTraining"/>
+
+    <LinearLayout
+        android:id="@+id/llMateriTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleTraining">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Materi Training"
+            android:textColor="@color/grey8"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppinsregular" />
+
+        <TextView
+            android:id="@+id/tvMateriTraining"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Materi Training"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppinssemibold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvScheduleTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:text="error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinslight"
+        android:drawableStart="@drawable/ic_calendar_blue6"
+        android:drawablePadding="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@id/llMateriTraining"/>
+
+    <LinearLayout
+        android:id="@+id/llTrainerTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvScheduleTraining">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="Trainer "
+            android:textColor="@color/grey8"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:drawableStart="@drawable/ic_trainer"
+            android:drawablePadding="@dimen/_2sdp"/>
+
+        <TextView
+            android:id="@+id/tvPeopleTraining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="error"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppinsmedium" />
+
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvParticipantTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:text="error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinslight"
+        android:drawableStart="@drawable/ic_people_blue"
+        android:drawablePadding="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivNextTrainingSchedule"
+        app:layout_constraintTop_toBottomOf="@id/tvScheduleTraining" />
+
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/ivNextTrainingSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_next_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/tvApplyTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:paddingVertical="@dimen/_2sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:text="Apply"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsmedium"
+        android:background="@drawable/bg_rounded_blue5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llTrainerTraining" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

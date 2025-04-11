@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llPreviewUploadPhoto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context=".features.features_vendor.homescreen.attendance_fix.ui.activity.lowlevel.new_.AttendanceLowGeoLocationPhoto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/image_preview_card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="1.5"
+        app:cardElevation="8dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:alpha="0.25"
+            android:src="@drawable/ic_code_scanner_auto_focus_on"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/ivResultPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitlePreviewUploadPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Foto"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_16ssp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvDescPreviewUploadPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Pastikan foto terlihat jelas"
+            android:textColor="@color/grey2"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitlePreviewUploadPhoto"
+            app:layout_constraintBottom_toTopOf="@id/btnPreviewUploadPhoto"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPreviewUploadPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginBottom="@dimen/_14sdp"
+            android:background="@drawable/btn_primary"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Upload Foto"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_18sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_16sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/_20sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pinjaman"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/grayBold"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:drawableStart="@drawable/ic_rupiah"
+                    android:drawablePadding="@dimen/_4sdp"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Feature"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppinsregular"
+                    android:background="@drawable/bg_green"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayLine"
+                android:layout_marginTop="@dimen/_12sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Fitur untuk personalisasi benefit karyawan"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/_11ssp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/new_feature_mekari_1"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_9ssp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/new_feature_mekari_2"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_9ssp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Powered by"
+                android:textAlignment="center"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_9ssp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/hk_home"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_76sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/ic_mekari"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDialogUpdateApp"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Kembali"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/primary_color"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppinsmedium"
+                android:background="@drawable/bg_field_primary"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

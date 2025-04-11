@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.cftalk.ui.activity.CreateCftalkProjectActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_15sdp">
+
+        <LinearLayout
+            android:id="@+id/llProjectCreateCftalkProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbarCreateCftalkProject" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Pilih Project"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp"/>
+
+            <TextView
+                android:id="@+id/tvProjectCreateCftalkProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/bg_empty_card"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Pilih Project"
+                android:textColor="@color/grayTxt"
+                android:textSize="@dimen/_12ssp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTitleCreateCftalkProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Judul Pengajuan"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llProjectCreateCftalkProject" />
+
+        <TextView
+            android:id="@+id/tvDescCreateCftalkProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Keterangan"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTitleCreateCftalkProject" />
+
+        <TextView
+            android:id="@+id/tvUploadPhotoCreateCftalkProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Unggah foto"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDescCreateCftalkProject" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubmitDisableCreateCftalkProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_25sdp"
+            android:background="@drawable/btn_disable"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bodyText"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etSubAreaCreateCftalkProject" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubmitEnableCreateCftalkProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/bg_secondary"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bodyText"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etSubAreaCreateCftalkProject" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPhotoCreateCftalkProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUploadPhotoCreateCftalkProject">
+
+            <ImageView
+                android:id="@+id/ivPickPhotoCreateCftalkProject"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@drawable/rounded_dark_gray"
+                android:padding="@dimen/_15sdp"
+                android:src="@drawable/ic_camera_black"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/llResultsPhotoCreateCftalkProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="4"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivPickPhotoCreateCftalkProject">
+
+                <ImageView
+                    android:id="@+id/ivResultPhotoCreateCftalkProject"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_15sdp"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/ivResultPhoto2CreateCftalkProject"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_15sdp"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/ivResultPhoto3CreateCftalkProject"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_15sdp"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/ivResultPhoto4CreateCftalkProject"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_15sdp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+            android:id="@+id/spinnerTitleCreateCftalkProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:background="@drawable/btn_area"
+            android:spinnerMode="dropdown"
+            app:smsp_arrowColor="@color/grayTxt"
+            app:smsp_arrowPaddingBottom="@dimen/_5sdp"
+            app:smsp_arrowPaddingLeft="@dimen/_1sdp"
+            app:smsp_enableFloatingLabel="false"
+            app:smsp_floatingLabelColor="@color/white"
+            app:smsp_floatingLabelText="Pilih area"
+            app:smsp_hint="Pilih Judul CFTalk"
+            app:smsp_hintColor="@color/grayTxt"
+            app:smsp_hintSize="@dimen/_12ssp"
+            app:smsp_isSearchable="false"
+            app:smsp_itemColor="@color/grayTxt"
+            app:smsp_itemListColor="@color/grayTxt"
+            app:smsp_itemListHintBackgroundColor="#808080"
+            app:smsp_itemListHintColor="@color/primary_color"
+            app:smsp_multilineError="false"
+            app:smsp_selectedItemListColor="@color/grayTxt"
+            app:smsp_underlineColor="#F5F6F8"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleCreateCftalkProject"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etDescCreateCftalkProject"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            app:hintEnabled="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescCreateCftalkProject">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etInputDescCreateCftalkProject"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_gray"
+                android:fontFamily="@font/poppinsregular"
+                android:gravity="top|left"
+                android:hint="Keterangan"
+                android:maxLength="500"
+                android:textSize="@dimen/_12ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etCalendarCreateCftalkProject"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:visibility="gone"
+            app:hintEnabled="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clPhotoCreateCftalkProject">
+
+            <TextView
+                android:id="@+id/tvCalendarCreateCftalkProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Tanggal"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/etInputDateCreateCftalkProject"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_gray"
+                android:drawableRight="@drawable/ic_calendar_orange"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center_vertical"
+                android:hint="01 Januari 0001"
+                android:padding="@dimen/_15sdp"
+                android:textSize="@dimen/_12ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etAreaCreateCftalkProject"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            app:hintEnabled="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etCalendarCreateCftalkProject">
+
+            <TextView
+                android:id="@+id/tvAreaCreateCftalkProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Area"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                android:id="@+id/etInputAreaCreateCftalkProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:background="@drawable/btn_area"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:spinnerMode="dropdown"
+                app:smsp_arrowColor="@color/grayTxt"
+                app:smsp_arrowPaddingBottom="@dimen/_5sdp"
+                app:smsp_arrowPaddingLeft="@dimen/_1sdp"
+                app:smsp_enableFloatingLabel="false"
+                app:smsp_floatingLabelColor="@color/white"
+                app:smsp_floatingLabelText="Pilih area"
+                app:smsp_hint="Pilih Area"
+                app:smsp_hintColor="@color/grayTxt"
+                app:smsp_hintSize="@dimen/_12ssp"
+                app:smsp_isSearchable="false"
+                app:smsp_itemColor="@color/grayTxt"
+                app:smsp_itemListColor="@color/grayTxt"
+                app:smsp_itemListHintBackgroundColor="#808080"
+                app:smsp_itemListHintColor="@color/primary_color"
+                app:smsp_multilineError="false"
+                app:smsp_selectedItemListColor="@color/grayTxt"
+                app:smsp_underlineColor="#F5F6F8" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etSubAreaCreateCftalkProject"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            app:hintEnabled="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etAreaCreateCftalkProject">
+
+            <TextView
+                android:id="@+id/tvSubAreaCreateCftalkProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Sub Area"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp" />
+
+            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                android:id="@+id/etInputSubAreaCreateCftalkProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:background="@drawable/btn_area"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:spinnerMode="dropdown"
+                app:smsp_arrowColor="@color/grayTxt"
+                app:smsp_arrowPaddingBottom="@dimen/_5sdp"
+                app:smsp_arrowPaddingLeft="@dimen/_1sdp"
+                app:smsp_enableFloatingLabel="false"
+                app:smsp_floatingLabelColor="@color/white"
+                app:smsp_floatingLabelText="Pilih area"
+                app:smsp_hint="Pilih Sub Area"
+                app:smsp_hintColor="@color/grayTxt"
+                app:smsp_hintSize="@dimen/_12ssp"
+                app:smsp_isSearchable="false"
+                app:smsp_itemColor="@color/grayTxt"
+                app:smsp_itemListColor="@color/grayTxt"
+                app:smsp_itemListHintBackgroundColor="#808080"
+                app:smsp_itemListHintColor="@color/primary_color"
+                app:smsp_multilineError="false"
+                app:smsp_searchHeaderBackgroundColor="@color/primary_color"
+                app:smsp_searchHeaderText="Cari sub area"
+                app:smsp_searchTextColor="@color/grayTxt"
+                app:smsp_selectedItemListColor="@color/grayTxt"
+                app:smsp_underlineColor="#F5F6F8" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <include
+            android:id="@+id/appbarCreateCftalkProject"
+            layout="@layout/app_bar_default"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_18sdp"
+    app:cardCornerRadius="@dimen/_16sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/_20sdp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_120sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/success_create_permission" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Berhasil Submit Laporan Audit"
+            android:textAlignment="center"
+            android:textColor="@color/green2"
+            android:textSize="@dimen/_14ssp"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp"
+            android:background="@drawable/bg_field">
+
+            <TextView
+                android:id="@+id/tvDateDialogSuccessSubmitAudit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="error date"
+                android:textAlignment="center"
+                android:textColor="@color/graybtn"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <TextView
+                android:id="@+id/tvPeriodeDialogSuccessSubmitAudit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:paddingVertical="@dimen/_2sdp"
+                android:background="@drawable/bg_grey1"
+                android:text="Error Periode"
+                android:textAlignment="center"
+                android:textColor="@color/blue3"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="Dicek oleh"
+                android:textAlignment="center"
+                android:textColor="@color/graybtn"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <TextView
+                android:id="@+id/tvNameDialogSuccessSubmitAudit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="error name"
+                android:textAlignment="center"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <LinearLayout
+                android:id="@+id/ll3DialogSuccessSubmitAudit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2.2"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/ll2ListAuditInspeksi">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"/>
+
+                <TextView
+                    android:id="@+id/tvL1DialogSuccessSubmitAudit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="L1"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_11ssp"
+                    android:drawableStart="@drawable/ic_circle_chooser"
+                    android:drawablePadding="@dimen/_2sdp"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+
+                <TextView
+                    android:id="@+id/tvL2DialogSuccessSubmitAudit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="L2"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_11ssp"
+                    android:drawableStart="@drawable/ic_done_circle_green"
+                    android:drawablePadding="@dimen/_2sdp"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+
+                <TextView
+                    android:id="@+id/tvL3DialogSuccessSubmitAudit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="L3"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_11ssp"
+                    android:drawableStart="@drawable/ic_done_circle_green"
+                    android:drawablePadding="@dimen/_2sdp"
+                    tools:ignore="UseCompatTextViewDrawableXml" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLaporanDialogSuccessSubmitAudit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:background="@drawable/btn_primary"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Lihat Laporan"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCloseDialogSuccessSubmitAudit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:background="@drawable/bg_red"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Tutup"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

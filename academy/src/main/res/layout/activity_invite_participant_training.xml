@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_trainer.myclass.ui.activity.InviteParticipantTrainingActivity">
+
+    <include
+        android:id="@+id/appbarInviteParticipant"
+        layout="@layout/app_bar_training" />
+
+    <TextView
+        android:id="@+id/tvStatusInviteParticipant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_2sdp"
+        android:text="PROFESIONAL"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_8ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:background="@drawable/bg_second_color"
+        app:layout_constraintTop_toBottomOf="@id/appbarInviteParticipant"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleInviteParticipant"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:gravity="bottom"
+        android:text="Error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinsbold"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusInviteParticipant" />
+
+    <TextView
+        android:id="@+id/tv2InviteParticipant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Training Untuk"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleInviteParticipant"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTrainerInviteParticipant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="end"
+        android:text="error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleInviteParticipant"
+        app:layout_constraintStart_toEndOf="@id/tv2InviteParticipant" />
+
+    <TextView
+        android:id="@+id/tv3InviteParticipant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Tanggal"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/tv2InviteParticipant"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDateInviteParticipant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="end"
+        android:text="error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv2InviteParticipant"
+        app:layout_constraintStart_toEndOf="@id/tv3InviteParticipant" />
+
+    <TextView
+        android:id="@+id/tv4InviteParticipant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Jam"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/tv3InviteParticipant"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTimeInviteParticipant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="end"
+        android:text="error"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv3InviteParticipant"
+        app:layout_constraintStart_toEndOf="@id/tv4InviteParticipant" />
+
+    <View
+        android:id="@+id/view1InviteParticipant"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4sdp"
+        android:background="@color/background"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv4InviteParticipant" />
+
+    <TextView
+        android:id="@+id/tvListInviteParticipantTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Daftar peserta training :"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view1InviteParticipant"/>
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/tvCountParticipantInviteParticipant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:text="0 Peserta"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinssemibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view1InviteParticipant"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvInviteParticipantTraining"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        tools:listitem="@layout/list_participant"
+        app:layout_constraintTop_toBottomOf="@id/tvListInviteParticipantTraining"
+        app:layout_constraintBottom_toTopOf="@id/ll1InviteParticipantTraining" />
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/ll1InviteParticipantTraining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:padding="@dimen/_18sdp"
+        android:elevation="@dimen/_6sdp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/btnAddInviteParticipant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16ssp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:background="@drawable/bg_rounded_dot_blue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Tambah Peserta"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:drawableStart="@drawable/ic_create_circle_blue"
+                android:drawablePadding="@dimen/_4sdp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/btnSubmitInviteParticipant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_disable"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

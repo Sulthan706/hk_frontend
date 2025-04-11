@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/layout_forgot"
+        layout="@layout/app_bar_default" />
+
+    <TextView
+        android:id="@+id/tv_forgot_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Verifikasi"
+        android:textColor="@color/black"
+        android:textSize="@dimen/h4"
+        app:layout_constraintTop_toBottomOf="@+id/layout_forgot" />
+
+    <TextView
+        android:id="@+id/tv_forgot2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/otp"
+        android:textSize="@dimen/h5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgot_otp" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_verif_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgot2">
+
+        <EditText
+            android:id="@+id/etotp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/primary_color"
+            tools:text="1" />
+
+        <EditText
+            android:id="@+id/etotp2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/primary_color"
+            tools:text="1" />
+
+        <EditText
+            android:id="@+id/etotp3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/primary_color"
+            tools:text="1" />
+
+        <EditText
+            android:id="@+id/etotp4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/primary_color"
+            tools:text="1" />
+
+        <EditText
+            android:id="@+id/etotp5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/primary_color"
+            tools:text="1" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_forgot_otp_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_rounded_primary"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Verify"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/smallRounded"
+        app:layout_constraintTop_toBottomOf="@+id/ll_verif_otp" />
+
+    <TextView
+        android:id="@+id/tv_otp_resend_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text=". . . s Resend Code"
+        android:textSize="@dimen/smallText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_forgot_otp_send" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

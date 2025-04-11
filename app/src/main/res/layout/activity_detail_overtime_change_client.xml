@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.overtime.ui.activity.DetailOvertimeChangeClientActivity">
+
+    <include
+        android:id="@+id/appbar_detail_change_schedule_teamlead"
+        layout="@layout/app_bar_default_client" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar_detail_change_schedule_teamlead">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll1_detailOvertimeChangeClient"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_20sdp"
+                android:background="@drawable/bg_white_card"
+                android:elevation="@dimen/_6sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_titleDetailOvertimeChangeClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_24sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Error Title"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <TextView
+                    android:id="@+id/tv_dateDetailOvertimeChangeClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error Date"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_shiftDetailOvertimeChangeClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error Shift"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_locationDetailOvertimeChangeClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error Area"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tv_subLocDetailOvertimeChangeClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error Subarea"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2_detailOvertimeChangeClient"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/ll1_detailOvertimeChangeClient">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Pembuat Lembur Ganti :"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:background="@drawable/bg_white_card"
+                    android:elevation="@dimen/_6sdp"
+                    android:padding="@dimen/_8sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_createdDetailOvertimeChangeClient"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        app:civ_border_color="@android:color/darker_gray"
+                        app:civ_border_width="@dimen/_1sdp"
+                        tools:src="@drawable/foto1" />
+
+                    <TextView
+                        android:id="@+id/tv_createdDetailOvertimeChangeClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_toEndOf="@id/iv_createdDetailOvertimeChangeClient"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Error name"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_14ssp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3_detailOvertimeChangeClient"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/ll2_detailOvertimeChangeClient">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Menggantikan :"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:background="@drawable/bg_white_card"
+                    android:elevation="@dimen/_6sdp"
+                    android:padding="@dimen/_8sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_employeeDetailOvertimeChangeClient"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        app:civ_border_color="@android:color/darker_gray"
+                        app:civ_border_width="@dimen/_1sdp"
+                        tools:src="@drawable/foto1" />
+
+                    <TextView
+                        android:id="@+id/tv_employeeDetailOvertimeChangeClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_toEndOf="@id/iv_employeeDetailOvertimeChangeClient"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Error name"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_14ssp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll4_detailOvertimeChangeClient"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/ll3_detailOvertimeChangeClient">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Digantikan oleh :"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:background="@drawable/bg_white_card"
+                    android:elevation="@dimen/_6sdp"
+                    android:padding="@dimen/_8sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_replaceDetailOvertimeChangeClient"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        app:civ_border_color="@android:color/darker_gray"
+                        app:civ_border_width="@dimen/_1sdp"
+                        tools:src="@drawable/foto1" />
+
+                    <TextView
+                        android:id="@+id/tv_replaceDetailOvertimeChangeClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_toEndOf="@id/iv_replaceDetailOvertimeChangeClient"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Error name"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_14ssp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll5_detailOvertimeChangeClient"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/ll4_detailOvertimeChangeClient">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Alasan lembur"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginHorizontal="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:background="@drawable/bg_white_card"
+                    android:elevation="@dimen/_6sdp"
+                    android:padding="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/tv_descDetailOvertimeChangeClient"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="3"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Error"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_14ssp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_24sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll5_detailOvertimeChangeClient"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

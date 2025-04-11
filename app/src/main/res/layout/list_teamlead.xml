@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:id="@+id/iv_fotoUserTimku"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/foto1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/iv_fotoUserTimku"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Error Name"
+        android:textColor="@color/neutral100"
+        android:textSize="@dimen/h4" />
+
+    <ImageView
+        android:id="@+id/iv_expandDownListTl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:visibility="visible"
+        android:src="@drawable/ic_expand_down_black" />
+
+    <ImageView
+        android:id="@+id/iv_expandUpListTl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_expand_up_black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/iv_fotoUserTimku"
+        android:layout_marginTop="8dp"
+        android:background="#DEDEDE" />
+
+</RelativeLayout>

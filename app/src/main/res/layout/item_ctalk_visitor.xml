@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/tvObjectName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinssemibold"
+                    tools:text="Objek 1"
+                    android:textColor="@color/primary_color" />
+
+                <TextView
+                    android:id="@+id/tvDetailObjectName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    tools:text="Keterangan pengerjaan"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                >
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mVBeforeImageVisitor"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_toStartOf="@+id/mVAfterImageVisitor"
+                    android:backgroundTint="#DEDEDE"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="@dimen/_4sdp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp">
+
+                    <ImageView
+                        android:id="@+id/ivBeforeVisitor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:alpha="0.25"
+                        android:src="@drawable/ic_round_add_a_photo"
+                        android:visibility="visible"
+                        app:tint="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/ivBeforeVisitorImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        tools:src="@tools:sample/backgrounds/scenic" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mVAfterImageVisitor"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="19dp"
+                    android:backgroundTint="#DEDEDE"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="@dimen/_4sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp">
+
+                    <ImageView
+                        android:id="@+id/ivAfterVisitor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:alpha="0.25"
+                        android:src="@drawable/ic_round_add_a_photo"
+                        android:visibility="visible"
+                        app:tint="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/ivAfterVisitorImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        tools:src="@tools:sample/backgrounds/scenic" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

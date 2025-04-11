@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".features.features_management.homescreen.attendanceOpr.ui.activity.DetailAbsentOprMgmntActivity">
+
+    <include
+        android:id="@+id/appbarDetailAbsentOprMgmnt"
+        layout="@layout/app_bar_default"/>
+
+    <RelativeLayout
+        android:id="@+id/rlDetailAbsentOprMgmnt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_card"
+        android:elevation="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginBottom="@dimen/_18sdp"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/appbarDetailAbsentOprMgmnt">
+
+        <TextView
+            android:id="@+id/tvMonthDetailAbsentOprMgmnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_arrow_down_secondary"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Bulan"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMonthDetailAbsentOprMgmnt">
+
+            <RelativeLayout
+                android:id="@+id/rl_progressDetailAbsentOprMgmnt"
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_75sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_gravity="center">
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/progressBarDetailAbsentOprMgmnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:progress="0"
+                    app:indicatorColor="@color/primary_color"
+                    app:indicatorDirectionCircular="clockwise"
+                    app:indicatorInset="5dp"
+                    app:indicatorSize="@dimen/_66sdp"
+                    app:trackColor="@color/orangeDisable"
+                    app:trackCornerRadius="@dimen/_12sdp"
+                    app:trackThickness="@dimen/_10sdp"
+                    tools:progress="0" />
+
+                <TextView
+                    android:id="@+id/tv_progressBarDetailAbsentOprMgmnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="0%"
+                    android:textAlignment="center"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/rl_progressDetailAbsentOprMgmnt">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah hadir"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <TextView
+                    android:id="@+id/tvTotalDetailAbsentOprMgmnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 / 0 kehadiran"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_15ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <TextView
+                    android:id="@+id/tvDateDetailAbsentOprMgmnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="00/00/0000 - 00/00/0000"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/poppinsregular"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDetailAbsentOprMgmnt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:visibility="gone"
+        tools:listitem="@layout/list_detail_count_absent_opr"
+        app:layout_constraintTop_toBottomOf="@id/rlDetailAbsentOprMgmnt"/>
+
+    <FrameLayout
+        android:id="@+id/fl_NoInternetDetailAbsentOprMgmnt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/layoutConnectionTimeout"
+            layout="@layout/fragment_connection_timeout" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

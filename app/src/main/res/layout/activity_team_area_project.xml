@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.dashboardProject.ui.activity.TeamAreaProjectActivity">
+
+    <include
+        android:id="@+id/appbarTeamAreaProject"
+        layout="@layout/app_bar_default_with_date_client"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appbarTeamAreaProject"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_22sdp">
+
+            <LinearLayout
+                android:id="@+id/llPeriodeTeamAreaProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Periode"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <TextView
+                    android:id="@+id/tvCurrentPeriodeTeamAreaProject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:text="Error"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/grey2_client"
+                    android:fontFamily="@font/poppinsregular"
+                    android:background="@drawable/bg_field_empty_card"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSubLocTeamAreaProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                app:layout_constraintTop_toBottomOf="@id/llPeriodeTeamAreaProject">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sub area"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                    android:id="@+id/spinnerSubLocTeamAreaProject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/bg_spinner_no_padding"
+                    android:spinnerMode="dropdown"
+                    app:smsp_arrowColor="@color/white"
+                    app:smsp_arrowPaddingRight="@dimen/_2sdp"
+                    app:smsp_enableFloatingLabel="false"
+                    app:smsp_floatingLabelColor="@color/white"
+                    app:smsp_floatingLabelText="Pilih area"
+                    app:smsp_hint="Pilih sub area"
+                    app:smsp_hintColor="@color/graybtn"
+                    app:smsp_hintSize="@dimen/_11ssp"
+                    app:smsp_isSearchable="false"
+                    app:smsp_itemColor="@color/black2"
+                    app:smsp_itemListColor="@color/black2"
+                    app:smsp_itemListHintBackgroundColor="#808080"
+                    app:smsp_itemListHintColor="@color/primary_color"
+                    app:smsp_multilineError="false"
+                    app:smsp_searchHeaderBackgroundColor="@color/primary_color"
+                    app:smsp_searchHeaderText="Cari sub area"
+                    app:smsp_searchTextColor="@color/black2"
+                    app:smsp_selectedItemListColor="@color/black2"
+                    app:smsp_underlineColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llShiftTeamAreaProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                app:layout_constraintTop_toBottomOf="@id/llSubLocTeamAreaProject">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Shift"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                    android:id="@+id/spinnerShiftTeamAreaProject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/bg_spinner_no_padding"
+                    android:spinnerMode="dropdown"
+                    app:smsp_arrowColor="@color/white"
+                    app:smsp_arrowPaddingRight="@dimen/_2sdp"
+                    app:smsp_enableFloatingLabel="false"
+                    app:smsp_floatingLabelColor="@color/white"
+                    app:smsp_floatingLabelText="Pilih area"
+                    app:smsp_hint="Pilih shift"
+                    app:smsp_hintColor="@color/graybtn"
+                    app:smsp_hintSize="@dimen/_11ssp"
+                    app:smsp_isSearchable="false"
+                    app:smsp_itemColor="@color/black2"
+                    app:smsp_itemListColor="@color/black2"
+                    app:smsp_itemListHintBackgroundColor="#808080"
+                    app:smsp_itemListHintColor="@color/primary_color"
+                    app:smsp_multilineError="false"
+                    app:smsp_searchHeaderBackgroundColor="@color/primary_color"
+                    app:smsp_searchHeaderText="Cari sub area"
+                    app:smsp_searchTextColor="@color/black2"
+                    app:smsp_selectedItemListColor="@color/black2"
+                    app:smsp_underlineColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEmployeeTeamAreaProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/llShiftTeamAreaProject">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hari ini"
+                        android:textColor="@color/grey2_client"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tvCurrentDateTeamAreaProject"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Error date"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/grey2_client"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jam kerja"
+                        android:textColor="@color/grey2_client"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tvWorkTimeTeamAreaProject"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Error time"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/grey2_client"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="Pekerjaan"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDacTeamAreaProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/list_dac_team_client"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="Pengawas"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPengawasTeamAreaProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    tools:listitem="@layout/list_employee_history_attendance_project"/>
+
+                <TextView
+                    android:id="@+id/tvEmptyPengawasTeamAreaProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:text="tidak ada pengawas"
+                    android:textAlignment="center"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="Operator"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvOperatorTeamAreaProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    tools:listitem="@layout/list_employee_history_attendance_project"/>
+
+                <TextView
+                    android:id="@+id/tvEmptyOperatorTeamAreaProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:text="tidak ada operator"
+                    android:textAlignment="center"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEmptyTeamAreaProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_42sdp"
+                android:text="Pilih sub area dan shift terlebih dahulu untuk menampilkan daftar karyawan"
+                android:textAlignment="center"
+                android:textColor="@color/grayTxt"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/llShiftTeamAreaProject"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

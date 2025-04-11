@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.damagereport.ui.activity.ListBakMachineActivity">
+
+    <include
+        android:id="@+id/app_bar_bak_machine"
+        layout="@layout/app_bar_default"/>
+
+    <LinearLayout
+        android:id="@+id/linear_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_bak_machine">
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:textAlignment="center"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_9ssp"
+            android:visibility="gone"
+            android:layout_marginHorizontal="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tv_rusak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:textAlignment="center"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_9ssp"
+            android:layout_marginHorizontal="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tv_baik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:textAlignment="center"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_9ssp"
+            android:layout_marginHorizontal="@dimen/_10sdp" />
+
+
+    </LinearLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_bak_machine">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/list_item_shimmer_bak_machine"/>
+
+            <include
+                layout="@layout/list_item_shimmer_bak_machine"/>
+
+            <include
+                layout="@layout/list_item_shimmer_bak_machine"/>
+
+            <include
+                layout="@layout/list_item_shimmer_bak_machine"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bak_machine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/linear_total"/>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Tidak ada data mesin"
+        android:textAlignment="center"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_9ssp"
+        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

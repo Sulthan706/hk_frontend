@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.UpdateBpjsActivity">
+
+    <include
+        android:id="@+id/appbarKesehatan"
+        layout="@layout/app_bar_default"/>
+
+    <TextView
+        android:id="@+id/titleDokumen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Foto Dokumen"
+        app:layout_constraintTop_toBottomOf="@+id/appbarKesehatan"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginHorizontal="24dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_14ssp"/>
+    <RelativeLayout
+        android:id="@+id/rlImageKesehatan"
+        android:layout_width="match_parent"
+        android:layout_height="244dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleDokumen"
+        android:layout_marginHorizontal="24dp"
+        android:background="#F4F4F4"
+        android:layout_marginTop="@dimen/_9sdp">
+
+        <ImageView
+            android:id="@+id/ivDefaultImageKesehatan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/defaultimageBpjs"
+            android:padding="@dimen/_60sdp"
+            android:src="@drawable/logo_splash" />
+
+        <ImageView
+            android:id="@+id/ivKesehatan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_error_image"
+            android:visibility="gone"
+            android:contentDescription="@string/defaultimageBpjs"
+            android:scaleType="centerCrop"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tvTitleKesehatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titleWarnJamsostek"
+        app:layout_constraintTop_toBottomOf="@+id/rlImageKesehatan"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppinsregular"/>
+    <TextView
+        android:id="@+id/tvTitleInputNumberKesehatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nomor BPJS Kesehatan"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleKesehatan"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etNumbKesehatan"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:enabled="true"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:hint="Nomor belum tersedia"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleInputNumberKesehatan">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvNumbKesehatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:inputType="text|textMultiLine|textCapSentences"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:maxLength="100"
+            android:gravity="left"
+            android:maxLines="10"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBpjsUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toBottomOf="@+id/etNumbKesehatan"
+        android:layout_marginHorizontal="24dp"
+        android:text="@string/updateBpjs"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppinssemibold"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/secondary_color"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cornerRadius="9dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

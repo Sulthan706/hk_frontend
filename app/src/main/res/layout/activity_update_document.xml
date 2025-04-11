@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.ChangeDocumentActivity">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/layoutAppbarUpdateDocument"
+                layout="@layout/app_bar_default" />
+
+            <TextView
+                android:id="@+id/tvTitleUpdateDocument"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layoutAppbarUpdateDocument"
+                android:text="Pilih pada dokumen yang ingin Anda lengkapi atau ingin diperbarui"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsregular"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/llMainDocument"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleUpdateDocument"
+
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dokumen Pribadi"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/secondary_color"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="22dp"/>
+
+                <LinearLayout
+                    android:id="@+id/llUploadKTP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/bg_field"
+                    android:elevation="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/ivKTPPlaceImage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_document_ktp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="KTP"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/tvNumberNikDokumen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="3125031289000003"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/primary_color"
+                            />
+                        <TextView
+                            android:id="@+id/tvUploadedKTP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="file belum tersedia"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_9ssp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llbpjskerja"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/bg_field"
+                    android:elevation="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp">
+
+                    <ImageView
+
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_document_bpjs" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="BPJS Ketenagakerjaan"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="@color/black"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvJamsostekNumb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Nomor belum tersedia"
+                            android:textSize="@dimen/_9ssp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/tvFileJamsostek"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="file belum tersedia"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_9ssp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llbpjskesehatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/bg_field"
+                    android:elevation="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp">
+
+                    <ImageView
+
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_document_bpjs" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="BPJS Kesehatan"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/tvBpjsKes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nomor belum tersedia"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_9ssp"/>
+                        <TextView
+                            android:id="@+id/tvFileBpjsKes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="file belum tersedia"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_9ssp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ijazah &amp; Sertifikat"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/secondary_color"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="22dp"/>
+
+                <LinearLayout
+                    android:id="@+id/llUploadIjazah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/bg_field"
+                    android:elevation="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp">
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_document_ijazah"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ijazah Pendidikan Terakhir"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/tvUploadedIjazah"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="file belum tersedia"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_9ssp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llUploadSertifikat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/bg_field"
+                    android:elevation="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp">
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_document_sertifikatkompetensi"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sertifikat Kompetensi"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="@color/black"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(jika ada)"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textColor="@color/blue"
+                                android:textStyle="italic"
+                                android:layout_marginLeft="@dimen/_4sdp"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvUploadedSertifikat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="file belum tersedia"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_9ssp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llUploadSIO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/bg_field"
+                    android:elevation="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp">
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_document_sio"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SIO"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="@color/black"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(jika ada)"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textColor="@color/blue"
+                                android:textStyle="italic"
+                                android:layout_marginLeft="@dimen/_4sdp"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvUploadedSio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="file belum tersedia"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_9ssp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llUploadSKCK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/bg_field"
+                    android:elevation="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp">
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_document_skck"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SKCK"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="@color/black"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(jika ada)"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textColor="@color/blue"
+                                android:textStyle="italic"
+                                android:layout_marginLeft="@dimen/_4sdp"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvUploadedSkck"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="file belum tersedia"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textStyle="italic"
+                            android:textSize="@dimen/_9ssp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:layout_marginTop="@dimen/_20sdp"/>
+
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

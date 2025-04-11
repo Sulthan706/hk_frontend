@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottom_sheets_background_white"
+    android:padding="@dimen/_18sdp">
+
+    <ImageView
+        android:id="@+id/ivCloseBottomInputPartisipan"
+        android:layout_width="@dimen/_21sdp"
+        android:layout_height="@dimen/_21sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:src="@drawable/ic_close_bottom_sheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv1BottomInputPartisipan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Partisipan Meeting"
+        android:textAlignment="center"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv2BottomInputPartisipan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Nama Partisipan"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/ivCloseBottomInputPartisipan"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNameBottomInputPartisipan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/bg_field"
+        android:fontFamily="@font/poppinsregular"
+        android:hint="masukkan nama partisipan"
+        android:maxLines="1"
+        android:lines="1"
+        android:singleLine="true"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/tv2BottomInputPartisipan"/>
+
+    <TextView
+        android:id="@+id/tv3BottomInputPartisipan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Email"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/etNameBottomInputPartisipan"/>
+
+    <LinearLayout
+        android:id="@+id/llBottomInputPartisipan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv3BottomInputPartisipan">
+
+        <TextView
+            android:id="@+id/tvErrorEmailBottomInputPartisipan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Format email tidak sesuai"
+            android:textColor="@color/red1"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etMailBottomInputPartisipan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:background="@drawable/bg_field"
+            android:fontFamily="@font/poppinsregular"
+            android:hint="masukkan alamat email"
+            android:maxLines="1"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_12ssp"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/tv3BottomInputPartisipan"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitBottomInputPartisipan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:background="@drawable/bg_secondary_new"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toBottomOf="@+id/llBottomInputPartisipan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

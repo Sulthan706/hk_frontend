@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appbar_searchStaff"
+        layout="@layout/app_bar_default_with_edit_text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_searchStaff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/appbar_searchStaff" />
+
+    <FrameLayout
+        android:id="@+id/flConnectionTimeoutSearchStaff"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar_searchStaff" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

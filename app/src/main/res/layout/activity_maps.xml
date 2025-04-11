@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.attendance_fix.ui.activity.lowlevel.new_.AttendanceLowGeoLocation">
+
+    <include
+        android:id="@+id/layout_appbar"
+        layout="@layout/app_bar_default"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_map_schedule"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="#E5E5E5"
+        android:fontFamily="@font/poppinsmedium"
+        android:gravity="center"
+        android:text="Senin, 13 Januari 2022 (07.30 WIB)"
+        android:textSize="@dimen/_11ssp"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/layout_appbar" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/tv_map_schedule" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:weightSum="2"
+        map:layout_constraintBottom_toTopOf="@+id/ll_attendance_now"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:singleSelection="false">
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/Widget.App.TimeAttendanceEnabled"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Jam Masuk"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_9ssp" />
+
+        <Button
+            style="@style/Widget.App.TimeAttendanceDisabled"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Jam Keluar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9ssp" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_attendance_now"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:background="@drawable/rounded_attendance"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_7sdp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tv_check_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Error"
+            android:textSize="@dimen/_11ssp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_check_in_enabled"
+            style="@style/Widget.App.ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:text="Absen Masuk"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_check_in_disabled"
+            style="@style/Widget.App.ButtonStyleDisabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:text="Absen Masuk"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

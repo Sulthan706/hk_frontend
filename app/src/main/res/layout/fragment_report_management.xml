@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.features_vendor.homescreen.home.ui.new_.fragment.ReportFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_30sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_147sdp"
+            android:background="@drawable/bg_main_report_management"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <LinearLayout
+            android:id="@+id/llMainReportDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_38sdp"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:background="@drawable/bg_field"
+            android:orientation="vertical"
+            android:elevation="@dimen/_2sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_red_rounded"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/_7sdp"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Project"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/_12ssp"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="@dimen/_16sdp"/>
+                <TextView
+                    android:id="@+id/tvTotalCountProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginRight="@dimen/_16sdp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_4sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Aktif"
+                        android:textColor="@color/green2"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:id="@+id/tvCountActiveProject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="0"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/green2"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_4sdp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Near Expiry"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_10ssp"
+                        android:paddingLeft="@dimen/_10sdp"/>
+                    <TextView
+                        android:id="@+id/tvCountNearExpired"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_info"
+                        android:paddingRight="@dimen/_3sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_4sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinslight"
+                        android:text="project near expiry jika sudah memasuki periode 3 bulan sebelum tanggal terakhir project"
+                        android:textColor="@color/grey2"
+                        android:textSize="@dimen/_6ssp"
+                        android:textStyle="italic"
+                        android:layout_marginTop="@dimen/_4sdp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_4sdp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Expired"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_weight="1"
+                        android:textColor="@color/primary_color"
+                        android:textSize="@dimen/_10ssp"/>
+                    <TextView
+                        android:id="@+id/tvCountExpired"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/primary_color"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAlignment="textEnd"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_4sdp">
+                    <TextView
+                        android:id="@+id/tvBtnSeeListProject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lihat daftar project"
+                        android:fontFamily="@font/poppinsregular"
+                        android:background="@drawable/bg_btn_red_rounded"
+                        android:paddingHorizontal="@dimen/_8sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llReportAbsensiDaily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/llMainReportDashboard"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="@dimen/_22sdp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Report Absensi Harian"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDateCounting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="26 Januari 2023"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/grey2"
+                    android:layout_weight="0.8"
+                    android:textSize="@dimen/_12ssp"
+                    android:textAlignment="textEnd"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llActiveAppsCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintTop_toBottomOf="@id/llReportAbsensiDaily"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="@dimen/_22sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Aktif Aplikasi"
+                    android:textColor="@color/grey2"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 project"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/grey2"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/_12ssp"
+                    android:textAlignment="textEnd"/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCardSummary1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/llActiveAppsCount"
+            android:weightSum="2"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:layout_marginTop="8dp">
+
+            <RelativeLayout
+                android:id="@+id/rlActiveReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_report_green_rounded"
+                android:padding="@dimen/_10ssp"
+                android:layout_weight="1"
+                android:layout_marginRight="6dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_right_green"
+                    android:layout_alignParentEnd="true"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Perfect"
+                        android:textColor="@color/green2"
+                        android:textSize="@dimen/_10ssp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="kehadiran 100%"
+                        android:textColor="@color/green2"
+                        android:textSize="@dimen/_8ssp" />
+                    <TextView
+                        android:id="@+id/tvCountPerfectProject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="0 project"
+                        android:textColor="@color/green2"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlAlmostPerfectReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_report_blue_rounded"
+                android:padding="@dimen/_10ssp"
+                android:layout_weight="1"
+                android:layout_marginRight="6dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_right_blue"
+                    android:layout_alignParentEnd="true"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Menuju perfect"
+                        android:textColor="@color/secondary_color"
+                        android:textSize="@dimen/_10ssp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="kehadiran 71% - 99%"
+                        android:textColor="@color/secondary_color"
+                        android:textSize="@dimen/_8ssp" />
+                    <TextView
+                        android:id="@+id/tvCountAlmostPerfectProject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="0 project"
+                        android:textColor="@color/secondary_color"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llCardSummary2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/llCardSummary1"
+            android:weightSum="2"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:layout_marginTop="8dp">
+
+            <RelativeLayout
+                android:id="@+id/rlNeedImprovementReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_report_orange_rounded"
+                android:padding="@dimen/_10ssp"
+                android:layout_weight="1"
+                android:layout_marginRight="6dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_right_orange"
+                    android:layout_alignParentEnd="true"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Perlu ditingkatkan"
+                        android:textColor="@color/primary_color"
+                        android:textSize="@dimen/_10ssp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="kehadiran 60% - 70%"
+                        android:textColor="@color/primary_color"
+                        android:textSize="@dimen/_8ssp" />
+                    <TextView
+                        android:id="@+id/tvCountNeedImprovementProject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="0 project"
+                        android:textColor="@color/primary_color"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlUnderPerfectReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_report_red_rounded"
+                android:padding="@dimen/_10ssp"
+                android:layout_weight="1"
+                android:layout_marginRight="6dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_right_red"
+                    android:layout_alignParentEnd="true"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Under"
+                        android:textColor="@color/red2"
+                        android:textSize="@dimen/_10ssp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="kehadiran &lt; 60%"
+                        android:textColor="@color/red2"
+                        android:textSize="@dimen/_8ssp" />
+                    <TextView
+                        android:id="@+id/tvCountUnderPerfectProject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="0 project"
+                        android:textColor="@color/red2"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llDownloadReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/llCardSummary2"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:layout_marginTop="24dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvComplaintReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Report Komplain"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/black"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/tvDownloadReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Download Report"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/blue"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"/>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/llDownloadReport"
+            android:weightSum="2"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:layout_marginTop="8dp">
+            <RelativeLayout
+                android:id="@+id/rlBtnCftalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_report_cftalk"
+                android:padding="@dimen/_10ssp"
+                android:layout_weight="1"
+                android:layout_marginRight="6dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_right_white"
+                    android:layout_alignParentEnd="true"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="CFTalk"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="diajukan internal manajemen"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_7ssp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlBtnCtalk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_primary"
+                android:padding="@dimen/_10ssp"
+                android:layout_weight="1"
+                android:layout_marginRight="6dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_right_white"
+                    android:layout_alignParentEnd="true"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="CTalk"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="diajukan klien"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_7ssp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

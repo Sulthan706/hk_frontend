@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+
+        <layer-list>
+
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/secondaryNew"/>
+                    <corners android:radius="8dp" />
+                    <padding android:right="@dimen/_3sdp"
+                        android:left="@dimen/_3sdp"/>
+                </shape>
+            </item>
+
+            <item
+                android:drawable="@drawable/ic_dropdown_white"
+                android:gravity="end|center"/>
+
+        </layer-list>
+
+    </item>
+
+</selector>

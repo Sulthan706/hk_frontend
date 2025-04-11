@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="h1">48sp</dimen>
+    <dimen name="h2">36sp</dimen>
+    <dimen name="h3">28sp</dimen>
+    <dimen name="h4">20sp</dimen>
+    <dimen name="h5">18sp</dimen>
+    <dimen name="textInput">16sp</dimen>
+    <dimen name="bodyText">16sp</dimen>
+    <dimen name="paragraphText">14sp</dimen>
+    <dimen name="smallText">12sp</dimen>
+    <dimen name="smallerText">10sp</dimen>
+    <dimen name="smallestText">8sp</dimen>
+    <dimen name="paddinglayout">16dp</dimen>
+    <dimen name="smallRounded">16dp</dimen>
+    <dimen name="mediumRounded">24dp</dimen>
+    <dimen name="largeRounded">32</dimen>
+    <dimen name="indicatorGap">2dp</dimen>
+    <dimen name="heightAppbar">50dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="app_bar_height">240dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="liveness_camerax_overlay_border_stroke">5dp</dimen>
+    <item name="liveness_camerax_overlay_horizontal_margin" format="float" type="dimen">150.0</item>
+    <item name="liveness_camerax_overlay_vertical_margin" format="float" type="dimen">400.0</item>
+    <item name="liveness_camerax_overlay_progress_margin" format="float" type="dimen">100.0</item>
+    <item name="liveness_camerax_overlay_sweep_angle" format="float" type="dimen">360.0</item>
+    <dimen name="liveness_camerax_card_message_margin">80dp</dimen>
+    <dimen name="liveness_camerax_card_message_min_height">40dp</dimen>
+    <dimen name="liveness_camerax_button_take_picture_margin">10dp</dimen>
+    <dimen name="liveness_camerax_button_take_picture_height">75dp</dimen>
+    <dimen name="liveness_camerax_button_take_picture_width">75dp</dimen>
+    <dimen name="liveness_camerax_button_take_picture_radius">50dp</dimen>
+    <dimen name="liveness_camerax_margin_medium">32dp</dimen>
+    <dimen name="liveness_camerax_margin_normal">16dp</dimen>
+    <dimen name="liveness_camerax_margin_small">8dp</dimen>
+    <dimen name="liveness_camerax_text_size_message">16sp</dimen>
+    <dimen name="liveness_camerax_text_size_take_picture_button">16sp</dimen>
+    <dimen name="liveness_camerax_button_take_picture_icon_size">40dp</dimen>
+</resources>

@@ -1,0 +1,168 @@
+package com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.mainInspeksi.ui.meeting.activity
+
+import android.annotation.SuppressLint
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.view.View
+import android.widget.Toast
+import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.hkapps.hygienekleen.databinding.ActivityProjectsMeetingBinding
+import com.hkapps.hygienekleen.features.features_management.homescreen.attendanceOSM.model.listAllProject.Content
+import com.hkapps.hygienekleen.features.features_management.homescreen.attendanceOSM.viewModel.AttendanceManagementViewModel
+import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.mainInspeksi.ui.adapter.ProjectsInspeksiAdapter
+import com.hkapps.hygienekleen.pref.CarefastOperationPref
+import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+
+class ProjectsMeetingActivity : AppCompatActivity(), ProjectsInspeksiAdapter.ProjectInspeksiCallBack {
+
+    private lateinit var binding: ActivityProjectsMeetingBinding
+    private lateinit var rvAdapter: ProjectsInspeksiAdapter
+    private val userId = CarefastOperationPref.loadInt(CarefastOperationPrefConst.USER_ID, 0)
+    private val userLevel = CarefastOperationPref.loadString(CarefastOperationPrefConst.USER_LEVEL_POSITION, "")
+    private var page = 0
+    private var isLastPage = false
+    private val size = 10
+
+    private val viewModel: AttendanceManagementViewModel by lazy {
+        ViewModelProviders.of(this).get(AttendanceManagementViewModel::class.java)
+    }
+
+    @SuppressLint("SetTextI18n")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityProjectsMeetingBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // set appbar
+        binding.appbarProjectsMeeting.tvAppbarTitle.text = "Daftar Project"
+        binding.appbarProjectsMeeting.ivAppbarBack.setOnClickListener {
+            onBackPressed()
+        }
+
+        // set default layout
+        binding.shimmerProjectsMeeting.startShimmerAnimation()
+        binding.shimmerProjectsMeeting.visibility = View.VISIBLE
+        binding.rvProjectsMeeting.visibility = View.GONE
+
+        // set recyclerview
+        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        binding.rvProjectsMeeting.layoutManager = layoutManager
+
+        // set scroll listener
+        val scrollListener = object : EndlessScrollingRecyclerView(layoutManager) {
+            override fun onLoadMore(totalItemsCount: Int, recyclerView: RecyclerView) {
+                if (!isLastPage) {
+                    page++
+                    if (userLevel == "BOD" || userLevel == "CEO") {
+                        viewModel.getAllProject(page, size)
+                    } else {
+                        viewModel.getProjectsManagement(userId, page, size)
+                    }
+                }
+            }
+        }
+        binding.rvProjectsMeeting.addOnScrollListener(scrollListener)
+
+        loadData()
+        setObserver()
+    }
+
+    private fun loadData() {
+        if (userLevel == "BOD" || userLevel == "CEO") {
+            viewModel.getAllProject(page, size)
+        } else {
+            viewModel.getProjectsManagement(userId, page, size)
+        }
+    }
+
+    private fun setObserver() {
+        // set observer
+        viewModel.isLoading?.observe(this) { isLoading ->
+            if (isLoading != null) {
+                if (isLoading) {
+                    Toast.makeText(this, "Terjadi kesalahan mengambil list project.", Toast.LENGTH_SHORT).show()
+                } else {
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        binding.shimmerProjectsMeeting.stopShimmerAnimation()
+                        binding.shimmerProjectsMeeting.visibility = View.GONE
+                        binding.rvProjectsMeeting.visibility = View.VISIBLE
+                    }, 1500)
+                }
+            }
+        }
+        viewModel.projectManagementModel.observe(this) {
+            if (it.code == 200) {
+                if (it.data.content.isNotEmpty()) {
+                    isLastPage = it.data.last
+                    if (page == 0) {
+                        rvAdapter = ProjectsInspeksiAdapter(
+                            it.data.content as ArrayList<Content>
+                        ).also { it1 -> it1.setListener(this) }
+                        binding.rvProjectsMeeting.adapter = rvAdapter
+                    } else {
+                        rvAdapter.listAllProject.addAll(it.data.content)
+                        rvAdapter.notifyItemRangeChanged(
+                            rvAdapter.listAllProject.size - it.data.content.size,
+                            rvAdapter.listAllProject.size
+                        )
+                    }
+                } else {
+                    binding.rvProjectsMeeting.adapter = null
+                }
+            } else {
+                binding.rvProjectsMeeting.adapter = null
+            }
+        }
+        viewModel.allProjectModel.observe(this) {
+            if (it.code == 200) {
+                if (it.data.content.isNotEmpty()) {
+                    isLastPage = it.data.last
+                    if (page == 0) {
+                        rvAdapter = ProjectsInspeksiAdapter(
+                            it.data.content as ArrayList<Content>
+                        ).also { it1 -> it1.setListener(this) }
+                        binding.rvProjectsMeeting.adapter = rvAdapter
+                    } else {
+                        rvAdapter.listAllProject.addAll(it.data.content)
+                        rvAdapter.notifyItemRangeChanged(
+                            rvAdapter.listAllProject.size - it.data.content.size,
+                            rvAdapter.listAllProject.size
+                        )
+                    }
+                } else {
+                    binding.rvProjectsMeeting.adapter = null
+                }
+            } else {
+                binding.rvProjectsMeeting.adapter = null
+            }
+        }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
+
+    override fun onClickProject(
+        projectCode: String,
+        projectName: String,
+        latitude: String,
+        longitude: String,
+        radius: Int,
+        branchName: String,
+        branchCode: String
+    ) {
+        CarefastOperationPref.saveString(CarefastOperationPrefConst.CLICK_FROM, "listMeeting")
+        CarefastOperationPref.saveString(CarefastOperationPrefConst.M_CLICK_FROM, "listMeeting")
+        CarefastOperationPref.saveString(CarefastOperationPrefConst.PROJECT_CODE_MEETING, projectCode)
+        CarefastOperationPref.saveString(CarefastOperationPrefConst.PROJECT_NAME_MEETING, projectName)
+
+        startActivity(Intent(this, ListMeetingInspeksiActivity::class.java))
+    }
+}

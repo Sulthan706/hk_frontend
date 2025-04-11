@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.complaint.ui.activity.ComplaintActivity">
+
+    <include
+        android:id="@+id/layout_appbar_create_permission"
+        layout="@layout/app_bar_default_with_history_permission"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_appbar_create_permission"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_15sdp">
+
+            <TextView
+                android:id="@+id/tv_title_permission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Judul izin"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_desc_permission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Alasan izin"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerCreatePermission" />
+
+            <TextView
+                android:id="@+id/tv_upload_photo_permission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Unggah foto"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlChooseDatePermission" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text="(Optional)"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/secondaryNew"
+                android:fontFamily="@font/poppinsmedium"
+                app:layout_constraintStart_toEndOf="@id/tv_upload_photo_permission"
+                app:layout_constraintTop_toBottomOf="@+id/rlChooseDatePermission"/>
+
+            <TextView
+                android:id="@+id/tvInfoUploadPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="@string/info_upload_photo_permission"
+                android:textSize="@dimen/_8ssp"
+                android:textColor="@color/grayTxt"
+                android:fontFamily="@font/poppinsregular"
+                android:textStyle="italic"
+                app:layout_constraintTop_toBottomOf="@+id/tv_upload_photo_permission"/>
+
+            <TextView
+                android:id="@+id/tv_fromdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_enddate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit_permission_disabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginVertical="@dimen/_25sdp"
+                android:background="@drawable/btn_disable"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_photo_permission" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit_permission_enabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginVertical="@dimen/_25sdp"
+                android:background="@drawable/btn_enabled"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bodyText"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_photo_permission" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_photo_permission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInfoUploadPhoto">
+
+                <ImageView
+                    android:id="@+id/iv_pick_photo_permission"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/rounded_dark_gray"
+                    android:padding="@dimen/_15sdp"
+                    android:src="@drawable/ic_camera_black"
+                    android:visibility="visible"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_result_photo_permission"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:padding="@dimen/_15sdp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Spinner
+                android:id="@+id/spinnerCreatePermission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/bg_spinner_default"
+                android:elevation="@dimen/_6sdp"
+                android:entries="@array/permissionTitle"
+                android:paddingVertical="@dimen/_4sdp"
+                android:paddingStart="@dimen/_10sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_permission" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_desc"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                app:hintEnabled="false"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_desc_permission">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_input_desc_permission"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_gray"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="top|left"
+                    android:hint="Alasan izin"
+                    android:maxLength="500"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvCalendarPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_gravity="right"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Tanggal izin"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_desc" />
+
+            <RelativeLayout
+                android:id="@+id/rlChooseDatePermission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:background="@drawable/bg_empty_card"
+                android:elevation="@dimen/_4sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCalendarPermission">
+
+                <ImageView
+                    android:id="@+id/ivChooseDatePermission"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_calendar_orange"/>
+
+                <TextView
+                    android:id="@+id/tvChooseDatePermission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_toEndOf="@id/ivChooseDatePermission"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="pilih tanggal"
+                    android:textAlignment="center"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_12ssp" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:visibility="gone"
+                android:id="@+id/et_calendar_permission"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="@dimen/_135sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:hintEnabled="false"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_desc">
+
+                <TextView
+                    android:id="@+id/tv_calendar_permission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Tanggal dari"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/et_input_date_permission"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_gray"
+                    android:drawableRight="@drawable/ic_calendar_orange"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:gravity="center_vertical"
+                    android:hint="Pilih tanggal"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:textSize="@dimen/_10ssp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:visibility="gone"
+                android:id="@+id/et_calendar_end_permission"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="@dimen/_135sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20sdp"
+                app:hintEnabled="false"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_desc">
+
+                <TextView
+                    android:id="@+id/tv_calendar_end_permission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Tanggal sampai"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/et_input_date_end_permission"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_gray"
+                    android:drawableRight="@drawable/ic_calendar_orange"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:gravity="center_vertical"
+                    android:hint="Pilih tanggal"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:textSize="@dimen/_10ssp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.myteam.ui.new_.activity.MyTeamClientsActivity">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_my_team_clients"
+        android:paddingBottom="@dimen/_200sdp"
+        android:fitsSystemWindows="true"
+        app:contentScrim="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    <LinearLayout
+        android:id="@+id/llTitleMyTeamClients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_43sdp"
+        android:paddingHorizontal="@dimen/_10sdp">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/rlBtnBackMyTeamClients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:src="@drawable/ic_arrow_back_white"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:fab_colorNormal="@color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="CF Team"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:paddingRight="@dimen/_30sdp"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/llTitleMyTeamClients"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/llTitleMyTeamClients"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/llCountCfTeam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/llTitleMyTeamClients"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_32sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total CF Team :"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textAlignment="textStart"/>
+                <TextView
+                    android:id="@+id/tvCountTotalCfTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="231 Orang"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/llCountCfTeam"
+
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlBtnPengawasDetail"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_field"
+                    android:padding="@dimen/_7sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:elevation="@dimen/_2sdp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pengawas"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/tvCountPengawasTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="17 Orang"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="#2B5281"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_20sdp" />
+                    <TextView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/ic_chevron_right_black"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="@dimen/_4sdp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlBtnOperatorDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_field"
+                    android:elevation="@dimen/_2sdp"
+                    android:padding="@dimen/_7sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Operator"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvCountOperatorTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="211 Orang"
+                        android:textColor="#2B5281" />
+
+                    <TextView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/ic_chevron_right_black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlBtnCFmanajemenDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_field"
+                    android:padding="@dimen/_7sdp"
+                    android:elevation="@dimen/_2sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="CF Manajemen"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvCountCFManajemenTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="3 Orang"
+                        android:textColor="#2B5281" />
+
+                    <TextView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/ic_chevron_right_black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kehadiran hari ini"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"/>
+                    <TextView
+                        android:id="@+id/tvDateNowCfTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="18 Nov 2022, 14:33 WIB"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Live report kehadiran akan terus update hingga shift malam (jika ada). Silakan cek secara berkala."
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="italic"
+                    android:textColor="#B0B0B0"/>
+
+                <LinearLayout
+                    android:id="@+id/llCountStatusMyTeamClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_empty_no_border"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Libur"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/tvCountCfTeamLibur"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:fontFamily="@font/poppinsregular"
+                                android:text="-"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Belum absen"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:textColor="#FF5656"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/tvCountCfTeamBelumAbsen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_alignParentEnd="true"
+                                android:textStyle="bold"
+                                android:textColor="#FF5656"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:fontFamily="@font/poppinsregular"
+                                android:text="Sedang bekerja"
+                                android:textColor="#0064FB"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tvCountCfTeamSedangBekerja"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_alignParentEnd="true"
+                                android:textColor="#0064FB"
+                                android:textStyle="bold"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Selesai bekerja"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:textColor="#00BD8C"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/tvCountCfTeamSelesaiBekerja"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:fontFamily="@font/poppinsregular"
+                                android:textSize="@dimen/_12ssp"
+                                android:layout_alignParentEnd="true"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/rlBtnHistoryMyTeamClients"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_myteam_history_attendance"
+                        android:padding="@dimen/_5sdp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lihat riwayat kehadiran"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:textStyle="bold"/>
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlBtnScheduleCfteam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_primary"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Lihat schedule team"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".features.features_client.report.ui.old.activity.DetailAreaReportClientActivity">
+
+    <include
+        android:id="@+id/appbarDetailAreaReportClient"
+        layout="@layout/app_bar_default_client"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appbarDetailAreaReportClient"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll1_DetailAreaReportClient"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Staff yang bertugas"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_white_card"
+                    android:elevation="@dimen/_4sdp"
+                    android:layout_margin="@dimen/_6sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_pengawasDetailAreaReportClient"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:src="@drawable/foto1"
+                        app:civ_border_color="@android:color/darker_gray"
+                        app:civ_border_width="@dimen/_1sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/iv_pengawasDetailAreaReportClient">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pengawas :"
+                            android:textColor="@color/blueTxtV2"
+                            android:textSize="@dimen/_10ssp"
+                            android:fontFamily="@font/poppinsmedium"/>
+
+                        <TextView
+                            android:id="@+id/tv_pengawasDetailAreaReportClient"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Error pengawas"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_12ssp"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <Spinner
+                    android:id="@+id/spinnerOpsDetailAreaReportClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:elevation="@dimen/_4sdp"
+                    android:background="@drawable/bg_spinner_white"
+                    android:spinnerMode="dropdown"
+                    android:entries="@array/noChoose"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_8sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2_DetailAreaReportClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                app:layout_constraintTop_toBottomOf="@id/ll1_DetailAreaReportClient">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kode Plotting"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tv_codePlottingDetailAreaReportClient"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Error Kode Plotting"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/neutral100"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Area"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tv_areaDetailAreaReportClient"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Error Area"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/neutral100"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sub Area"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tv_subAreaDetailAreaReportClient"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Error Sub Area"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/neutral100"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Shift"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tv_shiftDetailAreaReportClient"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Error Shift"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/neutral100"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_progressDetailAreaReportClient"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:paddingVertical="@dimen/_24sdp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/ll2_DetailAreaReportClient">
+
+                <ImageView
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:src="@drawable/cleaning"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="Sedang dikerjakan"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinsregular"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_reviewDetailAreaReportClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/ll2_DetailAreaReportClient">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dicek oleh"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tv_checkByDetailAreaReportClient"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Error"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/neutral100"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Penilaian Object"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tv_penilaianObjectDetailAreaReportClient"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Error"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/neutral100"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Foto pengawas"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/grayTxt"
+                        android:fontFamily="@font/poppinsmedium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_reviewDetailAreaReportClient"
+                        android:layout_width="@dimen/_56sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="#DEDEDE"
+                        app:cardCornerRadius="@dimen/_8sdp"
+                        app:cardElevation="@dimen/_4sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/iv_reviewDetailAreaReportClient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_error_image" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_noteReviewDetailAreaReportClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_64sdp"
+                    android:gravity="start"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_22sdp"
+                    android:text="Error catatan"
+                    android:textSize="@dimen/_12ssp"
+                    android:maxLines="2"
+                    android:textColor="@color/neutral100"
+                    android:fontFamily="@font/poppinsregular"
+                    android:background="@drawable/bg_field"
+                    android:padding="@dimen/_8sdp"/>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

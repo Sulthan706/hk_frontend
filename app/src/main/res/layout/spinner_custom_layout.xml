@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    >
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/star_rating"
+            android:id="@+id/star_1"
+            android:visibility="visible"
+            android:layout_margin="2dp"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/star_rating"
+            android:id="@+id/star_2"
+            android:visibility="visible"
+            android:layout_margin="2dp" />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/star_rating"
+            android:id="@+id/star_3"
+            android:layout_margin="2dp" />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/star_rating"
+            android:visibility="visible"
+            android:id="@+id/star_4"
+            android:layout_margin="2dp"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/star_rating"
+            android:id="@+id/star_5"
+            android:visibility="visible"
+            android:layout_margin="2dp"/>
+
+
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Bintang 1"-->
+<!--        android:padding="10dp"-->
+<!--        android:id="@+id/star_1"-->
+<!--        android:visibility="visible"/>-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Bintang 2"-->
+<!--        android:padding="10dp"-->
+<!--        android:id="@+id/star_2"-->
+<!--        android:visibility="visible"/>-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Bintang 3"-->
+<!--        android:padding="10dp"-->
+<!--        android:id="@+id/star_3"-->
+<!--        android:visibility="visible"/>-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Bintang 4"-->
+<!--        android:padding="10dp"-->
+<!--        android:id="@+id/star_4"-->
+<!--        android:visibility="visible"/>-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Bintang 5"-->
+<!--        android:padding="10dp"-->
+<!--        android:id="@+id/star_5"-->
+<!--        android:visibility="visible"/>-->
+
+</LinearLayout>

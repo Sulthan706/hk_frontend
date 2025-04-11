@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.home.ui.old.fragment.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@drawable/bg_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="@string/home_app_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_fotoUserHome"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/foto1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/tv_nucHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="134dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                android:text="@string/user_nuc"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_userNameHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="134dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="2"
+                android:text="@string/user_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h5"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nucHome" />
+
+            <TextView
+                android:id="@+id/tv_userJobHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="134dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                android:text="@string/user_job"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h5"
+                app:layout_constraintTop_toBottomOf="@+id/tv_userNameHome" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="196dp"
+            android:background="@drawable/bg_white_card"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_projectHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Project :"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/h5" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_pilihProject"
+                    android:layout_width="140dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_field"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_projectHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="@string/pilih_project"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/bodyText" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_projectUserHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/user_project"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/h5"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Status :"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/h5" />
+
+                <TextView
+                    android:id="@+id/tv_statusHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/h5" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_infoHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="2"
+                android:text="@string/home_info_bertugas"
+                android:textColor="@color/information"
+                android:textSize="@dimen/bodyText"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_menuHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+            <!--        absen & izin -->
+            <RelativeLayout
+                android:id="@+id/rl_absenIzinMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_absenHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_absen" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Absen"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/paragraphText"
+                        tools:layout_editor_absoluteX="42dp"
+                        tools:layout_editor_absoluteY="416dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_toEndOf="@id/linearLayout"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_izinHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_izin" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Izin"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/paragraphText"
+                        tools:layout_editor_absoluteX="42dp"
+                        tools:layout_editor_absoluteY="416dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--        timku & checklist -->
+            <RelativeLayout
+                android:id="@+id/rl_timkuChecklistMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_toEndOf="@id/rl_absenIzinMenu">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_timKuHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_timku" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Tim Ku"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/paragraphText"
+                        tools:layout_editor_absoluteX="42dp"
+                        tools:layout_editor_absoluteY="416dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_toEndOf="@id/linearLayout3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_checklistHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_checklist" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Checklist"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/paragraphText"
+                        tools:layout_editor_absoluteX="42dp"
+                        tools:layout_editor_absoluteY="416dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--        plotting, lembur, jadkar -->
+            <RelativeLayout
+                android:id="@+id/rl_plottingLemburJadkar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_timkuChecklistMenu"
+                android:layout_marginTop="24dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_plottingHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_plotting" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Plotting"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/paragraphText"
+                        tools:layout_editor_absoluteX="42dp"
+                        tools:layout_editor_absoluteY="416dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_toEndOf="@id/linearLayout4"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_lemburHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_lembur" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Lembur"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/paragraphText"
+                        tools:layout_editor_absoluteX="42dp"
+                        tools:layout_editor_absoluteY="416dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_toEndOf="@id/linearLayout5"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_jadKarHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_jadkar" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Jad Kar"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/paragraphText"
+                        tools:layout_editor_absoluteX="42dp"
+                        tools:layout_editor_absoluteY="416dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

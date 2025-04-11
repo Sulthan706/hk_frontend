@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.UpdateFamilyNumbActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_update_profile_familynumber"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_isi_kk"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textAlignment="center"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor Kartu Keluarga"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_30sdp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etNumbKK"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:enabled="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="Masukan Nomor KK"
+                    app:helperTextTextColor="@color/red"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_no_hp_profile">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tvNumberKK"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:inputType="phone"
+                        android:maxLength="20" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:id="@+id/btnSubmitUpdateKK"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_43sdp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:elevation="@dimen/_2sdp"
+                    android:text="Simpan"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/bg_primary"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include
+        android:id="@+id/layoutAppbarUpdateFamNumber"
+        layout="@layout/app_bar_default" />
+</androidx.constraintlayout.widget.ConstraintLayout>

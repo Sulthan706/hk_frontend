@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.setting.ui.activity.SettingClientActivity">
+
+    <include
+        android:id="@+id/appbar_settingClient"
+        layout="@layout/app_bar_default_client"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@+id/appbar_settingClient">
+
+        <TextView
+            android:id="@+id/tv_edit_profile_client"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Edit Profile"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/neutral100"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:src="@color/grayLine" />
+
+        <TextView
+            android:id="@+id/tv_changepass_profile_client"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Change Password"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/neutral100" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:src="@color/grayLine" />
+
+        <TextView
+            android:id="@+id/tv_logout_client"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Log Out"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/neutral100" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:src="@color/grayLine" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDialog"
+        android:layout_width="320dp"
+        android:layout_height="360dp"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_greeting_malam"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Selamat Malam,"
+                android:textAlignment="center"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Hygiene Kleen People"
+                android:textAlignment="center"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Yuk, tetap semangat selesaikan pekerjaan, jangan sampai ada yang tertunda ya."
+                android:textAlignment="center"
+                android:textSize="@dimen/_10ssp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Semoga hari ini menyenangkan."
+                android:textAlignment="center"
+                android:textSize="@dimen/_10ssp" />
+
+            <RelativeLayout
+                android:id="@+id/btnBackGreetingMalam"
+                android:background="@drawable/bg_secondary"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:layout_gravity="center"
+                android:textColor="@color/white">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Oke, siap"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppinssemibold"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

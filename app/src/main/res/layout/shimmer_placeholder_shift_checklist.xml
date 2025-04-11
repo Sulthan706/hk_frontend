@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:elevation="@dimen/_6sdp"
+    android:layout_margin="@dimen/_8sdp"
+    android:background="@drawable/bg_white_card">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:elevation="@dimen/_6sdp"
+        android:background="@drawable/bg_white_card">
+
+        <TextView
+            android:id="@+id/tv1_shimmerShiftChecklist"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:maxLines="1"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:fontFamily="@font/poppinssemibold"
+            android:background="@drawable/bg_shimmer"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:id="@+id/tv_timeListShiftChecklist"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:maxLines="1"
+            android:layout_below="@id/tv1_shimmerShiftChecklist"
+            android:background="@drawable/bg_shimmer"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="#969696"
+            android:fontFamily="@font/poppinssemibold"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2.02"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:background="@drawable/bg_shimmer"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/secondary_color"
+            android:fontFamily="@font/poppinssemibold"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02"
+            android:background="@color/gray_dark"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:background="@drawable/bg_shimmer"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/secondary_color"
+            android:fontFamily="@font/poppinssemibold"/>
+
+    </LinearLayout>
+
+</LinearLayout>

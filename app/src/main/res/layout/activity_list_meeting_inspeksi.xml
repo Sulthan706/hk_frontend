@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.meeting.activity.ListMeetingInspeksiActivity">
+
+    <include
+        android:id="@+id/appbarListMeetingInspeksi"
+        layout="@layout/app_bar_default"/>
+
+    <LinearLayout
+        android:id="@+id/ll1ListMeetingInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:orientation="horizontal"
+        android:weightSum="1.5"
+        app:layout_constraintTop_toBottomOf="@id/appbarListMeetingInspeksi">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Tanggal"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+        <TextView
+            android:id="@+id/tvDateListMeetingInspeksi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/_6sdp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_field"
+            android:text="Error date"
+            android:textColor="@color/grey2"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:drawableEnd="@drawable/ic_calendar_orange"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvEmptyListMeetingInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:gravity="center"
+        android:text="Anda belum membuat laporan meeting hari ini. Silakan membuat laporan dengan klik tombol di bawah."
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/ll1ListMeetingInspeksi"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerListMeetingInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/ll1ListMeetingInspeksi">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/shimmer_placeholder_list_meeting"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_list_meeting"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_list_meeting"/>
+
+            <include
+                layout="@layout/shimmer_placeholder_list_meeting"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListMeetingInspeksi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:visibility="gone"
+        tools:listitem="@layout/list_meeting_inspeksi"
+        app:layout_constraintTop_toBottomOf="@id/ll1ListMeetingInspeksi"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivCreateListMeetingInspeksi"
+        android:layout_width="@dimen/_62sdp"
+        android:layout_height="@dimen/_62sdp"
+        android:layout_margin="@dimen/_12sdp"
+        android:src="@drawable/ic_create_white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

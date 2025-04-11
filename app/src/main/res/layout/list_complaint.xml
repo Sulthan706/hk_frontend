@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_12sdp"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_8sdp"
+    android:paddingHorizontal="@dimen/_12sdp"
+    android:paddingVertical="@dimen/_8sdp">
+
+    <ImageView
+        android:id="@+id/iv_clientListComplaint"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@drawable/bg_shimmer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_56sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/iv_clientListComplaint"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_namaListComplaint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Error Nama"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toEndOf="@id/iv_listComplaint"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_titleListComplaint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Error judul CTalk"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toEndOf="@id/iv_listComplaint"
+            app:layout_constraintTop_toBottomOf="@id/tv_namaListComplaint" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/iv_clientListComplaint">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_dateListComplaint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error tanggal"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/tv_subLocationListComplaint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error sub area"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_10ssp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_timeListComplaint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLength="5"
+                android:text="Error waktu"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/tv_locationListComplaint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error area"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_10ssp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:background="@drawable/bg_disable"
+                android:layout_marginEnd="@dimen/_12sdp">
+
+                <ImageView
+                    android:id="@+id/iv_listComplaint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/googleg_disabled_color_18" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:background="@drawable/rounded_gray"
+                android:elevation="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/tv_descriptionListComplaint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppinsregular"
+                    android:maxLines="3"
+                    android:text="Error Keterangan"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_10ssp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

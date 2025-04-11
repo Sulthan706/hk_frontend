@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemNotifTraining"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_20sdp"
+    android:paddingTop="@dimen/_12sdp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dateTimeItemNotif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="04/01/2024, 08:00"
+        android:textSize="@dimen/_8ssp"
+        android:textColor="@color/grey2_client"
+        android:fontFamily="@font/poppinsregular" />
+
+    <TextView
+        android:id="@+id/tvMainContentItemNotif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Yuk, Apply Kelas Terbaru!"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinssemibold" />
+
+    <TextView
+        android:id="@+id/tvSubContentItemNotif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pendaftaran telah dibuka hingga sebelum kelas dimulai. Yuk, daftar sekarang melalui aplikasi."
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/grey2_client"
+        android:fontFamily="@font/poppinsregular" />
+
+    <TextView
+        android:id="@+id/tvSeeItemNotif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Lihat Selengkapnya"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/blue5"
+        android:fontFamily="@font/poppinsregular" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:background="@color/grayLine" />
+
+</LinearLayout>

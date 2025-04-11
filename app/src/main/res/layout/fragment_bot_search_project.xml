@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottom_sheets_background_white"
+    android:padding="@dimen/_18sdp">
+
+    <View
+        android:id="@+id/viewBotProject"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_bottomsheet_grey"
+        android:layout_marginHorizontal="150dp"
+        />
+    <TextView
+        android:id="@+id/tvTitleChooseDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Pilih project"
+        android:textAlignment="textStart"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewBotProject"/>
+    <!--    content-->
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/idSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:iconifiedByDefault="false"
+        android:padding="1dp"
+        android:background="@drawable/bg_field"
+        android:queryHint="Search Programming language"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleChooseDate"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearchProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/idSV"
+        tools:listitem="@layout/item_bot_sheet_listproject"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearchLowProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/idSV"
+        tools:listitem="@layout/item_bot_sheet_listproject"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvEmtpyDataSearch"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Data kosong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idSV"
+        tools:layout_editor_absoluteX="23dp"
+        android:fontFamily="@font/poppinsregular"
+        android:textAlignment="center"
+        android:visibility="visible"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnSumbitProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvSearchProject"
+        android:text="Terapkan"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppinsregular"
+        android:backgroundTint="@color/secondary_color"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/btnDownloadProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvSearchProject"
+        android:text="Terapkan"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppinsregular"
+        android:backgroundTint="@color/secondary_color"
+        android:visibility="gone"/>
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

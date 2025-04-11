@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homeScreenUpdated.visitReport.ui.activity.UnplannedVisitsManagementActivity">
+
+    <include
+        android:id="@+id/appbarUnplannedVisitsManagement"
+        layout="@layout/app_bar_default"/>
+
+    <RelativeLayout
+        android:id="@+id/rl1UnplannedVisitsManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20sdp"
+        android:background="@drawable/bg_primary_rounded_bottom"
+        app:layout_constraintTop_toBottomOf="@id/appbarUnplannedVisitsManagement">
+
+        <TextView
+            android:id="@+id/tvDateUnplannedVisitsManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:text="1 Des 2024 - 10 Des 2024"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/bg_field_tranparent"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvTotUnplannedVisitsManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Total : - visits"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinssemibold"
+        app:layout_constraintTop_toBottomOf="@id/rl1UnplannedVisitsManagement"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUnplannedVisitsManagement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_20sdp"
+        tools:listitem="@layout/item_list_visit_report_management"
+        app:layout_constraintTop_toBottomOf="@id/tvTotUnplannedVisitsManagement"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

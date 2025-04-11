@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheets_background"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_cancel_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_close_black"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pilih_tanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Pilih Tanggal"
+        android:textColor="@color/black"
+        android:textSize="@dimen/h3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cancel_history" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pilih_tanggal">
+
+        <TextView
+            android:id="@+id/tv_mulai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Mulai"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bodyText" />
+
+        <TextView
+            android:id="@+id/tv_sampai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Sampai"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bodyText" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_choose_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_text">
+
+        <TextView
+            android:id="@+id/tv_choose_date_prefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rectangle_rounded"
+            android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingHorizontal="@dimen/h5"
+            android:paddingVertical="@dimen/smallText"
+            android:text="@string/pilih_tanggal"
+            android:textSize="@dimen/bodyText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_choose_date_suffix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rectangle_rounded"
+            android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingHorizontal="@dimen/h5"
+            android:paddingVertical="@dimen/smallText"
+            android:text="@string/pilih_tanggal"
+            android:textSize="@dimen/bodyText"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_max_30hari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="*Pilih tanggal maximal 30 hari"
+        android:textColor="@color/secondary_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_choose_date" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_applied_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_rounded_primary"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Terapkan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/smallRounded"
+        app:layout_constraintBottom_toTopOf="@+id/space"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_max_30hari" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_applied_history" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

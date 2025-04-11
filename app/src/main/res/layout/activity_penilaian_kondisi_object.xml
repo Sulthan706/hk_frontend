@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.checklist.ui.old.teamlead.activity.PenilaianKondisiObjectActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/appbar_penilaianKondisiObj"
+            layout="@layout/app_bar_default" />
+
+        <FrameLayout
+            android:id="@+id/flConnectionTimeoutPenilaianKondisiObj"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar_penilaianKondisiObj" />
+
+        <TextView
+            android:id="@+id/tvKondisiObject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_22sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Kondisi Object"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintTop_toBottomOf="@+id/appbar_penilaianKondisiObj"
+            tools:layout_editor_absoluteX="29dp" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerPenilaianKondisiObj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/tvKondisiObject">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/shimmer_placeholder_kondisi_object"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_kondisi_object"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_kondisi_object"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_kondisi_object"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+                <include
+                    layout="@layout/shimmer_placeholder_kondisi_object"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_layoutPenilaianKondisiObj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/tvKondisiObject">
+
+            <RelativeLayout
+                android:id="@+id/rl_object1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_firstObject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Object 1"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+                <Spinner
+                    android:id="@+id/spinner_firstObject"
+                    android:layout_width="@dimen/_135sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_spinner_disable"
+                    android:entries="@array/nilaiPekerjaan" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_object2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tv_secondObject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Object 2"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+                <Spinner
+                    android:id="@+id/spinner_secondObject"
+                    android:layout_width="@dimen/_135sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_spinner_disable"
+                    android:entries="@array/nilaiPekerjaan" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_object3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tv_thirdObject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Object 3"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+                <Spinner
+                    android:id="@+id/spinner_thirdObject"
+                    android:layout_width="@dimen/_135sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_spinner_disable"
+                    android:entries="@array/nilaiPekerjaan" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_object4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tv_fourthObject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Object 4"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+                <Spinner
+                    android:id="@+id/spinner_fourthObject"
+                    android:layout_width="@dimen/_135sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_spinner_disable"
+                    android:entries="@array/nilaiPekerjaan" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_object5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tv_fifthObject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Object 5"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+                <Spinner
+                    android:id="@+id/spinner_fifthObject"
+                    android:layout_width="@dimen/_135sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_spinner_disable"
+                    android:entries="@array/nilaiPekerjaan" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_22sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/ll_layoutPenilaianKondisiObj">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Unggah Foto"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_uploadPhoto"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_disable">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_camera_black" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/image_preview_upload_file"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    app:cardElevation="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_resultUploadFile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop"
+                        tools:src="@tools:sample/backgrounds/scenic" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Catatan"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp" />
+
+            <EditText
+                android:id="@+id/et_noteObject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_field"
+                android:fontFamily="@font/poppinsregular"
+                android:hint="Berikan catatanmu di sini"
+                android:inputType="text"
+                android:maxLines="2"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_12ssp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_kirimNilai"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:background="@drawable/btn_disable"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Kirim ke Supervisor"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

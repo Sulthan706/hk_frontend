@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheets_background_white"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_close_date_absent_opr_mgmnt"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:src="@drawable/ic_close_black"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pilih_bulan_absent_opr_mgmnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Pilih Bulan"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_close_date_absent_opr_mgmnt" />
+
+
+    <TextView
+        android:id="@+id/tv_choose_date_myteam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_field"
+        android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/poppinsregular"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/pilih_tanggal"
+        android:textColor="@color/neutral100"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toBottomOf="@id/tv_pilih_bulan_absent_opr_mgmnt" />
+
+    <TextView
+        android:id="@+id/tv_max_30hari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="*Pilih tanggal maximal 30 hari"
+        android:textColor="@color/secondary_color"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_date_myteam" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_applied_myteam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/btn_disable"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Terapkan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_date_myteam" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_applied_myteam" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

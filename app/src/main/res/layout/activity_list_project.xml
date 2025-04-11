@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.home.ui.old.activity.ListProjectActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@color/primary_color"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="10dp">
+
+            <ImageView
+                android:id="@+id/iv_backListProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_toEndOf="@id/iv_backListProject"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center_vertical"
+                android:text="List Project"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h5" />
+
+            <ImageView
+                android:id="@+id/iv_doneListProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/ic_done" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="RC-JKT2"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/h5" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_listProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"/>
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="56dp"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:background="@drawable/bg_field_selected"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="12dp"-->
+<!--            android:text="BG Junction"-->
+<!--            android:textColor="@color/neutral100"-->
+<!--            android:textFontWeight="400"-->
+<!--            android:textSize="16sp" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="56dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:background="@drawable/bg_field"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="12dp"-->
+<!--            android:text="Mall A"-->
+<!--            android:textColor="@color/neutral100"-->
+<!--            android:textFontWeight="400"-->
+<!--            android:textSize="16sp" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="56dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:background="@drawable/bg_field"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="12dp"-->
+<!--            android:text="Mall B"-->
+<!--            android:textColor="@color/neutral100"-->
+<!--            android:textFontWeight="400"-->
+<!--            android:textSize="16sp" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="56dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:background="@drawable/bg_field"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="12dp"-->
+<!--            android:text="Mall C"-->
+<!--            android:textColor="@color/neutral100"-->
+<!--            android:textFontWeight="400"-->
+<!--            android:textSize="16sp" />-->
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

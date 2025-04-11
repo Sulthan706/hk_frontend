@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/layout_appbar_attendance_history"
+        layout="@layout/app_bar_default" />
+
+    <TextView
+        android:id="@+id/tv_attendance_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_rectangle_rounded"
+        android:fontFamily="@font/poppinsregular"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Pilih Tanggal"
+        android:textColor="@color/neutral100"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_appbar_attendance_history" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_header_history_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_secondary_history"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_attendance_history">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1.2"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center"
+            android:text="Tanggal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="0.8"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center"
+            android:text="Masuk"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="0.8"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center"
+            android:text="Keluar"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1.2"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center"
+            android:text="Project"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@drawable/bg_rectangle"
+        android:id="@+id/rv_attendance_history"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/_2sdp"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_header_history_date" />
+
+    <FrameLayout
+        android:id="@+id/flConnectionTimeoutHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_appbar_attendance_history" />
+
+    <FrameLayout
+        android:id="@+id/flDateHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_attendance_history" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

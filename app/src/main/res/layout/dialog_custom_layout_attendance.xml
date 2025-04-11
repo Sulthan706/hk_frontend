@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_240sdp"
+    android:layout_height="@dimen/_220sdp"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_custom_dialog"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_5sdp">
+
+    <ImageView
+        android:id="@+id/yesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_close_black" />
+
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_check_circle" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsbold"
+        android:textAlignment="center"
+        android:textColor="#00AF54"
+        android:textSize="@dimen/_16sdp"
+        android:text="Berhasil"
+        tools:text="Berhasil" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:textColor="@color/grayTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Anda melakukan absen pada"
+        android:textAlignment="center"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/tv_date_custom_dialog_attendance"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:textAlignment="center"
+        android:textSize="@dimen/_14sdp"
+        tools:text="11 Januari 2022"/>
+
+    <TextView
+        android:id="@+id/tv_time_custom_dialog_attendance"
+        android:layout_gravity="center"
+        android:textColor="@color/blueTxtV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsbold"
+        android:textAlignment="center"
+        android:textSize="@dimen/_18sdp"
+        tools:text="06:55"/>
+</LinearLayout>

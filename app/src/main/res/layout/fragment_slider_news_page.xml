@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.home.ui.fragment.SliderNewsPageFragment">
+
+<!--    <VideoView-->
+<!--        android:id="@+id/videoViewNews"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:visibility="visible"-->
+<!--        android:src="@color/grayBold"/>-->
+    <ImageView
+        android:id="@+id/imageViewNews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        android:src="@color/grayBold"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBarNews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="120dp"/>
+</RelativeLayout>

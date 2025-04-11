@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_margin="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <de.hdodenhof.circleimageview.CircleImageView
+               android:id="@+id/img_profile"
+               android:layout_width="@dimen/_40sdp"
+               android:layout_height="@dimen/_40sdp"
+               app:civ_border_color="@android:color/darker_gray"
+               app:civ_border_width="@dimen/_2sdp"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginStart="@dimen/_8sdp"
+               android:layout_gravity="center_vertical">
+
+               <TextView
+                   android:id="@+id/tv_name"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/poppinssemibold"
+                   android:text="@string/text_created_at"
+                   android:layout_weight="1"
+                   android:textColor="@color/black2"
+                   android:textSize="@dimen/_10ssp"/>
+
+               <TextView
+                   android:id="@+id/tv_desc"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/poppinsregular"
+                   android:text="@string/text_created_at"
+                   android:layout_weight="1"
+                   android:textColor="@color/black2"
+                   android:textSize="@dimen/_10ssp"/>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="#d9d9d9"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp">
+
+
+            <TextView
+                android:id="@+id/tv_closing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Closing"
+                android:paddingVertical="@dimen/_4sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:background="@drawable/bg_rounded_green"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"/>
+
+            <TextView
+                android:id="@+id/tv_time_closing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_weight="2"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:text="Waktu closing, 9 okt 2024, 15:08"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_10ssp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_weight="1"
+                android:text="Pekerjaan Selesai"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_10ssp"/>
+
+            <TextView
+                android:id="@+id/tv_count_finish_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                android:text="Pekerjaan Selesai"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_10ssp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_weight="1"
+                android:text="Pekerjaan Dialihkan"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_10ssp"/>
+
+            <TextView
+                android:id="@+id/tv_count_diversion_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                android:text="Pekerjaan Selesai"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_10ssp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

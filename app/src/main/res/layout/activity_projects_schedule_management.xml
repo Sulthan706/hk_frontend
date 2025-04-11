@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homeScreenUpdated.schedule.ui.activity.ProjectsScheduleManagementActivity">
+
+    <include
+        android:id="@+id/appbarProjectsScheduleManagement"
+        layout="@layout/app_bar_default"/>
+
+    <RelativeLayout
+        android:id="@+id/rlDateProjectsScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_12sdp"
+        android:elevation="@dimen/_6sdp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/appbarProjectsScheduleManagement">
+        
+        <TextView
+            android:id="@+id/tvDateProjectsScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="14 Dec 2024"
+            android:textAlignment="center"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:drawableStart="@drawable/ic_schedule_management"
+            android:drawablePadding="@dimen/_4sdp"/>
+        
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchProjectsScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:theme="@style/SearchViewManagement"
+        android:background="@drawable/bg_field_tranparent_greybtn"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search Project"
+        app:searchIcon="@drawable/ic_search_gray_txt"
+        app:searchHintIcon="@null"
+        app:closeIcon="@drawable/ic_close_circle_red"
+        app:layout_constraintTop_toBottomOf="@id/rlDateProjectsScheduleManagement"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="visible"
+        android:id="@+id/rvProjectsScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        tools:listitem="@layout/list_item_checkbox"
+        app:layout_constraintTop_toBottomOf="@id/searchProjectsScheduleManagement"
+        app:layout_constraintBottom_toTopOf="@id/clBottomProjectsScheduleManagement"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvEmptyProjectsScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Project not found. Try search using other keywords."
+        android:textAlignment="center"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/searchProjectsScheduleManagement"
+        app:layout_constraintBottom_toTopOf="@id/clBottomProjectsScheduleManagement"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/clBottomProjectsScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20sdp"
+        android:orientation="horizontal"
+        android:elevation="@dimen/_10sdp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llTotProjectsScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Project"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <TextView
+                android:id="@+id/tvTotProjectsScheduleManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_20ssp"
+                android:fontFamily="@font/poppinsbold"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvResetProjectsScheduleManagement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:text="Reset All"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintEnd_toStartOf="@id/btnSaveProjectsScheduleManagement"
+            app:layout_constraintTop_toTopOf="@id/llTotProjectsScheduleManagement"
+            app:layout_constraintBottom_toBottomOf="@id/llTotProjectsScheduleManagement"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSaveProjectsScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:background="@drawable/bg_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/llTotProjectsScheduleManagement"
+            app:layout_constraintBottom_toBottomOf="@id/llTotProjectsScheduleManagement"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

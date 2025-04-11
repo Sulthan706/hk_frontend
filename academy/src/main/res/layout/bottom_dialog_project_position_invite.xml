@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_dialog_background_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/layout1BottomDialogProjectPositionInvite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/bottom_dialog_background_white"
+        android:elevation="@dimen/_4sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnCloseBottomDialogProjectPositionInvite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_closes_dark_grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Peserta Dari"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnProjectBottomDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:background="@drawable/bg_second_color"
+        android:elevation="@dimen/_2sdp"
+        android:gravity="center"
+        android:text="Project"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppinssemibold"
+        app:layout_constraintTop_toBottomOf="@id/layout1BottomDialogProjectPositionInvite"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPositionBottomDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:background="@drawable/bg_rounded_orange2"
+        android:elevation="@dimen/_2sdp"
+        android:gravity="center"
+        android:text="Jabatan Peserta"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppinssemibold"
+        app:layout_constraintTop_toBottomOf="@id/btnProjectBottomDialog"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/btnPositionBottomDialog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

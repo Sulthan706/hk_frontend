@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_240sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingVertical="@dimen/_16sdp"
+    android:background="@drawable/bg_custom_dialog"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_5sdp">
+
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_baseline_warning_24" />
+
+    <TextView
+        android:id="@+id/tvProjectVisitDurationExceeded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Peringatan! Tambahan waktu kunjungan telah habis."
+        android:textAlignment="center"
+        android:textColor="@color/red3"
+        android:textSize="@dimen/_14ssp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Harap segera lakukan absen keluar"
+        android:textAlignment="center"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAttendanceOutExtendedVisitExceeded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:background="@drawable/bg_secondary"
+        android:text="Absen Keluar Sekarang"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11ssp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppinssemibold"/>
+
+</LinearLayout>

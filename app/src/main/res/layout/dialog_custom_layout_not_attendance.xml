@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_240sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_custom_dialog"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_5sdp">
+
+    <ImageView
+        android:id="@+id/yesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_close_black" />
+
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_baseline_warning_24" />
+
+    <TextView
+        android:id="@+id/body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Tunggu dulu"
+        android:textAlignment="center"
+        android:textColor="#E03616"
+        android:textSize="@dimen/_16sdp"
+        tools:text="Tunggu dulu" />
+
+    <TextView
+        android:id="@+id/tv_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsregular"
+        android:padding="@dimen/_15sdp"
+        android:text="@string/belum_absen"
+        android:textAlignment="center"
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_11sdp" />
+
+    <TextView
+        android:id="@+id/tv_timeCheckOutAttendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_22sdp"
+        android:fontFamily="@font/poppinsbold"
+        android:textAlignment="center"
+        android:textColor="@color/blueTxtV2"
+        android:textSize="@dimen/_18ssp"
+        android:visibility="gone"
+        tools:text="00:00" />
+
+    <LinearLayout
+        android:id="@+id/ll_checklistButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/_4sdp"
+            android:background="@drawable/bg_field"
+            android:text="Kembali"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_11ssp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppinsregular"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_checklist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/_4sdp"
+            android:background="@drawable/bg_secondary"
+            android:text="Checklist"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppinsregular"/>
+
+    </LinearLayout>
+
+</LinearLayout>

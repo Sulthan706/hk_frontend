@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/listview_background_shape">
+            <stroke android:width="0dp"
+                android:color="@color/primary_color" />
+            <padding android:left="0dp"
+                android:top="0dp"
+                android:right="0dp"
+                android:bottom="0dp" />
+            <corners android:radius="5dp" />
+            <solid android:color="#F5F6F8" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/bg_home"
+          android:height="@dimen/_110sdp">
+    </item>
+
+</layer-list>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.service.permission.ui.activity.DetailHistoryPermissionManagementActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDetailHistoryPermission"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <include
+            android:id="@+id/appbarDetailHistoryPermissionMid"
+            layout="@layout/app_bar_default"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDetailHistoryPermissionMid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:padding="@dimen/_10sdp"
+            android:elevation="@dimen/_4sdp"
+            android:background="@drawable/bg_white_card"
+            app:layout_constraintTop_toBottomOf="@id/appbarDetailHistoryPermissionMid">
+
+            <RelativeLayout
+                android:id="@+id/rlDefaultUploadPhoto"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:background="@drawable/bg_disable"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_upload_photo"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/bg_secondary_rounded"
+                    android:fontFamily="@font/poppinsregular"
+                    android:paddingHorizontal="@dimen/_16sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:text="Upload"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardUploadPhoto"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:backgroundTint="@color/grayLine"
+                app:cardCornerRadius="@dimen/_6sdp"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivPreviewUploadPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:src="@drawable/ic_error_image" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvSubAreaDetailHistoryPermissionMid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:text="Error Subarea"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@id/cardUploadPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvAreaDetailHistoryPermissionMid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:text="Error Area"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@id/cardUploadPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tvSubAreaDetailHistoryPermissionMid"/>
+
+            <TextView
+                android:id="@+id/tvShiftDetailHistoryPermissionMid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:text="Error Shift"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_12ssp"
+                android:maxLines="2"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintStart_toEndOf="@id/cardUploadPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tvAreaDetailHistoryPermissionMid"/>
+
+            <TextView
+                android:id="@+id/tvDateDetailHistoryPermissionMid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:text="Error Date"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_12ssp"
+                android:maxLines="1"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintStart_toEndOf="@id/cardUploadPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tvShiftDetailHistoryPermissionMid"/>
+
+            <TextView
+                android:id="@+id/tvTitleDetailHistoryPermissionMid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:text="Error Title"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp"
+                android:maxLines="1"
+                android:fontFamily="@font/poppinsmedium"
+                app:layout_constraintStart_toEndOf="@id/cardUploadPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvInfoDetailHistoryPermissionMid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:text="@string/info_upload_photo_detail_permission"
+            android:textSize="@dimen/_8ssp"
+            android:textColor="@color/grayTxt"
+            android:fontFamily="@font/poppinsregular"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/clDetailHistoryPermissionMid"/>
+
+        <TextView
+            android:id="@+id/tv1DetailHistoryPermissionMid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="Pemohon"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintTop_toBottomOf="@id/tvInfoDetailHistoryPermissionMid"/>
+
+        <RelativeLayout
+            android:id="@+id/rlPemohonDetailHistoryPermissionMid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:padding="@dimen/_8sdp"
+            android:background="@drawable/bg_field"
+            app:layout_constraintTop_toBottomOf="@id/tv1DetailHistoryPermissionMid">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivPemohonDetailHistoryPermissionMid"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/bg_shimmer"
+                app:civ_border_color="@android:color/darker_gray"
+                app:civ_border_width="@dimen/_1sdp"
+                tools:src="@drawable/foto1" />
+
+            <TextView
+                android:id="@+id/tvPemohonDetailHistoryPermissionMid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_toEndOf="@id/ivPemohonDetailHistoryPermissionMid"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppinsmedium"
+                android:maxLines="1"
+                android:text="Error Name"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_12ssp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv2DetailHistoryPermissionMid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="Alasan izin"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintTop_toBottomOf="@id/rlPemohonDetailHistoryPermissionMid"/>
+
+        <TextView
+            android:id="@+id/tvDescDetailHistoryPermissionMid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_24sdp"
+            android:text="Error keterangan"
+            android:textColor="@color/black1"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:background="@drawable/bg_field"
+            app:layout_constraintTop_toBottomOf="@id/tv2DetailHistoryPermissionMid"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPreviewUploadPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/layoutPreviewUploadPhotoPermission"
+            layout="@layout/layout_preview_upload_photo"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

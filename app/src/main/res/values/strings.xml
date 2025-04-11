@@ -1,0 +1,371 @@
+<resources>
+    <string name="app_name">Hygiene Kleen</string>
+
+    <!--    <string name="url">http://54.251.83.205/</string>-->
+    <string name="url">http://43.157.201.56/</string>
+    <string name="app_version">V 1.0.0</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loading_string">Sedang mengambil data . . . </string>
+    <string name="loading_string_progress">Sedang memproses data . . . </string>
+    <string name="loading_string2">Silahkan tunggu . . . </string>
+    <string name="text_empty_list_weekly_progress">Tidak ada daftar daily progress saat ini. Silakan buat daily progress terlebih dahulu dengan klik pada tombol Mulai Aktivitas di Area pada halaman inspeksi.</string>
+    <string name="konfirmasi_checklist_on_checkbox">Saya mengkonfirmasi bahwa pekerjaan yang dilakukan karyawan sudah benar</string>
+    <string name="home_app_title">Hygiene Kleen</string>
+    <string name="user_nuc">Unknown NUC</string>
+    <string name="user_name">Unknown Name</string>
+    <string name="user_job">Unknown Position</string>
+    <string name="user_project">Unknown Project</string>
+    <string name="user_work_status">Unknown Working Status</string>
+    <string name="home_info_bertugas">Selamat menjalankan tugas hari ini</string>
+    <string name="home_info_belum_absen">Lakukan absen sebelum bertugas</string>
+    <string name="text_only_one_face">Hanya boleh terdapat 1 wajah saja</string>
+    <string name="text_no_face">Wajah tidak terdeteksi</string>
+    <string name="text_face_is_out">Pastikan wajah anda berada di area tedeksi, tidak terlalu dekat / jauh</string>
+
+    <string name="email_not_verified_dialog_title">Email belum terverifikasi</string>
+
+    <string name="email_not_verified_dialog_message">Klik di sini untuk kirim ulang \npesan verifikasi e-mail</string>
+
+    <string name="email_error">Hmm, salah format. Contoh: name@email.com.</string>
+
+    <string name="no_ho_error">Hmm, nomor setidaknya harus 8 digit.</string>
+
+    <string name="password_error">Masukkan kata sandi minimal 6 karakter.</string>
+    <string name="empty_schedule_management">Tidak ada rencana kunjunganpada tanggal ini</string>
+    <string name="empty_schedule_management_english">You don\'t have any visit reports for this date</string>
+
+    <string name="login_activity_login_failed_dialog_title">Gagal Masuk</string>
+
+    <string name="login_activity_login_failed_dialog_message">Masukkan e-mail dan \npassword yang benar.</string>
+    <string name="login_activity_login_failed_dialog_btn_coba_lagi">Coba lagi</string>
+    <string name="not_verified_dialog_button">Kirim Ulang</string>
+    <string name="forgot">Tolong masukkan email yang terdaftar, kami akan mengirimkan kode verifikasi ke email yang terdaftar.</string>
+    <string name="otp">Kode verifikasi telah dikirimkan ke <font color="#79bee1"> . . . @gmail.com</font></string>
+    <string name="tv_forgotpass">Tolong masukkan password baru anda</string>
+    <string name="pilih_project">Pilih Project</string>
+    <string name="daftar_nik_nuc">Tolong masukkan NUC dan Nomor Induk Kependudukan(NIK) kamu terlebih dahulu.</string>
+    <string name="daftar_email">Silahkan tambahkan email kamu untuk mempermudah login Care Ops.</string>
+    <string name="daftar_verif">Kode verifikasi telah dikirimkan ke</string>
+    <string name="daftar_password">Tolong masukkan password Anda</string>
+    <string name="error_email">\@gmail.com</string>
+    <string name="pendaftaran_berhasil">Pendaftaran Berhasil</string>
+    <string name="absen_dahulu">Mohon absen terlebih dahulu</string>
+    <string name="tuliskan_catatan">Tuliskan catatan</string>
+    <string name="pilih_tanggal">Pilih Tanggal</string>
+    <string name="belum_absen">Anda belum melakukan absen masuk. Silahkan klik pada absen masuk terlebih dahulu.</string>
+    <string name="belum_waktunya">Anda belum bisa melakukan absen.</string>
+    <string name="lewat_waktunya">Waktu absen pulang anda sudah lebih 2 jam.</string>
+    <string name="waktunya_lewat">Anda tidak dapat melakukan absen. Jadwal anda sudah lewat.</string>
+    <string name="checklis">Harap lengkapi checklist Anda.</string>
+    <string name="belum_checked">Anda belum melakukan checklist, mohon buka menu checklist dan menyelesaikan Checklist DAC.</string>
+    <string name="belum_checkout">Anda belum melakukan checkout di jadwal sebelumnya.</string>
+    <string name="confirm_dac_checklist">Apakah anda telah menyelesaikan semua pekerjaan anda?</string>
+    <string name="confirm_permission_izinkan">Apakah anda yakin untuk mengizinkan orang ini?</string>
+    <string name="confirm_permission_tolak">Apakah anda yakin untuk menolak izin orang ini?</string>
+    <string name="denial">Apakah anda ingin menolak cso ini?</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="text_desc_update_profile">Hai, Hygiene Kleen People. Silakan update data Anda. Pastikan data-data yang dimasukkan sudah benar, terutama data identitas seperti : NIK, status pernikahan, jumlah anak.\n \n Silakan klik pada bagian profile dan dokumen untuk melengkapi data tersebut.</string>
+    <string name="text_dialog_last_update_profile">Pastikan data-data yang dimasukkan sudah benar, seperti data : NIK, nama Bank &amp; nomor rekening, status pernikahan, &amp; jumlah anak. \n \n Silakan klik menu profile jika Anda ingin memperbarui data. </string>
+    <string name="new_update_info">Hai, Hygiene Kleen People.  Update aplikasi terlebih dahulu agar Anda tetap bisa mengakses fitur-fitur yang tersedia.</string>
+    <string name="dialog_edit_profile1">Hai, Hygiene Kleen People. Setelah kami cek, datamu masih belum lengkap. \n \n Yuk, isi Profile terlebih dahulu supaya Anda tetap bisa menggunakan fitur-fitur yang tersedia.</string>
+    <string name="dialog_edit_profile2">Silakan klik pada bagian profile dan dokumen untuk melengkapi data tersebut.</string>
+    <string name="empty_project_search">Project yang Anda cari tidak ditemukan atau berada di luar pengawasan. Coba ulangi menggunakan kata kunci lainnya.</string>
+    <string name="visit_tracking_info">Pantau aktivitas di project secara rutin. Lakukan absen masuk dan keluar setiap kali kunjungan ke project.</string>
+    <string name="visit_history_info">pilih salah satu tanggal atau tentukan tanggal dari dan sampai jika ingin melihat laporan dalam periode tertentu.</string>
+    <string name="move_project_check_in">Silakan pilih project dan lakukan absen masuk terlebih dahulu</string>
+    <string name="move_project_check_out">Silakan pilih project dan lakukan absen keluar kunjungan sebelumnya terlebih dahulu</string>
+    <string name="info_upload_photo_permission">Silakan unggah foto surat keterangan izin atau sakit. Permohonan Izin atau Sakit tanpa menyertakan surat akan mempengaruhi perhitungan absensi Anda. Foto surat dapat diunggah nanti jika surat sudah tersedia.</string>
+    <string name="info_upload_photo_detail_permission">*Fitur upload berlaku jika foto belum di upload saat pengajuan izin, dan hanya diberikan kesempatan sekali upload.\n*Anda tidak dapat upload foto setelah 24 jam Izin disetujui Pengawas atau Manajemen.</string>
+    <string name="Melengkapi_profile">Perhatian! Anda belum melengkapi semua data-data yang dibutuhkan. Yuk, isi data-data di bawah.</string>
+    <string name="title_isi_kk">Hygiene Kleen People, isi data berikut untuk keperluan verifikasi data pribadi. Pastikan Anda memberikan nomor KK yang benar.</string>
+    <string name="title_rekening">Kami memerlukan informasi bank dan rekeningmu untuk transaksi bulanan. Pastikan Anda memberikan data yang benar.</string>
+    <string name="notes_download1">*Laporan dibuat dalam format file Pdf (.pdf)</string>
+    <string name="notes_download2"><![CDATA[**Data yang diambil adalah daftar komplain CFTalk & CTalk di project yang dipilih]]></string>
+    <string name="info_service_management">*Total cuti sebanyak 12 hari selama setahun.\n*Izin tidak hadir karena alasan tertentu akan mengurangi jatah cuti. Cuti bersama juga mengurangi jatah cuti.</string>
+    <string name="info_service">*Per bulan maksimal 5 kali izin, dan maksimal 3 kali alpa. Jika sudah mencapai batas maksimum atau lebih, Anda akan mendapat SP.</string>
+    <string name="warning_back_audit">Jika Ya, semua komponen atau data yang sudah disi akan hilang dan Anda harus ulang dari awal. Klik tombol Submit untuk menyimpan laporan.</string>
+    <string name="warning_submit_audit">Apakah Anda yakin untuk submit penilaian? Jika Ya, maka Anda tidak bisa mengubah penilaian.</string>
+    <string name="new_feature_mekari_1">Kami membantu Anda mengelola kebutuhan finansial. Anda dapat akses ke dana darurat secara cepat untuk penuhi kebutuhan-kebutuhan finansial yang tidak terduga. Pastikan stres finansial tidak menghambat produktivitas Anda.</string>
+    <string name="new_feature_mekari_2">Fitur ini tersedia hanya bagi karyawan yang sudah bekerja selama 3 bulan atau lebih. Segera daftarkan akun MEKARI Flex Anda.</string>
+    <string name="info_regis_mekari_success">Selanjutnya, MEKARI Flex akan mengirimkan link aktivasi akun via email. Cek email Anda secara berkala dan segera lakukan aktivasi.</string>
+    <string name="info_regis_mekari_failed">Ada data-data yang belum dilengapi nih. Yuk, lengkapi data terlebih dahulu di menu Profile. Setelah itu, silakan kembali ke menu Pinjaman dan ulangi registrasi akun MEKARI Flex.</string>
+    <string name="titleWarnJamsostek">Pastikan foto dokumen terlihat jelas karena akan disimpan sebagai verifikasi data</string>
+    <string name="defaultimageBpjs">defaultImageBpjs</string>
+    <string name="updateBpjs"><![CDATA[Update Nomor & Foto Dokumen]]></string>
+    <string name="descQuestionLocation">Melalui fitur ini sistem secara otomatis mengambil data lokasi Anda berada saat ini. Oleh karena itu, Fitur lokasi atau GPS harus diaktifkan terutama pada saat jam kerja.</string>
+    <string name="descSubQuestionLocation">Pastikan Anda sudah mengaktifkan lokasi atau GPS saat menggunakan aplikasi ini.</string>
+    <string name="valdasi_imei">Anda tidak dapat login di HP ini. Silakan login menggunakan HP terdaftar atau hubungi admin jika HP Anda mengalami masalah.</string>
+    <string name="fake_gps_pop_up">Kami mendeteksi Anda menggunakan aplikasi FAKE GPS untuk mengambil titik lokasi absensi. Silakan aktifkan kembali fitur lokasi bawaan dan pastikan Anda berada di area absensi.</string>
+    <string name="successAttendanceUserFlying">Laporan absensimu berhasil disimpan dalam sistem kami. Selanjutnya menunggu approval dari pengawas tertinggi area atau Field Manager terlebih dahulu.</string>
+    <string name="failedAttendanceUserFlying">Gagal mengirim absensi, silahkan coba lagi.</string>
+    <string name="title2Fr">Kini absensi Hygiene Kleen dilengkapi fitur Face Recognition untuk mengenali identitas Anda dan memastikan data absensi tercatat dengan benar.</string>
+    <string name="empty_list_late_report">Awesome!\nThere is no lateness data this month.</string>
+    <string name="test_news">Bagaimana kami dapat membantu Anda.. Silahkan hubungi hotline 0818887454 dan kami akan memberikan solusi. Agar menjadi perhatian : Nomor layanan ini tidak menerima panggilan telepon, hanya pesan (chat) Whatsapp. Nomor layanan ini khusus melayani karyawan Hygiene Kleen di arae proyek. Silahkan kirimkan pesan pengaduan jika mengalami masalah seperti : Cara aktifasi dan penggunaan aplikasi yang ada di HygieneKleen Penggajian. BPJS Ketenagakerjaan dan BPJS Kesehatan. Pungutan liar (pungli) yang dilakukan oleh karyawan Hygiene Kleen. Perselisihan antar karyawan. Masalah lain yang terkait pekerjaan dilingkungan Hygiene Kleen</string>
+    <string name="logoclient">logoclient</string>
+    <string name="kodeDamageReport">Kode :</string>
+    <string name="typeDamageReport">Jenis :</string>
+    <string name="BrandDamageReport">Merek :</string>
+    <string name="keterangan">keterangan</string>
+    <string name="dialog_bak">Transaksi ini selanjutnya akan diperiksa dan ditindaklanjuti oleh Teknisi.</string>
+    <string name="fabback">fabBack</string>
+    <string name="show_more">Show More</string>
+    <string name="text_visitation">Dikunjungi</string>
+    <string name="text_location">Lokasi</string>
+    <string name="text_hint_location_form_weekly_progress">contoh : Toilet Lantai 1</string>
+    <string name="text_type_material">Jenis Material</string>
+    <string name="text_hint_type_material_form_weekly_progress">contoh : Keramik</string>
+    <string name="text_chemical">Chemical</string>
+    <string name="text_hint_chemical_form_weekly_progress">contoh : Floor Cleaner</string>
+    <string name="text_volume_chemical_used">Volume Chemical yang digunakan</string>
+    <string name="text_input_number">Masukkan angka</string>
+    <string name="text_miliiter">Mililiter</string>
+    <string name="text_cleaner_method">Metode Pembersihan</string>
+    <string name="text_frequency">Frekuensi</string>
+    <string name="text_minute">Menit</string>
+    <string name="text_width_area_cleaner">Luas Area Pembersihan</string>
+    <string name="text_pic_count">Jumlah PIC</string>
+    <string name="text_work_image">Foto Pekerjaan</string>
+    <string name="text_submit_work">Submit Pekerjaan</string>
+    <string name="text_before">Before</string>
+    <string name="text_after">After</string>
+    <string name="text_created_at">Dibuat pada :  </string>
+    <string name="text_made_by">Dibuat oleh :  </string>
+    <string name="text_location_bracket">Lokasi :</string>
+    <string name="text_detail">Lihat Detail</string>
+    <string name="text_see_all_in_report">Lihat Semua di Laporan</string>
+    <string name="text_date">Tanggal</string>
+    <string name="text_weekly_progress">Daily Progress</string>
+    <string name="text_status">Status</string>
+    <string name="text_status_approval">Status Approval</string>
+    <string name="text_choose_date">Pilih tanggal</string>
+    <string name="text_oke_next">Oke, Lanjut</string>
+    <string name="text_project">Project</string>
+    <string name="text_empty_weekly_progress">Anda belum membuat laporan daily progress. Silakan membuat laporan dengan klik tombol di bawah.</string>
+    <string name="text_hint_cleaning_method_form_weekly_progress">Contoh : Washing</string>
+    <string name="text_vom_meeting">VOM \n Meeting</string>
+    <string name="text_vom_routine">VOM \nRutin</string>
+    <string name="text_vom_audit">VOM \nAudit</string>
+    <string name="text_update_data">Update Data</string>
+    <string name="text_tittle_dialog_last_update">Apakah data profilemu sudah lengkap?</string>
+    <string name="text_complete_profile">Lengkapi Profile</string>
+    <string name="text_tittle_update_profile">Update Profilemu</string>
+    <string name="text_update_profile">Perbarui Profile</string>
+    <string name="text_choose_image">Pilih Gambar</string>
+    <string name="text_camera">Kamera</string>
+    <string name="text_galery">Galeri</string>
+    <string name="text_waiting">Tunggu Dulu !</string>
+    <string name="text_desc_waiting_closing">Anda tidak dapat melakukan \n absen pulang</string>
+    <string name="cek_amp_closing_pekerjaan"><![CDATA[Cek & Closing Pekerjaan]]></string>
+    <string name="text_desc_closing">Silahkan cek dan lakukan closing\n pekerjaan anda terlebih dahulu</string>
+    <string name="text_choose_area_assignment">Pilih Area Penugasan</string>
+    <string name="text_area_assignment">Area Penugasan</string>
+    <string name="text_choose_pengalihan">Pilih Shift Pengalihan</string>
+    <string name="text_shift_pengawas">Shift Pengawas</string>
+    <string name="text_pengawas">Pengawas</string>
+    <string name="text_ringkasan">Ringkasan</string>
+    <string name="text_total_settlement">Total Penyelesaian</string>
+    <string name="text_realitation">Realisasi</string>
+    <string name="text_alihkan">Alihkan</string>
+    <string name="text_work_diversion">Pengalihan Pekerjaan</string>
+    <string name="text_empty_diversion">Tidak ada item pekerjaan periodik di area ini. Silakah pilih area lainnya.</string>
+    <string name="text_closing_finish">Sudah Closing</string>
+    <string name="text_daily_closing">Closing</string>
+    <string name="text_work">Pekerjaan</string>
+    <string name="text_area">Area</string>
+    <string name="text_date_work">Tanggal Pekerjaan</string>
+    <string name="text_diversion_work_for">Alihkan pekerjaan ke</string>
+    <string name="text_choose_shift">Pilih shift</string>
+    <string name="text_desc_reason_diversion">Jelaskan secara singkat mengenai kendala yang dialami</string>
+    <string name="text_write_your_reason_here">Tuliskan alasanmu disini</string>
+    <string name="text_closing_pengawas">Closing Pengawas</string>
+    <string name="text_finish">Selesai</string>
+    <string name="text_has_closing">Total sudah closing</string>
+    <string name="text_see">Lihat</string>
+    <string name="text_empty_closing">Tidak ada pengawas dengan status ini. Silakan pilih status lainnya.</string>
+    <string name="text_choose_status">Pilih Status</string>
+    <string name="text_create_and_send"><![CDATA[Buat & Kirim]]></string>
+    <string name="text_not_approve">Belum disetujui</string>
+    <string name="text_do_you_approve_this_work">Anda menyetujui penyelesaian pekerjaan ini?</string>
+    <string name="text_approve">Approve</string>
+    <string name="text_shift">Shift</string>
+    <string name="text_see_file">Lihat file</string>
+    <string name="text_loading_generate_file">Harap tunggu, kami sedang\n menyiapkan file</string>
+    <string name="text_success">Berhasil</string>
+    <string name="text_approval_work">Approval Pekerjaan</string>
+    <string name="text_spv_has_closing">SPV sudah closing</string>
+    <string name="text_team_leader_has_closing">Team Leader sudah \nclosing</string>
+    <string name="text_back">Kembali</string>
+    <string name="text_back_work">Harap selesaikan pekerjaan ini. Silahkan kembali ke halaman daftar pekerjaan.
+    </string>
+    <string name="info_daily_visit_management">unplanned schedule : created on the same date as the planning date or diverted to different project</string>
+    <string name="info_feedback_submit_rating">Good or bad, doesn’t matter. Any feedback, as long as its constructive, is great and can help this employee get better.</string>
+    <string name="empty_submit_rating"><![CDATA[We\'ve got your response!\nPlease give rating & feedback for this employee next month.]]></string>
+
+    <string-array name="pilihLantai">
+        <item>Lantai 1</item>
+        <item>Lantai 2</item>
+        <item>Lantai 3</item>
+    </string-array>
+    <string-array name="pilihShift">
+        <item>Shift 1</item>
+        <item>Shift 2</item>
+        <item>Shift 3</item>
+    </string-array>
+    <string-array name="noChoose">
+        <item>Tidak ada pilihan</item>
+    </string-array>
+    <string-array name="kondisiObject">
+        <item>Tidak bersih</item>
+        <item>Tidak bau</item>
+    </string-array>
+    <string-array name="nilaiPekerjaan">
+        <item>-- Pilih Penilaian --</item>
+        <item>Tidak Standart</item>
+        <item>Standart</item>
+        <item>Melebihi Standart</item>
+    </string-array>
+    <string-array name="shift">
+        <item>Pilih shift</item>
+        <item>Shift Pagi</item>
+        <item>Shift Siang</item>
+    </string-array>
+    <string-array name="overtimeType">
+        <item>Pilih Judul Lembur</item>
+        <!--        <item>Lembur ganti Izin</item>-->
+        <item>Lembur ganti Alfa</item>
+        <item>Lembur ganti Resign</item>
+        <!--        <item>Lembur ganti Pengawas</item>-->
+        <!--        <item>Lembur ganti Off</item>-->
+    </string-array>
+    <string-array name="overtimeReqType">
+        <item>Pilih Judul Lembur</item>
+        <item>Lembur weekend</item>
+        <item>Lembur weekday</item>
+    </string-array>
+    <string-array name="complaintTitle">
+        <item>Kebersihan</item>
+        <item>Tenaga Kerja</item>
+        <item>Fasilitas Rusak</item>
+        <item>Sikap dan Perilaku</item>
+        <item>Keamanan</item>
+        <item>Keselamatan dan Kesehatan</item>
+        <item>Gangguan Hama</item>
+    </string-array>
+    <string-array name="listMonth">
+        <item>Pilih Bulan</item>
+        <item>Januari</item>
+        <item>Februari</item>
+        <item>Maret</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Agustus</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
+    <string-array name="listJobRole">
+        <item>Pilih Jabatan</item>
+        <item>Operator</item>
+        <item>Team Leader</item>
+        <item>Supervisor</item>
+        <item>Chief Supervisor</item>
+    </string-array>
+    <string-array name="noListJobRole">
+        <item>Pilih Jabatan</item>
+    </string-array>
+    <string-array name="maritalStatus">
+        <item>Pilih status perkawinan</item>
+        <item>Nikah</item>
+        <item>Belum Nikah</item>
+        <item>Cerai</item>
+    </string-array>
+    <string-array name="gender">
+        <item>Pilih jenis kelamin</item>
+        <item>PRIA</item>
+        <item>WANITA</item>
+    </string-array>
+    <string-array name="permissionTitle">
+        <item>Pilih Judul</item>
+        <item>IZIN</item>
+        <item>SAKIT</item>
+    </string-array>
+    <string-array name="tujuanKunjunganArea">
+        <item>Kunjungan Rutin</item>
+        <item>Sidak</item>
+    </string-array>
+    <string-array name="penilaianInspeksi">
+        <item>Melebihi Ekspektasi/Ekselen</item>
+        <item>Sangat Baik</item>
+        <item>Standar</item>
+        <item>Jelek/Kotor</item>
+        <item>Sangat Jelek/Kotor/Rusak</item>
+    </string-array>
+    <string-array name="tujuanKunjungan">
+        <item>Kunjungan Rutin &amp; Sidak</item>
+        <item>Kunjungan Rutin</item>
+        <item>Sidak</item>
+    </string-array>
+
+    <string-array name="task_detection_list">
+        <item>Please squarely facing the camera</item>
+        <item>Pejamkan mata</item>
+        <item>Kedip</item>
+        <item>Buka mulut</item>
+        <item>Senyum</item>
+        <item>Hadap kanan</item>
+        <item>Hadap kiri</item>
+        <item>Miring kanan</item>
+        <item>Miring kiri</item>
+    </string-array>
+
+    <string-array name="bank">
+        <item>Pilih nama bank</item>
+        <item>BCA</item>
+        <item>BNI</item>
+        <item>BRI</item>
+        <item>DANAMON</item>
+        <item>MANDIRI</item>
+        <item>UOB</item>
+    </string-array>
+    <string-array name="penilaianAudit">
+        <item>Ya</item>
+        <item>Tidak</item>
+    </string-array>
+    <string-array name="listActivitiesManagement">
+        <item>MEETING</item>
+        <item>SIDAK</item>
+        <item>RUTIN</item>
+    </string-array>
+    <string-array name="listActivitiesUnplanned">
+        <item>Reason</item>
+        <item>MEETING</item>
+        <item>SIDAK</item>
+    </string-array>
+    <string-array name="filter_weekly_progress">
+        <item>Semua</item>
+        <item>Dikerjakan</item>
+        <item>Selesai</item>
+        <item>Disetujui</item>
+    </string-array>
+
+    <string-array name="area_assignment">
+        <item>Semua Area Penugasan</item>
+    </string-array>
+    <string-array name="listActivitiesOps">
+        <item>MEETING</item>
+        <item>SIDAK</item>
+        <item>RUTIN</item>
+    </string-array>
+    <string-array name="sortBy">
+        <item>Highest</item>
+        <item>Lowest</item>
+    </string-array>
+
+
+</resources>

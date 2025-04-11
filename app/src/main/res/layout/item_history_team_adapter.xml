@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_item_attendance_choose_staff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_2sdp"
+    android:background="@drawable/bg_only_bottom_list"
+    android:padding="@dimen/_3sdp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivImageTeamProfile"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/foto1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llStaffAlreadyAttendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/ivImageTeamProfile"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvEmployeeNameHistory"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            tools:text="Name" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llStaffAlreadyAttendanceJobRank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llStaffAlreadyAttendance"
+        app:layout_constraintLeft_toRightOf="@+id/ivImageTeamProfile"
+        android:layout_marginHorizontal="@dimen/_3sdp">
+
+        <TextView
+            android:id="@+id/tvEmplNucJobnameHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_10ssp"
+            android:text="jobCode" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvBtnSeePhotoTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rectangle_blue_attendance"
+        android:fontFamily="@font/poppinsmedium"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_3sdp"
+        android:text="Lihat Foto"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_8ssp"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        app:layout_constraintStart_toEndOf="@+id/ivImageTeamProfile"
+        app:layout_constraintTop_toBottomOf="@+id/llStaffAlreadyAttendanceJobRank"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvScheduleAttendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:text="Lembur Ganti"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_1sdp"
+        android:background="@drawable/bg_transparent_attendance"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/primary_color"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/tvScheduleAttendancee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:text="Actual"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_1sdp"
+        android:background="@drawable/bg_transparent_attendance_actual"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#2B5281"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tvStatusAttendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-----"
+        android:textColor="#2D9CDB"
+        android:textSize="@dimen/_9ssp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvScheduleAttendance"
+        app:layout_constraintRight_toRightOf="parent"
+        android:fontFamily="@font/poppinsregular"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/_2sdp">
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@drawable/ic_attendance_in"/>
+
+        <TextView
+            android:id="@+id/tvStatusAttendanceIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_3sdp"
+            android:text="--:--"
+            android:textSize="@dimen/_9sdp"
+            android:fontFamily="@font/poppinsregular"/>
+
+        <ImageView
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@drawable/ic_attendance_out"/>
+
+        <TextView
+            android:id="@+id/tvStatusAttendanceOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_3sdp"
+            android:text="--:--"
+            android:textSize="@dimen/_9sdp"
+            android:fontFamily="@font/poppinsregular"/>
+
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_selfie_in_shadow"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/bg_rectangle_orange"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/profile_ic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

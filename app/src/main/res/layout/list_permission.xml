@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="@dimen/_8sdp"
+    android:layout_marginTop="@dimen/_6sdp"
+    android:layout_marginBottom="@dimen/_6sdp"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_8sdp"
+    android:paddingStart="@dimen/_12sdp"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_permission_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_clientList_permission"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_weight="0.6"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/bg_shimmer"
+            app:civ_border_color="@android:color/darker_gray"
+            app:civ_border_width="@dimen/_1sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/foto1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_56sdp"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:layout_weight="1.4"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/iv_clientList_permission"
+            app:layout_constraintEnd_toStartOf="@id/rl_status_permission"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_namaList_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Error Nama"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_12ssp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:layout_constraintStart_toEndOf="@id/iv_list_permission"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_titleList_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Tidak ada judul izin"
+                android:textColor="@color/gray_dark"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toEndOf="@id/iv_list_permission"
+                app:layout_constraintTop_toBottomOf="@id/tv_namaList_permission" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_status_permission"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:background="@drawable/bg_status_history_complaint_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_status_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="No Status"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/ll_permission_history">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_9sdp">
+
+            <TextView
+                android:id="@+id/tv_dateList_permission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error tanggal"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_8ssp" />
+
+            <TextView
+                android:id="@+id/tv_subLocationList_permission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error sub area"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_10ssp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_timeList_permission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error waktu"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/tv_locationList_permission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Error area"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_10ssp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@drawable/bg_disable">
+
+                <ImageView
+                    android:id="@+id/iv_list_permission"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/googleg_disabled_color_18" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:background="@drawable/rounded_gray"
+                android:elevation="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/tv_description_permission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppinsregular"
+                    android:maxLines="3"
+                    android:text="Error Keterangan"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_10ssp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

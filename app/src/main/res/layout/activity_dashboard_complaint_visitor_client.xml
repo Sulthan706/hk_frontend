@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeCtalkVisitorClient"
+    tools:context=".features.features_client.complaint.ui.activity.visitor.DashboardComplaintVisitorClientActivity">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTitleCtalkVisitorClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/secondary_color"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:id="@+id/llTitleCtalkVisitorClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="14dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabBackButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_left_black"
+                        android:contentDescription="@string/fabback"
+                        app:fabSize="mini"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="CTalk Visitor"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="6dp"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/llTitleCtalkVisitorClient"
+                    android:layout_marginHorizontal="14dp"
+                    android:layout_marginTop="56dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dashboard"
+                        android:textAlignment="textStart"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="6dp"
+                        android:layout_alignParentStart="true"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDetailCtalkVisitor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lihat Daftar CTalk"
+                        android:layout_alignParentEnd="true"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textSize="12sp"
+                        android:drawableEnd="@drawable/ic_chevron_right_white"
+                        android:backgroundTint="#0E243F"
+                        android:textColor="@color/white"
+                        app:cornerRadius="8dp"
+                        />
+
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:id="@+id/llSelectDateCtalkVisitorClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/clTitleCtalkVisitorClient"
+                android:layout_marginTop="32dp"
+                android:layout_marginHorizontal="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Tanggal"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etCtalkVisitorClientDate"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:hint="Pilih tanggal"
+                    app:endIconMode="custom"
+                    app:endIconDrawable="@drawable/ic_calendar_orange"
+                    app:endIconTint="@color/secondary_color"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    android:focusable="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/tvCalenderCtalkVisitor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewLineCtalkVisitor1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/llSelectDateCtalkVisitorClient"
+                android:background="@color/grayLine"
+                android:layout_marginTop="16dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rlTotalComplaintCtalkVisitorClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/viewLineCtalkVisitor1"
+                android:layout_marginTop="17dp"
+                android:layout_marginHorizontal="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Komplain"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:id="@+id/tvTotalCtalk"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:focusable="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/bg_field"
+                    tools:text="5"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rlPieChartCtalkVisitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/rlTotalComplaintCtalkVisitorClient"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_field"
+                android:layout_marginHorizontal="24dp"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Penyelesaian"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <LinearLayout
+                    android:id="@+id/llPieChartCtalkVisitorClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:baselineAligned="false"
+                    tools:ignore="UselessParent">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_progressDetailAbsentProjectMgmnt"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+
+                        android:layout_gravity="center"
+                        >
+                        <TextView
+                            android:id="@+id/tvTotalPercentage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:text="total"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textSize="12sp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="10dp"/>
+                        <ir.mahozad.android.PieChart
+                            android:id="@+id/pieChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:labelsSize="10sp"
+                            app:centerLabelSize="10sp"
+
+                            android:layout_marginEnd="10dp"/>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Menunggu"
+                            android:fontFamily= "@font/poppinssemibold"
+                            android:textColor="#FF5656"
+                            android:textSize="14sp"
+                            android:layout_marginTop="5dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dikerjakan"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="#F47721"
+                            android:textSize="14sp"
+                            android:layout_marginTop="22dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Selesai"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="@color/green2"
+                            android:textSize="14sp"
+                            android:layout_marginTop="22dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_field"
+                            android:padding="4dp">
+                            <TextView
+                                android:id="@+id/tvWaitingCtalk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="#FF5656"
+                                android:textSize="14sp"
+                                android:gravity="center"
+                                tools:text="18"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_field"
+                            android:padding="4dp"
+                            android:layout_marginTop="12dp">
+                            <TextView
+                                android:id="@+id/tvOnprogressCtalk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="#F47721"
+                                android:textSize="14sp"
+                                android:gravity="center"
+                                tools:text="18"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_field"
+                            android:padding="4dp"
+                            android:layout_marginTop="12dp">
+                            <TextView
+                                android:id="@+id/tvFinishCtalk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="@color/green2"
+                                android:textSize="14sp"
+                                android:gravity="center"
+                                tools:text="20"/>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewLineCtalkVisitor2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/grayLine"
+                app:layout_constraintTop_toBottomOf="@+id/rlPieChartCtalkVisitor"
+                android:layout_marginTop="28dp"/>
+
+            <LinearLayout
+                android:id="@+id/llAreaContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/viewLineCtalkVisitor2">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvMostAreaKomplain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Most Area Komplain"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginHorizontal="24dp"/>
+                    <TextView
+                        android:id="@+id/btnShowMoreArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="invisible"
+                        android:text="@string/show_more"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginHorizontal="24dp"/>
+
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAreaCtalkVisitor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tvMostAreaKomplain"
+                    tools:listitem="@layout/item_area_ctalk_visitor"
+                    android:layout_marginHorizontal="24dp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/llEmtpyAreaCtalkVisitor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tvMostAreaKomplain"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/ivEmptyAreaCtalk"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_empty_rkb"
+                        android:layout_marginTop="10dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak ada daftar komplain"
+                        app:layout_constraintTop_toBottomOf="@id/ivEmptyAreaCtalk"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:id="@+id/viewLineCtalkVisitor3"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/grayLine"
+                app:layout_constraintTop_toBottomOf="@+id/llAreaContent"
+                android:layout_marginTop="28dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/viewLineCtalkVisitor3"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvMostObjectKomplain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Most Objek Komplain"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginHorizontal="24dp"/>
+                    <TextView
+                        android:id="@+id/btnShowMoreObject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/show_more"
+                        android:visibility="invisible"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginHorizontal="24dp"/>
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvObjectCtalkVisitor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tvMostObjectKomplain"
+                    tools:listitem="@layout/item_area_ctalk_visitor"
+                    android:layout_marginHorizontal="24dp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/llEmtpyObjectCtalkVisitor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tvMostObjectKomplain"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_empty_rkb"
+                        android:layout_marginTop="10dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak ada daftar komplain"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

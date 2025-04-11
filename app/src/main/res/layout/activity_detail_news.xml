@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.home.ui.new_.activity.DetailNewsActivity">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/shimmerNewsLow"
+        >
+        <include
+            layout="@layout/shimmer_placeholder_home"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:visibility="gone">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/primary_color"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            >
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="414dp"
+                app:layout_collapseMode="parallax"/>
+            <TextView
+                android:id="@+id/tvNewsIndicator"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="1/2"
+                android:background="@drawable/bg_field_opacity_200"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="3dp"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <!-- The attribute app:layout_collapseMode="pin" is set so that
+                 sticks to the top when the user scrolls the view up-->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarNews"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--Now add the NestedScollView-->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsLowNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvTitleNews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CAREPEOPLE Hotline"
+                android:background="@color/primary_color"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/tvContentNews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/test_news"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_marginHorizontal="12dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

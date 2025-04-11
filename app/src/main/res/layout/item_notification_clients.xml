@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/clNotificationMidHistory"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:id="@+id/rlStatusNotif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/tvStatusNotif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Izin" />
+            <TextView
+                android:id="@+id/tvDateStatusNotif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05/10/2022, 08.00"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/poppinsregular"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rlStatusNotif"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMainContentNotif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Permohonanmu telah diproses"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="#363636"/>
+            <TextView
+                android:id="@+id/tvSecondMainContentNotif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Permohonanmu telah diproses"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="#363636"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvCaptionContentNotif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Lihat daftar selengkapnya pada menu izin."
+                android:textColor="#363636"
+                android:textSize="@dimen/_10ssp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_field_item_notif"
+                app:layout_constraintTop_toBottomOf="@+id/tvCaptionContentNotif"
+                android:layout_marginTop="@dimen/_4sdp"/>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

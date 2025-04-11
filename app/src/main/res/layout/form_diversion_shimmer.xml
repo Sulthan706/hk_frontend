@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/card_detail_diversion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_created_at"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/bg_shimmer"/>
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_created_at"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_shimmer" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <View
+                android:layout_width="150dp"
+                android:layout_height="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_created_at"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/bg_shimmer"/>
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_created_at"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_shimmer" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <View
+                android:layout_width="150dp"
+                android:layout_height="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_created_at"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/bg_shimmer"/>
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_created_at"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_shimmer" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <View
+                android:layout_width="150dp"
+                android:layout_height="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_created_at"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/bg_shimmer"/>
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/text_created_at"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_shimmer" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="15dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_created_at"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/bg_shimmer"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_created_at"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/bg_rounded_grey"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_created_at"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/bg_rounded_grey"/>
+
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="135dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_created_at"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/bg_rounded_grey"/>
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="15dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_created_at"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/bg_shimmer"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_created_at"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/bg_rounded_grey"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/text_created_at"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/grey2_client"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/bg_rounded_grey"/>
+
+    </LinearLayout>
+
+</LinearLayout>

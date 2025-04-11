@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.report.ui.new_.activity.ReportActivity">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llMainContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_secondary_radiusbottom"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/rlBtnBackReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_back_my_teams_clients"
+                        android:backgroundTint="@color/white"
+                        android:src="@drawable/ic_arrow_left_black"
+                        app:fabSize="mini"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvReportTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_30sdp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:layout_centerInParent="true"
+                        android:text="Report"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16sdp"
+                        />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCardMainDashboardReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:background="@drawable/bg_white_rounded_20dp"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvMonthMainReport"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_black_text"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/_9sdp"
+                            android:paddingVertical="@dimen/_3sdp"
+                            android:text="November 2022"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tvDayReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Mandays"
+                        android:textAlignment="center" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:layout_width="@dimen/_150sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_13sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/poppinsregular"
+                                    android:maxLines="1"
+                                    android:text="Total"
+                                    android:textAlignment="textStart" />
+
+                                <TextView
+                                    android:id="@+id/tvCountingReport"
+                                    android:layout_width="@dimen/_250sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/_12sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/poppinssemibold"
+                                    android:text="-"
+                                    android:textSize="@dimen/_10ssp"
+                                    android:textAlignment="textEnd" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_13sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/poppinsregular"
+                                    android:text="Terpenuhi"
+                                    android:textAlignment="textStart"
+                                    android:textColor="#F47721" />
+
+                                <TextView
+                                    android:id="@+id/tvMondays"
+                                    android:layout_width="@dimen/_95sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/_12sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/poppinssemibold"
+                                    android:text="-"
+                                    android:textSize="@dimen/_10ssp"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="#F47721" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_55sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_12sdp"
+                            android:layout_weight="1">
+
+                            <ProgressBar
+                                android:id="@+id/progressBarReportDashboard"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:indeterminateOnly="false"
+                                android:progressDrawable="@drawable/circular_bar_progress"
+                                tools:progress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_progressBarDetailCfteam"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="0%"
+                                android:textAlignment="center"
+                                android:textColor="@color/secondary_color"
+                                android:textSize="@dimen/_10ssp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Lihat laporan selengkapnya"
+                        android:textAlignment="center"
+                        android:textColor="#6B9CD7"
+                        android:textSize="@dimen/_9sdp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlJadwalKehadiran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:background="@drawable/bg_field"
+                android:elevation="@dimen/_2sdp"
+                android:padding="@dimen/_3sdp"
+                app:layout_constraintTop_toBottomOf="@+id/llMainContent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:src="@drawable/ic_arrow_right_blue" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivKondisiArea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_kondisi_area_report" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/ivKondisiArea"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="Jadwal Kehadiran"
+                            android:textColor="#2B5281"
+                            android:textSize="@dimen/_13ssp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_35sdp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="Ketahui jadwal kerja &amp; daftar CF Team yag bertugas"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/_8ssp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlKondisiArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@drawable/bg_field"
+                android:elevation="@dimen/_2sdp"
+                android:padding="@dimen/_3sdp"
+                app:layout_constraintTop_toBottomOf="@+id/rlJadwalKehadiran">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:src="@drawable/ic_arrow_right_blue" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivJadwalkehadiran"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_jadwal_area_report" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/ivJadwalkehadiran"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:text="Kondisi Area"
+                            android:textColor="#2B5281"
+                            android:textSize="@dimen/_13ssp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_39sdp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="Ketahui kondisi area yang dikerjakan CF Team"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/_8ssp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/rlKondisiArea"
+                android:layout_marginTop="@dimen/_30sdp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

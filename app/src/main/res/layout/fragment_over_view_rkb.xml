@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.features_client.monthlyworkreportclient.ui.fragment.OverViewRkbFragment">
+        <ImageView
+            android:id="@+id/ivBgCityRkbClientOverView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/bg_city_client_rkb"
+            android:visibility="invisible"/>                                                           "    />                                             "/>
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/llSummaryCardShiftChecklistMgmnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_summary_card_list_checklist"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+
+            app:layout_constraintTop_toBottomOf="@+id/ivBgCityRkbClientOverView"
+            android:elevation="@dimen/_2sdp"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:background="@drawable/bg_list_summary_list_checklist">
+
+                <TextView
+                    android:id="@+id/tv1_shimmerShiftChecklist"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:maxLines="1"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="15sp"
+                    android:text="Target bulan ini"/>
+
+                <TextView
+                    android:id="@+id/tvTotalWorkMonthly"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:maxLines="1"
+                    tools:text="34 Pekerjaan"
+                    android:textSize="15sp"
+                    android:textColor="@color/secondary_color"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:layout_alignParentEnd="true"
+                    android:textAlignment="textEnd"/>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Realisasi"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_progressDetailAbsentProjectMgmnt"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+
+                        android:layout_gravity="center"
+                        >
+                        <TextView
+                            android:id="@+id/tvTotalPercentage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:text="total"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textSize="12sp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="10dp"/>
+                        <ir.mahozad.android.PieChart
+                            android:id="@+id/pieChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:labelsSize="10sp"
+                            app:centerLabelSize="10sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"/>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Daily"
+                            android:fontFamily= "@font/poppinssemibold"
+                            android:textColor="#2D9CDB"
+                            android:textSize="14sp"
+                            android:layout_marginTop="5dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Weekly"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="#F47721"
+                            android:textSize="14sp"
+                            android:layout_marginTop="22dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Monthly"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="#9B51E0"
+                            android:textSize="14sp"
+                            android:layout_marginTop="22dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_field"
+                            android:padding="4dp">
+                            <TextView
+                                android:id="@+id/tvDailyWorkMonthly"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:gravity="center"
+                                tools:text="18 / 21"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_field"
+                            android:padding="4dp"
+                            android:layout_marginTop="12dp">
+                            <TextView
+                                android:id="@+id/tvWeeklyWorkMonthly"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:gravity="center"
+                                tools:text="18 / 20"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_field"
+                            android:padding="4dp"
+                            android:layout_marginTop="12dp">
+                            <TextView
+                                android:id="@+id/tvMonthlyWorkMonthly"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:gravity="center"
+                                tools:text="- / 20"/>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Pekerjaan Dialihkan"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3.3"
+                    android:layout_marginBottom="15dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Weekly"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:layout_marginTop="22dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Monthly"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:layout_marginTop="22dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="2.3">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_field"
+                            android:padding="4dp"
+                            android:layout_marginTop="15dp">
+                            <TextView
+                                android:id="@+id/tvWeeklyBaMonthly"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:gravity="center"
+                                tools:text="18 / 20"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_field"
+                            android:padding="4dp"
+                            android:layout_marginTop="12dp">
+                            <TextView
+                                android:id="@+id/tvMonthlyBaMonthly"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:gravity="center"
+                                tools:text="- / 20"/>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

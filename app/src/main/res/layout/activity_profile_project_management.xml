@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".features.features_management.homescreen.project.ui.activity.ProfileProjectManagementActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_profile_project_secondary"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_backProfileProjectManagement"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginStart="@dimen/_22sdp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_profileProjectMgmnt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/bg_white_card"
+        android:elevation="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@id/iv_backProfileProjectManagement">
+
+        <TextView
+            android:id="@+id/tv_projectNameProfileProjectMgmnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error Project Name"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppinssemibold"/>
+
+        <TextView
+            android:id="@+id/tv_projectCodeProfileProjectMgmnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error Kode Project"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"/>
+
+        <TextView
+            android:id="@+id/tv_branchNameProfileProjectMgmnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error Nama Cabang"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="Alamat"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+        <TextView
+            android:id="@+id/tv_projectAddressProfileProjectMgmnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error Alamat"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_12sdp"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_profileProjectMgmnt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        app:layout_constraintTop_toBottomOf="@id/ll_profileProjectMgmnt">
+
+        <RelativeLayout
+            android:id="@+id/rl_ctalkProfileProjectMgmnt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:padding="@dimen/_6sdp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_white_card"
+            android:elevation="@dimen/_4sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cl_operationalProfileProjectMgmnt">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_ctalkProfileProjectMgmnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_profileProjectMgmnt"
+                    android:layout_width="@dimen/_42sdp"
+                    android:layout_height="@dimen/_42sdp"
+                    android:background="@drawable/bg_disable"
+                    android:padding="@dimen/_6sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_cTalkProfileProjectMgmnt">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/complain" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_cTalkProfileProjectMgmnt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_toEndOf="@id/rl_profileProjectMgmnt"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="CTalk"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_16ssp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/rl_profileProjectMgmnt"
+                    app:layout_constraintEnd_toStartOf="@id/iv_nextCtalkProfileMgmnt"/>
+
+                <ImageView
+                    android:id="@+id/iv_nextCtalkProfileMgmnt"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:src="@drawable/ic_chevron_right_secondary_color"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_cTalkProfileProjectMgmnt"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_below="@id/cl_ctalkProfileProjectMgmnt">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_waitingCtalkProfileProjectMgmnt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_14ssp"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Menunggu"
+                        android:textColor="@color/grayTxt"
+                        android:textSize="@dimen/_8ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_onProgressCtalkProfileProjectMgmnt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_14ssp"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dikerjakan"
+                        android:textColor="@color/grayTxt"
+                        android:textSize="@dimen/_8ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_operationalProfileProjectMgmnt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_marginVertical="@dimen/_6sdp"
+            android:padding="@dimen/_4sdp"
+            android:background="@drawable/bg_white_card"
+            android:elevation="@dimen/_4sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/rl_ctalkProfileProjectMgmnt"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_operationalProfileProjectMgmnt"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_33sdp"
+                android:background="@drawable/bg_disable"
+                android:padding="@dimen/_4sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ll_operationalProfileProjectMgmnt">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/broom"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_operationalProfileProjectMgmnt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_4sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rl_operationalProfileProjectMgmnt"
+                app:layout_constraintEnd_toStartOf="@id/iv_operationalProfileProjectMgmnt">
+
+                <TextView
+                    android:id="@+id/tv_countOperationalProfileProjectMgmnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Operational"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_8ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_operationalProfileProjectMgmnt"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_chevron_right_secondary_color"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_operationalProfileProjectMgmnt"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_managementProfileProjectMgmnt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginVertical="@dimen/_6sdp"
+            android:padding="@dimen/_4sdp"
+            android:visibility="gone"
+            android:background="@drawable/bg_white_card"
+            android:elevation="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@id/cl_operationalProfileProjectMgmnt"
+            app:layout_constraintStart_toEndOf="@id/rl_ctalkProfileProjectMgmnt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_managementProfileProjectMgmnt"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_33sdp"
+                android:background="@drawable/bg_disable"
+                android:padding="@dimen/_4sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_managementProfileProjectMgmnt">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/teamworks" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_managementProfileProjectMgmnt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_4sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rl_managementProfileProjectMgmnt"
+                app:layout_constraintEnd_toStartOf="@id/iv_managementProfileProjectMgmnt">
+
+                <TextView
+                    android:id="@+id/tv_countManagementProfileProjectMgmnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Management"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_8ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_managementProfileProjectMgmnt"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_chevron_right_secondary_color"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_managementProfileProjectMgmnt"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_clientProfileProjectMgmnt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginVertical="@dimen/_6sdp"
+            android:padding="@dimen/_4sdp"
+            android:background="@drawable/bg_white_card"
+            android:elevation="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@id/cl_operationalProfileProjectMgmnt"
+            app:layout_constraintStart_toEndOf="@id/rl_ctalkProfileProjectMgmnt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_clientProfileProjectMgmnt"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_33sdp"
+                android:background="@drawable/bg_disable"
+                android:padding="@dimen/_4sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_clientProfileProjectMgmnt">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/immigration" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_clientProfileProjectMgmnt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_4sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rl_clientProfileProjectMgmnt"
+                app:layout_constraintEnd_toStartOf="@id/iv_clientProfileProjectMgmnt">
+
+                <TextView
+                    android:id="@+id/tv_countClientProfileProjectMgmnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Client"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_8ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_clientProfileProjectMgmnt"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_chevron_right_secondary_color"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_clientProfileProjectMgmnt"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clProfileProjectMgmnt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/cl_profileProjectMgmnt">
+
+        <RelativeLayout
+            android:id="@+id/rlCftalkProfileProjectMgmnt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:padding="@dimen/_6sdp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_white_card"
+            android:elevation="@dimen/_4sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cl_absentProfileProjectMgmnt">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clCftalkProfileProjectMgmnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rlProfileProjectMgmnt1"
+                    android:layout_width="@dimen/_42sdp"
+                    android:layout_height="@dimen/_42sdp"
+                    android:background="@drawable/bg_disable"
+                    android:padding="@dimen/_6sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvCftalkProfileProjectMgmnt">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/complain" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvCftalkProfileProjectMgmnt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_toEndOf="@id/rlProfileProjectMgmnt1"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="CFTalk"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_16ssp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/rlProfileProjectMgmnt1"
+                    app:layout_constraintEnd_toStartOf="@id/iv_nextCftalkProfileMgmnt"/>
+
+                <ImageView
+                    android:id="@+id/iv_nextCftalkProfileMgmnt"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:src="@drawable/ic_chevron_right_secondary_color"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvCftalkProfileProjectMgmnt"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_below="@id/clCftalkProfileProjectMgmnt">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_waitingCftalkProfileProjectMgmnt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_14ssp"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Menunggu"
+                        android:textColor="@color/grayTxt"
+                        android:textSize="@dimen/_8ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_onProgressCftalkProfileProjectMgmnt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_14ssp"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dikerjakan"
+                        android:textColor="@color/grayTxt"
+                        android:textSize="@dimen/_8ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_absentProfileProjectMgmnt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_marginVertical="@dimen/_6sdp"
+            android:padding="@dimen/_4sdp"
+            android:background="@drawable/bg_white_card"
+            android:elevation="@dimen/_4sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/rlCftalkProfileProjectMgmnt" >
+
+            <RelativeLayout
+                android:id="@+id/rl_absentProfileProjectMgmnt"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_33sdp"
+                android:background="@drawable/bg_disable"
+                android:padding="@dimen/_4sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ll_absentProfileProjectMgmnt">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/immigration" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_absentProfileProjectMgmnt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_4sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rl_absentProfileProjectMgmnt"
+                app:layout_constraintEnd_toStartOf="@id/iv_absentProfileProjectMgmnt">
+
+                <TextView
+                    android:id="@+id/tv_totalAbsentProfileProjectMgmnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <TextView
+                    android:id="@+id/tv_AbsentProfileProjectMgmnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Absensi Bulan"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_8ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_absentProfileProjectMgmnt"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_chevron_right_secondary_color"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_absentProfileProjectMgmnt"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/cl_clientProfileProjectMgmnt"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/_4sdp"-->
+<!--            android:layout_marginEnd="@dimen/_8sdp"-->
+<!--            android:layout_marginVertical="@dimen/_6sdp"-->
+<!--            android:padding="@dimen/_4sdp"-->
+<!--            android:background="@drawable/bg_white_card"-->
+<!--            android:elevation="@dimen/_4sdp"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/cl_absentProfileProjectMgmnt"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/rlCftalkProfileProjectMgmnt"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            >-->
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/rl_clientProfileProjectMgmnt"-->
+<!--                android:layout_width="@dimen/_32sdp"-->
+<!--                android:layout_height="@dimen/_33sdp"-->
+<!--                android:background="@drawable/bg_disable"-->
+<!--                android:padding="@dimen/_4sdp"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="@id/ll_clientProfileProjectMgmnt">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:src="@drawable/immigration" />-->
+
+<!--            </RelativeLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/ll_clientProfileProjectMgmnt"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginHorizontal="@dimen/_4sdp"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/rl_clientProfileProjectMgmnt"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/iv_clientProfileProjectMgmnt">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_countClientProfileProjectMgmnt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="0"-->
+<!--                    android:textColor="@color/neutral100"-->
+<!--                    android:textSize="@dimen/_14ssp"-->
+<!--                    android:fontFamily="@font/poppinssemibold"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Client"-->
+<!--                    android:textColor="@color/grayTxt"-->
+<!--                    android:textSize="@dimen/_8ssp"-->
+<!--                    android:fontFamily="@font/poppinsmedium"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_clientProfileProjectMgmnt"-->
+<!--                android:layout_width="@dimen/_16sdp"-->
+<!--                android:layout_height="@dimen/_16sdp"-->
+<!--                android:src="@drawable/ic_chevron_right_secondary_color"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="@id/ll_clientProfileProjectMgmnt"/>-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPeriodicManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rlCftalkProfileProjectMgmnt"
+            android:layout_marginTop="10dp"
+            >
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_card"
+                android:padding="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:elevation="@dimen/_2sdp"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginBottom="6dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_periodic_management"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="Pekerjaan Periodik"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"/>
+
+                <ImageView
+                    android:id="@+id/image_periodik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_right_secondary_color"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="3dp"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_below="@id/image_periodik"/>
+
+                <LinearLayout
+                    android:id="@+id/linear_closing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_below="@id/image_periodik">
+
+                    <LinearLayout
+                        android:id="@+id/linear_visibility"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_20sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Tanggal Pekerjaan"
+                                android:textColor="@color/black2"
+                                android:fontFamily="@font/poppinsregular"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:text=":"
+                                android:textColor="@color/black2"
+                                android:fontFamily="@font/poppinsregular"/>
+
+
+                            <TextView
+                                android:id="@+id/tv_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black2"
+                                android:fontFamily="@font/poppinsregular"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_5sdp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Status Closing"
+                                android:textColor="@color/black2"
+                                android:fontFamily="@font/poppinsregular"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:text=":"
+                                android:textColor="@color/black2"
+                                android:fontFamily="@font/poppinsregular"/>
+
+
+                            <TextView
+                                android:id="@+id/tv_status_closing"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/red"
+                                android:fontFamily="@font/poppinsbold"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_closing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linear_visibility"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_blue_rounded"
+                        android:fontFamily="@font/poppinsregular"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:text="@string/text_daily_closing"
+                        android:visibility="gone"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linear_visibility"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_stroke_blue"
+                        android:fontFamily="@font/poppinsregular"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:visibility="gone"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:text="Lihat Riwayat"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_10ssp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ll1_profileProjectManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_profileProjectMgmnt">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_absentProfileProjectMgmntClient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_marginVertical="@dimen/_6sdp"
+            android:padding="@dimen/_4sdp"
+            android:background="@drawable/bg_white_card"
+            android:elevation="@dimen/_4sdp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/rl_absentProfileProjectMgmntClient"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_33sdp"
+                android:background="@drawable/bg_disable"
+                android:padding="@dimen/_4sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_absentProfileProjectMgmntClient">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/immigration" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_absentProfileProjectMgmntClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_4sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rl_absentProfileProjectMgmntClient"
+                app:layout_constraintEnd_toStartOf="@id/iv_absentProfileProjectMgmntClient">
+
+                <TextView
+                    android:id="@+id/tv_totalAbsentProfileProjectMgmntClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <TextView
+                    android:id="@+id/tv_AbsentProfileProjectMgmntClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Absensi Bulan"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_8ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_absentProfileProjectMgmntClient"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_chevron_right_secondary_color"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_absentProfileProjectMgmntClient"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_clientProfileProjectMgmntClient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_marginVertical="@dimen/_6sdp"
+            android:padding="@dimen/_4sdp"
+            android:visibility="gone"
+            android:background="@drawable/bg_white_card"
+            android:elevation="@dimen/_4sdp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/rl_clientProfileProjectMgmntClient"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_33sdp"
+                android:background="@drawable/bg_disable"
+                android:padding="@dimen/_4sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_clientProfileProjectMgmntClient">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/immigration" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_clientProfileProjectMgmntClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_4sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rl_clientProfileProjectMgmntClient"
+                app:layout_constraintEnd_toStartOf="@id/iv_clientProfileProjectMgmntClient">
+
+                <TextView
+                    android:id="@+id/tv_clientProfileProjectMgmntClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Client"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_8ssp"
+                    android:fontFamily="@font/poppinsmedium"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_clientProfileProjectMgmntClient"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_chevron_right_secondary_color"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_clientProfileProjectMgmntClient"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

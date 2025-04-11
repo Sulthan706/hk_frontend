@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.facerecog.ui._new.ConfirmFacePhotoActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:id="@+id/rectangle_1"
+                android:layout_width="match_parent"
+                android:layout_height="420.5dp"
+                android:background="@drawable/bg_register_face_recog"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <include
+                android:id="@+id/layout_appbar"
+                layout="@layout/app_bar_default"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rlLogoFaceSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/layout_appbar"
+                android:layout_marginTop="19dp"
+                android:layout_marginHorizontal="134dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:src="@drawable/ic_logo_cf"
+                    android:background="@drawable/bg_face_recog_cam"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="9dp"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivCapturedFace"
+                android:layout_width="240dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toBottomOf="@+id/rlLogoFaceSubmit"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="30dp"
+
+                />
+            <LinearLayout
+                android:id="@+id/llBtnRegisFaceRecog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/ivCapturedFace"
+                android:orientation="vertical"
+                android:layout_marginTop="23dp">
+                <TextView
+                    android:id="@+id/tvUserNameRegisFace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Fritz agricia"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="24sp"
+                    android:textColor="@color/secondary_color"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:layout_marginHorizontal="24dp"/>
+                <TextView
+                    android:id="@+id/tvUserProjectCodeRegisFace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="DIC12321"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="24dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:text="Foto ini akan disimpan sebagai foto diri Anda" />
+
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFaceRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/llBtnRegisFaceRecog"
+                android:layout_marginHorizontal="24dp"
+                android:text="Simpan Foto Anda"
+                android:fontFamily="@font/poppinssemibold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:cornerRadius="9dp"
+                android:layout_marginTop="28dp"
+                android:paddingVertical="13dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFaceRegisBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/btnFaceRegis"
+                android:layout_marginHorizontal="24dp"
+                android:text="Ulangi Ambil Foto"
+                android:fontFamily="@font/poppinssemibold"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_color"
+                android:background="@color/smsp_transparent_color"
+                app:cornerRadius="9dp"
+                android:layout_marginTop="16dp"
+                android:paddingVertical="13dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

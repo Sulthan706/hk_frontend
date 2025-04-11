@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/_15sdp"
+    app:cardCornerRadius="@dimen/_12sdp"
+    app:cardElevation="@dimen/_12sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_notif_client"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:civ_border_color="@android:color/darker_gray"
+                app:civ_border_width="@dimen/_1sdp"
+                android:src="@drawable/foto1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toStartOf="@+id/tv_selesai_notif_client"
+                android:layout_toEndOf="@id/iv_notif_client"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name_notif_client"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Your Name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_plotting_notif_client"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Error Plotting"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_selesai_notif_client"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/bg_status_notif"
+                android:elevation="@dimen/_8sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:paddingHorizontal="@dimen/_11ssp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="Selesai"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/tv_date_notif_client"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="left"
+                    android:text=". . . , 01/01/0000"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+
+                <TextView
+                    android:id="@+id/tv_area_notif_client"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="right"
+                    android:text="Area"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/tv_shift_notif_client"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="left"
+                    android:text="Shift"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+
+                <TextView
+                    android:id="@+id/tv_subarea_notif_client"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="right"
+                    android:text="Sub Area"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

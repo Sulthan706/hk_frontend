@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.service.resign.ui.activity.ListReqResignVendorActivity">
+
+    <include
+        android:id="@+id/appBarResignList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/app_bar_default"/>
+
+    <TextView
+        android:id="@+id/tvEmptyResignVendor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Tidak ada data"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rvCardResignVendor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarResignList"
+        tools:listitem="@layout/item_resign_vendor"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCreateResign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:contentDescription="fabaddResign"
+        android:layout_marginBottom="91dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_add_white"
+        app:tint="@color/white"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

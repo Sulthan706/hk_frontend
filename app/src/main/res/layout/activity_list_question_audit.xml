@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.inspeksi.audit.ui.activity.ListQuestionAuditActivity">
+
+    <include
+        android:id="@+id/appbarListQuestionAudit"
+        layout="@layout/app_bar_default"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerListQuestionAudit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmitEnableListQuestionAudit"
+        app:layout_constraintTop_toBottomOf="@id/appbarListQuestionAudit">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_placeholder_question_audit"/>
+            <include layout="@layout/shimmer_placeholder_question_audit"/>
+            <include layout="@layout/shimmer_placeholder_question_audit"/>
+            <include layout="@layout/shimmer_placeholder_question_audit"/>
+            <include layout="@layout/shimmer_placeholder_question_audit"/>
+            <include layout="@layout/shimmer_placeholder_question_audit"/>
+            <include layout="@layout/shimmer_placeholder_question_audit"/>
+            <include layout="@layout/shimmer_placeholder_question_audit"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListQuestionAudit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        tools:listitem="@layout/list_question_audit"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmitEnableListQuestionAudit"
+        app:layout_constraintTop_toBottomOf="@id/appbarListQuestionAudit"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitDisableListQuestionAudit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/bg_disable"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Simpan"
+        android:visibility="visible"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitEnableListQuestionAudit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/bg_secondary"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Simpan"
+        android:visibility="invisible"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homeScreenUpdated.schedule.ui.activity.ChangeScheduleManagementActivity">
+
+    <include
+        android:id="@+id/appbarChangeScheduleManagement"
+        layout="@layout/app_bar_default" />
+
+    <TextView
+        android:id="@+id/tv1ChangeScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Initial Plan"
+        android:textColor="@color/neutral100"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintTop_toBottomOf="@id/appbarChangeScheduleManagement" />
+
+    <TextView
+        android:id="@+id/tvDateChangeScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:text="Select Date"
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:background="@drawable/bg_field"
+        android:drawableEnd="@drawable/ic_calendar_orange"
+        app:layout_constraintTop_toBottomOf="@id/tv1ChangeScheduleManagement"/>
+
+    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+        android:id="@+id/spinnerProjectDivertedChangeScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:paddingStart="@dimen/_4sdp"
+        android:background="@drawable/bg_dropdown"
+        android:spinnerMode="dropdown"
+        app:smsp_arrowColor="@color/white"
+        app:smsp_arrowPaddingRight="@dimen/_2sdp"
+        app:smsp_enableFloatingLabel="false"
+        app:smsp_floatingLabelColor="@color/white"
+        app:smsp_floatingLabelText="Select Project"
+        app:smsp_hint="Select Project"
+        app:smsp_hintColor="@color/grayTxt"
+        app:smsp_hintSize="@dimen/_11ssp"
+        app:smsp_isSearchable="true"
+        app:smsp_itemColor="@color/black2"
+        app:smsp_itemListColor="@color/black2"
+        app:smsp_itemListHintBackgroundColor="#808080"
+        app:smsp_itemListHintColor="@color/primary_color"
+        app:smsp_multilineError="false"
+        app:smsp_searchHeaderBackgroundColor="@color/primary_color"
+        app:smsp_searchHeaderText="Select Project"
+        app:smsp_searchTextColor="@color/black2"
+        app:smsp_selectedItemListColor="@color/black2"
+        app:smsp_underlineColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvDateChangeScheduleManagement"/>
+
+    <View
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/background"
+        app:layout_constraintTop_toBottomOf="@id/spinnerProjectDivertedChangeScheduleManagement" />
+
+    <TextView
+        android:id="@+id/tv2ChangeScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Change Plan to"
+        android:textColor="@color/neutral100"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintTop_toBottomOf="@id/layout1" />
+
+    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+        android:id="@+id/spinnerProjectChangeScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:paddingStart="@dimen/_4sdp"
+        android:background="@drawable/bg_dropdown"
+        android:spinnerMode="dropdown"
+        app:smsp_arrowColor="@color/white"
+        app:smsp_arrowPaddingRight="@dimen/_2sdp"
+        app:smsp_enableFloatingLabel="false"
+        app:smsp_floatingLabelColor="@color/white"
+        app:smsp_floatingLabelText="Select Project"
+        app:smsp_hint="Select Project"
+        app:smsp_hintColor="@color/grayTxt"
+        app:smsp_hintSize="@dimen/_11ssp"
+        app:smsp_isSearchable="true"
+        app:smsp_itemColor="@color/black2"
+        app:smsp_itemListColor="@color/black2"
+        app:smsp_itemListHintBackgroundColor="#808080"
+        app:smsp_itemListHintColor="@color/primary_color"
+        app:smsp_multilineError="false"
+        app:smsp_searchHeaderBackgroundColor="@color/primary_color"
+        app:smsp_searchHeaderText="Select Project"
+        app:smsp_searchTextColor="@color/black2"
+        app:smsp_selectedItemListColor="@color/black2"
+        app:smsp_underlineColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tv2ChangeScheduleManagement"/>
+
+    <TextView
+        android:id="@+id/tv3ChangeScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Reason"
+        android:textColor="@color/neutral100"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsmedium"
+        app:layout_constraintTop_toBottomOf="@id/spinnerProjectChangeScheduleManagement" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerReasonChangeScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:background="@drawable/bg_dropdown"
+        android:entries="@array/listActivitiesManagement"
+        android:spinnerMode="dropdown"
+        app:layout_constraintTop_toBottomOf="@id/tv3ChangeScheduleManagement"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDisableChangeScheduleManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:text="Submit Plan"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsmedium"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_rounded_disable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerReasonChangeScheduleManagement"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:visibility="gone"
+        android:id="@+id/btnChangeScheduleManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:text="Submit Plan"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsmedium"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerReasonChangeScheduleManagement"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

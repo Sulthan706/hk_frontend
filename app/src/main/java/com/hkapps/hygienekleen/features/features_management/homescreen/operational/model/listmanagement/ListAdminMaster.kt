@@ -1,0 +1,13 @@
+package com.hkapps.hygienekleen.features.features_management.homescreen.operational.model.listmanagement
+
+data class ListAdminMaster(
+    val content: List<ContentManagementOperational>,
+    val empty: Boolean,
+    val first: Boolean,
+    val last: Boolean,
+    val number: Int,
+    val numberOfElements: Int,
+    val pageable: Pageable,
+    val size: Int,
+    val sort: SortX
+)

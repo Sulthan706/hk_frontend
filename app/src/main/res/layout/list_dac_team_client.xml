@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_6sdp"
+    android:padding="@dimen/_8sdp"
+    android:orientation="horizontal"
+    android:weightSum="2.5"
+    android:background="@drawable/bg_secondary">
+
+    <TextView
+        android:id="@+id/tvDacListTeamClient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:text="Error dac"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsregular"/>
+
+    <TextView
+        android:id="@+id/tvDacTimeListTeamClient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Error time"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppinsregular"/>
+
+</LinearLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_custom_dialog"
+    android:orientation="vertical"
+    android:padding="@dimen/_12sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1.1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tentukan Periode"
+            android:textColor="@color/black3"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+        <ImageView
+            android:id="@+id/ivCloseAttendanceProjectDialog"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_weight="0.1"
+            android:src="@drawable/ic_close_grey"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="Jenis laporan"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsmedium"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="Absensi CF Team"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:background="@drawable/bg_field_empty_card"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="Project"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsmedium"/>
+
+    <TextView
+        android:id="@+id/tvProjectAttendanceProjectDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:padding="@dimen/_8sdp"
+        android:text="Error"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:background="@drawable/bg_field_empty_card"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="Periode"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsmedium"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mulai dari"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sampai dengan"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppinsmedium"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvDateStartAttendanceProjectDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:padding="@dimen/_8sdp"
+            android:text="Pilih tanggal"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:background="@drawable/bg_field"/>
+
+        <TextView
+            android:id="@+id/tvDateEndAttendanceProjectDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:padding="@dimen/_8sdp"
+            android:text="Pilih tanggal"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:background="@drawable/bg_field"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:text="Laporan dibuat dalam format file Excel (.xls)."
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDownloadAttendanceProjectDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:text="Download File"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsmedium"
+        android:background="@drawable/bg_secondary"/>
+
+</LinearLayout>

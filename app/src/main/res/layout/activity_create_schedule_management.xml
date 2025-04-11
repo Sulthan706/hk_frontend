@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homeScreenUpdated.schedule.ui.activity.CreateScheduleManagementActivity">
+
+    <include
+        android:id="@+id/appbarCreateScheduleManagement"
+        layout="@layout/app_bar_default"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="visible"
+        android:id="@+id/clEmptyCreateScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/appbarCreateScheduleManagement">
+
+        <TextView
+            android:id="@+id/tv1CreateScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="Visit Date"
+            android:textColor="@color/graybtn"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivCreateScheduleManagement"/>
+
+        <ImageView
+            android:id="@+id/ivCreateScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_schedule_management_grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv1CreateScheduleManagement"
+            app:layout_constraintBottom_toBottomOf="@id/tv1CreateScheduleManagement"/>
+
+        <TextView
+            android:id="@+id/tv2CreateScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="- visits"
+            android:textColor="@color/graybtn"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <View
+            android:id="@+id/viewCreateScheduleManagement"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/grayLine"
+            app:layout_constraintTop_toBottomOf="@id/ivCreateScheduleManagement"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rvCreateScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        tools:listitem="@layout/item_list_create_schedule_management"
+        app:layout_constraintTop_toBottomOf="@id/appbarCreateScheduleManagement"
+        app:layout_constraintBottom_toTopOf="@id/clBottomCreateScheduleManagement"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBottomCreateScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20sdp"
+        android:orientation="horizontal"
+        android:elevation="@dimen/_10sdp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+        
+        <LinearLayout
+            android:id="@+id/llTotVisitsCreateScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Visits"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <TextView
+                android:id="@+id/tvTotVisitsCreateScheduleManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_20ssp"
+                android:fontFamily="@font/poppinsbold"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAddDateCreateScheduleManagement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:text="Add Date"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:drawableStart="@drawable/ic_add_circle_primary"
+            android:drawablePadding="@dimen/_4sdp"
+            app:layout_constraintEnd_toStartOf="@id/btnSubmitDisableCreateScheduleManagement"
+            app:layout_constraintTop_toTopOf="@id/llTotVisitsCreateScheduleManagement"
+            app:layout_constraintBottom_toBottomOf="@id/llTotVisitsCreateScheduleManagement"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:visibility="visible"
+            android:id="@+id/btnSubmitDisableCreateScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:background="@drawable/bg_gray_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/llTotVisitsCreateScheduleManagement"
+            app:layout_constraintBottom_toBottomOf="@id/llTotVisitsCreateScheduleManagement"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:visibility="invisible"
+            android:id="@+id/btnSubmitCreateScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:background="@drawable/bg_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/llTotVisitsCreateScheduleManagement"
+            app:layout_constraintBottom_toBottomOf="@id/llTotVisitsCreateScheduleManagement"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

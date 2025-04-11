@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.monthlyworkreport.ui.activity.operator.PeriodicOperatorDetailActivity">
+    <include
+        android:id="@+id/appbarMonthlyWorkReportChecklist"
+        layout="@layout/app_bar_default"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/appbarMonthlyWorkReportChecklist"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTypeMonthlyRkb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="65dp"
+                    android:layout_height="23dp"
+                    android:paddingHorizontal="3dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:id="@+id/tvTypeJob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="12sp"
+                        android:text="Daily"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textColor="@color/white"
+                        android:gravity="center"/>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="24dp"
+                    >
+                    <ImageView
+                        android:id="@+id/ivStampDetailRkb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        tools:src="@drawable/ic_stamp"
+                        android:layout_marginHorizontal="3dp"
+                        android:gravity="center"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:id="@+id/ivCheckjobDetailRkb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        tools:src="@drawable/ic_checklist_radial"
+                        android:layout_marginHorizontal="3dp"
+                        android:gravity="center"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:id="@+id/ivMessageDetailRkb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        tools:src="@drawable/ic_realization_rkb"
+                        android:layout_marginHorizontal="3dp"
+                        android:gravity="center"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:id="@+id/ivBaDetailRkb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        tools:src="@drawable/ic_ba"
+                        android:layout_marginHorizontal="3dp"
+                        android:gravity="center"
+                        android:visibility="gone"/>
+
+
+
+                </LinearLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <RelativeLayout
+                android:id="@+id/rlTypeMonthlyWorkReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/clTypeMonthlyRkb"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp">
+                <TextView
+                    android:id="@+id/tvDetailJob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SWEEPING"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/black"
+                    />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/llAreaSubareaChecklistRkb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/rlTypeMonthlyWorkReport"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Area"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="13sp"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/tvLocationChecklistRkb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LANTAI GF"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="13sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="8dp">
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Subarea"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="13sp"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/tvSubAreaChecklistRkb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LOBBY GF"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="13sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="13dp">
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Shift"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="13sp"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/tvShiftNameChecklistRkb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Shift pagi"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="13sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:id="@+id/viewLocationChecklistRkb"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/grey1"
+                app:layout_constraintTop_toBottomOf="@+id/llAreaSubareaChecklistRkb"/>
+            <TextView
+                android:id="@+id/tvFotoWorkChecklistRkb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/viewLocationChecklistRkb"
+                android:text="Foto Pekerjaan"
+                android:fontFamily="@font/poppinsmedium"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"/>
+            <LinearLayout
+                android:id="@+id/llPhotoChecklistRkb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tvFotoWorkChecklistRkb"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="24dp">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llBeforeRkb"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="10dp"
+                        >
+                        <ImageView
+                            android:id="@+id/ivBeforeRkb"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"
+                            android:contentDescription="Before Image" />
+                        <ImageView
+                            android:id="@+id/ivBeforeRkbEmpty"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:padding="40dp"
+                            android:background="@drawable/bg_field_disable"
+                            android:src="@drawable/ic_camera_black"
+                            android:contentDescription="Before Image" />
+                        <ProgressBar
+                            android:id="@+id/progressBarRkb"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"/>
+
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:id="@+id/llStatsButtonBeforeRkb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="9dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:text="Before"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnReplaceBeforePeriodic"
+                                android:layout_width="208dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="#2D9CDB"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="Ubah foto"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                app:cornerRadius="9dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Jenis Pekerjaan"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvCommentsBeforePeriodic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="9dp"
+                            android:background="@drawable/bg_field"
+                            android:fontFamily="@font/poppinsregular"
+                            tools:text="Before"
+                            android:textSize="12sp"
+                            android:padding="5dp"
+                            android:maxLines="2"
+                            android:maxLength="15"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clUploadBeforeImgPeriodicLate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_periodic_upload_before"
+                    android:gravity="center"
+                    android:padding="13dp"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_camera_fill"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Before"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:textColor="#FF5656"
+                            android:layout_marginLeft="4dp"
+                            android:textSize="12sp"
+                            android:layout_marginTop="1dp"/>
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clUploadBeforeImgPeriodic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_periodic_upload_before"
+                    android:gravity="center"
+                    android:padding="13dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/ivCameraBefore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_camera_fill"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Before"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:textColor="#FF5656"
+                            android:layout_marginLeft="4dp"
+                            android:textSize="12sp"
+                            android:layout_marginTop="1dp"/>
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llProcessRkb"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="10dp"
+                        >
+                        <ImageView
+                            android:id="@+id/ivProcessRkb"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"
+                            android:contentDescription="Before Image" />
+                        <ImageView
+                            android:id="@+id/ivProcessRkbEmpty"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:padding="40dp"
+                            android:background="@drawable/bg_field_disable"
+                            android:src="@drawable/ic_camera_black"
+                            android:contentDescription="Before Image" />
+                        <ProgressBar
+                            android:id="@+id/progressBarProgressRkb"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"/>
+
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:id="@+id/llStatsButtonProcessRkb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="9dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:text="Process"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnReplaceProgressPeriodic"
+                                android:layout_width="208dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="#2D9CDB"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="Ubah foto"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                app:cornerRadius="9dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Jenis Pekerjaan"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvCommentsProcessPeriodic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="9dp"
+                            android:background="@drawable/bg_field"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Before"
+                            android:textSize="12sp"
+                            android:padding="5dp"
+                            android:maxLines="2"
+                            android:maxLength="15"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clUploadProcessImgPeriodicLate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_periodic_upload_process"
+                    android:gravity="center"
+                    android:padding="13dp"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_camera_fill"
+                            android:backgroundTint="@color/primary_color"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Process"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:textColor="@color/primary_color"
+                            android:layout_marginLeft="4dp"
+                            android:textSize="12sp"
+                            android:layout_marginTop="1dp"/>
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clUploadProcessImgPeriodic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_periodic_upload_process"
+                    android:gravity="center"
+                    android:padding="13dp"
+                    android:layout_marginTop="16dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/ivCameraProcess"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_camera_fill"
+                            android:backgroundTint="@color/primary_color"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Process"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:textColor="@color/primary_color"
+                            android:layout_marginLeft="4dp"
+                            android:textSize="12sp"
+                            android:layout_marginTop="1dp"/>
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llAfterRkb"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="10dp"
+                        >
+                        <ImageView
+                            android:id="@+id/ivAfterRkb"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"
+                            android:contentDescription="Before Image" />
+                        <ImageView
+                            android:id="@+id/ivAfterRkbEmpty"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:padding="40dp"
+                            android:background="@drawable/bg_field_disable"
+                            android:src="@drawable/ic_camera_black"
+                            android:contentDescription="Before Image" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBarAfterRkb"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp" />
+
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:id="@+id/llStatsButtonAfterRkb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="9dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppinssemibold"
+                                android:text="After"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnReplaceAfterPeriodic"
+                                android:layout_width="208dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="#2D9CDB"
+                                android:fontFamily="@font/poppinsmedium"
+                                android:text="Ubah foto"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                app:cornerRadius="9dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Jenis Pekerjaan"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvCommentsAfterPeriodic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="9dp"
+                            android:background="@drawable/bg_field"
+                            android:fontFamily="@font/poppinsregular"
+                            tools:text="Before"
+                            android:textSize="12sp"
+                            android:padding="5dp"
+                            android:maxLines="2"
+                            android:maxLength="15"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clUploadAfterImgPeriodicLate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_periodic_upload_after"
+                    android:gravity="center"
+                    android:padding="13dp"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_camera_fill"
+                            android:backgroundTint="#2D9CDB"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="After"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:textColor="#2D9CDB"
+                            android:layout_marginLeft="4dp"
+                            android:textSize="12sp"
+                            android:layout_marginTop="1dp"/>
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clUploadAfterImgPeriodic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_periodic_upload_after"
+                    android:gravity="center"
+                    android:padding="13dp"
+                    android:layout_marginTop="16dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/ivCameraAfter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_camera_fill"
+                            android:backgroundTint="#2D9CDB"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="After"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:textColor="#2D9CDB"
+                            android:layout_marginLeft="4dp"
+                            android:textSize="12sp"
+                            android:layout_marginTop="1dp"/>
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/viewLocationChecklistRkb2"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/grey1"
+                app:layout_constraintTop_toBottomOf="@+id/llPhotoChecklistRkb"
+                android:layout_marginTop="18dp"/>
+            <RelativeLayout
+                android:id="@+id/rlCreateBachecklist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/viewLocationChecklistRkb2"
+                android:layout_marginHorizontal="24dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlBtnCreateBa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Berita Acara Pengalihan Pekerjaan"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textColor="@color/black"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:gravity="center_vertical"
+                        android:textSize="14sp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCreateBa"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="4dp"
+                        android:backgroundTint="#2D9CDB"
+                        app:cornerRadius="8dp"
+                        app:icon="@drawable/ic_pencil_rkb"
+                        app:iconTint="@color/white"
+                        android:visibility="gone"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCreateBaDisable"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="4dp"
+                        android:backgroundTint="@color/gray_dark"
+                        app:cornerRadius="8dp"
+                        app:icon="@drawable/ic_pencil_rkb"
+                        app:iconTint="@color/white" />
+                </RelativeLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clResultBa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvTitleResultBa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Berita Acara Pengalihan Pekerjaan"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+                    <LinearLayout
+                        android:id="@+id/llResultBa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTitleResultBa">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="90dp"
+                            android:layout_height="120dp"
+                            app:cardCornerRadius="8dp"
+                            android:layout_marginTop="5dp">
+                            <ImageView
+                                android:id="@+id/ivDivertedImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_camera_black"/>
+                            <ProgressBar
+                                android:id="@+id/progresbarBa"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+                        </androidx.cardview.widget.CardView>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/etResultBa"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:focusable="false"
+                            app:boxCornerRadiusBottomStart="8dp"
+                            app:boxCornerRadiusBottomEnd="8dp"
+                            app:boxCornerRadiusTopStart="8dp"
+                            app:boxCornerRadiusTopEnd="8dp"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTitleResultBa"
+                            app:boxStrokeColor="@color/black"
+                            android:layout_marginLeft="10dp">
+
+                            <EditText
+                                android:id="@+id/tvResultBa"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:ems="10"
+                                android:fontFamily="@font/poppinsregular"
+                                android:gravity="left|top"
+                                android:inputType="textMultiLine"
+                                android:maxLength="100"
+                                android:scrollbars="vertical"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvResultCreatedByBa"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="yang buat"
+                        android:textSize="11sp"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintTop_toBottomOf="@+id/llResultBa"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        app:layout_constraintTop_toBottomOf="@+id/tvResultCreatedByBa">
+                        <TextView
+                            android:id="@+id/tvResultDateBa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvResultCreatedByBa"
+                            tools:text="tanggal dibuat ba"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/tvRedirectedDateBa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/tvResultDateBa"
+                            tools:text="tanggal"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/viewLocationChecklistRkb3"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/grey1"
+                app:layout_constraintTop_toBottomOf="@+id/rlCreateBachecklist"
+                android:layout_marginTop="4dp"/>
+
+            <LinearLayout
+                android:id="@+id/llFinishChecklistRkb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/viewLocationChecklistRkb3"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginHorizontal="24dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Diselesaikan Pada"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="13dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/tvFinishJobDateChecklistRkb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="13dp"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/viewLocationChecklistRkb4"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/grey1"
+                app:layout_constraintTop_toBottomOf="@+id/llFinishChecklistRkb"
+                android:layout_marginTop="16dp"/>
+            <LinearLayout
+                android:id="@+id/llStatusApproval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/viewLocationChecklistRkb4"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Status Approval"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:layout_marginHorizontal="24dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="12dp">
+                    <ImageView
+                        android:id="@+id/ivDotStatusApproval"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_uncheck_rkb"
+                        android:layout_marginTop="4dp"/>
+                    <TextView
+                        android:id="@+id/tvStatsResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:fontFamily="@font/poppinsregular"
+                        tools:text="Menunggu persetujuan penanggung jawab atau pengawas tertinggi"
+                        android:gravity="center_vertical"
+                        />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:background="@color/grey1"
+                    android:layout_marginTop="16dp"/>
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnApprovalJob"
+                android:layout_width="366dp"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toBottomOf="@+id/llStatusApproval"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:cornerRadius="8dp"
+                android:text="Approve"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/white"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="40dp"
+                android:visibility="gone"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

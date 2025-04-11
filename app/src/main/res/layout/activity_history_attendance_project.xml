@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.dashboardProject.ui.activity.HistoryAttendanceProjectActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_32sdp">
+
+            <DatePicker
+                android:id="@+id/calendarHistoryAttendanceProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:datePickerMode="calendar"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:theme="@style/ClientDatePickerTheme"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/btnPilihTanggalHistoryAttendanceProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:background="@drawable/bg_secondary_new"
+                android:text="Pilih tanggal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsmedium"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/view1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/calendarHistoryAttendanceProject"/>
+
+            <LinearLayout
+                android:id="@+id/ll1HistoryAttendanceProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/view1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jadwal Libur"
+                        android:textColor="@color/grey3"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tvOffEmployeeHistoryAttendanceProject"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/grey3"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jadwal Masuk"
+                        android:textColor="@color/grey2_client"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tvWorkingHistoryAttendanceProject"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/grey2_client"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                </LinearLayout>
+
+                <com.mackhartley.roundedprogressbar.RoundedProgressBar
+                    android:id="@+id/progressBarHistoryAttendanceProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    app:rpbBackgroundColor="@color/grayLine"
+                    app:rpbProgressColor="@color/green2"
+                    app:rpbCornerRadius="@dimen/_12sdp"
+                    app:rpbProgressTextColor="@color/white"
+                    app:rpbTextPadding="@dimen/_12sdp"
+                    app:rpbTextSize="@dimen/_12ssp"
+                    app:rpbProgress="50"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/llCountAttendanceHistoryAttendanceProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvHadirHistoryAttendanceProject"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hadir"
+                        android:textColor="@color/green2"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                    <TextView
+                        android:id="@+id/tvTidakHadirHistoryAttendanceProject"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tidak hadir"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/red1"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvEmptyActualScheduleHistoryAttendanceProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:text="Data kehadiran belum tersedia"
+                    android:textAlignment="center"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/ll1HistoryAttendanceProject"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_22sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/view2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jadwal Lembur"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <TextView
+                    android:id="@+id/tvEmptyOvertimeScheduleHistoryAttendanceProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:text="Data kehadiran belum tersedia"
+                    android:textAlignment="center"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:id="@+id/llOvertimeChangeHistoryAttendanceProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lembur Ganti"
+                        android:textColor="@color/grey2_client"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                    <TextView
+                        android:id="@+id/tvOvertimeChangeHistoryAttendanceProject"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="-"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/grey2_client"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOvertimeRequestHistoryAttendanceProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lembur Tagih"
+                        android:textColor="@color/grey2_client"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                    <TextView
+                        android:id="@+id/tvOvertimeRequestHistoryAttendanceProject"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="-"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/grey2_client"
+                        android:fontFamily="@font/poppinssemibold"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDownloadHistoryAttendanceProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:text="Download Report"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:background="@drawable/bg_secondary"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/appbarHistoryAttendanceProject"
+        layout="@layout/app_bar_default_client"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

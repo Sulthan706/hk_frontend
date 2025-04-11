@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.home.ui.activity.HomeNewsManagementActivity">
+
+    <include
+        android:id="@+id/appbarNewsManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/app_bar_default"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNewsManagement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbarNewsManagement"
+        tools:listitem="@layout/item_list_home_news"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/tvEmtpyStateNewsManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/appbarNewsManagement"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="14sp"
+        android:text="Tidak ada pengumuman"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppinsregular"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

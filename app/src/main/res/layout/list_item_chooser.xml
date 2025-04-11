@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_field"
+    android:paddingVertical="@dimen/_6sdp"
+    android:paddingHorizontal="@dimen/_12sdp"
+    android:layout_marginBottom="@dimen/_6sdp">
+
+    <TextView
+        android:id="@+id/tvItemChooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:text="Error"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black2"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_toStartOf="@id/ivDefaultChooser"/>
+
+    <ImageView
+        android:id="@+id/ivDefaultChooser"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:src="@drawable/ic_circle_chooser"
+        android:visibility="visible"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+
+    <RelativeLayout
+        android:id="@+id/ivSelectedChooser"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="@dimen/_14sdp"
+            android:layout_height="@dimen/_14sdp"
+            android:src="@drawable/ic_selected1_circle_chooser"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="@dimen/_7sdp"
+            android:layout_height="@dimen/_7sdp"
+            android:src="@drawable/ic_selected2_circle_chooser"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

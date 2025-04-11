@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.features_management.homescreen.home.ui.fragment.ServiceManagementFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="visible"
+        android:id="@+id/clServiceManagement"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_service">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:background="@color/grayLine"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:id="@+id/llIzinServiceManagement"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/search_new" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llLemburServiceManagement"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/time_new" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llApprovalServiceManagement"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/ic_approval" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llTrainingServiceManagement"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_white"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/training" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCutiServiceManagement"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_disable_new"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:src="@drawable/ic_cuti_new" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Izin"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Lembur"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Approval"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9ssp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Training"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Cuti"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="3">
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="@dimen/_90sdp"
+            android:background="@drawable/bg_white_card"
+            android:elevation="10dp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvCurrentMonthDateService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Error"
+                android:textAlignment="center"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_14ssp" />
+
+            <LinearLayout
+                android:id="@+id/llInfo1ServiceManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCurrentMonthDateService"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_primary_rounded" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_2sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Jumlah"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_8ssp" />
+
+                <View
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_secondary_rounded" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_2sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Terpakai"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_8ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llInfo2ServiceManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llInfo1ServiceManagement"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal"
+                android:weightSum="3.2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_55sdp"
+                        android:layout_gravity="center">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarCuti"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:indeterminateOnly="false"
+                            android:progressDrawable="@drawable/circular_bar_progress"
+                            tools:progress="0" />
+
+                        <TextView
+                            android:id="@+id/tv_progressBarCuti"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="0 / 0"
+                            android:textAlignment="center"
+                            android:textColor="@color/secondary_color"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Cuti"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_55sdp"
+                        android:layout_gravity="center">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarIzin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:indeterminateOnly="false"
+                            android:progressDrawable="@drawable/circular_bar_progress"
+                            tools:progress="0" />
+
+                        <TextView
+                            android:id="@+id/tv_progressBarIzin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="0 / 0"
+                            android:textAlignment="center"
+                            android:textColor="@color/secondary_color"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Izin"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_55sdp"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:background="@drawable/bg_red">
+
+                        <TextView
+                            android:id="@+id/tvApprovalIzinService"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_16ssp"
+                            android:gravity="center"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/tvApprovalIzinService"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="Menunggu"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Approval Izin"
+                        android:textAlignment="center"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llInfo2ServiceManagement"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/info_service_management"
+                android:textColor="@color/grayTxt"
+                android:textSize="@dimen/_8ssp"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Service"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/clServiceBod"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl1ServiceBod"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:padding="@dimen/_16sdp"
+            android:background="@drawable/bg_tracking_activity"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvTitleServiceBod"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Service"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clApprovalIzinServiceBod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/bg_white_card"
+            android:elevation="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@id/rl1ServiceBod">
+
+            <ImageView
+                android:id="@+id/iv1ServiceBod"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/search_new"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv1ServiceBod"/>
+
+            <TextView
+                android:id="@+id/tv1ServiceBod"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:text="Approval Izin Management"
+                android:textColor="@color/black1"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center_vertical"
+                android:drawableEnd="@drawable/ic_next_grey"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv1ServiceBod"/>
+
+            <TextView
+                android:id="@+id/tvNotifIzinServiceBod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:background="@drawable/bg_red"
+                android:text="0 menunggu"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppinsmedium"
+                app:layout_constraintTop_toBottomOf="@id/tv1ServiceBod"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/llTrainingServiceBod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/bg_white_card"
+            android:elevation="@dimen/_4sdp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/clApprovalIzinServiceBod">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/training" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:text="Training"
+                android:textColor="@color/black1"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center_vertical"
+                android:drawableEnd="@drawable/ic_next_grey"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

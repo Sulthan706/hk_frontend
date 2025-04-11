@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_list_complaint_client"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_14sdp"
+    android:layout_marginTop="@dimen/_2sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_8sdp"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivHistoryApproval"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:src="@drawable/foto1"
+            app:civ_border_color="@android:color/darker_gray"
+            app:civ_border_width="@dimen/_1sdp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_toEndOf="@id/ivHistoryApproval"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNamaHistoryApproval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppinssemibold"
+                android:maxLines="1"
+                android:text="Error Nama"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toEndOf="@id/iv_listComplaint"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNucJobHistoryApproval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                android:text="error nuc | error job"
+                android:textColor="@color/gray_dark"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toEndOf="@id/iv_listComplaint"
+                app:layout_constraintTop_toBottomOf="@id/tv_namaListComplaint" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tvShiftHistoryApproval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                android:text="Error shift"
+                android:textColor="@color/grey4"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/tvTimeHistoryApproval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="1"
+                android:text="Error waktu"
+                android:textAlignment="textEnd"
+                android:textColor="@color/grey4"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDescHistoryApproval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:padding="@dimen/_4sdp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="berada di luar area"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/bg_red"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="horizontal"
+            android:weightSum="2.5">
+
+            <TextView
+                android:id="@+id/tvTimeCreatedHistoryApproval"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="error"
+                android:textColor="@color/grey5"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsregular"
+                android:drawableStart="@drawable/ic_schedule_grey"
+                android:drawablePadding="@dimen/_3sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/tvStatusHistoryApproval"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/_6sdp"
+                android:text="error"
+                android:textAlignment="center"
+                android:textColor="@color/grey2_client"
+                android:textSize="@dimen/_10ssp"
+                android:background="@drawable/bg_field"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

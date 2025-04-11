@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_5sdp"
+    tools:context=".features.features_vendor.homescreen.dac.ui.fragment.ConfirmDacChecklistDialog">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_16sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_18sdp">
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:lottie_url="https://lottie.host/380923b1-7935-417b-8612-3b285cf33c3a/2RBQwciBwR.json"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Berhasil Submit Foto"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/green2"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="22dp">
+                <TextView
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="Diambil pada"
+                    android:textAlignment="textStart"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/tvDateCreatedJobByRkb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    tools:text="tanggal"
+                    android:textAlignment="textEnd"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="Diambil oleh"
+                    android:textAlignment="textStart"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivIconDialogRkb"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/ic_profile"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="5dp">
+                    <TextView
+                        android:id="@+id/tvNameCreatedJobByRkb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        tools:text="Charles iskandar"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:id="@+id/tvPositionCreatedJobByRkb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        tools:text="jabatan"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCreatedRkb"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/secondary_color"
+                android:text="Oke, Lanjut"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppinssemibold"
+                app:cornerRadius="8dp"
+                android:layout_marginTop="42dp"
+                android:layout_marginBottom="40dp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

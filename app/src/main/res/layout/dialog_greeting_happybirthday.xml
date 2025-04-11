@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDialog"
+        android:layout_width="320dp"
+        android:layout_height="360dp"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dari"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppinsregular"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_birthday_hat"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_32sdp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivImageManagement"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/profile_ic"
+                    app:civ_border_color="@color/gray"/>
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Selamat Ulang Tahun"
+                android:textAlignment="center"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/secondary_color"/>
+            <TextView
+                android:id="@+id/tvNameBirthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                tools:text="fritz agricia saduk"
+                android:textAlignment="center"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Semoga makin sukses, sehat selalu, dan apa yang diharapkan di tahun ini bisa terwujud. Terima kasih telah menjadi bagian dari keluarga PT Peduli Cepat Internasional. Kami doakan yang terbaik untukmu."
+                android:textAlignment="center"
+                android:textSize="@dimen/_10ssp" />
+
+
+            <RelativeLayout
+                android:id="@+id/btnBackGreetingSiang"
+                android:background="@drawable/bg_secondary"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:layout_gravity="center"
+                android:textColor="@color/white">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Oke, siap"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppinssemibold"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

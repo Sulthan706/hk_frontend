@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llMainContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_secondary_radiusbottom"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+                    
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabArrowLeftBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:src="@drawable/ic_arrow_left_black"
+                        android:elevation="@dimen/_3sdp"
+                        app:fabSize="mini"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:gravity="center"
+                        android:text="Visit Report"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp"/>
+
+                    <ImageView
+                        android:id="@+id/ivBtnHistoryVisit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginEnd="1dp"
+                        android:src="@drawable/ic_calendar_white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvMonthMainReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_black_text"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/_9sdp"
+                        android:paddingVertical="@dimen/_3sdp"
+                        android:text="November 2022"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="@dimen/_10sdp"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTitleTodayKunjungan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/llMainContent"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:text="Berkunjung hari ini"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/tvTitleTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:text="--"
+                    android:fontFamily="@font/poppinsregular"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEmtpyStateVisitReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Belum ada agenda kunjungan hari ini"
+                app:layout_constraintTop_toBottomOf="@id/llTitleTodayKunjungan"
+                android:fontFamily="@font/poppinsregular"
+                android:textAlignment="center"
+                android:paddingVertical="@dimen/_100sdp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVisitReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmtpyStateVisitReport"
+                tools:listitem="@layout/item_my_team_clients_cfmanagement"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:visibility="gone"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/rvVisitReport"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

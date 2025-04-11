@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.service.overtime.ui.activity.CreateOvertimeChangeManagementActivity">
+
+    <include
+        android:id="@+id/appbarCreateOvertimeChangeManagement"
+        layout="@layout/app_bar_default"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarCreateOvertimeChangeManagement">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llSection1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_20sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Tipe Lembur"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tvDisableTitleOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/bg_field_disable"
+                    android:fontFamily="@font/poppinsregular"
+                    android:maxLines="1"
+                    android:text="Error Title"
+                    android:textColor="@color/neutral100"
+                    android:visibility="gone"
+                    android:textSize="@dimen/_12ssp" />
+
+                <Spinner
+                    android:id="@+id/spinnerOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_spinner_field_default"
+                    android:entries="@array/overtimeType"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_10sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Project"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+                <Spinner
+                    android:id="@+id/spinnerProjectOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_spinner_field_default"
+                    android:entries="@array/noChoose"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tvDisableProjectOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/bg_field_disable"
+                    android:fontFamily="@font/poppinsregular"
+                    android:maxLines="1"
+                    android:text="Error Project"
+                    android:textColor="@color/neutral100"
+                    android:visibility="gone"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewLine1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@drawable/bg_disable"/>
+
+            <LinearLayout
+                android:id="@+id/llSection2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_12sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Alasan Lembur"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_descOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_field_empty_card"
+                    android:padding="@dimen/_10sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_descOvertimeChangeManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="start"
+                        android:hint="Alasan lembur"
+                        android:inputType="text"
+                        android:maxLines="2"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_11ssp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/llDateAlfaOvertimeChange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Tanggal Lembur"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dateAlfaOvertimeChangeManagement"
+                        android:layout_width="match_parent      "
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:background="@drawable/bg_field_empty_card"
+                        android:paddingHorizontal="@dimen/_6sdp"
+                        android:paddingVertical="@dimen/_8sdp">
+
+                        <TextView
+                            android:id="@+id/tv_dateAlfaOvertimeChangeManagement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/ivCalendar1"
+                            android:fontFamily="@font/poppinsregular"
+                            android:maxLines="1"
+                            android:text="Pilih Tanggal"
+                            android:textAlignment="center"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <ImageView
+                            android:id="@+id/ivCalendar1"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_calendar_orange" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/llTitleDateShiftOvertimeChange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Tanggal"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_weight="0.8"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Shift"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/llDateShiftOvertimeChange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tvDisableDateOvertimeChangeManagement"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1.1"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/bg_field_disable"
+                        android:fontFamily="@font/poppinsregular"
+                        android:maxLines="1"
+                        android:text="Error Title"
+                        android:textColor="@color/neutral100"
+                        android:visibility="gone"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:id="@+id/tvDisableShiftOvertimeChangeManagement"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="0.9"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/bg_field_disable"
+                        android:fontFamily="@font/poppinsregular"
+                        android:maxLines="1"
+                        android:text="Error Title"
+                        android:textColor="@color/neutral100"
+                        android:visibility="gone"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dateOvertimeChangeManagement"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/bg_field_empty_card"
+                        android:paddingHorizontal="@dimen/_6sdp"
+                        android:paddingVertical="@dimen/_8sdp">
+
+                        <TextView
+                            android:id="@+id/tv_dateOvertimeChangeManagement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/ivCalendar"
+                            android:fontFamily="@font/poppinsregular"
+                            android:maxLines="1"
+                            android:text="Pilih Tanggal"
+                            android:textAlignment="center"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <ImageView
+                            android:id="@+id/ivCalendar"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_calendar_orange" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_shiftOvertimeChangeManagement"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/bg_field_empty_card"
+                        android:paddingHorizontal="@dimen/_4sdp"
+                        android:paddingVertical="@dimen/_8sdp">
+
+                        <TextView
+                            android:id="@+id/tv_shiftOvertimeChangeManagement"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="Pilih Shift"
+                            android:textAlignment="center"
+                            android:textColor="@color/neutral100"
+                            android:textSize="@dimen/_11ssp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPilihKaryawanOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Karyawan yang Lembur"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tvInfoPilihJabatanOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih level jabatan yang perlu dicarikan pengganti"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_8ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textStyle="italic"/>
+
+                <Spinner
+                    android:id="@+id/spinnerLevelOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_spinner_field_default"
+                    android:entries="@array/noChoose"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_10sdp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_opsOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/bg_field_empty_card"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tv_opsOvertimeChangeManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:maxLines="1"
+                        android:text="Cari nama karyawan"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_11ssp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_opsResignOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/bg_field_empty_card"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tv_opsResignOvertimeChangeManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:maxLines="1"
+                        android:text="Cari nama karyawan"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_11ssp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvDisableOperationalOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/bg_field_disable"
+                    android:fontFamily="@font/poppinsregular"
+                    android:maxLines="1"
+                    android:text="Error"
+                    android:textColor="@color/neutral100"
+                    android:visibility="gone"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/tvDisableJabatanOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/bg_field_disable"
+                    android:fontFamily="@font/poppinsregular"
+                    android:maxLines="1"
+                    android:text="Error Jabatan"
+                    android:textColor="@color/neutral100"
+                    android:visibility="gone"
+                    android:textSize="@dimen/_12ssp" />
+
+                <LinearLayout
+                    android:id="@+id/llOvertimeTypeResignManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSpinnerAreaOvertimeChangeManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:text="Area"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerAreaOvertimeChangeManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/bg_field_empty_card"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:spinnerMode="dropdown"
+                        app:smsp_arrowColor="@color/grayTxt"
+                        app:smsp_arrowPaddingBottom="@dimen/_5sdp"
+                        app:smsp_arrowPaddingLeft="@dimen/_1sdp"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_floatingLabelColor="@color/white"
+                        app:smsp_floatingLabelText="Pilih area"
+                        app:smsp_hint="Pilih Area"
+                        app:smsp_hintColor="@color/neutral100"
+                        app:smsp_hintSize="@dimen/_12ssp"
+                        app:smsp_isSearchable="false"
+                        app:smsp_itemColor="@color/neutral100"
+                        app:smsp_itemListColor="@color/neutral100"
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="@color/primary_color"
+                        app:smsp_multilineError="false"
+                        app:smsp_selectedItemListColor="@color/neutral100"
+                        app:smsp_underlineColor="#F5F6F8" />
+
+                    <TextView
+                        android:id="@+id/tvSpinnerSubAreaOvertimeChangeManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Sub Area"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerSubAreaOvertimeChangeManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:background="@drawable/bg_field_empty_card"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:spinnerMode="dropdown"
+                        app:smsp_arrowColor="@color/grayTxt"
+                        app:smsp_arrowPaddingBottom="@dimen/_5sdp"
+                        app:smsp_arrowPaddingLeft="@dimen/_1sdp"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_floatingLabelColor="@color/white"
+                        app:smsp_floatingLabelText="Pilih area"
+                        app:smsp_hint="Pilih Sub Area"
+                        app:smsp_hintColor="@color/neutral100"
+                        app:smsp_hintSize="@dimen/_12ssp"
+                        app:smsp_isSearchable="false"
+                        app:smsp_itemColor="@color/neutral100"
+                        app:smsp_itemListColor="@color/neutral100"
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="@color/primary_color"
+                        app:smsp_multilineError="false"
+                        app:smsp_searchHeaderBackgroundColor="@color/primary_color"
+                        app:smsp_searchHeaderText="Cari sub area"
+                        app:smsp_searchTextColor="@color/neutral100"
+                        app:smsp_selectedItemListColor="@color/neutral100"
+                        app:smsp_underlineColor="#F5F6F8" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@drawable/bg_disable"/>
+
+            <LinearLayout
+                android:id="@+id/llChangeByOvertimeChangeManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_20sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Digantikan oleh"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_changeByOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_field_empty_card"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tv_changeByOvertimeChangeManagement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsregular"
+                        android:maxLines="1"
+                        android:text="Cari karyawan pengganti"
+                        android:textColor="@color/neutral100"
+                        android:textSize="@dimen/_11ssp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSection3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_primary_soft"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp">
+
+                <LinearLayout
+                    android:id="@+id/llInfoScheduleOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_weight="1"
+                        android:text="Jadwal Lembur"
+                        android:textColor="@color/primary_color"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/tvInfoScheduleOvertime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:gravity="end"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_11ssp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llInfoShiftOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_weight="1"
+                        android:text="Shift"
+                        android:textColor="@color/grayTxt"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/tvInfoShiftOvertime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:gravity="end"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_11ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llInfoAreaOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_weight="1"
+                        android:text="Area"
+                        android:textColor="@color/grayTxt"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/tvInfoAreaOvertime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:gravity="end"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_11ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llInfoSubareaOvertimeChangeManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_weight="1"
+                        android:text="Subarea"
+                        android:textColor="@color/grayTxt"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/tvInfoSubareaOvertime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:gravity="end"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_11ssp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submitDisableOvertimeChangeManagement"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_margin="@dimen/_22sdp"
+                android:background="@drawable/bg_disable"
+                android:fontFamily="@font/poppinsmedium"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Submit"
+                android:visibility="visible"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submitEnableOvertimeChangeManagement"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_margin="@dimen/_22sdp"
+                android:background="@drawable/bg_primary"
+                android:fontFamily="@font/poppinsmedium"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Submit"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

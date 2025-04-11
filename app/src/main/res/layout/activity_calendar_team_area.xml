@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_client.dashboardProject.ui.activity.CalendarTeamAreaActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_32sdp">
+
+            <DatePicker
+                android:id="@+id/calendarTeamArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:datePickerMode="calendar"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:theme="@style/ClientDatePickerTheme"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/btnPilihTanggalTeamArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_4sdp"
+                android:background="@drawable/bg_secondary_new"
+                android:text="Pilih tanggal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/poppinsmedium"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/view1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/calendarTeamArea"/>
+
+            <LinearLayout
+                android:id="@+id/ll1CalendarTeamArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/view1">
+
+                <LinearLayout
+                    android:id="@+id/llSubLocCalendarTeamArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sub area"
+                        android:textColor="@color/grey2_client"
+                        android:textSize="@dimen/_13ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerSubLocCalendarTeamArea"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_spinner_no_padding"
+                        android:spinnerMode="dropdown"
+                        app:smsp_arrowColor="@color/white"
+                        app:smsp_arrowPaddingRight="@dimen/_2sdp"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_floatingLabelColor="@color/white"
+                        app:smsp_floatingLabelText="Pilih area"
+                        app:smsp_hint="Pilih sub area"
+                        app:smsp_hintColor="@color/graybtn"
+                        app:smsp_hintSize="@dimen/_11ssp"
+                        app:smsp_isSearchable="false"
+                        app:smsp_itemColor="@color/black2"
+                        app:smsp_itemListColor="@color/black2"
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="@color/primary_color"
+                        app:smsp_multilineError="false"
+                        app:smsp_searchHeaderBackgroundColor="@color/primary_color"
+                        app:smsp_searchHeaderText="Cari sub area"
+                        app:smsp_searchTextColor="@color/black2"
+                        app:smsp_selectedItemListColor="@color/black2"
+                        app:smsp_underlineColor="@color/white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llShiftCalendarTeamArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Shift"
+                        android:textColor="@color/grey2_client"
+                        android:textSize="@dimen/_13ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spinnerShiftCalendarTeamArea"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_spinner"
+                        android:spinnerMode="dropdown"
+                        app:smsp_arrowColor="@color/white"
+                        app:smsp_arrowPaddingRight="@dimen/_2sdp"
+                        app:smsp_enableFloatingLabel="false"
+                        app:smsp_floatingLabelColor="@color/white"
+                        app:smsp_floatingLabelText="Pilih area"
+                        app:smsp_hint="Pilih sub area"
+                        app:smsp_hintColor="@color/graybtn"
+                        app:smsp_hintSize="@dimen/_11ssp"
+                        app:smsp_isSearchable="false"
+                        app:smsp_itemColor="@color/black2"
+                        app:smsp_itemListColor="@color/black2"
+                        app:smsp_itemListHintBackgroundColor="#808080"
+                        app:smsp_itemListHintColor="@color/primary_color"
+                        app:smsp_multilineError="false"
+                        app:smsp_searchHeaderBackgroundColor="@color/primary_color"
+                        app:smsp_searchHeaderText="Cari sub area"
+                        app:smsp_searchTextColor="@color/black2"
+                        app:smsp_selectedItemListColor="@color/black2"
+                        app:smsp_underlineColor="@color/white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jam kerja"
+                        android:textColor="@color/grey2_client"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tvWorkTimeCalendarTeamArea"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="-"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/grey2_client"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pekerjaan"
+                        android:textColor="@color/grey2_client"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppinsmedium"/>
+
+                    <TextView
+                        android:id="@+id/tvPekerjaanCalendarTeamArea"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="-"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/grey2_client"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDacCalendarTeamArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/list_dac_team_client"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/ll1CalendarTeamArea"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_22sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/view2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pengawas"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <TextView
+                    android:id="@+id/tvEmptyPengawasCalendarTeamArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:text="tidak ada pengawas"
+                    android:textAlignment="center"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvDefaultPengawasCalendarTeamArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:text="pilih sub area dan shift terlebih dahulu"
+                    android:textAlignment="center"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:visibility="visible"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPengawasCalendarTeamArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:visibility="gone"
+                    tools:listitem="@layout/list_employee_history_attendance_project"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="Operator"
+                    android:textColor="@color/grey2_client"
+                    android:textSize="@dimen/_13ssp"
+                    android:fontFamily="@font/poppinssemibold"/>
+
+                <TextView
+                    android:id="@+id/tvEmptyOperatorCalendarTeamArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:text="tidak ada operator"
+                    android:textAlignment="center"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvDefaultOperatorCalendarTeamArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:text="pilih sub area dan shift terlebih dahulu"
+                    android:textAlignment="center"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:visibility="visible"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvOperatorCalendarTeamArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:visibility="gone"
+                    tools:listitem="@layout/list_employee_history_attendance_project"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/appbarCalendarTeamArea"
+        layout="@layout/app_bar_default_client"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

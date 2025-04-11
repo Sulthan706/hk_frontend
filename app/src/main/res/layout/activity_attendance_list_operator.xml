@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.NotAbsentOperatorActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_attendanceMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/abl">
+
+        <RelativeLayout
+            android:id="@+id/llCountStaffAttendanceIn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_choose_shift">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/bg_rounded_lightblue_attendance"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/_65sdp">
+
+                <TextView
+                    android:id="@+id/tvCountTotalAttendanceIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:paddingHorizontal="@dimen/_18sdp"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:text="-"
+                    android:textColor="#2B5281"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                   />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvCountAttendanceIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Jumlah staff :"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_60sdp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llBtnAttendanceInAndOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/llCountStaffAttendanceIn">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/bg_rectangle_orange_attendance">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvNotAttendanceStaff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="-"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Belum absen"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/bg_rectangle_lightblue_attendance">
+
+                <RelativeLayout
+                    android:id="@+id/llBtnAttendanceOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="@dimen/_20ssp"
+                        android:layout_marginBottom="@dimen/_1sdp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:foregroundGravity="center"
+                        android:src="@drawable/ic_chevron_right"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/_20ssp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="center"
+                        android:text="Sudah absen"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llListAttendanceLoadingState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_68sdp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tvListNotAttendance">
+
+            <TextView
+                android:id="@+id/tvEmptyStateNotAbsent"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:maxLines="2"
+                android:text="Pilih shift terlebih dahulu untuk menampilkan laporan hari ini"
+                android:textAlignment="center"
+                android:textSize="@dimen/_12ssp"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvListNotAttendance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Daftar staff yang belum absen"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintTop_toBottomOf="@+id/llBtnAttendanceInAndOut" />
+
+        <TextView
+            android:id="@+id/tvChooseStaffTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Sedang dilihat:"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_staff_not_attendance"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1.6"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/llListAttendanceLoadingState"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+            android:id="@+id/spinner_choose_shift"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_choose_shift"
+            android:paddingHorizontal="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvChooseStaffTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:smsp_arrowColor="@color/white"
+            app:smsp_arrowPaddingBottom="@dimen/_5sdp"
+            app:smsp_arrowPaddingLeft="@dimen/_1sdp"
+            app:smsp_enableFloatingLabel="false"
+            app:smsp_floatingLabelColor="@color/white"
+            app:smsp_floatingLabelText="Pilih Shift"
+            app:smsp_hint="Pilih Shift"
+            app:smsp_hintColor="@color/white"
+            app:smsp_hintSize="@dimen/_10sdp"
+            app:smsp_isSearchable="true"
+            app:smsp_itemColor="@color/white"
+            app:smsp_itemListColor="@color/secondary_color"
+            app:smsp_itemListHintBackgroundColor="#808080"
+            app:smsp_itemListHintColor="@color/primary_color"
+            app:smsp_multilineError="false"
+            app:smsp_searchHeaderText="Search Shift"
+            app:smsp_searchTextColor="@color/primary_color"
+            app:smsp_selectedItemListColor="@color/secondary_color" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/layout_appbar_attendance_list_operator"
+            layout="@layout/app_bar_default" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnHistoryAttendanceTim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#6F89FF"
+        app:elevation="@dimen/_12sdp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/add_fab"
+        app:layout_constraintEnd_toEndOf="@+id/add_fab"
+        app:layout_constraintStart_toStartOf="@+id/add_fab"
+        app:srcCompat="@drawable/ic_history_tim_attendance_fab"
+        app:tint="@color/white" />
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnHistoryAttendancePerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#00BD8C"
+        app:elevation="@dimen/_12sdp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/btnHistoryAttendanceTim"
+        app:layout_constraintEnd_toEndOf="@+id/btnHistoryAttendanceTim"
+        app:layout_constraintStart_toStartOf="@+id/btnHistoryAttendanceTim"
+        app:srcCompat="@drawable/ic_history_person_attendance_fab"
+        app:tint="@color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_14sdp"
+        android:backgroundTint="#F47721"
+        android:scaleType="fitXY"
+        app:elevation="@dimen/_14sdp"
+        app:fabCustomSize="@dimen/_55sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="@dimen/_29sdp"
+        app:srcCompat="@drawable/ic_history_attendance_floating"
+        app:tint="@color/white"
+        android:visibility="visible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addFabCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_14sdp"
+        android:backgroundTint="#F47721"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        app:elevation="@dimen/_14sdp"
+        app:fabCustomSize="@dimen/_55sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="@dimen/_20sdp"
+        app:srcCompat="@drawable/ic_cancel_fab"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

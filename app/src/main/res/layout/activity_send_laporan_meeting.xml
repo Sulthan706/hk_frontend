@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_management.homescreen.inspeksi.mainInspeksi.ui.meeting.activity.SendLaporanMeetingActivity">
+
+    <include
+        android:id="@+id/appbarSendLaporanMeeting"
+        layout="@layout/app_bar_default"/>
+
+    <TextView
+        android:id="@+id/tv1SendLaporanMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Tambahkan nama dan email partisipan meeting untuk mengirim laporan"
+        android:textColor="@color/grey2_client"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/appbarSendLaporanMeeting"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSendLaporanMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tv1SendLaporanMeeting"
+        app:layout_constraintBottom_toTopOf="@+id/rlSendLaporanMeeting"
+        tools:listitem="@layout/list_client_meeting"/>
+
+    <RelativeLayout
+        android:id="@+id/rlSendLaporanMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/bg_field_dotted_blue"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmitEnableSendLaporanMeeting">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableStart="@drawable/ic_create_light_blue"
+            android:drawablePadding="@dimen/_4sdp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Tambah Partisipan"
+            android:textColor="@color/blue2"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitDisableSendLaporanMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_margin="@dimen/_22sdp"
+        android:background="@drawable/bg_disable"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Submit &amp; Kirim Email"
+        android:visibility="visible"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitEnableSendLaporanMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_margin="@dimen/_22sdp"
+        android:background="@drawable/bg_secondary"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="Submit &amp; Kirim Email"
+        android:visibility="invisible"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

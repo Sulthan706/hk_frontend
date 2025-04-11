@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/bg_field_tranparent"
+        android:layout_marginTop="@dimen/_5sdp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_status_agenda_training"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sedang berjalan"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="#F47721"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Judul Training"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="@dimen/_12ssp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total partisipan: 10 Orang"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="@dimen/_10ssp"/>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

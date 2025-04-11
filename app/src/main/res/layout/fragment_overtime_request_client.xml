@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.features_client.overtime.ui.fragment.OvertimeRequestClientFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_22sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Judul Lembur"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp" />
+
+        <Spinner
+            android:id="@+id/spinnerOvertimeRequestClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_spinner_default"
+            android:elevation="@dimen/_6sdp"
+            android:entries="@array/overtimeReqType"
+            android:paddingVertical="@dimen/_12sdp"
+            android:paddingStart="@dimen/_10sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Alasan Lembur"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_descOvertimeRequestClient"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginHorizontal="@dimen/_4ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_empty_card"
+            android:elevation="@dimen/_6sdp"
+            android:padding="@dimen/_10sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_descOvertimeRequestClient"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="start"
+                android:hint="Alasan lembur"
+                android:inputType="text"
+                android:maxLines="2"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_12ssp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Unggah Foto"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_imageOvertimeRequestClient"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:backgroundTint="#DEDEDE"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_4sdp">
+
+            <ImageView
+                android:id="@+id/iv_defaultOvertimeRequestClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0.25"
+                android:src="@drawable/ic_camera_black"
+                android:visibility="visible"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/iv_OvertimeRequestClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Tanggal"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_dateOvertimeRequestClient"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_empty_card"
+            android:elevation="@dimen/_6sdp"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:paddingVertical="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/tv_dateOvertimeRequestClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/ivCalendar"
+                android:fontFamily="@font/poppinsmedium"
+                android:maxLines="1"
+                android:text="Pilih tanggal"
+                android:textAlignment="center"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_12ssp" />
+
+            <ImageView
+                android:id="@+id/ivCalendar"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_calendar_orange" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Jam"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_time1OvertimeRequestClient"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:background="@drawable/bg_empty_card"
+                android:elevation="@dimen/_6sdp"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/tv_time1OvertimeRequestClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_24sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:id="@+id/rl_time2OvertimeRequestClient"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:background="@drawable/bg_empty_card"
+                android:elevation="@dimen/_6sdp"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/tv_time2OvertimeRequestClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_24sdp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/neutral100"
+                    android:textSize="@dimen/_12ssp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Area"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp" />
+
+        <Spinner
+            android:id="@+id/spinner_LocOvertimeRequestClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_spinner_default"
+            android:elevation="@dimen/_6sdp"
+            android:entries="@array/noChoose"
+            android:paddingVertical="@dimen/_12sdp"
+            android:paddingStart="@dimen/_10sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Sub Area"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp" />
+
+        <Spinner
+            android:id="@+id/spinner_SubLocOvertimeRequestClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_spinner_default"
+            android:elevation="@dimen/_6sdp"
+            android:entries="@array/noChoose"
+            android:paddingVertical="@dimen/_12sdp"
+            android:paddingStart="@dimen/_10sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Operational"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_opsOvertimeRequestClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_empty_card"
+            android:elevation="@dimen/_6sdp"
+            android:padding="@dimen/_10sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_opsOvertimeRequestClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="@font/poppinsmedium"
+                android:inputType="number"
+                android:maxLines="1"
+                android:hint="Jumlah operator"
+                android:textColor="@color/neutral100"
+                android:textSize="@dimen/_12ssp" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submitEnableOvertimeRequestClient"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginVertical="@dimen/_20sdp"
+            android:background="@drawable/bg_primary"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Submit"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submitDisableOvertimeRequestClient"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginVertical="@dimen/_20sdp"
+            android:background="@drawable/bg_disable"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Submit"
+            android:visibility="visible"
+            android:enabled="false"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

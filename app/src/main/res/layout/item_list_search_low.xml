@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="12dp">
+
+    <TextView
+        android:id="@+id/tvNameProjectBotSheet"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="nama project"
+        android:maxLines="2"
+
+        android:fontFamily="@font/poppinsregular"
+        />
+    <ImageView
+        android:id="@+id/ivCheckProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_checkbox"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/ivUnCheckProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_checkbox_border"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:visibility="visible"/>
+
+
+
+</RelativeLayout>

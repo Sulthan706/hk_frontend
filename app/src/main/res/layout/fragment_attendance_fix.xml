@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/ll_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/bg_rectangle"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_check_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_bottom_side"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_self_attendance">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.8"
+                        android:fontFamily="@font/poppinsregular"
+                        android:padding="@dimen/_8sdp"
+                        android:text="Absen Masuk"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_check_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_check_in">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.8"
+                        android:fontFamily="@font/poppinsregular"
+                        android:padding="@dimen/_8sdp"
+                        android:text="Absen Keluar"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_attendance_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_check">
+
+                <TextView
+                    android:id="@+id/tv_attendance_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.45"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Catatan Kehadiran"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp" />
+
+                <TextView
+                    android:id="@+id/tv_attendance_see_all_history"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.55"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:gravity="center|end"
+                    android:text="Lihat semua"
+                    android:textColor="@color/blueTxt"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_attendance_history_attendance_disabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/rounded_attendance_disabled"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_attendance_log">
+
+                <TextView
+                    android:id="@+id/tv_attendance_history_disabled"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="left|bottom"
+                    android:padding="@dimen/_8sdp"
+                    android:text="Tidak ada absen"
+                    android:textColor="@color/gray"
+                    android:visibility="visible"
+                    tools:text="Absen dulu cuy" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_attendance_history_attendance_enabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/rounded_attendance_enabledv2"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_attendance_log">
+
+                <LinearLayout
+                    android:id="@+id/ll_attendance_history_enabled_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_attendance_enabledtop"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_attendance_history_enabled_datetitle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="left"
+                        android:padding="@dimen/_6sdp"
+                        android:textColor="@color/white"
+                        android:visibility="visible"
+                        tools:text="Tanggal :" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_history_enabled_date"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="right"
+                        android:padding="@dimen/_6sdp"
+                        android:textColor="@color/white"
+                        android:visibility="visible"
+                        tools:text="11 Jan 2022" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_attendance_status_in_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_attendance_history_enabled_in"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:gravity="center"
+                        android:padding="@dimen/_3sdp"
+                        android:textColor="@color/blueTxtV2"
+                        android:visibility="visible"
+                        tools:text="Masuk" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_history_enabled_out"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:gravity="center"
+                        android:padding="@dimen/_3sdp"
+                        android:textColor="@color/blueTxtV2"
+                        android:visibility="visible"
+                        tools:text="Pulang" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_attendance_status_in_out_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_attendance_history_enabled_in_status"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="center"
+                        android:padding="@dimen/_3sdp"
+                        android:textColor="@color/redTxt"
+                        android:visibility="visible"
+                        tools:text="Belum absen" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_history_enabled_out_status"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinsregular"
+                        android:gravity="center"
+                        android:padding="@dimen/_3sdp"
+                        android:textColor="@color/redTxt"
+                        android:visibility="visible"
+                        tools:text="Belum absen" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

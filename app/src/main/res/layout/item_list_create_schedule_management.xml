@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_6sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clDateListCreateScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvDateListCreateScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="error"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivDateListCreateScheduleManagement"/>
+
+        <ImageView
+            android:id="@+id/ivDateListCreateScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_schedule_management"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvDateListCreateScheduleManagement"
+            app:layout_constraintBottom_toBottomOf="@id/tvDateListCreateScheduleManagement"/>
+
+        <TextView
+            android:id="@+id/tvVisitsListCreateScheduleManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="- visits"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/ivDeleteListCreateScheduleManagement"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintStart_toEndOf="@id/tvDateListCreateScheduleManagement"
+            app:layout_constraintTop_toTopOf="@id/tvDateListCreateScheduleManagement"
+            app:layout_constraintBottom_toBottomOf="@id/tvDateListCreateScheduleManagement"/>
+
+        <View
+            android:id="@+id/viewListCreateScheduleManagement"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/grayLine"
+            app:layout_constraintTop_toBottomOf="@id/ivDateListCreateScheduleManagement"/>
+
+        <TextView
+            android:id="@+id/tvEditListCreateScheduleManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Add/Remove Project"
+            android:textColor="@color/blue5"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsmedium"
+            android:drawableStart="@drawable/ic_edit_blue5"
+            android:drawablePadding="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@id/viewListCreateScheduleManagement"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:background="@drawable/bg_field"
+        app:layout_constraintTop_toBottomOf="@id/clDateListCreateScheduleManagement">
+
+        <TextView
+            android:id="@+id/tvProjectCodeListCreateScheduleManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvProjectListCreateScheduleManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/poppinssemibold"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            app:layout_constraintTop_toBottomOf="@id/tvProjectCodeListCreateScheduleManagement"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:visibility="gone"
+            android:id="@+id/spinnerListCreateScheduleManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/bg_dropdown"
+            android:entries="@array/listActivitiesManagement"
+            android:spinnerMode="dropdown"
+            app:layout_constraintTop_toBottomOf="@id/tvProjectListCreateScheduleManagement"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

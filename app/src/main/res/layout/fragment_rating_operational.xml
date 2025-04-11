@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottom_sheets_background_white"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/star_rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="213dp" />
+
+    <TextView
+        android:id="@+id/tv_rating_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="3.5"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="205dp"
+        android:layout_marginRight="8dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_gravity="center_vertical"
+        app:civ_border_color="@android:color/darker_gray"
+        app:civ_border_width="@dimen/_2sdp"
+        tools:src="@drawable/profile_ic"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="200dp" />
+
+    <TextView
+        android:id="@+id/tv_name_profile_rating"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Nama employee"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="155dp" />
+
+
+
+
+    <TextView
+        android:id="@+id/tv_position_rating"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Penilaian Karyawan"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="125dp" />
+
+
+    <Spinner
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:id="@+id/spinner_rating"
+        android:background="@drawable/bg_field"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="85dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_chevron_down"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="60dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_give_rating"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/btn_rounded_secondary"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Penilaian"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        android:padding="15dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="10dp"
+
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_give_rating_success"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+
+        android:background="@drawable/btn_green"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Sukses!"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        android:padding="15dp"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_url="https://assets1.lottiefiles.com/packages/lf20_u4rxwy4z.json"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

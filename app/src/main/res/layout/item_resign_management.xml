@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="@dimen/_12sdp"
+    android:layout_margin="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/llCardResign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="13dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivUserProfileResign"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="13dp"
+                    android:src="@drawable/profile_default"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="@dimen/_4sdp">
+                    <TextView
+                        android:id="@+id/tvUserNameResign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        tools:text="Agricia saduk"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/tvNucAndPositionResign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        tools:text="DIC12345678 | Cleaner"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Permohonan: "
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:id="@+id/tvUserReasonResign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        tools:text="Resign"
+                        android:textAllCaps="true"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Project Sekarang:"
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvUserProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+                    tools:text="MALL KOTA KASABLANKA"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="left"
+                    android:text="Tanggal Resign"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvUserRequestResignDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_field_tranparent"
+                    android:fontFamily="@font/poppinsregular"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="5dp"
+                    tools:text="24 April 2024"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvTitleReasonResignResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:gravity="left"
+                    android:text="Alasan"
+                    android:textColor="@color/grayTxt"
+                    android:textSize="@dimen/_10ssp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvUserReasonResignResult"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_field_tranparent"
+                    android:fontFamily="@font/poppinsregular"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="5dp"
+                    tools:text="reason"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="190dp"
+                        android:layout_marginTop="13dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_calender_resign"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvCreateResignVendor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:gravity="center"
+                            tools:text="17 Apr 2024, 07:45"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="@dimen/_10ssp"
+                            android:layout_marginStart="25dp"
+                            />
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true">
+                        <com.google.android.material.button.MaterialButton
+                            android:visibility="gone"
+                            android:id="@+id/btnDeclineResign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tolak"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/poppinssemibold"
+                            app:cornerRadius="8dp"
+                            style="@style/CustomOutlinedButton"
+                            android:layout_marginEnd="10dp"/>
+                        <com.google.android.material.button.MaterialButton
+                            android:visibility="gone"
+                            android:id="@+id/btnApproveResign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Setujui"
+                            android:textAllCaps="false"
+                            android:backgroundTint="@color/green"
+                            android:fontFamily="@font/poppinssemibold"
+                            android:textColor="@color/white"
+                            app:cornerRadius="8dp"
+                            />
+                        <com.google.android.material.button.MaterialButton
+                            android:visibility="gone"
+                            android:id="@+id/btnApprovedResign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sudah Disetujui"
+                            android:textAllCaps="false"
+                            android:textColor="@color/green"
+                            android:fontFamily="@font/poppinssemibold"
+                            app:cornerRadius="8dp"
+                            app:rippleColor="@color/green"
+                            style="@style/CustomOutlinedButtonApproved"
+                            android:layout_marginEnd="10dp"/>
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEskalasiHcResign"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eskalasi ke HC"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/poppinssemibold"
+                            app:cornerRadius="8dp"
+                            app:rippleColor="@color/gray_dark"
+                            android:textColor="@color/gray_dark"
+                            style="@style/CustomOutlinedButtonDisable"
+                            android:layout_marginEnd="10dp"/>
+                        <com.google.android.material.button.MaterialButton
+                            android:visibility="gone"
+                            android:id="@+id/btnDeclinedResign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ditolak"
+                            android:textAllCaps="false"
+                            android:textColor="@color/red"
+                            app:rippleColor="@color/red"
+                            android:fontFamily="@font/poppinssemibold"
+                            app:cornerRadius="8dp"
+                            style="@style/CustomOutlinedButtonDeclined"
+                            android:layout_marginEnd="10dp"/>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEskalasiApproval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="*batas waktu approval sudah lewat 24 jam sehingga dieskalasi ke tim HC untuk ditindaklanjuti"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/grayTxt"
+                android:textSize="@dimen/_8ssp"
+                android:layout_marginHorizontal="12dp"
+                android:paddingBottom="5dp"
+                android:textStyle="italic"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

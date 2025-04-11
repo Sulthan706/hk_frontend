@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:background="@drawable/bg_field"
+    android:padding="@dimen/_8sdp"
+    android:paddingBottom="@dimen/_5sdp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_fotoStaff"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@drawable/bg_shimmer"
+        app:civ_border_color="@android:color/darker_gray"
+        app:civ_border_width="@dimen/_1sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/foto1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/iv_fotoStaff"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_userNameStaff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Error Name"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:id="@+id/tv_areaStaff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-3dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Error Area"
+            android:textColor="@color/neutral100"
+            android:textSize="@dimen/_10ssp" />
+
+
+        <TextView
+            android:id="@+id/tv_subAreaStaff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Error Sub Area"
+            android:textColor="@color/neutral80"
+            android:textSize="@dimen/_8ssp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

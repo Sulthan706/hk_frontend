@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_72sdp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivSelectedParticipant"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_42sdp"
+        android:src="@drawable/operation"
+        app:civ_border_width="@dimen/_1sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_round_close_circle"
+        app:layout_constraintBottom_toBottomOf="@id/ivSelectedParticipant"
+        app:layout_constraintEnd_toEndOf="@id/ivSelectedParticipant" />
+
+    <TextView
+        android:id="@+id/tvSelectedParticipant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="gabriella kambey"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/ivSelectedParticipant" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

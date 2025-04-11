@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_listBranch"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_14sdp"
+    android:layout_marginVertical="@dimen/_4sdp"
+    android:background="@drawable/bg_white_card"
+    android:elevation="@dimen/_6sdp"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/tvCodeBranchesHumanCapital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Branch 1"
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNameBranchesHumanCapital"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:text="All Branch"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppinssemibold"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/tvCodeBranchesHumanCapital"
+        app:layout_constraintEnd_toStartOf="@id/llStatisticBranchesHumanCapital"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTotMpBranchesHumanCapital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Active MP : 5.992"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/tvNameBranchesHumanCapital"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTurnoverBranchesHumanCapital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Turnover"
+        android:textColor="@color/grayTxt"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/llStatisticBranchesHumanCapital" />
+
+    <TextView
+        android:id="@+id/tvTotTurnoverBranchesHumanCapital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:text="-1"
+        android:textColor="@color/red4"
+        android:textSize="@dimen/_9ssp"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvTurnoverBranchesHumanCapital" />
+
+    <LinearLayout
+        android:id="@+id/llStatisticBranchesHumanCapital"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvTurnoverBranchesHumanCapital"
+        app:layout_constraintBottom_toBottomOf="@id/tvTotMpBranchesHumanCapital"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvResignBranchesHumanCapital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resign"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_9ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvTotResignBranchesHumanCapital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvNewcomerBranchesHumanCapital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Newcomer"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_9ssp"
+                android:fontFamily="@font/poppinsregular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvTotNewcomerBranchesHumanCapital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/green2"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppinssemibold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_next_grey"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

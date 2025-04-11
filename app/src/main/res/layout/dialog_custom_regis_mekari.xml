@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_18sdp"
+    app:cardCornerRadius="@dimen/_16sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/_20sdp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationSuccessRegisMekari"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_120sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/success_create_permission" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationFailedRegisMekari"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_120sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/failed_upload"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvSuccessRegisMekari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pendaftaran Berhasil"
+            android:textAlignment="center"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/green1"
+            android:fontFamily="@font/poppinssemibold"/>
+
+        <TextView
+            android:id="@+id/tvFailedRegisMekari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pendaftaran Belum Berhasil"
+            android:textAlignment="center"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/red1"
+            android:fontFamily="@font/poppinssemibold"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvInfoRegisMekari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/info_regis_mekari_success"
+            android:textAlignment="center"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_12ssp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDialogRegisMekari"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="Oke, siap"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/bg_secondary"/>
+
+        <TextView
+            android:id="@+id/tvInstallDialogRegisMekari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="Install App Mekari Flex"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/bg_field_blue"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:paddingVertical="@dimen/_4sdp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

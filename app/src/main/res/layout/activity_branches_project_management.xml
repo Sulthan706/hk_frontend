@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".features.features_management.homeScreenUpdated.project.ui.activity.BranchesProjectManagementActivity">
+
+    <include
+        android:id="@+id/appbarBranchesProjectManagement"
+        layout="@layout/app_bar_default"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvErrorBranchesProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Failed to get data, please check your connection"
+        android:textAlignment="center"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black2"
+        android:fontFamily="@font/poppinsregular"
+        app:layout_constraintTop_toBottomOf="@id/appbarBranchesProjectManagement"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:visibility="visible"
+        android:id="@+id/shimmerBranchesProject"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/appbarBranchesProjectManagement">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/shimmer_placeholder_branch_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/shimmer_placeholder_branch_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_branch_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_branch_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_branch_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <include
+                layout="@layout/shimmer_placeholder_branch_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/clDashboardBranchesProjectManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_12sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:elevation="@dimen/_6sdp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/appbarBranchesProjectManagement">
+
+        <TextView
+            android:id="@+id/tvDateBranchesProjectManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Today, 14 Dec 2024"
+            android:textAlignment="center"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNationalBranchesProjectManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="National"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintTop_toBottomOf="@id/tvDateBranchesProjectManagement"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAllBranchesProjectManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="All Branch"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintTop_toBottomOf="@id/tvNationalBranchesProjectManagement"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTotBranchesProjectManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="Total Project : 1.148"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintTop_toBottomOf="@id/tvAllBranchesProjectManagement"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvStatisticBranchesProjectManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:text="Statistic"
+            android:textColor="@color/grayTxt"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintTop_toBottomOf="@id/tvDateBranchesProjectManagement"
+            app:layout_constraintStart_toEndOf="@id/tvTotBranchesProjectManagement" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvStatisticBranchesProjectManagement"
+            app:layout_constraintBottom_toBottomOf="@id/tvTotBranchesProjectManagement"
+            app:layout_constraintStart_toEndOf="@id/tvTotBranchesProjectManagement"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvActiveBranchesProjectManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Active"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_9ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvPercentActiveBranchesProjectManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="88,88%"
+                    android:textColor="@color/green2"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvTotActiveBranchesProjectManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:text="8888"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvPercentActiveBranchesProjectManagement"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvClosedBranchesProjectManagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Closed"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_9ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvPercentClosedBranchesProjectManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="88,88%"
+                    android:textColor="@color/red1"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppinssemibold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvTotClosedBranchesProjectManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:text="8888"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/poppinsregular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvPercentClosedBranchesProjectManagement"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rvBranchesProjectManagement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        tools:listitem="@layout/branches_project"
+        app:layout_constraintTop_toBottomOf="@id/clDashboardBranchesProjectManagement"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

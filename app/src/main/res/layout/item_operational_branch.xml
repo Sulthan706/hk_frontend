@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_field"
+    android:elevation="2dp">
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingHorizontal="10dp">
+            <TextView
+                android:id="@+id/tvBranchName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Branch office"
+                android:fontFamily="@font/poppinssemibold"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tvTotalManpower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 MP"
+                android:fontFamily="@font/poppinssemibold"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/secondary_color"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tvBranch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="branch"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

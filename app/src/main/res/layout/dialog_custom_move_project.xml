@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_14sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_16sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_20sdp"
+            android:paddingHorizontal="@dimen/_12sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:src="@drawable/ic_move_project_attendance"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:text="Pindah Project?"
+                android:textAlignment="center"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/primary_color"
+                android:fontFamily="@font/poppinssemibold"/>
+
+            <TextView
+                android:id="@+id/tvInfoDialogMoveProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/move_project_check_in"
+                android:textAlignment="center"
+                android:textColor="@color/grayTxt"
+                android:textSize="@dimen/_10ssp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnHomeDialogMoveProject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:text="ke Home"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/primary_color"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:background="@drawable/bg_field_primary"/>
+
+                <Space
+                    android:layout_width="@dimen/_4sdp"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAbsentDialogMoveProject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:text="Absen sekarang"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:background="@drawable/bg_primary"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_trainer.myclass.ui.activity.FinishedCreateClassActivity">
+
+    <TextView
+        android:id="@+id/btnReturnFinishedCreateClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginBottom="@dimen/_52sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:gravity="center"
+        android:text="Kembali ke Daftar Kelas"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsmedium"
+        android:background="@drawable/bg_second_color"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/btnInviteFinishedCreateClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16ssp"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:background="@drawable/bg_rounded_dot_blue"
+        app:layout_constraintBottom_toTopOf="@+id/btnReturnFinishedCreateClass">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Invite Peserta"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppinsregular"
+            android:drawableStart="@drawable/ic_create_circle_blue"
+            android:drawablePadding="@dimen/_4sdp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvInfoFinishedCreateClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="@string/info_finished_create_class"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvFinishedCreateClass"/>
+
+    <TextView
+        android:id="@+id/tvFinishedCreateClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:text="Berhasil!"
+        android:textColor="@color/green2"
+        android:textSize="@dimen/_22ssp"
+        android:fontFamily="@font/poppinsbold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
