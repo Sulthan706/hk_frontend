@@ -164,6 +164,52 @@ class HomeManagementUpdatedFragment : Fragment() {
         activity?.window!!.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.white)
         isOnline(requireActivity())
 
+        binding.lltimesheetBod.setOnClickListener {
+            if (isVp) {
+//                    Toast.makeText(requireContext(), "feature coming soon", Toast.LENGTH_SHORT).show()
+                startActivity(
+                    Intent(
+                        requireActivity(),
+                        ListAllProjectManagementActivity::class.java
+                    ).also {
+                        it.putExtra("type", "timesheet")
+                    }
+                )
+            } else {
+                startActivity(
+                    Intent(
+                        requireActivity(),
+                        ListBranchProjectManagementActivity::class.java
+                    ).also {
+                        it.putExtra("type", "timesheet")
+                    }
+                )
+            }
+        }
+
+        binding.llTurnoverManagement.setOnClickListener {
+            if (isVp) {
+//                    Toast.makeText(requireContext(), "feature coming soon", Toast.LENGTH_SHORT).show()
+                startActivity(
+                    Intent(
+                        requireActivity(),
+                        ListAllProjectManagementActivity::class.java
+                    ).also {
+                        it.putExtra("type", "turnover")
+                    }
+                )
+            } else {
+                startActivity(
+                    Intent(
+                        requireActivity(),
+                        ListBranchProjectManagementActivity::class.java
+                    ).also {
+                        it.putExtra("type", "turnover")
+                    }
+                )
+            }
+        }
+
         // set version app text
         val manager = requireActivity().packageManager
         val info = manager.getPackageInfo(requireActivity().packageName, 0)
@@ -1175,6 +1221,7 @@ class HomeManagementUpdatedFragment : Fragment() {
         binding.clMenuBodCeoHomeManagementUpdated.visibility = View.GONE
         binding.llMenuManagementHomeUpdated.visibility = View.VISIBLE
         binding.llMenuTeknisiHomeManagementUpdated.visibility = View.GONE
+        binding.linearAlatMr.visibility = View.VISIBLE
 
         // set on click menu
         binding.llAttendanceManagement.setOnClickListener {
@@ -1273,6 +1320,12 @@ class HomeManagementUpdatedFragment : Fragment() {
             binding.llMenu3BodCeo.visibility = View.VISIBLE
 
             // set on click menu
+
+
+        } else {
+            binding.llTimesheetBodCeo.visibility = View.INVISIBLE
+            binding.llMenu3BodCeo.visibility = View.VISIBLE
+
             binding.llTimesheetBodCeo.setOnClickListener {
                 if (isVp) {
 //                    Toast.makeText(requireContext(), "feature coming soon", Toast.LENGTH_SHORT).show()
@@ -1317,7 +1370,7 @@ class HomeManagementUpdatedFragment : Fragment() {
                     )
                 }
             }
-            binding.llAlatBodCeo.setOnClickListener {
+            binding.llAlatBod.setOnClickListener {
                 if (isVp) {
 //                    Toast.makeText(requireContext(), "feature coming soon", Toast.LENGTH_SHORT).show()
                     startActivity(
@@ -1339,7 +1392,7 @@ class HomeManagementUpdatedFragment : Fragment() {
                     )
                 }
             }
-            binding.llMrBodCeo.setOnClickListener {
+            binding.llMrBod.setOnClickListener {
                 if (isVp) {
 //                    Toast.makeText(requireContext(), "feature coming soon", Toast.LENGTH_SHORT).show()
                     startActivity(
@@ -1361,10 +1414,6 @@ class HomeManagementUpdatedFragment : Fragment() {
                     )
                 }
             }
-
-        } else {
-            binding.llTimesheetBodCeo.visibility = View.INVISIBLE
-            binding.llMenu3BodCeo.visibility = View.GONE
         }
 
         // set on click menu

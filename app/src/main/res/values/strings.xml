@@ -67,10 +67,10 @@
     <string name="denial">Apakah anda ingin menolak cso ini?</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="text_desc_update_profile">Hai, Hygiene Kleen People. Silakan update data Anda. Pastikan data-data yang dimasukkan sudah benar, terutama data identitas seperti : NIK, status pernikahan, jumlah anak.\n \n Silakan klik pada bagian profile dan dokumen untuk melengkapi data tersebut.</string>
+    <string name="text_desc_update_profile">Hallo. Silakan update data Anda. Pastikan data-data yang dimasukkan sudah benar, terutama data identitas seperti : NIK, status pernikahan, jumlah anak.\n \n Silakan klik pada bagian profile dan dokumen untuk melengkapi data tersebut.</string>
     <string name="text_dialog_last_update_profile">Pastikan data-data yang dimasukkan sudah benar, seperti data : NIK, nama Bank &amp; nomor rekening, status pernikahan, &amp; jumlah anak. \n \n Silakan klik menu profile jika Anda ingin memperbarui data. </string>
-    <string name="new_update_info">Hai, Hygiene Kleen People.  Update aplikasi terlebih dahulu agar Anda tetap bisa mengakses fitur-fitur yang tersedia.</string>
-    <string name="dialog_edit_profile1">Hai, Hygiene Kleen People. Setelah kami cek, datamu masih belum lengkap. \n \n Yuk, isi Profile terlebih dahulu supaya Anda tetap bisa menggunakan fitur-fitur yang tersedia.</string>
+    <string name="new_update_info">Hallo, Update aplikasi terlebih dahulu agar Anda tetap bisa mengakses fitur-fitur yang tersedia.</string>
+    <string name="dialog_edit_profile1">Hallo, Setelah kami cek, datamu masih belum lengkap. \n \n Yuk, isi Profile terlebih dahulu supaya Anda tetap bisa menggunakan fitur-fitur yang tersedia.</string>
     <string name="dialog_edit_profile2">Silakan klik pada bagian profile dan dokumen untuk melengkapi data tersebut.</string>
     <string name="empty_project_search">Project yang Anda cari tidak ditemukan atau berada di luar pengawasan. Coba ulangi menggunakan kata kunci lainnya.</string>
     <string name="visit_tracking_info">Pantau aktivitas di project secara rutin. Lakukan absen masuk dan keluar setiap kali kunjungan ke project.</string>
@@ -80,7 +80,7 @@
     <string name="info_upload_photo_permission">Silakan unggah foto surat keterangan izin atau sakit. Permohonan Izin atau Sakit tanpa menyertakan surat akan mempengaruhi perhitungan absensi Anda. Foto surat dapat diunggah nanti jika surat sudah tersedia.</string>
     <string name="info_upload_photo_detail_permission">*Fitur upload berlaku jika foto belum di upload saat pengajuan izin, dan hanya diberikan kesempatan sekali upload.\n*Anda tidak dapat upload foto setelah 24 jam Izin disetujui Pengawas atau Manajemen.</string>
     <string name="Melengkapi_profile">Perhatian! Anda belum melengkapi semua data-data yang dibutuhkan. Yuk, isi data-data di bawah.</string>
-    <string name="title_isi_kk">Hygiene Kleen People, isi data berikut untuk keperluan verifikasi data pribadi. Pastikan Anda memberikan nomor KK yang benar.</string>
+    <string name="title_isi_kk">Hallo, isi data berikut untuk keperluan verifikasi data pribadi. Pastikan Anda memberikan nomor KK yang benar.</string>
     <string name="title_rekening">Kami memerlukan informasi bank dan rekeningmu untuk transaksi bulanan. Pastikan Anda memberikan data yang benar.</string>
     <string name="notes_download1">*Laporan dibuat dalam format file Pdf (.pdf)</string>
     <string name="notes_download2"><![CDATA[**Data yang diambil adalah daftar komplain CFTalk & CTalk di project yang dipilih]]></string>

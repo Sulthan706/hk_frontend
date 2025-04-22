@@ -76,6 +76,7 @@ class ProfileProjectManagementActivity : AppCompatActivity() {
                 startActivity(i)
             }
             binding.rlHeader.setBackgroundResource(R.drawable.bg_profile_project_primary)
+            binding.rlHeader.backgroundTintList = ContextCompat.getColorStateList(this, R.color.primary_color)
         }
 
         binding.btnClosing.setOnClickListener {

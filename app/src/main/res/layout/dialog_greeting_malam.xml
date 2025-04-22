@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/poppinsbold"
-                android:text="Selamat Malam,"
+                android:text="Selamat Malam"
                 android:textAlignment="center"
                 android:textSize="@dimen/_12ssp"
                 android:textColor="@color/black"/>
@@ -42,6 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsbold"
+                android:visibility="gone"
                 android:text="Hygiene Kleen People"
                 android:textAlignment="center"
                 android:textSize="@dimen/_12ssp"

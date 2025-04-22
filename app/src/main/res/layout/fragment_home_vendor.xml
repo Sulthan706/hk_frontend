@@ -619,6 +619,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="@dimen/_12sdp"
                                 android:layout_weight="1"
+                                android:visibility="gone"
                                 android:elevation="@dimen/_8sdp"
                                 android:orientation="vertical">
 
@@ -650,6 +651,42 @@
 
                             </LinearLayout>
 
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                android:elevation="@dimen/_8sdp"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_timesheet_area"
+                                    android:layout_width="@dimen/_58sdp"
+                                    android:layout_height="@dimen/_58sdp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/bg_white_card">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_34sdp"
+                                        android:layout_height="@dimen/_34sdp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_timesheets" />
+
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_timesheet"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/_4sdp"
+                                    android:fontFamily="@font/poppinsmedium"
+                                    android:text="Timesheet"
+                                    android:textColor="@color/color_brown"
+                                    android:textSize="@dimen/_12ssp" />
+
+                            </LinearLayout>
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -663,6 +700,8 @@
 
                         </LinearLayout>
 
+
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -670,7 +709,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:visibility="gone"
                         android:layout_marginHorizontal="@dimen/_12sdp"
                         app:layout_constraintTop_toBottomOf="@id/linearLayout6">
 
@@ -710,41 +748,7 @@
 
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_8sdp"
-                            android:layout_marginBottom="@dimen/_12sdp"
-                            android:layout_weight="1"
-                            android:elevation="@dimen/_8sdp"
-                            android:orientation="vertical">
 
-                            <RelativeLayout
-                                android:id="@+id/rl_timesheet"
-                                android:layout_width="@dimen/_58sdp"
-                                android:layout_height="@dimen/_58sdp"
-                                android:layout_gravity="center"
-                                android:background="@drawable/bg_white_card">
-
-                                <ImageView
-                                    android:layout_width="@dimen/_34sdp"
-                                    android:layout_height="@dimen/_34sdp"
-                                    android:layout_centerInParent="true"
-                                    android:src="@drawable/ic_timesheets" />
-
-                            </RelativeLayout>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginTop="@dimen/_4sdp"
-                                android:fontFamily="@font/poppinsmedium"
-                                android:text="Timesheet"
-                                android:textColor="@color/color_brown"
-                                android:textSize="@dimen/_12ssp" />
-
-                        </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -788,6 +792,7 @@
                             android:layout_marginTop="@dimen/_8sdp"
                             android:layout_marginBottom="@dimen/_12sdp"
                             android:layout_weight="1"
+                            android:visibility="invisible"
                             android:elevation="@dimen/_8sdp"
                             android:orientation="vertical">
 
@@ -825,7 +830,7 @@
                             android:layout_marginBottom="@dimen/_12sdp"
                             android:layout_weight="1"
                             android:elevation="@dimen/_8sdp"
-                            android:visibility="gone"
+                            android:visibility="invisible"
                             android:orientation="vertical">
 
                             <RelativeLayout

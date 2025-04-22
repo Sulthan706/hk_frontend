@@ -34,7 +34,7 @@
             android:id="@+id/ivDefaultImageKesehatan"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/logo_splash"
+            android:src="@drawable/ic_hk"
             android:padding="@dimen/_60sdp"
             android:contentDescription="@string/defaultimageBpjs"/>
         <ImageView
@@ -104,6 +104,7 @@
         android:textColor="@color/white"
         android:fontFamily="@font/poppinssemibold"
         android:textAllCaps="false"
+        android:visibility="gone"
         android:backgroundTint="@color/secondary_color"
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/poppinsbold"
-                android:text="Selamat Sore,"
+                android:text="Selamat Sore"
                 android:textAlignment="center"
                 android:textSize="@dimen/_12ssp"
                 android:textColor="@color/black"/>
@@ -43,6 +43,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsbold"
                 android:text="Hygiene People"
+                android:visibility="gone"
                 android:textAlignment="center"
                 android:textSize="@dimen/_12ssp"
                 android:textColor="@color/black"/>

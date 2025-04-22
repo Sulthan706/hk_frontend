@@ -155,7 +155,7 @@ class HomeVendorFragment : Fragment() {
         binding.rlBak.setOnClickListener {
             startActivity(Intent(requireContext(), ListBakMachineActivity::class.java))
         }
-        binding.rlTimesheet.setOnClickListener {
+        binding.rlTimesheetArea.setOnClickListener {
             startActivity(Intent(requireContext(), GrafikActivity::class.java).also {
                 it.putExtra("type","timesheet")
             })
@@ -358,6 +358,8 @@ class HomeVendorFragment : Fragment() {
 
                 binding.llComplaint.visibility = View.GONE
                 binding.llAbsentStaff.visibility = View.GONE
+                binding.rlTimesheetArea.visibility = View.GONE
+                binding.tvTimesheet.visibility = View.GONE
 
                 // geo location attendance
                 binding.llAttendance.setOnClickListener {
@@ -430,7 +432,7 @@ class HomeVendorFragment : Fragment() {
                 }
 
                 // menu ctalk
-                binding.llComplaint.visibility = View.VISIBLE
+                binding.llComplaint.visibility = View.GONE
                 binding.llComplaint.setOnClickListener {
                     CarefastOperationPref.saveString(
                         CarefastOperationPrefConst.NOTIF_INTENT,
@@ -487,7 +489,7 @@ class HomeVendorFragment : Fragment() {
                 }
 
                 // menu ctalk
-                binding.llComplaint.visibility = View.VISIBLE
+                binding.llComplaint.visibility = View.GONE
                 binding.llComplaint.setOnClickListener {
                     val i = Intent(requireActivity(), DashboardComplaintVendorActivity::class.java)
                     startActivity(i)
@@ -540,7 +542,7 @@ class HomeVendorFragment : Fragment() {
                 }
 
                 // menu ctalk
-                binding.llComplaint.visibility = View.VISIBLE
+                binding.llComplaint.visibility = View.GONE
                 binding.llComplaint.setOnClickListener {
                     val i = Intent(requireActivity(), DashboardComplaintVendorActivity::class.java)
                     startActivity(i)
