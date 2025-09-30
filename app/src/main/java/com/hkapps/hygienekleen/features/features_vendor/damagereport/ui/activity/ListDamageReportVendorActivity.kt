@@ -25,6 +25,7 @@ import com.hkapps.hygienekleen.utils.CommonUtils
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.hkapps.hygienekleen.utils.InternetCheckService
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -49,6 +50,8 @@ class ListDamageReportVendorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListDamageReportVendorBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarDamageReportManagement.tvAppbarTitle.text = "$projectName"
         binding.appbarDamageReportManagement.ivAppbarBack.setOnClickListener {

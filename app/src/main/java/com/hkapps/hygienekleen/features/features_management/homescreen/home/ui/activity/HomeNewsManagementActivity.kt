@@ -17,6 +17,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.home.view
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class HomeNewsManagementActivity : AppCompatActivity(), ListNewsManagementAdapter.ListNewsManagementCallback {
     private lateinit var binding : ActivityHomeNewsManagementBinding
@@ -32,6 +33,7 @@ class HomeNewsManagementActivity : AppCompatActivity(), ListNewsManagementAdapte
         super.onCreate(savedInstanceState)
         binding = ActivityHomeNewsManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarNewsManagement.ivAppbarBack.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()

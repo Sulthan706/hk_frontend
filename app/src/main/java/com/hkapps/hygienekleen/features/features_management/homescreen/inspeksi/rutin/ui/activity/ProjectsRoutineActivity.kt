@@ -19,6 +19,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ProjectsRoutineActivity : AppCompatActivity(), ProjectsInspeksiAdapter.ProjectInspeksiCallBack {
 
@@ -40,6 +41,8 @@ class ProjectsRoutineActivity : AppCompatActivity(), ProjectsInspeksiAdapter.Pro
         super.onCreate(savedInstanceState)
         binding = ActivityProjectsRoutineBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar
         binding.appbarProjectsRoutine.tvAppbarTitle.text = "Daftar Project"

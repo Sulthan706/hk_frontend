@@ -20,6 +20,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.tabs.TabLayout
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -39,6 +40,7 @@ class MyteamSpvActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMyteamSpvBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set layout client
         if (userLevel == "CLIENT") {

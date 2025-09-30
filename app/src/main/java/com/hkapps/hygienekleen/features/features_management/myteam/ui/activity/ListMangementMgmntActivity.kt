@@ -25,6 +25,7 @@ import com.hkapps.hygienekleen.features.features_management.myteam.ui.adapter.Li
 import com.hkapps.hygienekleen.features.features_management.myteam.viewmodel.MyTeamManagementViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListMangementMgmntActivity : AppCompatActivity() {
 
@@ -42,6 +43,8 @@ class ListMangementMgmntActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListMangementMgmntBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
 
 

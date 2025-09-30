@@ -6,15 +6,43 @@
     android:layout_height="match_parent"
     android:background="#F5F6F8">
 
-    <include
-        android:id="@+id/layout_appbar"
-        layout="@layout/app_bar_default" />
+    <View
+        android:id="@+id/statusBarBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusBarBackground"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetEndWithActions="0dp">
+
+        <include
+            android:id="@+id/layout_appbar"
+            layout="@layout/app_bar_default" />
+
+
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
 
     <LinearLayout
         android:id="@+id/llNotifMidCategories"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/layout_appbar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         android:orientation="horizontal"
         android:background="@drawable/bg_field_notif"
         android:gravity="center"
@@ -74,7 +102,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_transparent_notif_mid"
-                android:text="CFTalk"
+                android:text="HKTalk"
                 android:fontFamily="@font/poppinsregular"
                 android:paddingHorizontal="@dimen/_17sdp"
                 android:paddingVertical="@dimen/_2sdp"

@@ -36,6 +36,7 @@ import com.hkapps.hygienekleen.utils.CommonUtils
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.applySkeleton
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 
 class   NotifMidActivity : AppCompatActivity(), NotifMidAdapter.ListNotifDataHistory {
@@ -75,6 +76,7 @@ class   NotifMidActivity : AppCompatActivity(), NotifMidAdapter.ListNotifDataHis
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMidNotifBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         super.onCreate(savedInstanceState)
 
         binding.layoutAppbar.tvAppbarTitle.text = "Notifikasi"

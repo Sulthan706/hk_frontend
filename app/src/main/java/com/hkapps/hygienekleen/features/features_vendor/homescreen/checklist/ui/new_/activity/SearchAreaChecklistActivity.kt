@@ -26,6 +26,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.checklist.vie
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class SearchAreaChecklistActivity : AppCompatActivity(), ListAreaChecklistAdapter.ListAreaChecklistCallBack {
 
@@ -45,6 +46,8 @@ class SearchAreaChecklistActivity : AppCompatActivity(), ListAreaChecklistAdapte
         super.onCreate(savedInstanceState)
         binding = ActivitySearchAreaChecklistBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarSearchAreaChecklist.ivAppbarBack.setOnClickListener {
             super.onBackPressed()

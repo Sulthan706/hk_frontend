@@ -13,6 +13,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.report.viewmo
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.github.sundeepk.compactcalendarview.CompactCalendarView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -32,6 +33,7 @@ class DetailAttendanceReportActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailAttendanceReportBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarDetailAttendanceReport.tvAppbarTitle.text = "Report Kehadiran"

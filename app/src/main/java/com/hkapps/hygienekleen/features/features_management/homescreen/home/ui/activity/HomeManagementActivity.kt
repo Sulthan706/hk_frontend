@@ -14,6 +14,7 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -22,6 +23,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
@@ -71,6 +74,20 @@ class HomeManagementActivity : AppCompatActivity() {
         binding = ActivityHomeManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content)) { view, insets ->
+            view.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.setPadding(0, systemBars.top, 0, 0)
+            insets
+        }
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.bottomNavigationView) { view, insets ->
+            val layoutParams = view.layoutParams as ViewGroup.MarginLayoutParams
+            layoutParams.bottomMargin = 0
+            view.layoutParams = layoutParams
+            WindowInsetsCompat.CONSUMED
+        }
+
         CarefastOperationPref.saveString(
             CarefastOperationPrefConst.SAVE_DATE_TEMPORER_START,
             ""
@@ -108,6 +125,7 @@ class HomeManagementActivity : AppCompatActivity() {
         binding.bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.menuHome -> {
+
                     if (binding.bottomNavigationView.selectedItemId == menuItem.itemId) {
                         //doNothing
                     } else {
@@ -116,6 +134,12 @@ class HomeManagementActivity : AppCompatActivity() {
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.menuService -> {
+                    ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content)) { view, insets ->
+                        val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+                        view.setBackgroundColor(ContextCompat.getColor(this, R.color.primary_color))
+                        view.setPadding(0, systemBars.top, 0, 0)
+                        insets
+                    }
                     if (binding.bottomNavigationView.selectedItemId == menuItem.itemId) {
                         //doNothing
                     } else {
@@ -124,6 +148,12 @@ class HomeManagementActivity : AppCompatActivity() {
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.menuReport -> {
+                    ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content)) { view, insets ->
+                        val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+                        view.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+                        view.setPadding(0, systemBars.top, 0, 0)
+                        insets
+                    }
                     if (binding.bottomNavigationView.selectedItemId == menuItem.itemId) {
                         //doNothing
                     } else {
@@ -139,6 +169,12 @@ class HomeManagementActivity : AppCompatActivity() {
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.menuProfile -> {
+                    ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content)) { view, insets ->
+                        val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+                        view.setBackgroundColor(ContextCompat.getColor(this, R.color.primary_color))
+                        view.setPadding(0, systemBars.top, 0, 0)
+                        insets
+                    }
                     if (binding.bottomNavigationView.selectedItemId == menuItem.itemId) {
                         //doNothing
                     } else {

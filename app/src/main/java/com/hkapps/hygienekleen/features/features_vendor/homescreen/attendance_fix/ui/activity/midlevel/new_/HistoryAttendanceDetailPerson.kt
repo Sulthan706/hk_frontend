@@ -15,6 +15,7 @@ import com.hkapps.hygienekleen.databinding.ActivityHistoryAttendanceDetailPerson
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.attendance_fix.viewmodel.AttendanceFixViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -43,6 +44,7 @@ class HistoryAttendanceDetailPerson : AppCompatActivity() {
         binding = ActivityHistoryAttendanceDetailPersonBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         val onClickListener =
             binding.layoutAppbarHistoryAttendancePerson.ivAppbarBack.setOnClickListener {
                 onBackPressed()

@@ -86,7 +86,7 @@ class HomeClientFragment : Fragment() {
         // new update app
         val manager = requireActivity().packageManager
         val info = manager.getPackageInfo(requireActivity().packageName, 0)
-        versionApp = info.versionName
+        versionApp = info.versionName ?: "unknown"
         binding.tvVersionHomeClient.text = versionApp
 
         homeViewModel.checkVersion(versionApp)

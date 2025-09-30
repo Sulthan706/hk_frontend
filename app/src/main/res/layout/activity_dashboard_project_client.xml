@@ -119,7 +119,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CF Manajemen"
+                android:text="HK Manajemen"
                 android:textAlignment="center"
                 android:textColor="@color/black2"
                 android:textSize="@dimen/_13ssp"

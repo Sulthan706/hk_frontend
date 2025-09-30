@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import com.hkapps.hygienekleen.databinding.ActivityApprovalLeaderBinding
 import com.hkapps.hygienekleen.features.features_vendor.service.approval.ui.adapter.ViewPagerApprovalAdapter
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ApprovalLeaderActivity : AppCompatActivity() {
 
@@ -17,6 +18,8 @@ class ApprovalLeaderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityApprovalLeaderBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar layout
         binding.appbarApprovalLeader.tvAppbarTitle.text = "Daftar Approval"

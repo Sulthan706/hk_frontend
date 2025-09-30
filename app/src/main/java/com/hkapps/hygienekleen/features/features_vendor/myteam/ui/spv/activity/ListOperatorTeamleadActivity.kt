@@ -7,6 +7,7 @@ import android.os.Bundle
 import com.hkapps.hygienekleen.databinding.ActivityListOperatorTeamleadBinding
 import com.hkapps.hygienekleen.features.features_vendor.myteam.ui.spv.adapter.ViewPagerTeamSpvAdapter
 import com.hkapps.hygienekleen.features.features_vendor.myteam.ui.teamlead.activity.SearchStaffMyteamTlActivity
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListOperatorTeamleadActivity : AppCompatActivity() {
 
@@ -18,6 +19,7 @@ class ListOperatorTeamleadActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListOperatorTeamleadBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar layout
         val teamleadName:String = intent.getStringExtra("leaderName").toString()

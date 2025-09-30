@@ -37,6 +37,7 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import com.jaredrummler.android.device.DeviceName
 import java.util.*
 
@@ -81,6 +82,8 @@ class UserFlyingReportActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityUserFlyingReportBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar layout
         binding.appbarUserFlyingReport.tvAppbarTitle.text = "Isi Laporan Absensi"

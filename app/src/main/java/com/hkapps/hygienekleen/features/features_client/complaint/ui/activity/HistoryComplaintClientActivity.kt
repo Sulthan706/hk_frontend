@@ -19,6 +19,7 @@ import com.hkapps.hygienekleen.features.features_client.complaint.viewmodel.Clie
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.tabs.TabLayout
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class HistoryComplaintClientActivity : AppCompatActivity() {
 
@@ -35,6 +36,7 @@ class HistoryComplaintClientActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHistoryComplaintClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         val window: Window = this.window
 

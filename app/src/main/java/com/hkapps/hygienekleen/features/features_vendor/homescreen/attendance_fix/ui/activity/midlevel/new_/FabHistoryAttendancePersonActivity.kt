@@ -20,6 +20,7 @@ import com.hkapps.hygienekleen.utils.CommonUtils
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.applySkeleton
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class FabHistoryAttendancePersonActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFabHistoryAttendancePersonBinding
@@ -58,6 +59,7 @@ class FabHistoryAttendancePersonActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         binding.layoutAppbarHistoryAttPerson.ivAppbarBack.setOnClickListener {
             onBackPressed()
         }

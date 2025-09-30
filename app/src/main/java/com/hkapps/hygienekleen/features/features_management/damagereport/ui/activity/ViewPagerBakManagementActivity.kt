@@ -11,6 +11,7 @@ import com.hkapps.hygienekleen.features.features_management.damagereport.ui.frag
 import com.hkapps.hygienekleen.features.features_management.damagereport.ui.fragment.NotFinishBakManagementFragment
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.tabs.TabLayoutMediator
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -24,6 +25,8 @@ class ViewPagerBakManagementActivity : AppCompatActivity(), DateSelectedListener
         super.onCreate(savedInstanceState)
         binding = ActivityViewPagerBakManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appBarBakManagement.tvAppbarTitle.text = "List BAK Mesin"
         binding.appBarBakManagement.ivAppbarBack.setOnClickListener {

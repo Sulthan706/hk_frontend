@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.hkapps.hygienekleen.databinding.ActivityMyTeamManagementBinding
 import com.hkapps.hygienekleen.features.features_management.myteam.ui.adapter.ViewPagerMyTeamManagementAdapter
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class MyTeamManagementActivity : AppCompatActivity() {
 
@@ -16,6 +17,8 @@ class MyTeamManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMyTeamManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set layout appbar
         binding.appbarMyTeamManagement.tvAppbarTitle.text = "Tim Ku"

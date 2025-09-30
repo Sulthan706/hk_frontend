@@ -36,6 +36,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.viewmode
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.MultipartBody.Part.Companion.createFormData
@@ -67,6 +68,7 @@ class UploadDocumentPhotoActivity : AppCompatActivity() {
         binding = ActivityUploadDocumentKtpphotoBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
         val window: Window = this.window
         // clear FLAG_TRANSLUCENT_STATUS flag:

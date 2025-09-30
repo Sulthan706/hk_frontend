@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import com.hkapps.hygienekleen.databinding.ActivityListTeamleadTimkuBinding
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListTeamleadTimkuActivity : AppCompatActivity() {
 
@@ -15,6 +16,7 @@ class ListTeamleadTimkuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListTeamleadTimkuBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.shimmerTeamleadTimku.startShimmerAnimation()
 

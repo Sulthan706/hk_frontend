@@ -17,6 +17,7 @@ import com.hkapps.hygienekleen.databinding.ActivityClosingManagementBinding
 import com.hkapps.hygienekleen.features.features_management.homescreen.closing.ui.fragment.GenerateFileManagementFragment
 import com.hkapps.hygienekleen.features.features_management.homescreen.closing.ui.fragment.SendEmailClosingManagementFragment
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.closing.ui.adapter.ClosingSpvAdapter
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ClosingManagementActivity : AppCompatActivity() {
 
@@ -31,6 +32,7 @@ class ClosingManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityClosingManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         setViewPager()
 
     }

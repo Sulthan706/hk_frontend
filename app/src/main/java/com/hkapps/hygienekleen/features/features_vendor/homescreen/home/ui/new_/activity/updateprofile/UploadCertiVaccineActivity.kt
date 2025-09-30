@@ -35,6 +35,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.viewmode
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -60,6 +61,7 @@ class UploadCertiVaccineActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         binding = ActivityUploadCertiVaccineBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
 
 

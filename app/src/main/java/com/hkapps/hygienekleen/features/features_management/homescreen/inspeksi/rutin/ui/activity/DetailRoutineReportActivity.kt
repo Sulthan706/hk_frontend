@@ -14,6 +14,7 @@ import com.hkapps.hygienekleen.databinding.ActivityDetailRoutineReportBinding
 import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.rutin.viewmodel.RoutineViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DetailRoutineReportActivity : AppCompatActivity() {
 
@@ -33,6 +34,8 @@ class DetailRoutineReportActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailRoutineReportBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarDetailRoutineReport.tvAppbarTitle.text = "Laporan Kunjungan Rutin"

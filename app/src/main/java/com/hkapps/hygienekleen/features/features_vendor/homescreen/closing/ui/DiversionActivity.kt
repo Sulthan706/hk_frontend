@@ -31,6 +31,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 
@@ -80,6 +81,7 @@ class DiversionActivity : AppCompatActivity(),ListChooseFilterAreaAdapter.OnItem
         super.onCreate(savedInstanceState)
         binding = ActivityDiversionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         initView()
 
     }

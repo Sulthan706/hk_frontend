@@ -33,6 +33,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 
@@ -85,6 +86,7 @@ class ApprovalWorkClosingActivity : AppCompatActivity(),ListChooseFilterAreaAdap
         super.onCreate(savedInstanceState)
         binding = ActivityApprovalWorkClosingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK) {
                initView()

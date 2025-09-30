@@ -24,6 +24,7 @@ import com.hkapps.hygienekleen.features.features_client.dashboardProject.ui.adap
 import com.hkapps.hygienekleen.features.features_client.dashboardProject.viewmodel.DashboardProjectViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -49,6 +50,7 @@ class TeamAreaProjectActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityTeamAreaProjectBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set status bar color
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

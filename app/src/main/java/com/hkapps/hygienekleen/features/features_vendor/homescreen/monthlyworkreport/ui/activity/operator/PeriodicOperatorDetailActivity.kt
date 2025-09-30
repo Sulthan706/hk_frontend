@@ -36,6 +36,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.monthlyworkre
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import de.hdodenhof.circleimageview.CircleImageView
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -87,6 +88,7 @@ class PeriodicOperatorDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPeriodicOperatorDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarMonthlyWorkReportChecklist.tvAppbarTitle.text = "Ceklis Pekerjaan"
         binding.appbarMonthlyWorkReportChecklist.ivAppbarBack.setOnClickListener {

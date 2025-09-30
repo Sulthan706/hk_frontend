@@ -29,6 +29,7 @@ import com.hkapps.hygienekleen.features.features_vendor.service.permission.viewm
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -60,6 +61,7 @@ class HistoryPermissionMidActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityHistoryPermissionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         val window: Window = this.window
 

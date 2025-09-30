@@ -26,6 +26,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.cftalk.vi
 import com.hkapps.hygienekleen.features.features_management.homescreen.project.ui.activity.ListAllProjectManagementActivity
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ProjectsCftalkManagementActivity : AppCompatActivity(),
     ProjectsAllCftalkAdapter.ProjectsAllCallBack {
@@ -48,6 +49,8 @@ class ProjectsCftalkManagementActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityProjectsCftalkManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarProjectsCftalkManagement.tvAppbarTitle.text = "CFtalk"

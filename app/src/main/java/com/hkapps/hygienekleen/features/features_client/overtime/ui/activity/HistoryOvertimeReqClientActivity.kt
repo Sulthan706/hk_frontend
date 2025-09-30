@@ -29,6 +29,7 @@ import com.hkapps.hygienekleen.features.features_client.overtime.ui.adapter.Over
 import com.hkapps.hygienekleen.features.features_client.overtime.viewmodel.OvertimeClientViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class HistoryOvertimeReqClientActivity : AppCompatActivity(), OvertimeRequestClientAdapter.ListOvertimeReqCallback {
 
@@ -47,6 +48,7 @@ class HistoryOvertimeReqClientActivity : AppCompatActivity(), OvertimeRequestCli
         super.onCreate(savedInstanceState)
         binding = ActivityHistoryOvertimeReqClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // change status bar color
         val window: Window = this.window

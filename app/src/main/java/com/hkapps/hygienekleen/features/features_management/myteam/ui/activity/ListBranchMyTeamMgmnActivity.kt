@@ -22,6 +22,7 @@ import com.hkapps.hygienekleen.features.features_management.myteam.ui.adapter.Li
 import com.hkapps.hygienekleen.features.features_management.myteam.viewmodel.MyTeamManagementViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListBranchMyTeamMgmnActivity : AppCompatActivity(), ListBranchMyTeamMgmntAdapter.ListBranchCallBack {
 
@@ -37,6 +38,8 @@ class ListBranchMyTeamMgmnActivity : AppCompatActivity(), ListBranchMyTeamMgmntA
         super.onCreate(savedInstanceState)
         binding = ActivityListBranchMyTeamMgmnBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarListBranchMyTeamManagement.tvAppbarTitle.text = "Daftar Cabang"

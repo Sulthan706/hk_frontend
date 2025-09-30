@@ -29,6 +29,7 @@ import com.hkapps.hygienekleen.utils.hide
 import com.hkapps.hygienekleen.utils.show
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.applySkeleton
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 
 class NotifClientActivity : AppCompatActivity(), ListNotifClientAdapter.ListNotifClient,
@@ -55,6 +56,7 @@ class NotifClientActivity : AppCompatActivity(), ListNotifClientAdapter.ListNoti
         super.onCreate(savedInstanceState)
         binding = ActivityNotifClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         val window: Window = this.window
 

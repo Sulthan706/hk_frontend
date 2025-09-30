@@ -29,6 +29,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.operation
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class MyTeamManagementProfileMgmntActivity : AppCompatActivity(),
     ListAllManagementAdapter.ListAllManagementCallback,
@@ -52,6 +53,8 @@ class MyTeamManagementProfileMgmntActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityMyTeamManagementProfileMgmntBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         if (userLevel == "CLIENT") {

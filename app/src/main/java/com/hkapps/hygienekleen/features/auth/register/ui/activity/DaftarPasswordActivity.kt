@@ -16,6 +16,7 @@ import com.hkapps.hygienekleen.features.auth.login.ui.activity.LoginActivity
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DaftarPasswordActivity : AppCompatActivity() {
 
@@ -35,8 +36,9 @@ class DaftarPasswordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPasswordDaftarBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
-        binding.ivBackDaftarPass.setOnClickListener {
+        binding.ivBackDaftarEmail.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()
         }
 

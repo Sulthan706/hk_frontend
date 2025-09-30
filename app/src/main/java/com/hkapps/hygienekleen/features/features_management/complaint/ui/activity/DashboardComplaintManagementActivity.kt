@@ -11,6 +11,7 @@ import com.hkapps.hygienekleen.databinding.ActivityDashboardComplaintManagementB
 import com.hkapps.hygienekleen.features.features_management.complaint.viewmodel.ComplaintManagementViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import ir.mahozad.android.PieChart
 import java.lang.Float
 import java.text.SimpleDateFormat
@@ -31,6 +32,7 @@ class DashboardComplaintManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardComplaintManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         monthNow = getDateNow()
         binding.tvComplaintGetMonth.text = monthNow
 

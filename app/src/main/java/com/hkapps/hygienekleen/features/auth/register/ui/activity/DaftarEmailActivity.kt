@@ -14,6 +14,7 @@ import com.hkapps.hygienekleen.features.auth.register.viewmodel.DaftarViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DaftarEmailActivity : AppCompatActivity() {
 
@@ -30,6 +31,7 @@ class DaftarEmailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDaftarEmailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.ivBackDaftarEmail.setOnClickListener {
             super.onBackPressed()

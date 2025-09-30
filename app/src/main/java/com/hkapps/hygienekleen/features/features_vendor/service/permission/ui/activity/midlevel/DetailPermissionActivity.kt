@@ -21,6 +21,7 @@ import com.hkapps.hygienekleen.databinding.ActivityDetailPermissionBinding
 import com.hkapps.hygienekleen.features.features_vendor.service.permission.viewmodel.PermissionViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -44,6 +45,7 @@ class DetailPermissionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailPermissionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.layoutAppbarPermission.tvAppbarTitle.text = "Permohonan Izin"
         binding.layoutAppbarPermission.ivAppbarBack.setOnClickListener {

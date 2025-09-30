@@ -28,6 +28,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.hkapps.hygienekleen.features.features_management.homescreen.operational.ui.adapter.ListOperationalProjectAdapter
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 import com.hkapps.hygienekleen.features.features_management.homescreen.operational.model.listoperationalproject.Content as ListOperationalProjectContent
 import com.hkapps.hygienekleen.features.features_management.homescreen.operational.model.listalloperational.Content as ListAllOperationalContent
@@ -51,6 +52,8 @@ class SearchOperationalActivity : AppCompatActivity(), ListAllOperationalAdapter
         super.onCreate(savedInstanceState)
         binding = ActivitySearchOperationalBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar
         if (userPosition == "CLIENT") {

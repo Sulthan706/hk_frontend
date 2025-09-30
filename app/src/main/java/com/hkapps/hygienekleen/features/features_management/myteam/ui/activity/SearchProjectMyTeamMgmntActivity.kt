@@ -27,6 +27,7 @@ import com.hkapps.hygienekleen.features.features_management.myteam.viewmodel.MyT
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class SearchProjectMyTeamMgmntActivity : AppCompatActivity(), ListProjectManagementAdapter.ListProjectManagementCallback {
 
@@ -47,6 +48,7 @@ class SearchProjectMyTeamMgmntActivity : AppCompatActivity(), ListProjectManagem
         binding = ActivitySearchProjectMyTeamMgmntBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         binding.appbarSearchProjectMyteamManagement.ivAppbarBack.setOnClickListener {
             super.onBackPressed()
             finish()

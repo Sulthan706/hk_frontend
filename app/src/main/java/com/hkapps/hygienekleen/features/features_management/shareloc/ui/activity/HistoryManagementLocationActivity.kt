@@ -19,6 +19,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.github.sundeepk.compactcalendarview.CompactCalendarView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -41,6 +42,7 @@ class HistoryManagementLocationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHistoryManagementLocationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         binding.appBarHistoryLocManagementBod.tvAppbarTitle.text = "Riwayat Lokasi"
         binding.appBarHistoryLocManagementBod.ivAppbarBack.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()

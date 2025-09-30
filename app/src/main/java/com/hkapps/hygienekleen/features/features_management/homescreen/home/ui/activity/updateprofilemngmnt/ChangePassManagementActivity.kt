@@ -16,6 +16,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.home.view
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.InternetCheckService
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ChangePassManagementActivity : AppCompatActivity() {
     private lateinit var binding: ActivityChangePassManagementBinding
@@ -29,6 +30,8 @@ class ChangePassManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityChangePassManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbar.ivAppbarBack.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()

@@ -16,6 +16,7 @@ import com.hkapps.hygienekleen.databinding.ActivityDetailMeetingInspeksiBinding
 import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.mainInspeksi.viewmodel.InspeksiViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DetailMeetingInspeksiActivity : AppCompatActivity() {
 
@@ -36,6 +37,8 @@ class DetailMeetingInspeksiActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailMeetingInspeksiBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarDetailMeetingInspeksi.tvAppbarTitle.text = "Laporan Meeting"

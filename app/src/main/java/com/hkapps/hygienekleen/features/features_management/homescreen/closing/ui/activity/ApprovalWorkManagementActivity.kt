@@ -31,6 +31,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 
@@ -77,6 +78,7 @@ class ApprovalWorkManagementActivity : AppCompatActivity(),ListChooseFilterAreaA
         super.onCreate(savedInstanceState)
         binding = ActivityApprovalWorkManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         i = intent.getBooleanExtra("isYesterday",false)
         initView(i)
     }

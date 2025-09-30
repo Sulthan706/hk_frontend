@@ -23,6 +23,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.cftalk.vi
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class SearchProjectCftalkActivity : AppCompatActivity(),
     ProjectsAllCftalkAdapter.ProjectsAllCallBack {
@@ -46,6 +47,8 @@ class SearchProjectCftalkActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivitySearchProjectCftalkBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarSearchProjectCftalk.ivAppbarBack.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()

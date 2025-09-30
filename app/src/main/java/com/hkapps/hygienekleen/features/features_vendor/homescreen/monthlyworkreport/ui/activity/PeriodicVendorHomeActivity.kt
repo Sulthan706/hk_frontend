@@ -35,6 +35,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -77,6 +78,7 @@ class PeriodicVendorHomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMonthlyWorkReportsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         CarefastOperationPref.saveBoolean(CarefastOperationPrefConst.REFRESH_DATA, false)
         binding.appbarMonthlyWorkReport.tvAppbarTitle.text = "Detail Pekerjaan"
         binding.appbarMonthlyWorkReport.ivAppbarBack.setOnClickListener {

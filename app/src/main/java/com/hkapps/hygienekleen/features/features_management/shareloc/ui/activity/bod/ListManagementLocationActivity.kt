@@ -21,6 +21,7 @@ import com.hkapps.hygienekleen.features.features_management.shareloc.viewmodel.S
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -44,6 +45,7 @@ class ListManagementLocationActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityListManagementLocationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         //appbar
         binding.appbarShareLocListMgmnt.tvAppbarTitle.text = "List Manajemen"
         binding.appbarShareLocListMgmnt.ivAppbarBack.setOnClickListener {

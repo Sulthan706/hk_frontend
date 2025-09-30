@@ -57,6 +57,7 @@ import java.util.Locale
 import com.bumptech.glide.request.target.CustomTarget
 import com.hkapps.hygienekleen.databinding.BottomSheetChooseImageBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DetailWeeklyProgressActivity : AppCompatActivity() {
 
@@ -122,6 +123,7 @@ class DetailWeeklyProgressActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailWeeklyProgressBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         initView()
     }
 

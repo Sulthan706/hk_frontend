@@ -6,6 +6,7 @@ import android.view.WindowManager
 import androidx.core.content.ContextCompat
 import com.hkapps.hygienekleen.R
 import com.hkapps.hygienekleen.databinding.ActivityLaporanMeetingBinding
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -15,6 +16,7 @@ class LaporanMeetingActivity : AppCompatActivity() {
         binding = ActivityLaporanMeetingBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         // clear FLAG_TRANSLUCENT_STATUS flag:
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
 

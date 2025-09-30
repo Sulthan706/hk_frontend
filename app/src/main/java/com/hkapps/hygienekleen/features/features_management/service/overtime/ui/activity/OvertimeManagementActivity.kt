@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import com.hkapps.hygienekleen.databinding.ActivityOvertimeManagementBinding
 import com.hkapps.hygienekleen.features.features_management.service.overtime.ui.adapter.ViewPagerOvertimeManagement
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class OvertimeManagementActivity : AppCompatActivity() {
 
@@ -16,6 +17,8 @@ class OvertimeManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOvertimeManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarOvertimeManagement.tvAppbarTitle.text = "Lembur"

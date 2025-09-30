@@ -17,6 +17,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.google.firebase.messaging.FirebaseMessaging
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -52,6 +53,7 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.layoutAppbar.ivAppbarBack.setOnClickListener {
             onBackPressed()

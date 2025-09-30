@@ -16,6 +16,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DashboardInspeksiActivity : AppCompatActivity(), ListChooseInspeksiAdapter.OnItemSelectedCallBack {
 
@@ -28,6 +29,8 @@ class DashboardInspeksiActivity : AppCompatActivity(), ListChooseInspeksiAdapter
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardInspeksiBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,null)
 
         // set on click button back
         binding.ivBackDashboardInspeksi.setOnClickListener {

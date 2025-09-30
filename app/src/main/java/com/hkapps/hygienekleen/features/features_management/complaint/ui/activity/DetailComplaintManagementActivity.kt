@@ -28,6 +28,7 @@ import com.hkapps.hygienekleen.features.features_management.complaint.viewmodel.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DetailComplaintManagementActivity : AppCompatActivity() {
 
@@ -58,6 +59,8 @@ class DetailComplaintManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailComplaintManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set project name
         if (clickFrom == "otherProject") {

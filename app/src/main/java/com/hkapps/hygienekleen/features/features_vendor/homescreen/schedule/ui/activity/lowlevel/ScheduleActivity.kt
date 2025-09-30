@@ -26,6 +26,7 @@ import com.hkapps.hygienekleen.utils.show
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.applySkeleton
 import com.google.android.material.appbar.AppBarLayout
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.util.*
 
 
@@ -59,6 +60,7 @@ class ScheduleActivity : AppCompatActivity(), ScheduleAdapter.ScheduleCallback,
         super.onCreate(savedInstanceState)
         binding = ActivityScheduleNewBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
 //        disable tanggal sebelumnya
 //        binding.calView.minDate = System.currentTimeMillis() - 1000;

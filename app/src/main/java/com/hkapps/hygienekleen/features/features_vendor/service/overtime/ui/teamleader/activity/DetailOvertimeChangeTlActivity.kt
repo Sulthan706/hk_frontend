@@ -12,6 +12,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.hkapps.hygienekleen.R
 import com.hkapps.hygienekleen.databinding.ActivityDetailOvertimeChangeTlBinding
 import com.hkapps.hygienekleen.features.features_vendor.service.overtime.viewmodel.OvertimeViewModel
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DetailOvertimeChangeTlActivity : AppCompatActivity() {
 
@@ -27,6 +28,7 @@ class DetailOvertimeChangeTlActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailOvertimeChangeTlBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // get overtime id
         overtimeId = intent.getIntExtra("overtimeChangeId", 0)

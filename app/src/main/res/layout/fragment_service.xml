@@ -194,7 +194,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppinsmedium"
-                    android:text="CFTalk"
+                    android:text="HKTalk"
                     android:visibility="gone"
                     android:textAlignment="center"
                     android:textColor="@color/black"
@@ -466,7 +466,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppinsmedium"
-                    android:text="CFTalk"
+                    android:text="HKTalk"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_11ssp" />

@@ -25,6 +25,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.attendance_fi
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.attendance_fix.ui.activity.midlevel.new_.AttendanceMidGeoLocationOSMNew
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -57,6 +58,7 @@ class ResultFacePhotoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityResultFacePhotoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         showLoading()
 
         val image = intent.getStringArrayListExtra("image")

@@ -32,6 +32,7 @@ import com.hkapps.hygienekleen.utils.CommonUtils
 import com.hkapps.hygienekleen.utils.NoInternetConnectionCallback
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.applySkeleton
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class NotAbsentOperatorActivity : AppCompatActivity(),
     AttendanceFixMidListStaffNotAttendanceAdapter.PhoneCallback,
@@ -82,6 +83,7 @@ class NotAbsentOperatorActivity : AppCompatActivity(),
         binding = ActivityAttendanceListOperatorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.layoutAppbarAttendanceListOperator.ivAppbarBack.setOnClickListener {
             onBackPressed()

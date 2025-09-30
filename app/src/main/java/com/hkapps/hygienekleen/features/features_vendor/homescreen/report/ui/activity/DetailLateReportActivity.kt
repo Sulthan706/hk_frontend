@@ -13,6 +13,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.report.ui.ada
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.report.viewmodel.ReportViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -33,6 +34,7 @@ class DetailLateReportActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailLateReportBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
         // on back pressed
         binding.ivBackDetailLateReport.setOnClickListener {

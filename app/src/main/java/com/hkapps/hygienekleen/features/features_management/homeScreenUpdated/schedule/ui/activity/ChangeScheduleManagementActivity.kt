@@ -25,6 +25,7 @@ import com.hkapps.hygienekleen.features.features_management.homeScreenUpdated.sc
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.util.Calendar
 
 class ChangeScheduleManagementActivity : AppCompatActivity() {
@@ -58,6 +59,8 @@ class ChangeScheduleManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityChangeScheduleManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar
         binding.appbarChangeScheduleManagement.tvAppbarTitle.text = "Change Plan"

@@ -24,6 +24,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.attendanc
 import com.hkapps.hygienekleen.features.features_management.homescreen.home.ui.activity.HomeManagementActivity
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.time.Duration
 import java.time.LocalTime
@@ -53,6 +54,8 @@ class ExtendVisitDurationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityExtendVisitDurationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar
         binding.appbarExtendVisitDuration.tvAppbarTitle.text = "Extend Durasi Visit Project"

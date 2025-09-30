@@ -26,6 +26,7 @@ import com.hkapps.hygienekleen.utils.ConnectionTimeoutFragment
 import com.hkapps.hygienekleen.utils.NoInternetConnectionCallback
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.tabs.TabLayout
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -45,6 +46,7 @@ class MyteamTeamleadActivity : AppCompatActivity(), NoInternetConnectionCallback
         super.onCreate(savedInstanceState)
         binding = ActivityMyteamTeamleadBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set layout client
         if (userLevel == "CLIENT") {

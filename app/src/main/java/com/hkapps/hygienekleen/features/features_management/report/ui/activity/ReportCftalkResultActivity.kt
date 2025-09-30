@@ -22,6 +22,7 @@ import com.hkapps.hygienekleen.utils.CommonUtils
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.applySkeleton
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -64,6 +65,7 @@ class ReportCftalkResultActivity : AppCompatActivity(), ReportCftalkAdapter.Repo
         binding = ActivityReportCftalkComplaintTodayBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
         binding.layoutAppbarCftalk.tvAppbarTitle.text = "Report CFTalk"
         binding.layoutAppbarCftalk.ivAppbarBack.setOnClickListener {

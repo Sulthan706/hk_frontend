@@ -16,6 +16,7 @@ import com.hkapps.hygienekleen.features.features_management.homeScreenUpdated.vi
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class UnplannedVisitsManagementActivity : AppCompatActivity() {
 
@@ -43,6 +44,8 @@ class UnplannedVisitsManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityUnplannedVisitsManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar
         binding.appbarUnplannedVisitsManagement.tvAppbarTitle.text = "Unplanned Visit"

@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_2sdp"
         android:padding="@dimen/_8sdp"
-        android:text="Absensi CF Team"
+        android:text="Absensi HK Team"
         android:textColor="@color/grey2_client"
         android:textSize="@dimen/_11ssp"
         android:fontFamily="@font/poppinsregular"

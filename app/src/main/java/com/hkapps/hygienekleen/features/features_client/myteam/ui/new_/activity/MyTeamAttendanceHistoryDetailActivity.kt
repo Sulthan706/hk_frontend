@@ -18,6 +18,7 @@ import com.hkapps.hygienekleen.features.features_client.myteam.ui.new_.adapter.M
 import com.hkapps.hygienekleen.features.features_client.myteam.viewmodel.MyTeamClientViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -46,6 +47,7 @@ class MyTeamAttendanceHistoryDetailActivity : AppCompatActivity() {
         binding = ActivityMyTeamAttendanceHistoryDetailBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // clear FLAG_TRANSLUCENT_STATUS flag:
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)

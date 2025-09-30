@@ -51,6 +51,7 @@ import java.util.*
 import android.graphics.BitmapShader
 import android.graphics.Shader
 import com.hkapps.hygienekleen.R
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ShareLocManagementActivity : AppCompatActivity() {
     private lateinit var binding: ActivityShareLocManagementBinding
@@ -79,6 +80,8 @@ class ShareLocManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityShareLocManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarShareLoc.tvAppbarTitle.text = "Kirim Lokasi"
         binding.appbarShareLoc.ivAppbarHistory.text = "Lihat Riwayat"

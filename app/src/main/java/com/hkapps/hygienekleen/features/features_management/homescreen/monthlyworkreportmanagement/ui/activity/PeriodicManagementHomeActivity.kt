@@ -24,6 +24,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.monthlywo
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import ir.mahozad.android.PieChart
 import java.lang.Float.isNaN
 import java.text.SimpleDateFormat
@@ -57,6 +58,8 @@ class PeriodicManagementHomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPeriodicManagementHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarListShiftChecklistMgmnt.tvAppbarTitle.text = "Pekerjaan Periodik"
         binding.appbarListShiftChecklistMgmnt.ivAppbarBack.setOnClickListener {

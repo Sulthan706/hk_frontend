@@ -37,6 +37,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -74,6 +75,8 @@ class CreateCftalkProjectActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityCreateCftalkProjectBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarCreateCftalkProject.tvAppbarTitle.text = "Komplain"
         binding.appbarCreateCftalkProject.ivAppbarBack.setOnClickListener {

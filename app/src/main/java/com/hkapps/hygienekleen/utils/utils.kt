@@ -5,6 +5,11 @@ import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
 import androidx.work.Worker
 import androidx.work.WorkerParameters
@@ -50,6 +55,26 @@ fun View.show() {
 
 fun View.invisible() {
     this.visibility = View.INVISIBLE
+}
+
+fun AppCompatActivity.setupEdgeToEdge(rootView: View, statusBarBackground: View? = null) {
+    enableEdgeToEdge()
+
+    ViewCompat.setOnApplyWindowInsetsListener(rootView) { view, insets ->
+        val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+        view.setPadding(
+            systemBars.left,
+            if(statusBarBackground != null) 0 else systemBars.top,
+            systemBars.right,
+            systemBars.bottom
+        )
+
+        statusBarBackground?.updateLayoutParams {
+            height = systemBars.top
+        }
+
+        insets
+    }
 }
 
 class ResetPreferencesWorker(context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {

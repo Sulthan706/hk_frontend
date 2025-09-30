@@ -7,14 +7,40 @@
     android:layout_height="match_parent"
     >
 
-    <include
-        android:id="@+id/appBarWithSearchEmployee"
-        android:layout_width="match_parent"
+    <View
+        android:id="@+id/statusBarBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        layout="@layout/app_bar_default_with_search"/>
+        android:background="?colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusBarBackground"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetEndWithActions="0dp">
+
+        <include
+            android:id="@+id/appBarWithSearchEmployee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/app_bar_default_with_search"/>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        app:layout_constraintTop_toBottomOf="@+id/appBarWithSearchEmployee"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         android:id="@+id/rlManpowerTotalManagement"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -15,6 +15,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.home.view
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListVaccineManagementActivity : AppCompatActivity(), ListVaccineManagementAdapter.ListVaccineMgmntClick {
     private lateinit var binding: ActivityListVaccineManagementBinding
@@ -32,6 +33,8 @@ class ListVaccineManagementActivity : AppCompatActivity(), ListVaccineManagement
         binding = ActivityListVaccineManagementBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.layoutAppbarHomeNews.ivAppbarBack.setOnClickListener {
             onBackPressed()

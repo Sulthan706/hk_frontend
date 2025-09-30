@@ -14,6 +14,7 @@ import androidx.viewpager.widget.ViewPager
 import com.hkapps.hygienekleen.R
 import com.hkapps.hygienekleen.databinding.ActivityOvertimeClientBinding
 import com.hkapps.hygienekleen.features.features_client.overtime.ui.adapter.ViewPagerOvertimeClientAdapter
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class OvertimeClientActivity : AppCompatActivity() {
 
@@ -25,6 +26,7 @@ class OvertimeClientActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOvertimeClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         val window: Window = this.window
         // clear FLAG_TRANSLUCENT_STATUS flag:

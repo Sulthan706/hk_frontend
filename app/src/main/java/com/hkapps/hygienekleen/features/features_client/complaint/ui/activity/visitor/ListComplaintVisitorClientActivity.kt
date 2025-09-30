@@ -11,6 +11,7 @@ import com.hkapps.hygienekleen.R
 import com.hkapps.hygienekleen.databinding.ActivityListComplaintVisitorClientBinding
 import com.hkapps.hygienekleen.features.features_client.complaint.ui.adapter.visitor.VpComplaintVisitorClientAdapter
 import com.google.android.material.tabs.TabLayoutMediator
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListComplaintVisitorClientActivity : AppCompatActivity() {
     private lateinit var binding: ActivityListComplaintVisitorClientBinding
@@ -19,6 +20,7 @@ class ListComplaintVisitorClientActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListComplaintVisitorClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         val window: Window = this.window
 

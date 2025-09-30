@@ -15,6 +15,7 @@ import com.hkapps.hygienekleen.features.auth.login.ui.activity.LoginActivity
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.firebase.messaging.FirebaseMessaging
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class SettingClientActivity : AppCompatActivity() {
 
@@ -26,6 +27,8 @@ class SettingClientActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySettingClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // change status bar color
         val window: Window = this.window

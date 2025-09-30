@@ -10,6 +10,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.hkapps.hygienekleen.databinding.ActivityOverviewImageBinding
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 
 class OverviewImageActivity : AppCompatActivity() {
@@ -25,6 +26,7 @@ class OverviewImageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOverviewImageBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
         val appBar = "Overview Image"
         binding.appbarOverviewWeeklyProgress.tvAppbarTitle.text = appBar

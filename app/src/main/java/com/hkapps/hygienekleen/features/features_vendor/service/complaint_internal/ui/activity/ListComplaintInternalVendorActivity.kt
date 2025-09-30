@@ -19,7 +19,7 @@ class ListComplaintInternalVendorActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // set appbar layout
-        binding.appbarListComplaintVendor.tvAppbarTitle.text = "CF Talk"
+        binding.appbarListComplaintVendor.tvAppbarTitle.text = "HK Talk"
         binding.appbarListComplaintVendor.ivAppbarBack.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()
             finish()

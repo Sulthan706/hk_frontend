@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import com.hkapps.hygienekleen.databinding.ActivityPdfViewSalaryBinding
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class PdfViewSalaryActivity : AppCompatActivity() {
 
@@ -22,6 +23,7 @@ class PdfViewSalaryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPdfViewSalaryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
         // prevent screen capture on this layout
         window.setFlags(LayoutParams.FLAG_SECURE, LayoutParams.FLAG_SECURE)

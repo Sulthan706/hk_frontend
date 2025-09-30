@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".features.features_vendor.homescreen.home.ui.new_.activity.mr.DashboardMRActivity">
+
+    <include
+        android:id="@+id/appbar_mr"
+        layout="@layout/app_bar_default_with_add"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <HorizontalScrollView
+            android:id="@+id/table_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_copyright_history_closing">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMovieList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/table_list_item" />
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tv_page_history_closing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="Showing ..."
+            android:textColor="@color/black3"
+            android:textSize="@dimen/_9ssp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_copyright_history_closing"/>
+
+        <ImageView
+            android:id="@+id/ivNextAbsenceReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/ic_next_greys"
+            app:layout_constraintBottom_toTopOf="@id/tv_copyright_history_closing"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPrevAbsenceReportManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:src="@drawable/ic_prev_greys"
+            app:layout_constraintBottom_toTopOf="@id/tv_copyright_history_closing"
+            app:layout_constraintEnd_toStartOf="@id/ivNextAbsenceReportManagement"/>
+
+        <TextView
+            android:id="@+id/tv_copyright_history_closing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:text="Copyright ©2022 PT Hygiene Kleen. All Rights Reserved."
+            android:textAlignment="center"
+            android:textColor="@color/black3"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_empty_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="Tidak ada data"
+            android:textColor="@color/black3"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/poppinsregular"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

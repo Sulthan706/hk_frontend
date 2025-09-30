@@ -26,6 +26,7 @@ import com.hkapps.hygienekleen.databinding.ActivityDetailClientRkbBinding
 import com.hkapps.hygienekleen.features.features_client.monthlyworkreportclient.viewmodel.MonthlyWorkClientViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DetailClientRkbActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailClientRkbBinding
@@ -44,6 +45,7 @@ class DetailClientRkbActivity : AppCompatActivity() {
         binding = ActivityDetailClientRkbBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         val window: Window = this.window
         // clear FLAG_TRANSLUCENT_STATUS flag:
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)

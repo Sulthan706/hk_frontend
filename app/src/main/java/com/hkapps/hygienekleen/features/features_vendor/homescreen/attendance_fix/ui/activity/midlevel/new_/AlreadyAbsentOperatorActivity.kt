@@ -14,6 +14,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.attendance_fi
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.util.*
 
 
@@ -45,6 +46,8 @@ class AlreadyAbsentOperatorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAlreadyAbsentOperatorBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.layoutAppbarAttendanceOperator.ivAppbarBack.setOnClickListener {
             onBackPressed()

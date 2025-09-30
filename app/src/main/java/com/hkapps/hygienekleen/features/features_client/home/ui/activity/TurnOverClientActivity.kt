@@ -24,6 +24,7 @@ import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import ir.mahozad.android.PieChart
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -106,6 +107,7 @@ class TurnOverClientActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityTurnOverClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
 //        for(i in listx){
 //            notAbsentData.add(i.notAbcentInPercent.toFloat())

@@ -21,6 +21,7 @@ import com.hkapps.hygienekleen.utils.CommonUtils
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.applySkeleton
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ReportCtalkResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityReportCtalkResultBinding
@@ -60,6 +61,7 @@ class ReportCtalkResultActivity : AppCompatActivity() {
         binding = ActivityReportCtalkResultBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         binding.layoutAppbar.tvAppbarTitle.text = "Report CTalk"
         binding.layoutAppbar.ivAppbarBack.setOnClickListener {
             onBackPressed()

@@ -29,6 +29,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.facebook.shimmer.ShimmerFrameLayout
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -89,6 +90,7 @@ class CreateOvertimeChangeMidActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityCreateOvertimeChangeMidBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar
         binding.appbarCreateOvertimeChangeMid.tvAppbarTitle.text = "Buat Jadwal Lembur"

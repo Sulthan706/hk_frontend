@@ -170,7 +170,7 @@ class MRManagementActivity : AppCompatActivity() {
                     val count = "Showing $pageStart-$pageEnd of ${it.data.size}"
                     binding.tvPageHistoryClosing.text = count
                     if (page == 0) {
-                        mrAdapter = MrAdapter(it.data.content.toMutableList())
+                        mrAdapter = MrAdapter(it.data.content.toMutableList(),false){}
                         binding.rvTableHistoryClosing.adapter = mrAdapter
                         binding.rvTableHistoryClosing.layoutManager = LinearLayoutManager(this)
                     } else {

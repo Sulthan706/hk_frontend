@@ -17,6 +17,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.closing.v
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.closing.ui.adapter.ChooseClientClosingAdapter
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ChooseClientClosingActivity : AppCompatActivity() {
 
@@ -43,6 +44,8 @@ class ChooseClientClosingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityChooseClientClosingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         val appBarName = "Daftar Klien"
         binding.appbarChooseClientClosing.tvAppbarTitle.text = appBarName

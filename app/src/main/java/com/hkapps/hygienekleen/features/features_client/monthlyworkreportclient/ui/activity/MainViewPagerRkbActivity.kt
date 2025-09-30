@@ -15,6 +15,7 @@ import com.hkapps.hygienekleen.features.features_client.monthlyworkreportclient.
 import com.hkapps.hygienekleen.features.features_client.monthlyworkreportclient.ui.fragment.ListWorkFragment
 import com.hkapps.hygienekleen.features.features_client.monthlyworkreportclient.ui.fragment.MonitoringRkbFragment
 import com.hkapps.hygienekleen.features.features_client.monthlyworkreportclient.ui.fragment.OverViewRkbFragment
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class MainViewPagerRkbActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainViewPagerRkbBinding
@@ -22,6 +23,7 @@ class MainViewPagerRkbActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainViewPagerRkbBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         val window: Window = this.window
         // clear FLAG_TRANSLUCENT_STATUS flag:
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)

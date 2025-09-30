@@ -32,6 +32,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.project.u
 import com.hkapps.hygienekleen.features.features_management.homescreen.project.ui.activity.ListBranchProjectManagementActivity
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ProfileManagementActivity : AppCompatActivity(), PhoneNumberAdapter.ListPhoneNumberCallBack {
 
@@ -53,6 +54,8 @@ class ProfileManagementActivity : AppCompatActivity(), PhoneNumberAdapter.ListPh
         super.onCreate(savedInstanceState)
         binding = ActivityProfileManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,null)
 
         // set layout client or management
         if (userLevel == "CLIENT") {

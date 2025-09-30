@@ -33,6 +33,7 @@ import com.hkapps.hygienekleen.features.features_vendor.profile.viewmodel.Profil
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -74,6 +75,7 @@ class ConfirmFacePhotoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityConfirmFacePhotoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         binding.layoutAppbar.tvAppbarTitle.text = "Konfirmasi Foto Wajah"
         binding.layoutAppbar.ivAppbarBack.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()

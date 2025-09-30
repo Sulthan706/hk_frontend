@@ -213,7 +213,7 @@ class HomeManagementUpdatedFragment : Fragment() {
         // set version app text
         val manager = requireActivity().packageManager
         val info = manager.getPackageInfo(requireActivity().packageName, 0)
-        versionApp = info.versionName
+        versionApp = info.versionName ?: "unknown"
         binding.tvVersionHome.text = versionApp
 
         // set on click button news

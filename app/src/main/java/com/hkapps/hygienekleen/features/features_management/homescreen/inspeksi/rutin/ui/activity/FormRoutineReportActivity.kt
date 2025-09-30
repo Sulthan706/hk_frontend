@@ -33,6 +33,7 @@ import com.hkapps.hygienekleen.databinding.ActivityFormRoutineReportBinding
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.ChangeDocumentActivity
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -57,6 +58,8 @@ class FormRoutineReportActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFormRoutineReportBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarFormRoutineReport.tvAppbarTitle.text = "Buat Laporan Kunjungan"

@@ -19,6 +19,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.hkapps.hygienekleen.features.features_management.homescreen.attendanceOSM.model.listAllProject.Content
 import com.hkapps.hygienekleen.features.features_management.homescreen.attendanceOSM.ui.adapter.ProjectsAllAttendanceAdapter
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class SearchProjectAttendanceActivity : AppCompatActivity(), ProjectsAllAttendanceAdapter.ProjectAllCallBack {
 
@@ -38,6 +39,8 @@ class SearchProjectAttendanceActivity : AppCompatActivity(), ProjectsAllAttendan
         super.onCreate(savedInstanceState)
         binding = ActivitySearchProjectAttendanceBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,null)
 
         // set back button
         binding.ivBackSearchProjectAttend.setOnClickListener {

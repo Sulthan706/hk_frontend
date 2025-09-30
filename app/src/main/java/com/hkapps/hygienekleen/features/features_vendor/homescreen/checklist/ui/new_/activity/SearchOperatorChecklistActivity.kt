@@ -22,6 +22,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.checklist.ui.
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.checklist.viewmodel.ChecklistViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class SearchOperatorChecklistActivity : AppCompatActivity(), ListOperatorChecklistAdapter.ListOperatorCallBack {
 
@@ -39,6 +40,8 @@ class SearchOperatorChecklistActivity : AppCompatActivity(), ListOperatorCheckli
         super.onCreate(savedInstanceState)
         binding = ActivitySearchOperatorChecklistBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarSearchOperatorChecklist.ivAppbarBack.setOnClickListener {
             super.onBackPressed()

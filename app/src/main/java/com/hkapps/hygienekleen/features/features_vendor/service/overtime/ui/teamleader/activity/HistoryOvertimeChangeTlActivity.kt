@@ -25,6 +25,7 @@ import com.hkapps.hygienekleen.features.features_vendor.service.overtime.ui.team
 import com.hkapps.hygienekleen.features.features_vendor.service.overtime.viewmodel.OvertimeViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class HistoryOvertimeChangeTlActivity : AppCompatActivity(), ListOvertimeChangeTlAdapter.ListOvertimeChangeTlCallback {
 
@@ -44,6 +45,7 @@ class HistoryOvertimeChangeTlActivity : AppCompatActivity(), ListOvertimeChangeT
         super.onCreate(savedInstanceState)
         binding = ActivityHistoryOvertimeChangeTlBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarHistoryOvertimeChangeTl.tvAppbarTitle.text = "History"

@@ -21,6 +21,7 @@ import com.hkapps.hygienekleen.features.features_client.monthlyworkreportclient.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListByStatusRkbClientActivity : AppCompatActivity(), ListByStatsRkbClientAdapter.ClickRkbClient {
     private lateinit var binding: ActivityListByStatusRkbClientBinding
@@ -50,6 +51,7 @@ class ListByStatusRkbClientActivity : AppCompatActivity(), ListByStatsRkbClientA
         super.onCreate(savedInstanceState)
         binding = ActivityListByStatusRkbClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         val window: Window = this.window
         // clear FLAG_TRANSLUCENT_STATUS flag:

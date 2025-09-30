@@ -40,6 +40,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -65,6 +66,8 @@ class FormLaporanMeetingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFormLaporanMeetingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         when (clickFrom) {
             "listMeeting" -> {

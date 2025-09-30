@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_35sdp"
+    app:cardCornerRadius="@dimen/_16sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/_20sdp">
+
+
+        <LinearLayout
+            android:id="@+id/linear_approved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvSuccessRegisMekari"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Setujui Permintaan"
+                android:textAlignment="center"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/green1"
+                android:fontFamily="@font/poppinssemibold"/>
+
+
+            <TextView
+                android:id="@+id/tvInfoBak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Apakah anda yakin ingin menyetujui permintaan ini?"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBackBakVendor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/red1"
+                    app:cornerRadius="8dp"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="5dp"
+                    android:paddingVertical="11dp"
+                    android:layout_marginTop="51dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnApproveReject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/green2"
+                    app:cornerRadius="8dp"
+                    android:textSize="16sp"
+                    android:layout_marginStart="5dp"
+                    android:paddingVertical="11dp"
+                    android:layout_marginTop="51dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_rejected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tolak Permintaan"
+                android:textAlignment="center"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/red1"
+                android:fontFamily="@font/poppinssemibold"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Apakah anda yakin ingin menolak permintaan ini?"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/red1"
+                    app:cornerRadius="8dp"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="5dp"
+                    android:paddingVertical="11dp"
+                    android:layout_marginTop="51dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnReject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/green2"
+                    app:cornerRadius="8dp"
+                    android:textSize="16sp"
+                    android:layout_marginStart="5dp"
+                    android:paddingVertical="11dp"
+                    android:layout_marginTop="51dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

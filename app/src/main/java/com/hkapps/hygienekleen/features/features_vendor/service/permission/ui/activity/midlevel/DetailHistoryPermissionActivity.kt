@@ -29,6 +29,7 @@ import com.hkapps.hygienekleen.features.features_vendor.service.permission.viewm
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -58,6 +59,7 @@ class DetailHistoryPermissionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailHistoryPermissionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarDetailHistoryPermissionMid.tvAppbarTitle.text = "Detail Permohonan Izin"

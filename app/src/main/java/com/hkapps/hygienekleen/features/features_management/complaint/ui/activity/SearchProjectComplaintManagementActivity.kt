@@ -26,6 +26,7 @@ import com.hkapps.hygienekleen.features.features_management.complaint.viewmodel.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class SearchProjectComplaintManagementActivity : AppCompatActivity(), ListProjectAllManagementAdapter.ListProjectAllCallback {
 
@@ -47,6 +48,8 @@ class SearchProjectComplaintManagementActivity : AppCompatActivity(), ListProjec
         super.onCreate(savedInstanceState)
         binding = ActivitySearchProjectComplaintManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarSearchProjectComplaintManagement.ivAppbarBack.setOnClickListener {
             super.onBackPressed()

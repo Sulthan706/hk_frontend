@@ -18,6 +18,7 @@ import com.hkapps.hygienekleen.features.auth.login.ui.activity.LoginActivity
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 
 class ForgotPassChangePass : AppCompatActivity() {
@@ -35,6 +36,7 @@ class ForgotPassChangePass : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityForgotPassChangePassBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         binding.layoutForgotpassChangepass.tvAppbarTitleNotback.text = "Password Baru"
 
         email = CarefastOperationPref.loadString(CarefastOperationPrefConst.USER_EMAIL, "")

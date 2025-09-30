@@ -12,6 +12,7 @@ import com.hkapps.hygienekleen.features.features_management.service.resign.ui.ad
 import com.hkapps.hygienekleen.features.features_management.service.resign.viewmodel.ResignManagementViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ResignReasonDecActivity : AppCompatActivity(), ListReasonDecAdapter.ReasonResignsCallback {
     private lateinit var binding: ActivityResignReasonDecBinding
@@ -38,6 +39,7 @@ class ResignReasonDecActivity : AppCompatActivity(), ListReasonDecAdapter.Reason
         super.onCreate(savedInstanceState)
         binding = ActivityResignReasonDecBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
         binding.btnCloseResignReasonDec.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()

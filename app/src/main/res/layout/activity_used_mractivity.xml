@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.home.ui.new_.activity.mr.UsedMRActivity">
+
+    <!-- Konten utama kamu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/appbar_mr"
+            layout="@layout/app_bar_default" />
+
+        <!-- Rounded Tab Layout Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/tab_container_background"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tab_used"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="Used"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textColor="@color/white"
+                    android:background="@drawable/tab_selected_background"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_margin="2dp" />
+
+                <TextView
+                    android:id="@+id/tab_stock"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="Stock"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppinsregular"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_margin="2dp" />
+
+                <TextView
+                    android:id="@+id/tab_history"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="History"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppinsregular"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_margin="2dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Content Area -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewMovieList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:padding="16dp" />
+
+            </HorizontalScrollView>
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:visibility="invisible"
+        android:contentDescription="Tambah data"
+        android:src="@drawable/ic_add_white"
+        app:tint="@color/white"
+        app:backgroundTint="@color/teal_700"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_gravity="bottom|end"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

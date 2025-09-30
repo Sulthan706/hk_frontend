@@ -31,6 +31,7 @@ import com.hkapps.hygienekleen.databinding.ActivityUploadBakManagementBinding
 import com.hkapps.hygienekleen.features.features_management.damagereport.viewmodel.DamageReportManagementViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -58,6 +59,8 @@ class UploadBakManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityUploadBakManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,null)
 
 
         binding.btnSubmitBak.setOnClickListener {

@@ -29,7 +29,14 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.ed
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.getTimeShift.GetTimeShiftResponseModel
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.latlongarea.LatLongAreaResponseModel
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.listSlipGaji.ListSlipGajiResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.CreateMRResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.CreateMaterialRequest
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.ItemMRDataResponse
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.ItemMrResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.ListHistoryStockResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.ListHistoryUsedResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.MRDashboardResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.SatuanResponse
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.profile.LastUpdateProfileResponse
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.reportAttendance.ReportAttendanceResponse
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.updatebpjs.UpdateBpjsResponseModel
@@ -37,6 +44,8 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.up
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.versionCek.VersionCheckResponse
 import io.reactivex.Single
 import okhttp3.MultipartBody
+import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface HomeRemoteDataSource {
 
@@ -202,5 +211,41 @@ interface HomeRemoteDataSource {
         page : Int,
         size : Int
     ):Single<ItemMrResponse>
+
+    fun dashboardMR(
+        projectCode : String,
+        page : Int,
+        size : Int
+    ):Single<MRDashboardResponse>
+
+    fun createMR(
+        createMaterialRequest: CreateMaterialRequest
+    ): Single<CreateMRResponse>
+
+    fun createMRFollowUp(
+        createMaterialRequest: CreateMaterialRequest
+    ): Single<CreateMRResponse>
+
+    fun getItemMR(
+        filter : String
+    ): Single<ItemMRDataResponse>
+
+    fun getUnitMR(
+        filter : String
+    ): Single<SatuanResponse>
+
+    fun approveMR(employeeId : Int,idMaterialRequest  : Int,
+    ): Single<CreateMRResponse>
+
+    fun getDataListHistoryUsed(idProject: String,
+    ): Single<ListHistoryUsedResponse>
+
+    fun getDataListHistoryStock(idProject: String,
+    ): Single<ListHistoryStockResponse>
+
+    fun getDataListUsed(idProject: String,date: String,
+    ): Single<ListHistoryUsedResponse>
+
+    fun createMRUsed(idProject: String,idItem : Int,quantity : Int,unit : String,userId : Int): Single<CreateMRResponse>
 
 }

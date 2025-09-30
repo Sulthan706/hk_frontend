@@ -27,6 +27,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.home.view
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.appbar.AppBarLayout
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DetailNewsManagementActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailNewsManagementBinding
@@ -51,6 +52,8 @@ class DetailNewsManagementActivity : AppCompatActivity() {
         )
 
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,null)
 
         // Add top margin to the toolbar to account for the status bar
         val toolbarLayoutParams =

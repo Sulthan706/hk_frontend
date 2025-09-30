@@ -18,15 +18,15 @@ android {
             keyPassword 'careops'
         }
     }
-    compileSdk = 34
+    compileSdk = 35
 //    buildToolsVersion "33.0.1"
 
     defaultConfig {
         applicationId "com.hkapps.hygienekleen"
         minSdkVersion 24
-        targetSdk = 34
-        versionCode 10
-        versionName "1.0.9"
+        targetSdk = 35
+        versionCode 13
+        versionName "1.2.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -97,6 +97,8 @@ def daggerVersion = '2.14.1'
 dependencies {
 //    implementation project(path: ':academy')
     implementation(project(":liveness"))
+
+    implementation 'com.github.dewinjm:monthyear-picker:1.0.2'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.12.0'

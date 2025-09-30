@@ -17,6 +17,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -47,6 +48,8 @@ class PeriodicManagementMonitorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPeriodicManagementMonitorBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarMonthlyWorkReport.tvAppbarTitle.text = "Daftar Pekerjaan"
         binding.appbarMonthlyWorkReport.ivAppbarBack.setOnClickListener {

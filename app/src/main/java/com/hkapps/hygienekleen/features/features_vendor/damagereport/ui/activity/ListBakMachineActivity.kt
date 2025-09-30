@@ -23,6 +23,7 @@ import com.hkapps.hygienekleen.features.features_vendor.damagereport.viewmodel.D
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -56,6 +57,7 @@ class ListBakMachineActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListBakMachineBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         initView()
     }
 

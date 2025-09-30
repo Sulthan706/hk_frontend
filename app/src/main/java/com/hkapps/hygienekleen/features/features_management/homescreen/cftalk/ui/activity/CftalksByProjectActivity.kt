@@ -10,6 +10,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.cftalk.ui
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.tabs.TabLayout
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class CftalksByProjectActivity : AppCompatActivity() {
 
@@ -21,6 +22,7 @@ class CftalksByProjectActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCftalksByProjectBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar layout
         binding.appbarCftalksByProject.tvAppbarTitle.text = projectName

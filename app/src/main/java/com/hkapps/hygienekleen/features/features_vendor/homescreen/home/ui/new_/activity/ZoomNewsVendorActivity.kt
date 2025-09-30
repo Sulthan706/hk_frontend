@@ -9,6 +9,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.home.ui.a
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.viewmodel.HomeViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ZoomNewsVendorActivity : AppCompatActivity() {
     private lateinit var binding: ActivityZoomNewsLowBinding
@@ -23,6 +24,7 @@ class ZoomNewsVendorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityZoomNewsLowBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
         loadData()
         setObserver()

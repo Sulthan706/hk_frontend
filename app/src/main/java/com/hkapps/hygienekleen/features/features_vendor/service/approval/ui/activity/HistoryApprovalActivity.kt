@@ -18,6 +18,7 @@ import com.hkapps.hygienekleen.features.features_vendor.service.approval.viewmod
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -44,6 +45,8 @@ class HistoryApprovalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHistoryApprovalBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarHistoryApproval.tvAppbarTitle.text = "Riwayat Approval Saya"

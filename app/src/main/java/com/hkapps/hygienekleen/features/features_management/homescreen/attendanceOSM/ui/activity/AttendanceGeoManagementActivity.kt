@@ -62,6 +62,7 @@ import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.model.CircleOptions
 import com.google.android.gms.maps.model.LatLng
 import com.google.firebase.messaging.FirebaseMessaging
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import org.osmdroid.config.Configuration
 import org.osmdroid.events.DelayedMapListener
 import org.osmdroid.events.MapListener
@@ -151,6 +152,8 @@ class AttendanceGeoManagementActivity : AppCompatActivity(), GoogleApiClient.Con
         super.onCreate(savedInstanceState)
         binding = ActivityAttendanceGeoManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         resultLauncher = registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()

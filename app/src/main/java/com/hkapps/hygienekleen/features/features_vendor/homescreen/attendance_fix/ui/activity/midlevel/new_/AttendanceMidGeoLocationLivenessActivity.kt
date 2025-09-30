@@ -27,6 +27,7 @@ import com.hkapps.hygienekleen.R
 import com.hkapps.hygienekleen.databinding.ActivityAttendanceMidGeoLocationLivenessBinding
 import com.hkapps.hygienekleen.features.facerecog.model.request.Images
 import com.hkapps.hygienekleen.features.facerecog.viewmodel.FaceRecogViewModel
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import com.hkapps.liveness.detection.FaceAnalyzer
 import com.hkapps.liveness.detection.LivenessDetector
 import com.hkapps.liveness.tasks.DetectionTask
@@ -69,6 +70,8 @@ class AttendanceMidGeoLocationLivenessActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAttendanceMidGeoLocationLivenessBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,null)
 
         if(isInternetAvailable(this)){
             getGestured()

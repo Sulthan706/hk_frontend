@@ -20,6 +20,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.monthlyworkre
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 
 class PeriodicVendorListByStatusActivity : AppCompatActivity(),
@@ -51,6 +52,7 @@ class PeriodicVendorListByStatusActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityListStatusRkbBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         CarefastOperationPref.saveBoolean(CarefastOperationPrefConst.REFRESH_DATA, true)
 

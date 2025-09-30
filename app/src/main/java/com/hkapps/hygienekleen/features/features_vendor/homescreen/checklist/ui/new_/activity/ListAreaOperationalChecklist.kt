@@ -7,6 +7,7 @@ import com.hkapps.hygienekleen.databinding.ActivityListAreaOperationalChecklistB
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.checklist.ui.new_.adapter.ViewPagerAreaOpsAdapter
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListAreaOperationalChecklist : AppCompatActivity() {
 
@@ -19,6 +20,8 @@ class ListAreaOperationalChecklist : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListAreaOperationalChecklistBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarListAreaOperationalChecklist.tvAppbarTitle.text = when(shiftName) {

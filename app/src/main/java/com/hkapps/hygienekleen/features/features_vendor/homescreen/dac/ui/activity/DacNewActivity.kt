@@ -22,6 +22,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.applySkeleton
 import com.google.android.material.snackbar.Snackbar
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import net.cachapa.expandablelayout.ExpandableLayout
 import java.text.SimpleDateFormat
 import java.util.*
@@ -52,6 +53,7 @@ class DacNewActivity : AppCompatActivity(), ExpandableLayout.OnExpansionUpdateLi
         super.onCreate(savedInstanceState)
         binding = ActivityDacBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.rvDac.layoutManager = layoutManager

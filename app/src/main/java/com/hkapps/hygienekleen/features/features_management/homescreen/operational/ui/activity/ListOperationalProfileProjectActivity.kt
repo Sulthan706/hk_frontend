@@ -13,6 +13,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.operation
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.tabs.TabLayout
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListOperationalProfileProjectActivity : AppCompatActivity() {
 
@@ -25,6 +26,8 @@ class ListOperationalProfileProjectActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListOperationalProfileProjectBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         //set layout
         if (userLevel == "CLIENT") {

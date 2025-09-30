@@ -20,6 +20,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.monthlywo
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class PeriodicManagementByStatusActivity : AppCompatActivity(), ListPeriodicManagementByStatusAdapter.ClickByStatsPeriodic {
     private lateinit var binding: ActivityPeriodicManagementByStatusBinding
@@ -53,6 +54,7 @@ class PeriodicManagementByStatusActivity : AppCompatActivity(), ListPeriodicMana
         super.onCreate(savedInstanceState)
         binding = ActivityPeriodicManagementByStatusBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         binding.appbarListRkb.ivAppbarBack.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()
             finish()

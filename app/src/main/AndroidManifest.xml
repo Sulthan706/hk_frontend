@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <meta-data android:name="isMonitoringTool" android:value="enterprise_management" />
     <application
         android:name=".app.CarefastOperationApp"
         android:allowBackup="true"
@@ -13,6 +12,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CarefastOperation">
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.mr.ChooseMRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.mr.UsedMRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.mr.ApproveMRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.mr.CreateMRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.mr.DashboardMRActivity"
+            android:exported="false" />
         <activity
             android:name=".features.features_management.homeScreenUpdated.humanCapital.ui.activity.ProfileEmployeeActivity"
             android:exported="false" />
@@ -1249,8 +1263,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="" />
-
-        <meta-data android:name="isMonitoringTool" android:value="enterprise_management" />
+        <meta-data
+            android:name="isMonitoringTool"
+            android:value="enterprise_management" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -1285,6 +1300,10 @@
             android:name=".utils.InternetCheckService"
             android:exported="false" />
     </application>
+
+    <meta-data
+        android:name="isMonitoringTool"
+        android:value="enterprise_management" />
 
     <queries>
 

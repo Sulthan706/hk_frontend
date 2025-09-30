@@ -7,9 +7,35 @@
     android:background="@color/background"
     tools:context=".features.features_vendor.homescreen.checklist.ui.new_.activity.SearchOperatorChecklistActivity">
 
-    <include
-        android:id="@+id/appbarSearchOperatorChecklist"
-        layout="@layout/app_bar_default_with_edit_text"/>
+    <View
+        android:id="@+id/statusBarBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusBarBackground"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetEndWithActions="0dp">
+
+        <include
+            android:id="@+id/appbarSearchOperatorChecklist"
+            layout="@layout/app_bar_default_with_edit_text"/>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
 
     <FrameLayout
         android:id="@+id/fl_NoInternetSearchOperatorChecklist"
@@ -40,7 +66,7 @@
         android:layout_marginHorizontal="@dimen/_12sdp"
         android:layout_marginTop="@dimen/_12sdp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appbarSearchOperatorChecklist"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         android:visibility="gone"
         tools:listitem="@layout/list_operational_checklist" />
 
@@ -52,7 +78,7 @@
         android:layout_marginTop="@dimen/_12sdp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appbarSearchOperatorChecklist">
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"

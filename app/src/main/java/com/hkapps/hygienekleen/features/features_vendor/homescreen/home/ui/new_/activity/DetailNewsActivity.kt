@@ -28,6 +28,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.viewmode
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.appbar.AppBarLayout
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DetailNewsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailNewsBinding
@@ -49,6 +50,7 @@ class DetailNewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
         // Make the status bar transparent
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

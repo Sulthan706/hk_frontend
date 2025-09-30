@@ -82,7 +82,7 @@ class MyTeamClientsListActivity : AppCompatActivity(), MyTeamListCfManagementAda
                 binding.appbarHistoryComplaint.tvAppbarTitle.text = "Daftar Pengawas"
             }
             "Management" -> {
-                binding.appbarHistoryComplaint.tvAppbarTitle.text = "Daftar CF Manajemen"
+                binding.appbarHistoryComplaint.tvAppbarTitle.text = "Daftar HK Manajemen"
                 binding.llShiftCfteamSelected.visibility = View.GONE
             }
         }

@@ -19,6 +19,7 @@ import com.hkapps.hygienekleen.features.features_client.myteam.viewmodel.MyTeamC
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -39,6 +40,7 @@ class MyTeamClientsActivity : AppCompatActivity() {
         binding = ActivityMyTeamClientsBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         val window: Window = this.window
 
         // clear FLAG_TRANSLUCENT_STATUS flag:

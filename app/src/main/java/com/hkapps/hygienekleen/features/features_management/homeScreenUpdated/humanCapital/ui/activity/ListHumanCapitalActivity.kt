@@ -28,6 +28,7 @@ import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.ValueFormatter
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -65,6 +66,8 @@ class ListHumanCapitalActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityListHumanCapitalBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,null)
 
         // set appbar
         binding.appbarListHumanCapital.tvAppbarTitle.text = if (userLevel == "BOD" || userLevel == "CEO" || isVp) {

@@ -7,9 +7,35 @@
     android:background="@color/background"
     tools:context=".features.features_management.myteam.ui.activity.ListOperationalMgmntActivity">
 
-    <include
-        android:id="@+id/appbarListOperationalMgmnt"
-        layout="@layout/app_bar_default_with_search_date"/>
+    <View
+        android:id="@+id/statusBarBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusBarBackground"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetEndWithActions="0dp">
+
+        <include
+            android:id="@+id/appbarListOperationalMgmnt"
+            layout="@layout/app_bar_default_with_search_date"/>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
 
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmerListOperationalMgmnt"
@@ -18,7 +44,7 @@
         android:layout_margin="@dimen/_12sdp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appbarListOperationalMgmnt">
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,7 +113,7 @@
         android:visibility="gone"
         tools:listitem="@layout/list_leader_myteam"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appbarListOperationalMgmnt"/>
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
 
     <FrameLayout
         android:id="@+id/fl_ListOperationalMgmntNoData"

@@ -15,6 +15,7 @@ import com.hkapps.hygienekleen.features.features_management.complaint.ui.adapter
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.tabs.TabLayout
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListComplaintManagementActivity : AppCompatActivity() {
 
@@ -27,6 +28,8 @@ class ListComplaintManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListComplaintManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         //set app client
         if(levelJabatan == "CLIENT"){

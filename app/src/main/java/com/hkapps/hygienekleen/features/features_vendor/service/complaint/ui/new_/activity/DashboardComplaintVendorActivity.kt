@@ -14,6 +14,7 @@ import com.hkapps.hygienekleen.databinding.ActivityDashboardComplaintVendorBindi
 import com.hkapps.hygienekleen.features.features_vendor.service.complaint.viewmodel.VendorComplaintViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import ir.mahozad.android.PieChart
 import java.lang.Float
 import java.text.SimpleDateFormat
@@ -36,6 +37,7 @@ class DashboardComplaintVendorActivity : AppCompatActivity() {
         binding = ActivityDashboardComplaintVendorBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarComplaintVendors.ivAppbarBack.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()

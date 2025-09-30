@@ -19,6 +19,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -43,6 +44,7 @@ class PeriodicOperatorHomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPeriodicOperatorHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         binding.appbarMonthlyWorkReport.tvAppbarTitle.text = "Detail Pekerjaan"
         binding.appbarMonthlyWorkReport.ivAppbarBack.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()

@@ -14,6 +14,7 @@ import com.hkapps.hygienekleen.features.features_management.report.viewmodel.Rep
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -42,6 +43,7 @@ class ReportDetailProjectActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityReportListProjectBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         binding.layoutAppbar.ivAppbarBack.setOnClickListener {
             onBackPressed()
         }

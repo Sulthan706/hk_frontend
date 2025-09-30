@@ -20,6 +20,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.applySkeleton
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class PersonHistoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPersonHistoryBinding
@@ -45,6 +46,8 @@ class PersonHistoryActivity : AppCompatActivity() {
         binding = ActivityPersonHistoryBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.layoutAppbarHistoryAttendancePerson.tvAppbarTitle.text = "Riwayat Absen Individual"
 

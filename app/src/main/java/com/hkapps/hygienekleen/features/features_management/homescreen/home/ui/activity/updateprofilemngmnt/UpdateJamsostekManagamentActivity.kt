@@ -16,6 +16,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.home.ui.f
 import com.hkapps.hygienekleen.features.features_management.homescreen.home.viewmodel.HomeManagementViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class UpdateJamsostekManagamentActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUpdateJamsostekManagamentBinding
@@ -32,6 +33,8 @@ class UpdateJamsostekManagamentActivity : AppCompatActivity() {
         binding = ActivityUpdateJamsostekManagamentBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarJamsostek.tvAppbarTitle.text = "BPJS Ketenagakerjaan"
         binding.appbarJamsostek.ivAppbarBack.setOnClickListener {

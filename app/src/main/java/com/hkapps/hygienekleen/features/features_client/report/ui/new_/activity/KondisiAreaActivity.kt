@@ -19,6 +19,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class KondisiAreaActivity : AppCompatActivity(), ListKondisiAreaAdapter.ListKondisiAreaCallBack {
     private lateinit var binding: ActivityKondisiAreaBinding
@@ -42,6 +43,7 @@ class KondisiAreaActivity : AppCompatActivity(), ListKondisiAreaAdapter.ListKond
         binding = ActivityKondisiAreaBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // clear FLAG_TRANSLUCENT_STATUS flag:
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)

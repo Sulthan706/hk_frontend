@@ -43,6 +43,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.monthlyworkre
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.monthlyworkreport.viewmodel.MonthlyWorkReportViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import ir.mahozad.android.PieChart
 import java.lang.Float
 import java.text.SimpleDateFormat
@@ -92,6 +93,7 @@ class ListShiftChecklistActivity : AppCompatActivity(),
         binding = ActivityListShiftChecklistBinding.inflate(layoutInflater)
         setContentView(binding.root)
         isDone = intent.getBooleanExtra("is_done",false)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         if(isDone){
             binding.appbarListShiftChecklist.ivAppbarBack.setOnClickListener {

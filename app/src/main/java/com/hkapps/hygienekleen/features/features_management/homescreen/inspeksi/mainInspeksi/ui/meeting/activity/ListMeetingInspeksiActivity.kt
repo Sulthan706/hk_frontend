@@ -22,6 +22,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -49,6 +50,8 @@ class ListMeetingInspeksiActivity : AppCompatActivity(), ListMeetingInspeksiAdap
         super.onCreate(savedInstanceState)
         binding = ActivityListMeetingInspeksiBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // validate project code by click from
         projectCode = if (clickFrom == "mainInspeksi" || mClickFrom == "mainInspeksi") {

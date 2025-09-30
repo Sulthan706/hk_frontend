@@ -14,6 +14,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.attendance_fi
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.attendance_fix.viewmodel.AttendanceFixViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class FabSearchAttendanceActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFabSearchAttendanceBinding
@@ -30,6 +31,7 @@ class FabSearchAttendanceActivity : AppCompatActivity() {
         binding = ActivityFabSearchAttendanceBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
 //        binding.ivBackSearchProjectAttend.setOnClickListener {
 //            onBackPressed()

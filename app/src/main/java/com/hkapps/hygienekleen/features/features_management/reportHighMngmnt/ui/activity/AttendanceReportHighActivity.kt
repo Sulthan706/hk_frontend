@@ -6,6 +6,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import com.hkapps.hygienekleen.databinding.ActivityAttendanceReportHighBinding
 import com.hkapps.hygienekleen.features.features_management.reportHighMngmnt.ui.adapter.AttendanceReportHighAdapter
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class AttendanceReportHighActivity : AppCompatActivity() {
 
@@ -17,6 +18,7 @@ class AttendanceReportHighActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAttendanceReportHighBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
         // set app bar
         binding.appbarAttendanceReportHigh.tvAppbarTitle.text = "ATTENDANCE REPORT"

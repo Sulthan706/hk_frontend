@@ -19,6 +19,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -53,6 +54,7 @@ class ProjectWeeklyProgressActivity : AppCompatActivity(), ProjectsInspeksiAdapt
         super.onCreate(savedInstanceState)
         binding = ActivityProjectWeeklyProgressBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
         binding.appBarWeeklyProgress.tvAppbarTitle.text = "Daftar Project"
         binding.appBarWeeklyProgress.ivAppbarBack.setOnClickListener {

@@ -19,6 +19,7 @@ import com.hkapps.hygienekleen.features.auth.forgotpass.viewmodel.ForgotPassView
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 
 class ForgotPassActivity : AppCompatActivity() {
@@ -47,6 +48,7 @@ class ForgotPassActivity : AppCompatActivity() {
 
         binding = ActivityForgotBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.btnForgotSend.setOnClickListener {
             validation()

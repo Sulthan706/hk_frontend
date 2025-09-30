@@ -25,6 +25,7 @@ import com.hkapps.hygienekleen.features.features_vendor.damagereport.ui.adapter.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -57,6 +58,7 @@ class ListMachineClientActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListMachineClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         initView()
 
     }

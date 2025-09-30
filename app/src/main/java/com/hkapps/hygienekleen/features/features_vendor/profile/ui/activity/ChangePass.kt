@@ -11,6 +11,7 @@ import com.hkapps.hygienekleen.databinding.ActivityChangePassBinding
 import com.hkapps.hygienekleen.features.features_vendor.profile.viewmodel.ProfileViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ChangePass : AppCompatActivity() {
     private lateinit var binding: ActivityChangePassBinding
@@ -23,6 +24,7 @@ class ChangePass : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityChangePassBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbar.tvAppbarTitle.text = "Change Password"
 

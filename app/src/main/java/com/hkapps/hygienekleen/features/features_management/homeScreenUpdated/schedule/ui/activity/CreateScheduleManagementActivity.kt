@@ -34,6 +34,7 @@ import com.github.sundeepk.compactcalendarview.domain.Event
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -82,6 +83,8 @@ class CreateScheduleManagementActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityCreateScheduleManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarCreateScheduleManagement.tvAppbarTitle.text = "Visit Schedule"

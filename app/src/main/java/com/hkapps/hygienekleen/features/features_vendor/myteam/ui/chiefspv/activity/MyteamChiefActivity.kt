@@ -29,6 +29,7 @@ import com.hkapps.hygienekleen.features.features_vendor.myteam.viewmodel.ShiftTi
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -58,6 +59,7 @@ class MyteamChiefActivity : AppCompatActivity(), ListSupervisorAdapter.ListSpvCa
         super.onCreate(savedInstanceState)
         binding = ActivityMyteamChiefBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         employeeId = when(clickFrom) {
             "Myteam Management" -> chiefId

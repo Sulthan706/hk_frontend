@@ -6,16 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".features.features_vendor.homescreen.home.ui.new_.activity.updateprofile.UpdateBpjsActivity">
 
-    <include
-        android:id="@+id/appbarKesehatan"
-        layout="@layout/app_bar_default"/>
+
+    <View
+        android:id="@+id/statusBarBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusBarBackground"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetEndWithActions="0dp">
+
+        <include
+            android:id="@+id/appbarKesehatan"
+            layout="@layout/app_bar_default"/>
+
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
 
     <TextView
         android:id="@+id/titleDokumen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Foto Dokumen"
-        app:layout_constraintTop_toBottomOf="@+id/appbarKesehatan"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         android:layout_marginTop="@dimen/_30sdp"
         android:layout_marginHorizontal="24dp"
         android:fontFamily="@font/poppinssemibold"
@@ -36,7 +64,7 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/defaultimageBpjs"
             android:padding="@dimen/_60sdp"
-            android:src="@drawable/logo_splash" />
+            android:src="@drawable/ic_hk" />
 
         <ImageView
             android:id="@+id/ivKesehatan"
@@ -106,6 +134,7 @@
         android:textColor="@color/white"
         android:fontFamily="@font/poppinssemibold"
         android:textAllCaps="false"
+        android:visibility="gone"
         android:backgroundTint="@color/secondary_color"
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"

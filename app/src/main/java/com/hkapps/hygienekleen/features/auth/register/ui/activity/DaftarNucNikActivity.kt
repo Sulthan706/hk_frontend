@@ -15,6 +15,7 @@ import com.hkapps.hygienekleen.features.auth.register.viewmodel.DataEmployeeView
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DaftarNucNikActivity : AppCompatActivity() {
 
@@ -32,7 +33,8 @@ class DaftarNucNikActivity : AppCompatActivity() {
         binding = ActivityDaftarNucNikBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.ivBackDaftarNucNik.setOnClickListener {
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
+        binding.ivBackDaftarEmail.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()
             finish()
         }

@@ -19,6 +19,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -53,11 +54,14 @@ class MRActivity : AppCompatActivity() {
     private val homeViewModel by lazy {
         ViewModelProvider(this)[HomeViewModel::class.java]
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMractivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root, binding.statusBarBackground)
         initView()
+        showLoading(getString(R.string.loading_string_progress))
         getData()
         next()
         previous()
@@ -144,7 +148,6 @@ class MRActivity : AppCompatActivity() {
             progressBar.visibility = View.GONE
             ivNextAbsenceReportManagement.visibility = View.VISIBLE
             ivPrevAbsenceReportManagement.visibility = View.VISIBLE
-            rvTableHistoryClosing.visibility = View.VISIBLE
             tvPageHistoryClosing.visibility = View.VISIBLE
         }
     }
@@ -153,14 +156,19 @@ class MRActivity : AppCompatActivity() {
         val calendar = Calendar.getInstance()
         val currentMonth = calendar.get(Calendar.MONTH) + 1
         val currentYear = calendar.get(Calendar.YEAR)
-        homeViewModel.getDataMr("014390101",currentMonth,currentYear,page,size)
+        val month = intent.getIntExtra("month",0)
+        val year = intent.getIntExtra("year",0)
+        if(intent.getStringExtra("mr") != null){
+            homeViewModel.getDataMr(CarefastOperationPref.loadString(CarefastOperationPrefConst.USER_PROJECT_CODE,""),month,year,page,size)
+        }else{
+            homeViewModel.getDataMr(CarefastOperationPref.loadString(CarefastOperationPrefConst.CLIENT_PROJECT_CODE,""),currentMonth,currentYear,page,size)
+        }
         homeViewModel.getDataMr.observe(this){
             if(it.code == 200){
                 hideLoading()
                 if(it.data.content.isNotEmpty()){
                     setLoadingFirst()
-                    binding.tableHistoryClosing.visibility = View.VISIBLE
-                    binding.rvTableHistoryClosing.visibility = View.VISIBLE
+                    binding.recyclerViewMovieList.visibility = View.VISIBLE
                     binding.ivNextAbsenceReportManagement.visibility = View.VISIBLE
                     binding.ivPrevAbsenceReportManagement.visibility = View.VISIBLE
                     binding.tvPageHistoryClosing.visibility = View.VISIBLE
@@ -171,9 +179,9 @@ class MRActivity : AppCompatActivity() {
                     val count = "Showing $pageStart-$pageEnd of ${it.data.size}"
                     binding.tvPageHistoryClosing.text = count
                     if (page == 0) {
-                        mrAdapter = MrAdapter(it.data.content.toMutableList())
-                        binding.rvTableHistoryClosing.adapter = mrAdapter
-                        binding.rvTableHistoryClosing.layoutManager = LinearLayoutManager(this)
+                        mrAdapter = MrAdapter(it.data.content.toMutableList(),true,false) {}
+                        binding.recyclerViewMovieList.adapter = mrAdapter
+                        binding.recyclerViewMovieList.layoutManager = LinearLayoutManager(this)
                     } else {
                         mrAdapter.data.clear()
                         for (i in 0 until it.data.content.size) {
@@ -183,8 +191,7 @@ class MRActivity : AppCompatActivity() {
                     }
                 }else{
                     binding.progressBar.visibility = View.GONE
-                    binding.tableHistoryClosing.visibility = View.GONE
-                    binding.rvTableHistoryClosing.visibility = View.GONE
+                    binding.recyclerViewMovieList.visibility = View.GONE
                     binding.ivNextAbsenceReportManagement.visibility = View.GONE
                     binding.ivPrevAbsenceReportManagement.visibility = View.GONE
                     binding.tvPageHistoryClosing.visibility = View.GONE
@@ -232,6 +239,5 @@ class MRActivity : AppCompatActivity() {
 
     private fun showLoading(loadingText: String) {
         loadingDialog = CommonUtils.showLoadingDialog(this, loadingText)
-//        loadData()
     }
 }

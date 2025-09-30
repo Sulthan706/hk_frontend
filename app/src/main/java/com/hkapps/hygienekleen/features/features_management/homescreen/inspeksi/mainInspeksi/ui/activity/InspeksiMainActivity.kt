@@ -40,6 +40,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -73,6 +74,7 @@ class InspeksiMainActivity : AppCompatActivity(), ListChooseInspeksiAdapter.OnIt
         super.onCreate(savedInstanceState)
         binding = ActivityInspeksiMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
         // set on click button back
         binding.ivBackInspeksiMain.setOnClickListener {

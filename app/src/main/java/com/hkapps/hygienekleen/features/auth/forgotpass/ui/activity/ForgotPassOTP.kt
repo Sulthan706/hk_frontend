@@ -23,6 +23,7 @@ import com.hkapps.hygienekleen.features.auth.forgotpass.viewmodel.ForgotPassView
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ForgotPassOTP : AppCompatActivity() {
 
@@ -40,6 +41,8 @@ class ForgotPassOTP : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityForgotPassOtpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.layoutForgot.tvAppbarTitle.text = "Verifikasi"
         binding.etotp.addTextChangedListener(GenericTextWatcher(binding.etotp, binding.etotp2))

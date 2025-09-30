@@ -15,6 +15,7 @@ import com.hkapps.hygienekleen.databinding.ActivityChangePassClientBinding
 import com.hkapps.hygienekleen.features.features_client.setting.viewmodel.SettingClientViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ChangePassClientActivity : AppCompatActivity() {
 
@@ -31,6 +32,7 @@ class ChangePassClientActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityChangePassClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // change status bar color
         val window: Window = this.window

@@ -24,6 +24,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.github.sundeepk.compactcalendarview.CompactCalendarView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -57,6 +58,8 @@ class PeriodicManagementCalendarActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityPeriodicManagementCalendarBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,null)
 
         binding.appbarMonthlyWorkReportCalender.tvAppbarTitle.text = "Daftar Pekerjaan"
         binding.appbarMonthlyWorkReportCalender.ivAppbarBack.setOnClickListener {

@@ -21,6 +21,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -58,6 +59,7 @@ class MRActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMractivity2Binding.inflate(layoutInflater)
         setContentView(binding.root)
+        Toast.makeText(this, "${intent.getStringExtra("mr")}", Toast.LENGTH_SHORT).show()
         initView()
         getData()
         next()
@@ -158,7 +160,15 @@ class MRActivity : AppCompatActivity() {
         val calendar = Calendar.getInstance()
         val currentMonth = calendar.get(Calendar.MONTH) + 1
         val currentYear = calendar.get(Calendar.YEAR)
-        homeViewModel.getDataMr(CarefastOperationPref.loadString(CarefastOperationPrefConst.CLIENT_PROJECT_CODE,""),currentMonth,currentYear,page,size)
+        if(intent.getStringExtra("mr") != null){
+            Toast.makeText(this,
+                "${CarefastOperationPref.loadString(CarefastOperationPrefConst.USER_PROJECT_CODE,"")} X", Toast.LENGTH_SHORT).show()
+            homeViewModel.getDataMr(CarefastOperationPref.loadString(CarefastOperationPrefConst.USER_PROJECT_CODE,""),currentMonth,currentYear,page,size)
+        }else{
+            Toast.makeText(this,
+                CarefastOperationPref.loadString(CarefastOperationPrefConst.CLIENT_PROJECT_CODE,""), Toast.LENGTH_SHORT).show()
+            homeViewModel.getDataMr(CarefastOperationPref.loadString(CarefastOperationPrefConst.CLIENT_PROJECT_CODE,""),currentMonth,currentYear,page,size)
+        }
         homeViewModel.getDataMr.observe(this){
             if(it.code == 200){
                 hideLoading()
@@ -176,7 +186,7 @@ class MRActivity : AppCompatActivity() {
                     val count = "Showing $pageStart-$pageEnd of ${it.data.size}"
                     binding.tvPageHistoryClosing.text = count
                     if (page == 0) {
-                        mrAdapter = MrAdapter(it.data.content.toMutableList())
+                        mrAdapter = MrAdapter(it.data.content.toMutableList(),false){}
                         binding.rvTableHistoryClosing.adapter = mrAdapter
                         binding.rvTableHistoryClosing.layoutManager = LinearLayoutManager(this)
                     } else {

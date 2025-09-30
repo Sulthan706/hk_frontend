@@ -19,6 +19,7 @@ import com.hkapps.hygienekleen.features.features_management.homeScreenUpdated.pr
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -41,6 +42,8 @@ class BranchesProjectManagementActivity : AppCompatActivity(), BranchesProjectAd
         super.onCreate(savedInstanceState)
         binding = ActivityBranchesProjectManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar
         binding.appbarBranchesProjectManagement.tvAppbarTitle.text = "Project"

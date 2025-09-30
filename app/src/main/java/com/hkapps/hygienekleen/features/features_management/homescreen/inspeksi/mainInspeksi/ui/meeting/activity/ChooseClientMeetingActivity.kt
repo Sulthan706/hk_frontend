@@ -16,6 +16,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.
 import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.mainInspeksi.viewmodel.InspeksiViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ChooseClientMeetingActivity : AppCompatActivity(), ChooseClientsAdapter.ChooseClientsCallback {
 
@@ -37,6 +38,8 @@ class ChooseClientMeetingActivity : AppCompatActivity(), ChooseClientsAdapter.Ch
         super.onCreate(savedInstanceState)
         binding = ActivityChooseClientMeetingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarChooseClientMeeting.tvAppbarTitle.text = "Daftar Klien"

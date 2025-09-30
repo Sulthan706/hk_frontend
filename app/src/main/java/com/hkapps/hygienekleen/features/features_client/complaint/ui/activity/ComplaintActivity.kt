@@ -35,6 +35,7 @@ import com.hkapps.hygienekleen.features.features_client.complaint.viewmodel.Clie
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -67,6 +68,7 @@ class ComplaintActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityComplaintBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         val window: Window = this.window
 

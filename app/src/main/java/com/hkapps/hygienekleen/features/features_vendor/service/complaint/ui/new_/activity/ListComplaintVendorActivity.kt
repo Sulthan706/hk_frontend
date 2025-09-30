@@ -11,6 +11,7 @@ import com.hkapps.hygienekleen.features.features_vendor.service.complaint.ui.new
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.tabs.TabLayout
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 
 class ListComplaintVendorActivity : AppCompatActivity() {
@@ -23,6 +24,7 @@ class ListComplaintVendorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListComplaintVendorBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar layout
         binding.appbarListComplaintVendor.tvAppbarTitle.text = "CTalk"

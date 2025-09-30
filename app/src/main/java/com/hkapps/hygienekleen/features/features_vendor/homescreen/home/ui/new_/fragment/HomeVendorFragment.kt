@@ -72,6 +72,7 @@ import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.*
 import com.google.android.gms.location.LocationRequest
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.snackbar.Snackbar
 import ru.nikartm.support.BadgePosition
 import java.io.File
@@ -80,6 +81,10 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 import com.hkapps.hygienekleen.R
+import com.hkapps.hygienekleen.databinding.BottomSheetHomeMenuBinding
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.activity.mr.ApproveMRActivity
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.activity.mr.DashboardMRActivity
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.activity.mr.UsedMRActivity
 
 
 class HomeVendorFragment : Fragment() {
@@ -100,6 +105,8 @@ class HomeVendorFragment : Fragment() {
 
     private val userLevelPosition =
         CarefastOperationPref.loadString(CarefastOperationPrefConst.USER_LEVEL_POSITION, "")
+
+    private val jobLevel = CarefastOperationPref.loadString(CarefastOperationPrefConst.JOB_LEVEL,"")
 
     private var loadingDialog: Dialog? = null
     private var oneTimeShow: Boolean = false
@@ -150,7 +157,10 @@ class HomeVendorFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.rlMr.setOnClickListener {
-            startActivity(Intent(requireContext(),MRActivity::class.java))
+            bottomSheetHomeMenu()
+//            startActivity(Intent(requireContext(),MRActivity::class.java).also{
+//                it.putExtra("mr","mr")
+//            })
         }
         binding.rlBak.setOnClickListener {
             startActivity(Intent(requireContext(), ListBakMachineActivity::class.java))
@@ -188,7 +198,7 @@ class HomeVendorFragment : Fragment() {
         // get version app & set text version
         val manager = requireActivity().packageManager
         val info = manager.getPackageInfo(requireActivity().packageName, 0)
-        versionApp = info.versionName
+        versionApp = info.versionName ?: "unknown"
         binding.tvVersionHome.text = versionApp
 
         // refresh home
@@ -1276,6 +1286,65 @@ class HomeVendorFragment : Fragment() {
             return true
         }
         return false
+    }
+
+    private fun bottomSheetHomeMenu() {
+        val bottomSheet = BottomSheetDialog(requireContext())
+        val view = BottomSheetHomeMenuBinding.inflate(layoutInflater)
+        bottomSheet.apply {
+            view.apply {
+                setContentView(view.root)
+                ivClose.setOnClickListener {
+                    dismiss()
+                }
+
+                if(jobLevel == "CHIEF SUPERVISOR"){
+                    linearTimku.setOnClickListener {
+                        CarefastOperationPref.saveString(
+                            CarefastOperationPrefConst.CLICK_FROM,
+                            "Service"
+                        )
+                        val i = Intent(context, DashboardMRActivity::class.java)
+                        startActivity(i)
+                    }
+                }else{
+//                    linearTimku.setOnClickListener {
+//                        Toast.makeText(requireContext(), "Fitur MR hanya untuk pengawas tertinggi", Toast.LENGTH_SHORT).show()
+//                    }
+                    linearTimku.setOnClickListener {
+                        CarefastOperationPref.saveString(
+                            CarefastOperationPrefConst.CLICK_FROM,
+                            "Service"
+                        )
+                        val i = Intent(context, DashboardMRActivity::class.java)
+                        startActivity(i)
+                    }
+                }
+
+                linearCftalk.setOnClickListener {
+                    val i =
+                        Intent(requireContext(), ApproveMRActivity::class.java).also {
+                            it.putExtra("mr","mr")
+                        }
+                    startActivity(i)
+                }
+
+                linearBakMesin.setOnClickListener {
+                    startActivity(
+                        Intent(
+                            requireContext(),
+                            UsedMRActivity::class.java
+                        )
+                    )
+                }
+
+//                linearRequestMp.setOnClickListener {
+//                    startActivity(Intent(requireContext(), ManPowerActivity::class.java))
+//                }
+
+            }
+            show()
+        }
     }
 
     //Snack bar kesalahan data / data kosong

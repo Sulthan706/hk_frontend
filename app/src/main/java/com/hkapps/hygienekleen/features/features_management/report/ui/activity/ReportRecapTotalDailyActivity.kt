@@ -12,6 +12,7 @@ import com.hkapps.hygienekleen.features.features_management.report.ui.adapter.Ca
 import com.hkapps.hygienekleen.features.features_management.report.viewmodel.ReportManagementViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ReportRecapTotalDailyActivity : AppCompatActivity() {
     private val viewModel: ReportManagementViewModel by viewModels()
@@ -36,6 +37,7 @@ class ReportRecapTotalDailyActivity : AppCompatActivity() {
         binding = ActivityReportRecapTotalDailyBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
 
         binding.layoutAppbar.tvAppbarTitle.text = "Rekap jumlah harian"

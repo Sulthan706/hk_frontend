@@ -71,7 +71,7 @@ class CreateComplaintInternalVendorActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //set appbar layout
-        binding.appbarCreateComplaintInternal.tvAppbarTitle.text = "CF Talk"
+        binding.appbarCreateComplaintInternal.tvAppbarTitle.text = "HK Talk"
         binding.appbarCreateComplaintInternal.ivAppbarBack.setOnClickListener {
             super.onBackPressed()
             finish()
@@ -142,7 +142,7 @@ class CreateComplaintInternalVendorActivity : AppCompatActivity() {
                     val a = Intent(this, ListComplaintInternalVendorActivity::class.java)
                     startActivity(a)
                     finish();
-                    Toast.makeText(this, "Berhasil mengirim CF Talk.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Berhasil mengirim HK Talk.", Toast.LENGTH_SHORT).show()
                 }
                 else -> {
                     hideLoading()

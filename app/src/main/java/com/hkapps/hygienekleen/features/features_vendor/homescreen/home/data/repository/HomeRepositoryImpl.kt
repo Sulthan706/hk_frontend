@@ -30,7 +30,14 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.ed
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.getTimeShift.GetTimeShiftResponseModel
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.latlongarea.LatLongAreaResponseModel
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.listSlipGaji.ListSlipGajiResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.CreateMRResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.CreateMaterialRequest
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.ItemMRDataResponse
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.ItemMrResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.ListHistoryStockResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.ListHistoryUsedResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.MRDashboardResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.SatuanResponse
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.profile.LastUpdateProfileResponse
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.reportAttendance.ReportAttendanceResponse
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.updatebpjs.UpdateBpjsResponseModel
@@ -269,6 +276,62 @@ class HomeRepositoryImpl @Inject constructor(private val remoteDataSource: HomeR
         size: Int
     ): Single<ItemMrResponse> {
         return remoteDataSource.itemMr(projectCode, month, year, page, size)
+    }
+
+    override fun dashboardMR(
+        projectCode: String,
+        page: Int,
+        size: Int
+    ): Single<MRDashboardResponse> {
+        return remoteDataSource.dashboardMR(projectCode, page, size)
+    }
+
+    override fun createMR(createMaterialRequest: CreateMaterialRequest): Single<CreateMRResponse> {
+        return remoteDataSource.createMR(createMaterialRequest)
+    }
+
+    override fun createMRFollowUp(createMaterialRequest: CreateMaterialRequest): Single<CreateMRResponse> {
+        return remoteDataSource.createMRFollowUp(createMaterialRequest)
+    }
+
+    override fun getItemMR(filter: String): Single<ItemMRDataResponse> {
+        return remoteDataSource.getItemMR(filter)
+    }
+
+    override fun getUnitMR(filter: String): Single<SatuanResponse> {
+        return remoteDataSource.getUnitMR(filter)
+    }
+
+    override fun approveMR(
+        employeeId: Int,
+        idMaterialRequest: Int
+    ): Single<CreateMRResponse> {
+        return remoteDataSource.approveMR(employeeId,idMaterialRequest)
+    }
+
+    override fun getDataListHistoryUsed(idProject: String): Single<ListHistoryUsedResponse> {
+        return remoteDataSource.getDataListHistoryUsed(idProject)
+    }
+
+    override fun getDataListHistoryStock(idProject: String): Single<ListHistoryStockResponse> {
+        return remoteDataSource.getDataListHistoryStock(idProject)
+    }
+
+    override fun getDataListUsed(
+        idProject: String,
+        date: String
+    ): Single<ListHistoryUsedResponse> {
+        return remoteDataSource.getDataListUsed(idProject, date)
+    }
+
+    override fun createMRUsed(
+        idProject: String,
+        idItem: Int,
+        quantity: Int,
+        unit: String,
+        userId: Int
+    ): Single<CreateMRResponse> {
+        return remoteDataSource.createMRUsed(idProject, idItem, quantity, unit, userId)
     }
 
 }

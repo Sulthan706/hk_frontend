@@ -22,6 +22,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.hkapps.hygienekleen.R
 import com.hkapps.hygienekleen.databinding.ActivityMainListShareLocManagementBinding
 import com.hkapps.hygienekleen.features.features_management.shareloc.viewmodel.ShareLocManagementViewModel
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import org.osmdroid.api.IMapController
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
@@ -48,6 +49,8 @@ class MainListShareLocManagementActivity : AppCompatActivity(), Target {
         super.onCreate(savedInstanceState)
         binding = ActivityMainListShareLocManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         Configuration.getInstance().load(applicationContext, getPreferences(MODE_PRIVATE))
 

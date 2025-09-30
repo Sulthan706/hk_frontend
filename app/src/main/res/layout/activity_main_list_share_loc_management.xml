@@ -6,16 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".features.features_management.shareloc.ui.activity.bod.MainListShareLocManagementActivity">
 
-    <include
-        android:id="@+id/appbarShareLocBod"
-        layout="@layout/appbar_default_with_replay" />
+    <View
+        android:id="@+id/statusBarBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusBarBackground"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetEndWithActions="0dp">
+
+        <include
+            android:id="@+id/appbarShareLocBod"
+            layout="@layout/appbar_default_with_replay" />
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvCountListAllShareLoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/appbarShareLocBod"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginHorizontal="12dp"
@@ -28,7 +54,7 @@
             android:layout_height="wrap_content"
             android:paddingVertical="15dp"
             android:paddingHorizontal="12dp"
-            android:background="#FF954D">
+            android:background="@color/third_color">
             <TextView
                 android:id="@+id/tvTimeNowShareBod"
                 android:layout_width="match_parent"
@@ -69,7 +95,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbarShareLocBod"/>
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
     
     <androidx.cardview.widget.CardView
         android:layout_width="366dp"

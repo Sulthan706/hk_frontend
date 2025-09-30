@@ -15,6 +15,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.home.ui.f
 import com.hkapps.hygienekleen.features.features_management.homescreen.home.viewmodel.HomeManagementViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class UpdateBpjsManagementActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUpdateBpjsManagementBinding
@@ -32,6 +33,8 @@ class UpdateBpjsManagementActivity : AppCompatActivity() {
         binding = ActivityUpdateBpjsManagementBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarKesehatan.tvAppbarTitle.text = "BPJS Kesehatan"
         binding.appbarKesehatan.ivAppbarBack.setOnClickListener {

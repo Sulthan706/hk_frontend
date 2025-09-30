@@ -267,7 +267,7 @@
                         android:layout_marginLeft="@dimen/_35sdp"
                         android:fontFamily="@font/poppinsregular"
                         android:paddingBottom="@dimen/_10sdp"
-                        android:text="Ketahui jadwal kerja &amp; daftar CF Team yag bertugas"
+                        android:text="Ketahui jadwal kerja &amp; daftar HK Team yag bertugas"
                         android:textAlignment="textStart"
                         android:textSize="@dimen/_8ssp" />
 
@@ -332,7 +332,7 @@
                         android:layout_marginLeft="@dimen/_39sdp"
                         android:fontFamily="@font/poppinsregular"
                         android:paddingBottom="@dimen/_10sdp"
-                        android:text="Ketahui kondisi area yang dikerjakan CF Team"
+                        android:text="Ketahui kondisi area yang dikerjakan HK Team"
                         android:textAlignment="textStart"
                         android:textSize="@dimen/_8ssp" />
 

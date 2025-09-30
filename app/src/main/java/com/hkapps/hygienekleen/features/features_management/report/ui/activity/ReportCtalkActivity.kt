@@ -15,6 +15,7 @@ import com.hkapps.hygienekleen.features.features_management.report.ui.fragment.B
 import com.hkapps.hygienekleen.features.features_management.report.viewmodel.ReportManagementViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -41,6 +42,7 @@ class ReportCtalkActivity : AppCompatActivity() {
         binding = ActivityReportCtalkBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         //lock orientation in portrait only
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LOCKED
         binding.layoutAppbar.tvAppbarTitle.text = "Report CTalk"

@@ -27,6 +27,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.applySkeleton
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import ir.mahozad.android.PieChart
 import java.lang.Float
 import java.text.SimpleDateFormat
@@ -59,6 +60,8 @@ class DacList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDacListBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         profileViewModel.getDailyActHome(userId, projectCode)
         setObserverDacHome()

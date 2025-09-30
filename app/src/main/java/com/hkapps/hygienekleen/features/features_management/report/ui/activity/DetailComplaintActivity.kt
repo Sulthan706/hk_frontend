@@ -19,6 +19,7 @@ import com.hkapps.hygienekleen.features.features_management.report.viewmodel.Rep
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DetailComplaintActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailComplaintCftalkBinding
@@ -43,6 +44,7 @@ class DetailComplaintActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        setupEdgeToEdge(binding.root,null)
         binding.layoutAppbar.tvAppbarTitle.text = "Detail CFTalk"
         binding.layoutAppbar.ivAppbarBack.setOnClickListener {
             onBackPressed()

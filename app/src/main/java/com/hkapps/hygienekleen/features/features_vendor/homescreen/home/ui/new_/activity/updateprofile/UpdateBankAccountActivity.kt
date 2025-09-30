@@ -14,6 +14,7 @@ import com.hkapps.hygienekleen.databinding.ActivityUpdateBankAccountBinding
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.viewmodel.HomeViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class UpdateBankAccountActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUpdateBankAccountBinding
@@ -41,6 +42,8 @@ class UpdateBankAccountActivity : AppCompatActivity() {
         binding = ActivityUpdateBankAccountBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.layoutAppbarUpdateAccountNumber.tvAppbarTitle.text = "Edit Rekening"
         binding.layoutAppbarUpdateAccountNumber.ivAppbarBack.setOnClickListener {

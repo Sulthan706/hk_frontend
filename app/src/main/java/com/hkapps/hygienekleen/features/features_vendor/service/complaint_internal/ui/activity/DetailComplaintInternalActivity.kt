@@ -49,6 +49,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -117,6 +118,7 @@ class DetailComplaintInternalActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityDetailComplaintInternalBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         //set appbar layout
         binding.appbarDetailComplaintInternal.tvAppbarTitle.text = "Detail Komplain"
@@ -1060,7 +1062,7 @@ class DetailComplaintInternalActivity : AppCompatActivity(),
                     Glide.with(applicationContext).load(uri)
                         .into(binding.ivResultUploadComplaintInternal)
 
-                    binding.ablComplaintInternal.visibility = View.GONE
+//                    binding.ablComplaintInternal.visibility = View.GONE
                     binding.layoutComplaintInternal.visibility = View.GONE
                     binding.llProgressStatusBarDetailCftalk.visibility = View.GONE
                     binding.llResultUploadImageComplaintInternal.visibility = View.VISIBLE

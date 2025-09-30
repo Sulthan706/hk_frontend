@@ -23,6 +23,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.snackbar.Snackbar
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -56,6 +57,7 @@ class CreateOvertimeChangeManagementsActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityCreateOvertimeChangeManagementsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
 
 

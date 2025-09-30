@@ -28,6 +28,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.operation
 import com.hkapps.hygienekleen.features.features_management.homescreen.operational.ui.adapter.PhoneNumberAdapter
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -51,6 +52,7 @@ class MyTeamClientEmployeeDetail : AppCompatActivity(), PhoneNumberAdapter.ListP
         binding = ActivityMyTeamClientHistoryDetailBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
         // clear FLAG_TRANSLUCENT_STATUS flag:
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)

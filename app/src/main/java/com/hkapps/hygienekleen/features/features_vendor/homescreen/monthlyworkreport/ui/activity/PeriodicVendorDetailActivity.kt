@@ -30,6 +30,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.monthlyworkre
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import de.hdodenhof.circleimageview.CircleImageView
 import java.io.*
 import java.text.ParseException
@@ -88,6 +89,7 @@ class PeriodicVendorDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityChecklistMonthlyWorkReportBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         i = intent.getBooleanExtra("from_closing",false)
 
         binding.appbarMonthlyWorkReportChecklist.tvAppbarTitle.text = "Ceklis Pekerjaan"

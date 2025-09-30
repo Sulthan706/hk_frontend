@@ -48,6 +48,7 @@ import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.LocationSettingsRequest
 import com.google.android.gms.location.LocationSettingsStatusCodes
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import de.hdodenhof.circleimageview.CircleImageView
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -81,6 +82,7 @@ class PeriodicVendorResultImageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPeriodicVendorResultImageBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         val bundle = intent.getBundleExtra("bundle")
 
         val uploadTypes = bundle?.getString("uploadType")

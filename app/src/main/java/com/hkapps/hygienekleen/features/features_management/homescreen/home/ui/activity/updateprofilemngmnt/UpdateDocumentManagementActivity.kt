@@ -10,6 +10,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.home.ui.f
 import com.hkapps.hygienekleen.features.features_management.homescreen.home.viewmodel.HomeManagementViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class UpdateDocumentManagementActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUpdateDocumentManagementBinding
@@ -29,6 +30,7 @@ class UpdateDocumentManagementActivity : AppCompatActivity() {
         binding.layoutAppbarUpdateDocument.ivAppbarBack.setOnClickListener {
             onBackPressed()
         }
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         binding.layoutAppbarUpdateDocument.tvAppbarTitle.text = "Dokumen Saya"
 
         binding.llUploadKTP.setOnClickListener {

@@ -8,6 +8,7 @@ import com.hkapps.hygienekleen.databinding.ActivityListBranchMgmntBinding
 import com.hkapps.hygienekleen.features.features_management.report.model.cardlistbranch.DataCardBranch
 import com.hkapps.hygienekleen.features.features_management.report.ui.adapter.ListCardBranchAdapter
 import com.hkapps.hygienekleen.features.features_management.report.viewmodel.ReportManagementViewModel
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListBranchMgmntActivity : AppCompatActivity() {
     private lateinit var binding : ActivityListBranchMgmntBinding
@@ -27,6 +28,7 @@ class ListBranchMgmntActivity : AppCompatActivity() {
 
         loadData()
         setObserver()
+        setupEdgeToEdge(binding.root,null)
         //oncreate
     }
 

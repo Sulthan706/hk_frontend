@@ -41,6 +41,14 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.ve
 import com.hkapps.hygienekleen.features.splash.ui.activity.SplashActivity
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.google.gson.Gson
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.CreateMRResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.CreateMaterialRequest
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.ItemMRData
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.ItemMRDataResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.ListHistoryStockResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.ListHistoryUsedResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.MRDashboardResponse
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.SatuanResponse
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
@@ -89,6 +97,15 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     val getTimeShiftModel = MutableLiveData<GetTimeShiftResponseModel>()
 
     val getDataMr = MutableLiveData<ItemMrResponse>()
+    val dashboardMR = MutableLiveData<MRDashboardResponse>()
+    val createMRResponse = MutableLiveData<CreateMRResponse>()
+    val getItemMR = MutableLiveData<ItemMRDataResponse>()
+    val getUnitMR = MutableLiveData<SatuanResponse>()
+    val approveMR = MutableLiveData<CreateMRResponse>()
+    val getMRUsed = MutableLiveData<ListHistoryUsedResponse>()
+    val getMRStock = MutableLiveData<ListHistoryStockResponse>()
+    val getListUsed = MutableLiveData<ListHistoryUsedResponse>()
+    val createUsed = MutableLiveData<CreateMRResponse>()
 
     val complaintValidateModel = MutableLiveData<ComplaintValidateResponse>()
 
@@ -1322,6 +1339,400 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
                                     ItemMrResponse::class.java
                                 )
                                 getDataMr.value = error
+                            }
+                            isLoading?.value = false
+                        } else {
+                            isLoading?.value = true
+                        }
+                    }
+
+                })
+        )
+    }
+
+    fun dashboardMR(
+        projectCode : String,
+        page : Int,
+        size : Int
+    ){
+        compositeDisposable.add(
+            repository.dashboardMR(projectCode, page, size)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object : DisposableSingleObserver<MRDashboardResponse>(){
+                    override fun onSuccess(t: MRDashboardResponse) {
+                        dashboardMR.value = t
+                    }
+
+                    override fun onError(e: Throwable) {
+                        if (e is HttpException) {
+                            if (e.response()!!.code() == 403 || e.response()!!.code() == 401) {
+                                Toast.makeText(
+                                    context,
+                                    "UNAUTHORIZED.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                val errorBody = e.response()?.errorBody()
+                                val gson = Gson()
+                                val error = gson.fromJson(
+                                    errorBody?.string(),
+                                    MRDashboardResponse::class.java
+                                )
+                                dashboardMR.value = error
+                            }
+                            isLoading?.value = false
+                        } else {
+                            isLoading?.value = true
+                        }
+                    }
+
+                })
+        )
+    }
+
+    fun createMR(
+        createMaterialRequest: CreateMaterialRequest
+    ){
+        compositeDisposable.add(
+            repository.createMR(createMaterialRequest)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object : DisposableSingleObserver<CreateMRResponse>(){
+                    override fun onSuccess(t: CreateMRResponse) {
+                        createMRResponse.value = t
+                    }
+
+                    override fun onError(e: Throwable) {
+                        if (e is HttpException) {
+                            if (e.response()!!.code() == 403 || e.response()!!.code() == 401) {
+                                Toast.makeText(
+                                    context,
+                                    "UNAUTHORIZED.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                val errorBody = e.response()?.errorBody()
+                                val gson = Gson()
+                                val error = gson.fromJson(
+                                    errorBody?.string(),
+                                    CreateMRResponse::class.java
+                                )
+                                createMRResponse.value = error
+                            }
+                            isLoading?.value = false
+                        } else {
+                            isLoading?.value = true
+                        }
+                    }
+
+                })
+        )
+    }
+
+    fun createMRFollowUp(
+        createMaterialRequest: CreateMaterialRequest
+    ){
+        compositeDisposable.add(
+            repository.createMRFollowUp(createMaterialRequest)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object : DisposableSingleObserver<CreateMRResponse>(){
+                    override fun onSuccess(t: CreateMRResponse) {
+                        createMRResponse.value = t
+                    }
+
+                    override fun onError(e: Throwable) {
+                        if (e is HttpException) {
+                            if (e.response()!!.code() == 403 || e.response()!!.code() == 401) {
+                                Toast.makeText(
+                                    context,
+                                    "UNAUTHORIZED.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                val errorBody = e.response()?.errorBody()
+                                val gson = Gson()
+                                val error = gson.fromJson(
+                                    errorBody?.string(),
+                                    CreateMRResponse::class.java
+                                )
+                                createMRResponse.value = error
+                            }
+                            isLoading?.value = false
+                        } else {
+                            isLoading?.value = true
+                        }
+                    }
+
+                })
+        )
+    }
+
+    fun getItemMR(
+       filter : String
+    ){
+        compositeDisposable.add(
+            repository.getItemMR(filter)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object : DisposableSingleObserver<ItemMRDataResponse>(){
+                    override fun onSuccess(t: ItemMRDataResponse) {
+                        getItemMR.value = t
+                    }
+
+                    override fun onError(e: Throwable) {
+                        if (e is HttpException) {
+                            if (e.response()!!.code() == 403 || e.response()!!.code() == 401) {
+                                Toast.makeText(
+                                    context,
+                                    "UNAUTHORIZED.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                val errorBody = e.response()?.errorBody()
+                                val gson = Gson()
+                                val error = gson.fromJson(
+                                    errorBody?.string(),
+                                    ItemMRDataResponse::class.java
+                                )
+                                getItemMR.value = error
+                            }
+                            isLoading?.value = false
+                        } else {
+                            isLoading?.value = true
+                        }
+                    }
+
+                })
+        )
+    }
+
+    fun getUnitMR(
+        filter : String
+    ){
+        compositeDisposable.add(
+            repository.getUnitMR(filter)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object : DisposableSingleObserver<SatuanResponse>(){
+                    override fun onSuccess(t: SatuanResponse) {
+                        getUnitMR.value = t
+                    }
+
+                    override fun onError(e: Throwable) {
+                        if (e is HttpException) {
+                            if (e.response()!!.code() == 403 || e.response()!!.code() == 401) {
+                                Toast.makeText(
+                                    context,
+                                    "UNAUTHORIZED.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                val errorBody = e.response()?.errorBody()
+                                val gson = Gson()
+                                val error = gson.fromJson(
+                                    errorBody?.string(),
+                                    SatuanResponse::class.java
+                                )
+                                getUnitMR.value = error
+                            }
+                            isLoading?.value = false
+                        } else {
+                            isLoading?.value = true
+                        }
+                    }
+
+                })
+        )
+    }
+
+    fun approveMr(
+        employeeId : Int,
+        idMaterial : Int,
+    ){
+        compositeDisposable.add(
+            repository.approveMR(employeeId,idMaterial)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object : DisposableSingleObserver<CreateMRResponse>(){
+                    override fun onSuccess(t: CreateMRResponse) {
+                        approveMR.value = t
+                    }
+
+                    override fun onError(e: Throwable) {
+                        if (e is HttpException) {
+                            if (e.response()!!.code() == 403 || e.response()!!.code() == 401) {
+                                Toast.makeText(
+                                    context,
+                                    "UNAUTHORIZED.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                val errorBody = e.response()?.errorBody()
+                                val gson = Gson()
+                                val error = gson.fromJson(
+                                    errorBody?.string(),
+                                    CreateMRResponse::class.java
+                                )
+                                approveMR.value = error
+                            }
+                            isLoading?.value = false
+                        } else {
+                            isLoading?.value = true
+                        }
+                    }
+
+                })
+        )
+    }
+
+    fun getListUsedMR(
+        projectCode : String
+    ){
+        compositeDisposable.add(
+            repository.getDataListHistoryUsed(projectCode)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object : DisposableSingleObserver<ListHistoryUsedResponse>(){
+                    override fun onSuccess(t: ListHistoryUsedResponse) {
+                        getMRUsed.value = t
+                    }
+
+                    override fun onError(e: Throwable) {
+                        if (e is HttpException) {
+                            if (e.response()!!.code() == 403 || e.response()!!.code() == 401) {
+                                Toast.makeText(
+                                    context,
+                                    "UNAUTHORIZED.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                val errorBody = e.response()?.errorBody()
+                                val gson = Gson()
+                                val error = gson.fromJson(
+                                    errorBody?.string(),
+                                    ListHistoryUsedResponse::class.java
+                                )
+                                getMRUsed.value = error
+                            }
+                            isLoading?.value = false
+                        } else {
+                            isLoading?.value = true
+                        }
+                    }
+
+                })
+        )
+    }
+
+    fun getListStockMR(
+        projectCode : String
+    ){
+        compositeDisposable.add(
+            repository.getDataListHistoryStock(projectCode)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object : DisposableSingleObserver<ListHistoryStockResponse>(){
+                    override fun onSuccess(t: ListHistoryStockResponse) {
+                        getMRStock.value = t
+                    }
+
+                    override fun onError(e: Throwable) {
+                        if (e is HttpException) {
+                            if (e.response()!!.code() == 403 || e.response()!!.code() == 401) {
+                                Toast.makeText(
+                                    context,
+                                    "UNAUTHORIZED.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                val errorBody = e.response()?.errorBody()
+                                val gson = Gson()
+                                val error = gson.fromJson(
+                                    errorBody?.string(),
+                                    ListHistoryStockResponse::class.java
+                                )
+                                getMRStock.value = error
+                            }
+                            isLoading?.value = false
+                        } else {
+                            isLoading?.value = true
+                        }
+                    }
+
+                })
+        )
+    }
+
+    fun getListUsed(
+        projectCode : String,
+        date: String,
+    ){
+        compositeDisposable.add(
+            repository.getDataListUsed(projectCode,date)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object : DisposableSingleObserver<ListHistoryUsedResponse>(){
+                    override fun onSuccess(t: ListHistoryUsedResponse) {
+                        getListUsed.value = t
+                    }
+
+                    override fun onError(e: Throwable) {
+                        if (e is HttpException) {
+                            if (e.response()!!.code() == 403 || e.response()!!.code() == 401) {
+                                Toast.makeText(
+                                    context,
+                                    "UNAUTHORIZED.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                val errorBody = e.response()?.errorBody()
+                                val gson = Gson()
+                                val error = gson.fromJson(
+                                    errorBody?.string(),
+                                    ListHistoryUsedResponse::class.java
+                                )
+                                getListUsed.value = error
+                            }
+                            isLoading?.value = false
+                        } else {
+                            isLoading?.value = true
+                        }
+                    }
+
+                })
+        )
+    }
+
+    fun createUsed(
+        idProject: String,idItem : Int,quantity : Int,unit : String,userId : Int
+    ){
+        compositeDisposable.add(
+            repository.createMRUsed(idProject,idItem,quantity,unit,userId)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object : DisposableSingleObserver<CreateMRResponse>(){
+                    override fun onSuccess(t: CreateMRResponse) {
+                        createUsed.value = t
+                    }
+
+                    override fun onError(e: Throwable) {
+                        if (e is HttpException) {
+                            if (e.response()!!.code() == 403 || e.response()!!.code() == 401) {
+                                Toast.makeText(
+                                    context,
+                                    "UNAUTHORIZED.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                val errorBody = e.response()?.errorBody()
+                                val gson = Gson()
+                                val error = gson.fromJson(
+                                    errorBody?.string(),
+                                    CreateMRResponse::class.java
+                                )
+                                createUsed.value = error
                             }
                             isLoading?.value = false
                         } else {

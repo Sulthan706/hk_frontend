@@ -16,6 +16,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.util.*
 
 class FormKontrolAreaActivity : AppCompatActivity() {
@@ -36,6 +37,8 @@ class FormKontrolAreaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFormKontrolAreaBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarFormKontrolArea.tvAppbarTitle.text = "Form Kontrol Area"

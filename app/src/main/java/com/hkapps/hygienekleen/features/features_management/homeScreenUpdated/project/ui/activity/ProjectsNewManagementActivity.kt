@@ -30,6 +30,7 @@ import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.ValueFormatter
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ProjectsNewManagementActivity : AppCompatActivity(),
     StatusProjectAdapter.StatusProjectCallback,
@@ -63,6 +64,8 @@ class ProjectsNewManagementActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityProjectsNewManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,null)
 
         // set appbar
         binding.appbarProjectsNewManagement.tvAppbarTitle.text =

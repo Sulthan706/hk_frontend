@@ -20,6 +20,7 @@ import com.hkapps.hygienekleen.features.features_management.homeScreenUpdated.hu
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class SearchHumanCapitalActivity : AppCompatActivity(),
     HumanCapitalBodAdapter.HumanCapitalBodCallback,
@@ -48,6 +49,8 @@ class SearchHumanCapitalActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivitySearchHumanCapitalBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarSearchHumanCapital.ivAppbarBack.setOnClickListener {

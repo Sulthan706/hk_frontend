@@ -24,6 +24,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ProjectsScheduleManagementActivity : AppCompatActivity(), SearchProjectsScheduleAdapter.ProjectAllCallBack {
 
@@ -63,6 +64,8 @@ class ProjectsScheduleManagementActivity : AppCompatActivity(), SearchProjectsSc
         super.onCreate(savedInstanceState)
         binding = ActivityProjectsScheduleManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // get list data from create schedule layout
         if (clickFrom == "edit") {

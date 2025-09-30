@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bottom_sheets_background_white">
+
+
+    <View
+        android:layout_width="70dp"
+        android:layout_height="10dp"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_rounded_grey"/>
+
+    <TextView
+        android:id="@+id/tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/poppinsmedium"
+        android:textAlignment="center"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_13ssp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/menuProject"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pilih kategori"
+        android:visibility="gone"
+        app:endIconDrawable="@drawable/ic_chevron_down"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginHorizontal="15dp"
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/category_job_reqmp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/poppinsregular"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginHorizontal="15dp"
+        app:startIconDrawable="@drawable/ic_search"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:inputType="text"
+            android:hint="Search" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="#d9d9d9"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_request_mp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"/>
+
+    <ImageButton
+        android:id="@+id/add"
+        android:background="@drawable/bg_primary_circle"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:padding="6dp"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:src="@drawable/ic_add_white"
+        android:scaleType="fitXY"
+        android:elevation="8dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terapkan"
+        android:enabled="false"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"
+        app:cornerRadius="6dp"/>
+
+
+
+</LinearLayout>

@@ -6,9 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".features.features_management.homescreen.operational.ui.activity.HistoryAttendanceOperationalActivity">
 
-    <include
-        android:id="@+id/layout_appbar_attendance_history"
-        layout="@layout/app_bar_default" />
+    <View
+        android:id="@+id/statusBarBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusBarBackground"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetEndWithActions="0dp">
+
+        <include
+            android:id="@+id/layout_appbar_attendance_history"
+            layout="@layout/app_bar_default" />
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
 
     <TextView
         android:id="@+id/tv_attendance_history"
@@ -24,7 +49,7 @@
         android:textSize="@dimen/_12ssp"
         android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_appbar_attendance_history" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
 
     <LinearLayout
@@ -38,7 +63,7 @@
         android:visibility="visible"
         android:weightSum="4"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_appbar_attendance_history">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <TextView
             android:layout_width="0dp"
@@ -108,7 +133,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_appbar_attendance_history" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <FrameLayout
         android:id="@+id/flDateHistory"

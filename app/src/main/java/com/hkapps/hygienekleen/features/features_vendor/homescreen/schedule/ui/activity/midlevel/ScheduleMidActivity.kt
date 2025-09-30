@@ -24,6 +24,7 @@ import com.hkapps.hygienekleen.utils.show
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.applySkeleton
 import com.google.android.material.appbar.AppBarLayout
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.util.*
 
 
@@ -54,6 +55,7 @@ class ScheduleMidActivity : AppCompatActivity(), ScheduleMidAdapter.ScheduleCall
         super.onCreate(savedInstanceState)
         binding = ActivityScheduleNewBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
 
         //show and hide title when collapse
         var isShow = true

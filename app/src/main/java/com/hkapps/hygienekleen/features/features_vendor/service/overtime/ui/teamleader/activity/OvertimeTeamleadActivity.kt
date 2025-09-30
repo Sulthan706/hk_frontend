@@ -9,6 +9,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.viewpager.widget.ViewPager
 import com.hkapps.hygienekleen.databinding.ActivityOvertimeTeamleadBinding
 import com.hkapps.hygienekleen.features.features_vendor.service.overtime.ui.teamleader.adapter.ViewPagerOvertimeTlAdapter
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class OvertimeTeamleadActivity : AppCompatActivity() {
 
@@ -20,6 +21,8 @@ class OvertimeTeamleadActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOvertimeTeamleadBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set tablayout & viewpager view
         viewPagerAdapter = ViewPagerOvertimeTlAdapter(supportFragmentManager, this)

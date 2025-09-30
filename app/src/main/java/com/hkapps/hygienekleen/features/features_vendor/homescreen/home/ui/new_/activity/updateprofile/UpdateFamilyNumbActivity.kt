@@ -17,6 +17,7 @@ import com.hkapps.hygienekleen.databinding.ActivityUpdateFamilyNumbBinding
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.viewmodel.HomeViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 
 class UpdateFamilyNumbActivity : AppCompatActivity() {
@@ -39,6 +40,8 @@ class UpdateFamilyNumbActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         val window: Window = this.window
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // clear FLAG_TRANSLUCENT_STATUS flag:
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)

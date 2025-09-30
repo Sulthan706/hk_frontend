@@ -23,6 +23,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.report.ui.act
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -48,6 +49,8 @@ class ProfileEmployeeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileEmployeeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,null)
 
         // set on click button back
         binding.ivBackProfileEmployee.setOnClickListener {

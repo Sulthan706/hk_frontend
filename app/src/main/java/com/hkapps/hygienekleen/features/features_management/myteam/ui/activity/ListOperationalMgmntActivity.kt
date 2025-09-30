@@ -26,6 +26,7 @@ import com.hkapps.hygienekleen.features.features_management.myteam.viewmodel.MyT
 import com.hkapps.hygienekleen.features.features_vendor.myteam.ui.spv.activity.MyteamSpvActivity
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListOperationalMgmntActivity : AppCompatActivity(),
     ListChiefSpvManagementAdapter.ListChiefSpvManagementCallback {
@@ -43,6 +44,8 @@ class ListOperationalMgmntActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityListOperationalMgmntBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
 
         // app bar client

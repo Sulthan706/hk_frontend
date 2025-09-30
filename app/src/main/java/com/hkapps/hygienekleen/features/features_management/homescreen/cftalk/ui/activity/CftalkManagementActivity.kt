@@ -8,6 +8,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.viewpager.widget.ViewPager
 import com.hkapps.hygienekleen.databinding.ActivityCftalkManagementBinding
 import com.hkapps.hygienekleen.features.features_management.homescreen.cftalk.ui.adapter.CftalkManagementAdapter
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class CftalkManagementActivity : AppCompatActivity() {
 
@@ -19,6 +20,8 @@ class CftalkManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCftalkManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarCftalkManagement.tvAppbarTitle.text = "CFtalk"

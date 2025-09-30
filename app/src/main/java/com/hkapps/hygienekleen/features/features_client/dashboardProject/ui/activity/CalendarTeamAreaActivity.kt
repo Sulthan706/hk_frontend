@@ -23,6 +23,7 @@ import com.hkapps.hygienekleen.features.features_client.dashboardProject.ui.adap
 import com.hkapps.hygienekleen.features.features_client.dashboardProject.viewmodel.DashboardProjectViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class CalendarTeamAreaActivity : AppCompatActivity() {
 
@@ -47,6 +48,7 @@ class CalendarTeamAreaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCalendarTeamAreaBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set status bar color
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

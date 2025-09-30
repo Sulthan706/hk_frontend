@@ -20,6 +20,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -65,6 +66,7 @@ class HistoryClosingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHistoryClosingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         initView()
         if(jobLevel.contains("chief",ignoreCase = true)){
             binding.tvShift.visibility = View.GONE

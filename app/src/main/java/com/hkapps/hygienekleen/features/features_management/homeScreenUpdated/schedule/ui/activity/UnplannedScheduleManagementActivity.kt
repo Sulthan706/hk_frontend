@@ -29,6 +29,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class UnplannedScheduleManagementActivity : AppCompatActivity(),
     SelectedProjectsUnplannedScheduleAdapter.SelectedProjectsCallBack {
@@ -59,6 +60,8 @@ class UnplannedScheduleManagementActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityCreateScheduleManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar
         binding.appbarCreateScheduleManagement.tvAppbarTitle.text = "Unplanned Visit Schedule"

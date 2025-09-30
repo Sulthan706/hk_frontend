@@ -32,6 +32,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListPermission : AppCompatActivity(),
     ListPermissionAdapter.ListPermissionCallBack,
@@ -59,6 +60,7 @@ class ListPermission : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityListPermissionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         val window: Window = this.window
         // clear FLAG_TRANSLUCENT_STATUS flag:

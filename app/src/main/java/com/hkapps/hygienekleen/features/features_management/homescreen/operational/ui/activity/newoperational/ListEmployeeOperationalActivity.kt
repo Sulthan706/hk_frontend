@@ -22,6 +22,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.operation
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListEmployeeOperationalActivity : AppCompatActivity(), JobRoleEmployeeAdapter.JobRoleEmployeeCallback,
 ListEmployeeOperationalAdapter.ListOperationalEmployeeCallback{
@@ -55,6 +56,9 @@ ListEmployeeOperationalAdapter.ListOperationalEmployeeCallback{
         super.onCreate(savedInstanceState)
         binding = ActivityListEmployeeOperationalBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appBarWithSearchEmployee.ivAppbarBack.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()

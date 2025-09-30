@@ -22,6 +22,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -49,6 +50,8 @@ class ListRoutineVisitedActivity : AppCompatActivity(), ListRoutineReportAdapter
         super.onCreate(savedInstanceState)
         binding = ActivityListRoutineVisitedBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarListRoutineVisited.tvAppbarTitle.text = "Kunjungan Rutin"

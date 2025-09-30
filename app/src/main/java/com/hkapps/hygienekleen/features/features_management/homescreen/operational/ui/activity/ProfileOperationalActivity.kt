@@ -36,6 +36,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.operation
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.time.LocalDateTime
 import java.time.temporal.ChronoField
 
@@ -67,6 +68,8 @@ class ProfileOperationalActivity : AppCompatActivity(), PhoneNumberAdapter.ListP
         super.onCreate(savedInstanceState)
         binding = ActivityProfileOperationalBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,null)
 
         // first state loading
         binding.shimmerFotoProfile.startShimmerAnimation()

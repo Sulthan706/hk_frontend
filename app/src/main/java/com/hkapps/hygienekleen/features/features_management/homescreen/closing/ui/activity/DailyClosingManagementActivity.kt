@@ -25,6 +25,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.closing.v
 import com.hkapps.hygienekleen.features.features_management.homescreen.home.ui.activity.HomeManagementActivity
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -67,6 +68,7 @@ class DailyClosingManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDailyClosingManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         initView()
     }
 

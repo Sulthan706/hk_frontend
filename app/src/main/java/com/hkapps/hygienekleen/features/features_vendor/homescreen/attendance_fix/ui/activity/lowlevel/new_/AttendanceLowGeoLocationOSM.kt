@@ -56,6 +56,7 @@ import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.model.CircleOptions
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.material.snackbar.Snackbar
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import org.osmdroid.config.Configuration
 import org.osmdroid.events.DelayedMapListener
 import org.osmdroid.events.MapListener
@@ -118,6 +119,7 @@ class AttendanceLowGeoLocationOSM : AppCompatActivity(), GoogleApiClient.Connect
         super.onCreate(savedInstanceState)
         binding = ActivityMapsOsmBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // check internet connection
         isOnline(this)

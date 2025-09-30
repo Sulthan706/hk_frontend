@@ -21,6 +21,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.checklist.ui.
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.checklist.viewmodel.ChecklistViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class DetailOperatorChecklistActivity : AppCompatActivity() {
 
@@ -43,6 +44,8 @@ class DetailOperatorChecklistActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailOperatorChecklistBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarDetailOperatorChecklist.tvAppbarTitle.text = "Konfirmasi Operational"

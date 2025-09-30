@@ -12,6 +12,7 @@ import com.hkapps.hygienekleen.databinding.ActivityListOperationalManagementBind
 import com.hkapps.hygienekleen.features.features_management.homescreen.operational.ui.adapter.ViewPagerOperationalAdapter
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListOperationalManagementActivity : AppCompatActivity() {
 
@@ -24,6 +25,8 @@ class ListOperationalManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListOperationalManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         //set layout
         if (userLevel == "CLIENT") {

@@ -35,6 +35,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.
 import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.rutin.viewmodel.RoutineViewModel
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -71,6 +72,7 @@ class SendRoutineReportActivity : AppCompatActivity(), ClientsSendRoutineAdapter
         super.onCreate(savedInstanceState)
         binding = ActivitySendRoutineReportBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // get list client from chooseClientRoutineActivity
         if (clickFrom == "chooseClient") {

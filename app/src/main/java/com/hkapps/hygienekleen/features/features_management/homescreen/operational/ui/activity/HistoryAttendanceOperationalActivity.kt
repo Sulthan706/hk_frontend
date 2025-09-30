@@ -34,6 +34,7 @@ import com.hkapps.hygienekleen.utils.NoInternetConnectionCallback
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.applySkeleton
 import com.google.android.material.snackbar.Snackbar
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class HistoryAttendanceOperationalActivity : AppCompatActivity(), NoInternetConnectionCallback {
 
@@ -58,6 +59,8 @@ class HistoryAttendanceOperationalActivity : AppCompatActivity(), NoInternetConn
         super.onCreate(savedInstanceState)
         binding = ActivityHistoryAttendanceOperationalBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar
         if (userLevel == "CLIENT") {

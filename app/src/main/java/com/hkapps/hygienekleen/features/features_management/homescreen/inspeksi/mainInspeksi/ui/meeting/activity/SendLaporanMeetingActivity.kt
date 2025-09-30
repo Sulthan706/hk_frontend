@@ -37,6 +37,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.inspeksi.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -75,6 +76,8 @@ class SendLaporanMeetingActivity : AppCompatActivity(), ClientsSendMeetingAdapte
         super.onCreate(savedInstanceState)
         binding = ActivitySendLaporanMeetingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // get list client from ChooseClientMeetingActivity
         when (clickFrom) {

@@ -9,6 +9,7 @@ import com.hkapps.hygienekleen.R
 import com.hkapps.hygienekleen.databinding.ActivityOpenDocumentManagementBinding
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class OpenDocumentManagementActivity : AppCompatActivity() {
     private lateinit var binding: ActivityOpenDocumentManagementBinding
@@ -33,6 +34,7 @@ class OpenDocumentManagementActivity : AppCompatActivity() {
         binding = ActivityOpenDocumentManagementBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         when (typeDocument) {
             "KTP" -> {
                 img = imageKTP

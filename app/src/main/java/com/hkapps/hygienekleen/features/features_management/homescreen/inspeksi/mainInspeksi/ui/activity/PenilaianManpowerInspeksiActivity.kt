@@ -8,6 +8,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.hkapps.hygienekleen.R
 import com.hkapps.hygienekleen.databinding.ActivityPenilaianManpowerInspeksiBinding
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class PenilaianManpowerInspeksiActivity : AppCompatActivity() {
 
@@ -19,6 +20,8 @@ class PenilaianManpowerInspeksiActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPenilaianManpowerInspeksiBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set app bar
         binding.appbarPenilaianManpowerInspeksi.tvAppbarTitle.text = "Penilaian Manpower"

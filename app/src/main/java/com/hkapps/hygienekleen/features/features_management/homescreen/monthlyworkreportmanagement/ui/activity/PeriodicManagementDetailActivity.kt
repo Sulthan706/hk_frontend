@@ -33,6 +33,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.closing.ui.Fo
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -70,6 +71,8 @@ class PeriodicManagementDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPeriodicManagementDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarMonthlyWorkReportChecklist.tvAppbarTitle.text = "Ceklis Pekerjaan"
         binding.appbarMonthlyWorkReportChecklist.ivAppbarBack.setOnClickListener {

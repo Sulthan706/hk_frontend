@@ -210,7 +210,7 @@
                 android:layout_marginTop="@dimen/_15sdp"
                 android:fontFamily="@font/poppinssemibold"
                 android:gravity="center"
-                android:text="Training CF Team"
+                android:text="Training HK Team"
                 android:textSize="@dimen/_16ssp"
                 app:layout_constraintTop_toTopOf="parent" />
 

@@ -20,6 +20,7 @@ import com.hkapps.hygienekleen.features.features_management.homeScreenUpdated.hu
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.EndlessScrollingRecyclerView
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -43,6 +44,8 @@ class BranchesHumanCapitalActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         binding = ActivityBranchesHumanCapitalBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         // set appbar
         binding.appbarBranchesHumanCapital.tvAppbarTitle.text = "Human Capital"

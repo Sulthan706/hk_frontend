@@ -18,6 +18,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import ir.mahozad.android.PieChart
 import java.lang.Float
 import java.text.SimpleDateFormat
@@ -41,6 +42,7 @@ class DashboardCtalkClientActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardCtalkClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         // clear FLAG_TRANSLUCENT_STATUS flag:
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window

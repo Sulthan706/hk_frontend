@@ -52,6 +52,7 @@ import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
 import com.hkapps.hygienekleen.utils.InternetCheckService
 import com.google.android.material.button.MaterialButton
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -83,6 +84,8 @@ class DetailDamageReportVendorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailDamageReportVendorBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         binding.appbarDetailDamageReport.tvAppbarTitle.text = "Detail Kondisi Mesin"
         binding.appbarDetailDamageReport.ivAppbarBack.setOnClickListener {

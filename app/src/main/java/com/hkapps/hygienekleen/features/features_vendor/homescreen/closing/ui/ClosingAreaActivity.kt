@@ -21,6 +21,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.closing.viewm
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.monthlyworkreport.viewmodel.MonthlyWorkReportViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import java.text.SimpleDateFormat
 import java.util.Calendar
 
@@ -64,6 +65,7 @@ class ClosingAreaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityClosingAreaBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         initView()
 
     }

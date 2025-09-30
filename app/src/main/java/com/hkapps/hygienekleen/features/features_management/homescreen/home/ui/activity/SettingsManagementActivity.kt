@@ -16,6 +16,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.home.view
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.google.firebase.messaging.FirebaseMessaging
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class SettingsManagementActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySettingsBinding
@@ -31,6 +32,8 @@ class SettingsManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         if (position == "CLIENT") {
             // clear FLAG_TRANSLUCENT_STATUS flag:

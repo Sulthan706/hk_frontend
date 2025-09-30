@@ -38,6 +38,7 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -62,6 +63,7 @@ class UploadVaccineManagementActivity : AppCompatActivity() {
         binding = ActivityUploadVaccineManagementBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,null)
         var flag = 1
         binding.btnUploadDocument.setOnClickListener {
             if (flag == 1){

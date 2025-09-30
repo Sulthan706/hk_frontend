@@ -24,6 +24,7 @@ import com.hkapps.hygienekleen.features.features_management.homescreen.home.view
 import com.hkapps.hygienekleen.features.features_vendor.notifcation.ui.old.activity.NotifVendorMidLevelActivity
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class ListProjectManagementActivity : AppCompatActivity(),
     ListProjectManagementAdapter.ListProjectManagementCallback {
@@ -44,6 +45,7 @@ class ListProjectManagementActivity : AppCompatActivity(),
         binding = ActivityListProjectManagementBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
         // set app bar
         binding.appbarListProjectManagement.tvAppbarTitle.text = "Daftar Proyek"
         binding.appbarListProjectManagement.ivAppbarBack.setOnClickListener {

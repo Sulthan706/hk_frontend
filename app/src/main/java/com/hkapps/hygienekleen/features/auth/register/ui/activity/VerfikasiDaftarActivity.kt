@@ -22,6 +22,7 @@ import com.hkapps.hygienekleen.features.auth.register.viewmodel.DaftarViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
 
 class VerfikasiDaftarActivity : AppCompatActivity() {
 
@@ -40,6 +41,7 @@ class VerfikasiDaftarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityVerfikasiDaftarBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdge(binding.root,binding.statusBarBackground)
 
         Log.d("tagVerifData", "onCreate: nuc = $nuc")
 
@@ -55,7 +57,7 @@ class VerfikasiDaftarActivity : AppCompatActivity() {
         binding.etOtp4.setOnKeyListener(GenericKeyEvent(binding.etOtp4, binding.etOtp3))
         binding.etOtp5.setOnKeyListener(GenericKeyEvent(binding.etOtp5, binding.etOtp4))
 
-        binding.ivBackDaftarVerif.setOnClickListener {
+        binding.ivBackDaftarEmail.setOnClickListener {
             onBackPressedCallback.handleOnBackPressed()
             finish()
         }
