@@ -35,6 +35,8 @@ class ChooseMRActivity : AppCompatActivity() {
 
     private var searchJob: Job? = null
 
+    private val currentSelectedItems = mutableListOf<MaterialRequestSend>()
+
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
             finish()
@@ -55,6 +57,10 @@ class ChooseMRActivity : AppCompatActivity() {
 
     private fun setupUI() {
         binding.apply {
+
+            intent.getParcelableArrayListExtra<MaterialRequestSend>("CURRENT_SELECTED_ITEMS")?.let {
+                currentSelectedItems.addAll(it)
+            }
 
             btnSubmitCreateScheduleManagement.setOnClickListener {
                 applySelection()
@@ -128,6 +134,7 @@ class ChooseMRActivity : AppCompatActivity() {
             adapter = ChooseMRAdapter(
                 data = itemList,
                 dataUnit = unitList,
+                existingSelections = currentSelectedItems,
                 onDataChanged = { materialRequests ->
                     selectedMaterialRequests.clear()
                     selectedMaterialRequests.addAll(materialRequests)

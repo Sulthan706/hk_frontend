@@ -11,4 +11,5 @@ data class ItemMRData(
     val kodeItem : String,
     val namaItem : String,
     val unitCode : String? = "",
+    val quantity : Int = 0,
 )

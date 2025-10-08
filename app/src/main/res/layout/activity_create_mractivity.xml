@@ -69,6 +69,34 @@
             android:textSize="@dimen/_11ssp"
             android:textStyle="bold" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Type Request"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/tv_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="5dp"
+            android:inputType="none"
+            android:background="@drawable/bg_field"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/poppinsregular"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_8sdp"
+            android:hint="Choose type request"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_10ssp"/>
+
         <LinearLayout
             android:id="@+id/linear_date"
             android:layout_width="match_parent"

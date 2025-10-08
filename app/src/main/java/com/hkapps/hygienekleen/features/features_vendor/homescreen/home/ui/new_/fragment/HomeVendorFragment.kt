@@ -83,6 +83,7 @@ import kotlin.collections.ArrayList
 import com.hkapps.hygienekleen.R
 import com.hkapps.hygienekleen.databinding.BottomSheetHomeMenuBinding
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.activity.mr.ApproveMRActivity
+import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.activity.mr.CreateMRActivity
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.activity.mr.DashboardMRActivity
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.activity.mr.UsedMRActivity
 
@@ -1304,7 +1305,7 @@ class HomeVendorFragment : Fragment() {
                             CarefastOperationPrefConst.CLICK_FROM,
                             "Service"
                         )
-                        val i = Intent(context, DashboardMRActivity::class.java)
+                        val i = Intent(context, CreateMRActivity::class.java)
                         startActivity(i)
                     }
                 }else{
@@ -1316,7 +1317,7 @@ class HomeVendorFragment : Fragment() {
                             CarefastOperationPrefConst.CLICK_FROM,
                             "Service"
                         )
-                        val i = Intent(context, DashboardMRActivity::class.java)
+                        val i = Intent(context, CreateMRActivity::class.java)
                         startActivity(i)
                     }
                 }
@@ -1338,9 +1339,9 @@ class HomeVendorFragment : Fragment() {
                     )
                 }
 
-//                linearRequestMp.setOnClickListener {
-//                    startActivity(Intent(requireContext(), ManPowerActivity::class.java))
-//                }
+                linearRequestMp.setOnClickListener {
+                    startActivity(Intent(requireContext(), DashboardMRActivity::class.java))
+                }
 
             }
             show()

@@ -1,11 +1,14 @@
 package com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.adapter
 
+import android.graphics.Color
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.PopupMenu
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.hkapps.hygienekleen.R
 import com.hkapps.hygienekleen.databinding.ListItemCreateMaterialRequestBinding
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.ItemMRData
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.MaterialRequestSend
@@ -15,11 +18,44 @@ import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.
 class ChooseMRAdapter(
     private val data: MutableList<ItemMRData>,
     private val dataUnit: List<SatuanData>,
+    private val isEditMode: Boolean = false,
+    private val editItem: MaterialRequestSend? = null,
+    private val existingSelections: List<MaterialRequestSend> = emptyList(),
     private val onDataChanged: (List<MaterialRequestSend>) -> Unit
 ) : RecyclerView.Adapter<ChooseMRViewHolder>() {
 
     // List untuk menyimpan data yang akan dikirim ke API
     private val materialRequestList = mutableListOf<MaterialRequestSend>()
+
+    // Map untuk tracking state setiap item
+    private val itemStateMap = mutableMapOf<Int, ItemState>()
+
+    data class ItemState(
+        var isSelected: Boolean = false,
+        var quantity: Int = 0,
+        var selectedUnitId: Int = 0,
+        var selectedUnitName: String = "",
+        var isDisabled: Boolean = false // untuk disable item yang sudah dipilih di luar edit mode
+    )
+
+    init {
+        // Prefill dari existingSelections
+        existingSelections.forEach { existing ->
+            val unit = dataUnit.find { it.idSatuan == existing.idSatuan }
+            itemStateMap[existing.idItem] = ItemState(
+                isSelected = true,
+                quantity = existing.qtyRequest,
+                selectedUnitId = existing.idSatuan,
+                selectedUnitName = unit?.namaSatuan ?: "Pilih Satuan",
+                isDisabled = false // selalu bisa diedit
+            )
+
+            // Tambahkan juga ke materialRequestList
+            materialRequestList.add(existing.copy())
+        }
+
+        notifyDataChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChooseMRViewHolder {
         return ChooseMRViewHolder(
@@ -34,99 +70,142 @@ class ChooseMRAdapter(
     override fun onBindViewHolder(holder: ChooseMRViewHolder, position: Int) {
         val item = data[position]
 
-        holder.binding.apply {
-            // Reset listeners untuk menghindari konflik
-            checkbox.setOnCheckedChangeListener(null)
-            tvGender.setOnClickListener(null)
-            etCount.removeTextChangedListener(holder.textWatcher)
+        // Initialize atau get existing state
+        val itemState = itemStateMap.getOrPut(item.idItem) {
+            ItemState(
+                selectedUnitId = dataUnit.firstOrNull()?.idSatuan ?: 0,
+                selectedUnitName = dataUnit.firstOrNull()?.namaSatuan ?: "Pilih Satuan",
+                isDisabled = false
+            )
+        }
 
-            // Set data item
+        holder.binding.apply {
+            clearListeners(holder)
+
             tvItemReasonResign.text = item.namaItem
 
-            // Inisialisasi atau ambil data existing untuk item ini
-            val existingData = materialRequestList.find { it.idItem == item.idItem }
-                ?: MaterialRequestSend(idItem = item.idItem).also {
-                    materialRequestList.add(it)
-                }
+            // Selalu enabled
+            checkbox.isEnabled = true
+            etCount.isEnabled = true
+            tvGender.isEnabled = true
+            root.alpha = 1.0f
 
-            // Set nilai default jika belum ada
-            if (existingData.idSatuan == 0 && dataUnit.isNotEmpty()) {
-                existingData.idSatuan = dataUnit[0].idSatuan
-                tvGender.text = dataUnit[0].namaSatuan
-            }
+            // Checkbox state
+            checkbox.isChecked = itemState.isSelected
 
-            // Set nilai count jika ada
-            if (existingData.qtyRequest > 0) {
-                etCount.setText(existingData.qtyRequest.toString())
-            }
+            // Quantity
+            etCount.setText(
+                if (itemState.quantity > 0) itemState.quantity.toString() else ""
+            )
 
-            // Setup spinner untuk unit
-            setupUnitSpinner(holder, existingData)
+            // Unit
+            tvGender.text = itemState.selectedUnitName
 
-            // Setup checkbox listener
-            checkbox.setOnCheckedChangeListener { _, isChecked ->
-                if (!isChecked) {
-                    // Remove dari list jika unchecked
-                    materialRequestList.removeAll { it.idItem == item.idItem }
-                    etCount.setText("")
-                    tvGender.text = if (dataUnit.isNotEmpty()) dataUnit[0].namaSatuan else "Satuan"
-                } else {
-                    // Add ke list jika checked dan belum ada
-                    if (materialRequestList.none { it.idItem == item.idItem }) {
-                        materialRequestList.add(
-                            MaterialRequestSend(
-                                idItem = item.idItem,
-                                idSatuan = dataUnit.firstOrNull()?.idSatuan ?: 0,
-                                qtyRequest = 0
-                            )
-                        )
-                    }
-                }
-                onDataChanged(getValidMaterialRequests())
-            }
-
-            // Setup EditText listener untuk quantity
-            holder.textWatcher = object : TextWatcher {
-                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-                override fun afterTextChanged(s: Editable?) {
-                    val quantity = s.toString().toIntOrNull() ?: 0
-
-                    // Update data di list
-                    materialRequestList.find { it.idItem == item.idItem }?.let {
-                        it.qtyRequest = quantity
-                    }
-
-                    // Auto check/uncheck checkbox berdasarkan quantity
-                    if (quantity > 0 && !checkbox.isChecked) {
-                        checkbox.isChecked = true
-                    } else if (quantity <= 0 && checkbox.isChecked) {
-                        checkbox.isChecked = false
-                    }
-
-                    onDataChanged(getValidMaterialRequests())
-                }
-            }
-            etCount.addTextChangedListener(holder.textWatcher)
+            // Listener
+            setupCheckboxListener(holder, item, itemState)
+            setupQuantityListener(holder, item, itemState)
+            setupUnitSpinner(holder, item, itemState)
         }
     }
 
-    private fun setupUnitSpinner(holder: ChooseMRViewHolder, materialRequest: MaterialRequestSend) {
+    private fun clearListeners(holder: ChooseMRViewHolder) {
+        holder.binding.apply {
+            checkbox.setOnCheckedChangeListener(null)
+            tvGender.setOnClickListener(null)
+            etCount.removeTextChangedListener(holder.textWatcher)
+        }
+    }
+
+    private fun setupCheckboxListener(
+        holder: ChooseMRViewHolder,
+        item: ItemMRData,
+        itemState: ItemState
+    ) {
+        holder.binding.checkbox.setOnCheckedChangeListener { _, isChecked ->
+            itemState.isSelected = isChecked
+
+            if (isEditMode && editItem != null && item.idItem == editItem.idItem) {
+                // Dalam edit mode, jika user uncheck item yang sedang diedit
+                // maka akan menghapus item tersebut dari list
+                if (!isChecked) {
+                    // Reset quantity
+                    itemState.quantity = 0
+                    holder.binding.etCount.setText("")
+                }
+            } else {
+                // Dalam add mode, normal behavior
+                if (!isChecked) {
+                    // Reset quantity when unchecked
+                    itemState.quantity = 0
+                    holder.binding.etCount.setText("")
+                } else {
+                    // Set default quantity when checked
+                    if (itemState.quantity <= 0) {
+                        itemState.quantity = 1
+                        holder.binding.etCount.setText("1")
+                    }
+                }
+            }
+
+            updateMaterialRequestList()
+            notifyDataChanged()
+        }
+    }
+
+    private fun setupQuantityListener(
+        holder: ChooseMRViewHolder,
+        item: ItemMRData,
+        itemState: ItemState
+    ) {
+        holder.textWatcher = object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: Editable?) {
+                val quantity = s.toString().toIntOrNull() ?: 0
+                itemState.quantity = quantity
+
+                // Auto check/uncheck checkbox based on quantity
+                if (quantity > 0 && !itemState.isSelected) {
+                    itemState.isSelected = true
+                    holder.binding.checkbox.isChecked = true
+                } else if (quantity <= 0 && itemState.isSelected) {
+                    itemState.isSelected = false
+                    holder.binding.checkbox.isChecked = false
+                }
+
+                updateMaterialRequestList()
+                notifyDataChanged()
+            }
+        }
+        holder.binding.etCount.addTextChangedListener(holder.textWatcher)
+    }
+
+    private fun setupUnitSpinner(
+        holder: ChooseMRViewHolder,
+        item: ItemMRData,
+        itemState: ItemState
+    ) {
         holder.binding.tvGender.setOnClickListener { view ->
             val popup = PopupMenu(view.context, view)
 
             dataUnit.forEachIndexed { index, unit ->
                 popup.menu.add(0, unit.idSatuan, index, unit.namaSatuan)
+
+                // Mark current selection
+                if (unit.idSatuan == itemState.selectedUnitId) {
+                    popup.menu.getItem(index).isChecked = true
+                }
             }
 
             popup.setOnMenuItemClickListener { menuItem ->
                 val selectedUnit = dataUnit.find { it.idSatuan == menuItem.itemId }
                 selectedUnit?.let { unit ->
+                    itemState.selectedUnitId = unit.idSatuan
+                    itemState.selectedUnitName = unit.namaSatuan
                     holder.binding.tvGender.text = unit.namaSatuan
 
-                    // Update data di list
-                    materialRequest.idSatuan = unit.idSatuan
-                    onDataChanged(getValidMaterialRequests())
+                    updateMaterialRequestList()
+                    notifyDataChanged()
                 }
                 true
             }
@@ -135,12 +214,32 @@ class ChooseMRAdapter(
         }
     }
 
+    private fun updateMaterialRequestList() {
+        materialRequestList.clear()
+
+        itemStateMap.forEach { (itemId, state) ->
+            if (state.isSelected && state.quantity > 0 && state.selectedUnitId > 0) {
+                materialRequestList.add(
+                    MaterialRequestSend(
+                        idItem = itemId,
+                        qtyRequest = state.quantity,
+                        idSatuan = state.selectedUnitId
+                    )
+                )
+            }
+        }
+    }
+
+    private fun notifyDataChanged() {
+        onDataChanged(materialRequestList.toList())
+    }
+
     // Function untuk mendapatkan data yang valid (checked dan quantity > 0)
-    private fun getValidMaterialRequests(): List<MaterialRequestSend> {
+    fun getValidMaterialRequests(): List<MaterialRequestSend> {
         return materialRequestList.filter { it.qtyRequest > 0 && it.idSatuan > 0 }
     }
 
-    // Function untuk mendapatkan semua data (untuk keperluan lain)
+    // Function untuk mendapatkan semua data
     fun getAllMaterialRequests(): List<MaterialRequestSend> {
         return materialRequestList.toList()
     }
@@ -148,6 +247,30 @@ class ChooseMRAdapter(
     // Function untuk mendapatkan data yang siap dikirim ke API
     fun getDataForAPI(): List<MaterialRequestSend> {
         return getValidMaterialRequests()
+    }
+
+    // Function untuk reset semua selection
+    fun clearAllSelections() {
+        itemStateMap.clear()
+        materialRequestList.clear()
+        notifyDataSetChanged()
+        notifyDataChanged()
+    }
+
+    // Function untuk set existing selections (if needed for edit mode)
+    fun setExistingSelections(existingSelections: List<MaterialRequestSend>) {
+        existingSelections.forEach { selection ->
+            val unit = dataUnit.find { it.idSatuan == selection.idSatuan }
+            itemStateMap[selection.idItem] = ItemState(
+                isSelected = true,
+                quantity = selection.qtyRequest,
+                selectedUnitId = selection.idSatuan,
+                selectedUnitName = unit?.namaSatuan ?: "Unknown Unit"
+            )
+        }
+        updateMaterialRequestList()
+        notifyDataSetChanged()
+        notifyDataChanged()
     }
 
     override fun getItemCount(): Int = data.size

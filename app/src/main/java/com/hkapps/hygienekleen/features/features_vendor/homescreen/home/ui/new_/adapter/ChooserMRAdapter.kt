@@ -27,7 +27,7 @@ class ChooserMRAdapter(
             btnRadioReason.setOnClickListener {
                 if (selectedFilter != data[position].namaItem) {
                     selectedFilter =  data[position].namaItem
-                    listener.onItemRequestMRClick(data[position].idItem,data[position].namaItem,data[position].unitCode ?: "")
+                    listener.onItemRequestMRClick(data[position].idItem,data[position].namaItem,data[position].unitCode ?: "",data[position].quantity)
                     notifyDataSetChanged()
                 }
             }
@@ -43,6 +43,6 @@ class ChooserMRAdapter(
 
     interface OnItemRequestMRClickListener{
 
-        fun onItemRequestMRClick(idItem : Int, namaItem : String, unitCode : String)
+        fun onItemRequestMRClick(idItem : Int, namaItem : String, unitCode : String,quantity : Int)
     }
 }

@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
@@ -128,7 +129,7 @@ class CreateMRActivity : AppCompatActivity() {
 
     private fun initView() {
         binding.apply {
-            appBarCreateMP.tvAppbarTitle.text = "Form Request MP"
+            appBarCreateMP.tvAppbarTitle.text = "Form Request MR"
             appBarCreateMP.ivAppbarBack.setOnClickListener {
                 onBackPressedCallback.handleOnBackPressed()
             }
@@ -136,6 +137,14 @@ class CreateMRActivity : AppCompatActivity() {
             tvProject.text = "Project : $projectId"
             tvDate.setOnClickListener {
                 showMonthPicker()
+            }
+
+            val items = listOf("Regular", "Susulan")
+            val adapter = ArrayAdapter(this@CreateMRActivity, android.R.layout.simple_dropdown_item_1line, items)
+
+            binding.tvType.setAdapter(adapter)
+            tvType.setOnClickListener {
+                tvType.showDropDown()
             }
 
             // Button untuk submit
@@ -191,6 +200,10 @@ class CreateMRActivity : AppCompatActivity() {
             },
             onEditItem = { item ->
                 val intent = Intent(this, ChooseMRActivity::class.java)
+                intent.putParcelableArrayListExtra(
+                    "CURRENT_SELECTED_ITEMS",
+                    ArrayList(selectedMaterialRequests)
+                )
                 chooseMRLauncher.launch(intent)
             }
         )
@@ -299,9 +312,9 @@ class CreateMRActivity : AppCompatActivity() {
             selectedMaterialRequests.toList()
         )
 
-        if (type == "Regular") {
+        if (binding.tvType.text.toString() == "Regular") {
             homeViewModel.createMR(request)
-        } else if (type == "Susulan") {
+        } else if (binding.tvType.text.toString() == "Susulan") {
             homeViewModel.createMRFollowUp(request)
         }
     }
@@ -337,8 +350,7 @@ class CreateMRActivity : AppCompatActivity() {
             .setTitle("Success")
             .setMessage("Material request has been created successfully")
             .setPositiveButton("OK") { _, _ ->
-                setResult(RESULT_OK)
-                finish()
+                startActivity(Intent(this, DashboardMRActivity::class.java))
             }
             .setCancelable(false)
             .create()

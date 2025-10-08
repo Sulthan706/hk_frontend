@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CarefastOperation">
         <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.mr.DeliveryOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.features_vendor.homescreen.home.ui.new_.activity.mr.CreateUsedMRActivity"
+            android:exported="false" />
+        <activity
             android:name=".features.features_vendor.homescreen.home.ui.new_.activity.mr.ChooseMRActivity"
             android:exported="false" />
         <activity

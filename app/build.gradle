@@ -90,6 +90,7 @@ android {
         error 'TypographyFractions', 'TypographyQuotes'
         warning 'UnusedResources', 'MissingTranslation'
     }
+    ndkVersion '29.0.14033849 rc4'
 }
 def lottieVersion = "3.4.0"
 def daggerVersion = '2.14.1'

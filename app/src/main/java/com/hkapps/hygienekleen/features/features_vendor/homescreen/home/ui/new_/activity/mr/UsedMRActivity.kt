@@ -126,7 +126,7 @@ class UsedMRActivity : AppCompatActivity() {
                 TAB_USED -> {
                     fabAdd.visibility = View.VISIBLE
                     fabAdd.setOnClickListener {
-                        resultLauncher.launch(Intent(this@UsedMRActivity, CreateMRActivity::class.java))
+                        resultLauncher.launch(Intent(this@UsedMRActivity, CreateUsedMRActivity::class.java))
                     }
                     tabUsed.setBackgroundResource(R.drawable.tab_selected_background)
                     tabUsed.setTextColor(ContextCompat.getColor(this@UsedMRActivity, android.R.color.white))

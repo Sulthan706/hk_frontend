@@ -145,14 +145,6 @@ class SelectedMRAdapter(
                     onEditItem(item)
                 }
 
-                // Unit selection
-                tvGender.setOnClickListener { view ->
-                    showUnitSpinner(view, item)
-                }
-
-                // Quantity changes
-                setupQuantityListener(item)
-
                 // Remove button
                 remove.setOnClickListener {
                     showRemoveConfirmation(item)
@@ -163,52 +155,6 @@ class SelectedMRAdapter(
                     onEditItem(item)
                 }
             }
-        }
-
-        private fun setupQuantityListener(item: MaterialRequestSend) {
-            // Remove existing listener
-            currentTextWatcher?.let { watcher ->
-                binding.etCount.removeTextChangedListener(watcher)
-            }
-
-            // Create new listener
-            val textWatcher = object : TextWatcher {
-                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-                override fun afterTextChanged(s: Editable?) {
-                    val quantity = s.toString().toIntOrNull() ?: 0
-                    if (quantity != item.qtyRequest) {
-                        onQuantityChanged(item, quantity)
-                    }
-                }
-            }
-
-            currentTextWatcher = textWatcher
-            binding.etCount.addTextChangedListener(textWatcher)
-        }
-
-        private fun showUnitSpinner(view: View, item: MaterialRequestSend) {
-            val popup = PopupMenu(view.context, view)
-
-            unitList.forEachIndexed { index, unit ->
-                popup.menu.add(0, unit.idSatuan, index, unit.namaSatuan)
-
-                // Mark current selection
-                if (unit.idSatuan == item.idSatuan) {
-                    popup.menu.getItem(index).isChecked = true
-                }
-            }
-
-            popup.setOnMenuItemClickListener { menuItem ->
-                val selectedUnit = unitList.find { it.idSatuan == menuItem.itemId }
-                selectedUnit?.let { unit ->
-                    binding.tvGender.text = unit.namaSatuan
-                    onUnitChanged(item, unit.idSatuan)
-                }
-                true
-            }
-
-            popup.show()
         }
 
         private fun showRemoveConfirmation(item: MaterialRequestSend) {
@@ -241,35 +187,6 @@ class SelectedMRAdapter(
                 remove.setOnClickListener(null)
                 root.setOnClickListener(null)
             }
-        }
-    }
-
-    // Function to update adapter when data changes
-    fun updateData() {
-        notifyDataSetChanged()
-    }
-
-    // Function to add new item
-    fun addItem(item: MaterialRequestSend) {
-        data.add(item)
-        notifyItemInserted(data.size - 1)
-    }
-
-    // Function to remove item
-    fun removeItem(item: MaterialRequestSend) {
-        val position = data.indexOf(item)
-        if (position != -1) {
-            data.removeAt(position)
-            notifyItemRemoved(position)
-        }
-    }
-
-    // Function to update specific item
-    fun updateItem(item: MaterialRequestSend) {
-        val position = data.indexOfFirst { it.idItem == item.idItem }
-        if (position != -1) {
-            data[position] = item
-            notifyItemChanged(position)
         }
     }
 }

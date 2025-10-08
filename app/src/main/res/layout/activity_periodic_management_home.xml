@@ -40,7 +40,7 @@
         android:id="@+id/rlMonthListShiftChecklist"
         android:layout_width="match_parent"
         android:layout_height="71dp"
-        app:layout_constraintTop_toBottomOf="@+id/appbarListShiftChecklistMgmnt"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         android:background="@drawable/bg_month_list_shift_checklist">
         <TextView
             android:id="@+id/tvMonthNowListChecklistMngmt"

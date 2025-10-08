@@ -7,6 +7,7 @@ data class ListHistoryUsedResponse(
 )
 
 data class ListHistoryUsedData(
+    val idItem : Int,
     val namaItem : String,
     val quantityItem : Int,
     val namaSatuan : String,

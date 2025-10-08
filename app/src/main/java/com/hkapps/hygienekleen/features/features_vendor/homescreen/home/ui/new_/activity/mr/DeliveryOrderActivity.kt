@@ -1,6 +1,5 @@
 package com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.activity.mr
 
-
 import android.app.AlertDialog
 import android.app.Dialog
 import android.content.Intent
@@ -8,36 +7,36 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
-import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.button.MaterialButton
 import com.hkapps.hygienekleen.R
-import com.hkapps.hygienekleen.databinding.ActivityDashboardMractivityBinding
-import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.model.mr.MRDashboardData
-import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.activity.HomeVendorActivity
-import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.activity.MRActivity
+import com.hkapps.hygienekleen.databinding.ActivityDeliveryOrderBinding
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.adapter.MrAdapter
-import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.ui.new_.adapter.TableViewAdapter
 import com.hkapps.hygienekleen.features.features_vendor.homescreen.home.viewmodel.HomeViewModel
 import com.hkapps.hygienekleen.pref.CarefastOperationPref
 import com.hkapps.hygienekleen.pref.CarefastOperationPrefConst
 import com.hkapps.hygienekleen.utils.CommonUtils
+import com.hkapps.hygienekleen.utils.setupEdgeToEdge
+import java.util.Calendar
+import kotlin.getValue
 
+class DeliveryOrderActivity : AppCompatActivity() {
 
-class DashboardMRActivity : AppCompatActivity() {
-
-    private lateinit var binding : ActivityDashboardMractivityBinding
+    private lateinit var binding : ActivityDeliveryOrderBinding
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-            startActivity(Intent(this@DashboardMRActivity, HomeVendorActivity::class.java))
+            finish()
         }
     }
 
@@ -47,30 +46,31 @@ class DashboardMRActivity : AppCompatActivity() {
     private var loadingDialog: Dialog? = null
 
     private val homeViewModel by viewModels<HomeViewModel>()
-    private val projectId = CarefastOperationPref.loadString(CarefastOperationPrefConst.USER_PROJECT_CODE,"")
+    private val userId = CarefastOperationPref.loadInt(CarefastOperationPrefConst.USER_ID,0)
 
-    private lateinit var tableViewAdapter: TableViewAdapter
+    private lateinit var tableViewAdapter: MrAdapter
 
     private lateinit var resultLauncher: ActivityResultLauncher<Intent>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDashboardMractivityBinding.inflate(layoutInflater)
+        binding = ActivityDeliveryOrderBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupEdgeToEdge(binding.root, binding.statusBarBackground)
         initView()
         next()
         showLoading(getString(R.string.loading_string_progress))
         previous()
         getData()
         setObserver()
-
     }
 
     private fun initView(){
         binding.apply {
-            val appBar = "Material Request"
-            appbarMr.tvAppbarTitle.text = appBar
-            appbarMr.ivAppbarBack.setOnClickListener {
+            val appBar = "Checklist MR"
+            appBarMr.tvAppbarTitle.text = appBar
+            appBarMr.ivAppbarBack.setOnClickListener {
                 onBackPressedCallback.handleOnBackPressed()
             }
 
@@ -83,26 +83,22 @@ class DashboardMRActivity : AppCompatActivity() {
                     dialogSuccess()
                 }
             }
-            appbarMr.llBtnUpload.setOnClickListener {
-                val popupMenu: PopupMenu = PopupMenu(this@DashboardMRActivity,binding.appbarMr.llBtnUpload)
-                popupMenu.menuInflater.inflate(R.menu.mr_add_menu, popupMenu.menu)
-                popupMenu.setOnMenuItemClickListener({ menuItem ->
-                    resultLauncher.launch(Intent(this@DashboardMRActivity, CreateMRActivity::class.java).also{
-                        it.putExtra("name",menuItem.title)
-                    })
-                    true
-                })
-                popupMenu.show()
-            }
         }
     }
 
     private fun getData(){
-        homeViewModel.dashboardMR(projectId, page, size)
+        val calendar = Calendar.getInstance()
+        val currentMonth = calendar.get(Calendar.MONTH) + 1
+        val currentYear = calendar.get(Calendar.YEAR)
+        if(intent.getStringExtra("mr") != null){
+            homeViewModel.getDataMr(CarefastOperationPref.loadString(CarefastOperationPrefConst.USER_PROJECT_CODE,""),currentMonth,currentYear,page,size)
+        }else{
+            homeViewModel.getDataMr(CarefastOperationPref.loadString(CarefastOperationPrefConst.CLIENT_PROJECT_CODE,""),currentMonth,currentYear,page,size)
+        }
     }
 
     private fun setObserver(){
-        homeViewModel.dashboardMR.observe(this) {
+        homeViewModel.getDataMr.observe(this) {
             if(it.code == 200){
                 hideLoading()
                 if(it.data.content.isNotEmpty()){
@@ -116,12 +112,8 @@ class DashboardMRActivity : AppCompatActivity() {
                     val count = "Showing $pageStart-$pageEnd of ${it.data.size}"
                     binding.tvPageHistoryClosing.text = count
                     if (page == 0) {
-                        tableViewAdapter = TableViewAdapter(it.data.content.toMutableList()){ month,year ->
-                            startActivity(Intent(this, MRActivity::class.java).also{
-                                it.putExtra("month",month)
-                                it.putExtra("year",year)
-                                it.putExtra("mr","mr")
-                            })
+                        tableViewAdapter = MrAdapter(it.data.content.toMutableList(),false,true){ id ->
+                            approveMr(id)
                         }
                         binding.recyclerViewMovieList.adapter = tableViewAdapter
                         binding.recyclerViewMovieList.layoutManager = LinearLayoutManager(this)
@@ -141,6 +133,20 @@ class DashboardMRActivity : AppCompatActivity() {
             }else{
                 hideLoading()
                 Toast.makeText(this, "Failed get data MR", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun approveMr(idMaterial : Int,){
+        showLoading("Please wait")
+        homeViewModel.approveMr(userId,idMaterial)
+        homeViewModel.approveMR.observe(this) {
+            if(it.code == 200){
+                hideLoading()
+                dialogSuccess()
+            }else{
+                hideLoading()
+                Toast.makeText(this, "Failed approve MR", Toast.LENGTH_SHORT).show()
             }
         }
     }

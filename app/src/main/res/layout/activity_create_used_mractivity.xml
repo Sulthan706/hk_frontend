@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.features_vendor.homescreen.home.ui.new_.activity.mr.CreateUsedMRActivity">
+
+    <View
+        android:id="@+id/statusBarBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusBarBackground"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetEndWithActions="0dp">
+
+        <include
+            android:id="@+id/appBarCreateMP"
+            layout="@layout/app_bar_default"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+        android:id="@+id/tv_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="12dp"
+        android:inputType="none"
+        android:background="@drawable/bg_field"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_12sdp"
+        android:hint="Select Item"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+        android:id="@+id/tv_unit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="12dp"
+        android:inputType="none"
+        android:background="@drawable/bg_field"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_12sdp"
+        android:hint="Unit"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item"/>
+
+    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+        android:id="@+id/tv_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="12dp"
+        android:inputType="none"
+        android:background="@drawable/bg_field"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_12sdp"
+        android:hint="Jumlah"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_unit"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitCreateScheduleManagement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:background="@drawable/bg_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
